@@ -10,7 +10,7 @@
 #import "NavSecondViewControllerOne.h"
 
 
-@interface NavRootViewControllerOne ()
+@interface NavRootViewControllerOne () <UINavigationControllerDelegate>
 
 @end
 
@@ -71,7 +71,7 @@
     // 显示出 toolbar, 但是无效! 因为 viewDid 加载完之前 self.navigationController 都等于 nil !! 注意.对比点击 segementControl
     [self.navigationController setToolbarHidden:NO animated:NO];
 
-
+    self.navigationController.delegate = self; // 设置代理
 }
 
 - (void)segmentAction:(id)sender {
@@ -140,4 +140,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UINavigationBarDelegate Method 代理
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    NSLog(@"hahah will show");
+}
 @end
