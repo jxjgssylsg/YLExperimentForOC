@@ -40,6 +40,10 @@
 #import "AnotherCollectionViewControllerFour.h"
 #import "CollectionViewControllerFive.h"
 #import "NavRootViewControllerOne.h"
+#import "TravelNavController.h"
+#import "TravelNav0Controller.h"
+#import "TravelNav1Controller.h"
+#import "BookNavController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -67,7 +71,8 @@
     // [self testNSDateComponents];
     // [self creatTimeZoneTableView];
     // [self testNSCalendar];
-    [self creatNavVCOne];
+    // [self creatNavVCOne];
+    [self creatNavVCTwo];
     // [self creatUITableViewOne];
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
@@ -97,6 +102,30 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+- (void)creatNavVCTwo {
+   UIWindow *window2 = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    static UIWindow *window;
+    window = window2;
+    // 1.客路的
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[TravelNavController new]];
+    nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"demo0" image:nil selectedImage:nil];
+    
+    UINavigationController *nav0 = [[UINavigationController alloc]initWithRootViewController:[TravelNav0Controller new]];
+    nav0.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"demo1" image:nil selectedImage:nil];
+    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:[TravelNav1Controller new]];
+    nav1.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"demo2" image:nil selectedImage:nil];
+    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:[BookNavController new]];
+    nav2.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"demo3" image:nil selectedImage:nil];
+    UITabBarController *tabVC = [[UITabBarController alloc]init];
+    tabVC.viewControllers = @[nav, nav0, nav1,nav2];
+    
+    window2.rootViewController = tabVC;
+    [window2 makeKeyAndVisible];
+    
+
     
 }
 
