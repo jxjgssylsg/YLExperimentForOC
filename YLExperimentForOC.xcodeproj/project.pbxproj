@@ -98,6 +98,10 @@
 		C3A212171D7D77730025B75F /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212161D7D77730025B75F /* CollectionViewDataSource.m */; };
 		C3A2121C1D7D777F0025B75F /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212191D7D777F0025B75F /* CircleLayout.m */; };
 		C3A2121D1D7D777F0025B75F /* MyCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2121B1D7D777F0025B75F /* MyCollectionReusableView.m */; };
+		C3A212271D7E6FF80025B75F /* NavRootViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212221D7E6FF80025B75F /* NavRootViewControllerOne.m */; };
+		C3A212281D7E6FF80025B75F /* NavRootViewControllerOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A212231D7E6FF80025B75F /* NavRootViewControllerOne.xib */; };
+		C3A212291D7E6FF80025B75F /* NavSecondViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212251D7E6FF80025B75F /* NavSecondViewControllerOne.m */; };
+		C3A2122A1D7E6FF80025B75F /* NavSecondViewControllerOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A212261D7E6FF80025B75F /* NavSecondViewControllerOne.xib */; };
 		C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */; };
 		C3A52ACF1D6D321800325182 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACE1D6D321800325182 /* TestCell.m */; };
 		C3A52AD21D6D339500325182 /* BasicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD11D6D339500325182 /* BasicController.m */; };
@@ -287,6 +291,12 @@
 		C3A212191D7D777F0025B75F /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
 		C3A2121A1D7D777F0025B75F /* MyCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionReusableView.h; sourceTree = "<group>"; };
 		C3A2121B1D7D777F0025B75F /* MyCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionReusableView.m; sourceTree = "<group>"; };
+		C3A212211D7E6FF80025B75F /* NavRootViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavRootViewControllerOne.h; sourceTree = "<group>"; };
+		C3A212221D7E6FF80025B75F /* NavRootViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavRootViewControllerOne.m; sourceTree = "<group>"; };
+		C3A212231D7E6FF80025B75F /* NavRootViewControllerOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavRootViewControllerOne.xib; sourceTree = "<group>"; };
+		C3A212241D7E6FF80025B75F /* NavSecondViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavSecondViewControllerOne.h; sourceTree = "<group>"; };
+		C3A212251D7E6FF80025B75F /* NavSecondViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavSecondViewControllerOne.m; sourceTree = "<group>"; };
+		C3A212261D7E6FF80025B75F /* NavSecondViewControllerOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavSecondViewControllerOne.xib; sourceTree = "<group>"; };
 		C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseController.h; sourceTree = "<group>"; };
 		C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseController.m; sourceTree = "<group>"; };
 		C3A52ACD1D6D321800325182 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
@@ -481,6 +491,7 @@
 				C35B1F861CCF6BAF00032582 /* QRCode 二维码 */,
 				C35B1F6A1CCF5A4800032582 /* Supporting Files */,
 				C35CC6D11CF42C1F008B9EC2 /* TimeZoneTableView */,
+				C3A212201D7E6E3A0025B75F /* New Group */,
 				C3DE87541D026AE20051E255 /* UITableView */,
 				C3664DDC1D30DB7200D29182 /* UIScrollView */,
 				C37813151D7AA0E200ABF5A0 /* UICollectionView */,
@@ -718,6 +729,19 @@
 			name = CollectionViewSampleFive;
 			sourceTree = "<group>";
 		};
+		C3A212201D7E6E3A0025B75F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C3A212211D7E6FF80025B75F /* NavRootViewControllerOne.h */,
+				C3A212221D7E6FF80025B75F /* NavRootViewControllerOne.m */,
+				C3A212231D7E6FF80025B75F /* NavRootViewControllerOne.xib */,
+				C3A212241D7E6FF80025B75F /* NavSecondViewControllerOne.h */,
+				C3A212251D7E6FF80025B75F /* NavSecondViewControllerOne.m */,
+				C3A212261D7E6FF80025B75F /* NavSecondViewControllerOne.xib */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		C3A52AC91D6C015400325182 /* Masonry Samples Two */ = {
 			isa = PBXGroup;
 			children = (
@@ -894,6 +918,7 @@
 				C34FEB551D115FE1006E6A51 /* 7.png in Resources */,
 				C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */,
 				C3A212051D7D5A070025B75F /* Header.xib in Resources */,
+				C3A212281D7E6FF80025B75F /* NavRootViewControllerOne.xib in Resources */,
 				C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */,
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
 				C3A212101D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard in Resources */,
@@ -905,6 +930,7 @@
 				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
 				C3A212031D7D5A070025B75F /* Footer.xib in Resources */,
 				C34FEB511D115FE1006E6A51 /* 3.png in Resources */,
+				C3A2122A1D7E6FF80025B75F /* NavSecondViewControllerOne.xib in Resources */,
 				C3A211EE1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard in Resources */,
 				C34FEB561D115FE1006E6A51 /* 8.png in Resources */,
 				C301DF631D4F273A00408501 /* bgEarn@2x.png in Resources */,
@@ -1033,6 +1059,7 @@
 				C3A2120D1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m in Sources */,
 				C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
+				C3A212271D7E6FF80025B75F /* NavRootViewControllerOne.m in Sources */,
 				C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */,
 				C3A211DB1D7BB4E00025B75F /* CalendarDataSource.m in Sources */,
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
@@ -1091,6 +1118,7 @@
 				C3664DDF1D30DC0200D29182 /* ScrollViewControllerOne.m in Sources */,
 				C316FE091D6840E100EB3560 /* MasonryFiveViewController.m in Sources */,
 				C3A2121D1D7D777F0025B75F /* MyCollectionReusableView.m in Sources */,
+				C3A212291D7E6FF80025B75F /* NavSecondViewControllerOne.m in Sources */,
 				C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */,
 				C301DF2B1D49EFAC00408501 /* BFEForeignAnswerViewController.m in Sources */,
 				C3A52AF01D6D339500325182 /* HeaderFooterViewController.m in Sources */,

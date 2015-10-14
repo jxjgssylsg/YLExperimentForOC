@@ -64,10 +64,13 @@
     UIBarButtonItem *four = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:nil action:nil];
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
+    // 注意这里是 self !!
     [self setToolbarItems:[NSArray arrayWithObjects:flexItem, one, flexItem, two, flexItem, three, flexItem, four, flexItem, nil]];
-
-    // 显示出 toolbar
+    
+    // 当 pushViewController:navVCOne animated:YES, animation 为 YES 时,界面没出之前 nav 都为 nil
+    // 显示出 toolbar, 但是无效! 因为 viewDid 加载完之前 self.navigationController 都等于 nil !! 注意.对比点击 segementControl
     [self.navigationController setToolbarHidden:NO animated:NO];
+
 
 }
 
@@ -93,6 +96,9 @@
                                                   otherButtonTitles:nil, nil];
             
             [alert show];
+          
+            // 当 pushViewController:navVCOne animated:YES, animation 为 YES 时, 这里 self.navigationController 可以使用了,对比 viewDidLoad
+             [self.navigationController setToolbarHidden:NO animated:NO];
         }
             break;
 

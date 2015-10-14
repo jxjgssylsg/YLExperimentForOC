@@ -39,6 +39,7 @@
 #import "MyCollectionViewControllerThree.h"
 #import "AnotherCollectionViewControllerFour.h"
 #import "CollectionViewControllerFive.h"
+#import "NavRootViewControllerOne.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -66,6 +67,7 @@
     // [self testNSDateComponents];
     // [self creatTimeZoneTableView];
     // [self testNSCalendar];
+    [self creatNavVCOne];
     // [self creatUITableViewOne];
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
@@ -86,7 +88,7 @@
     // [self creatUICollectionViewTwo];
     // [self creatUICollectionViewThree];
     // [self creatUICollectionViewFour];
-     [self creatUICollectionViewFive];
+    // [self creatUICollectionViewFive];
 
 // ------------------------------ FCOM ------------------------------- //
     
@@ -96,6 +98,19 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     
+}
+
+- (void)creatNavVCOne {
+    NavRootViewControllerOne *navVCOne = [[NavRootViewControllerOne alloc] init];
+    
+    // 神奇的世界, 当 animated:YES 时, 下面两个 NSLog 输出都是空!!!! 谨慎猜测可能是动画效果要在界面出来之后才 push 的, 写篇文章说一下.
+    [self.navigationController pushViewController:navVCOne animated:NO];
+    NSLog(@"%@", navVCOne.navigationController); // 对比一下
+    
+    [navVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    NSLog(@"%@", navVCOne.navigationController); // 对比一下
+   
 }
 
 - (void)creatUICollectionViewFive {

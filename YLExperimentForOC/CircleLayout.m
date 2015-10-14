@@ -81,9 +81,9 @@
     
     attributes.size = CGSizeMake(260, 40);
     if([elementKind isEqual:@"FirstSupplementary"]) {
-        attributes.center = CGPointMake(cvSize.width/2, 40);
+        attributes.center = CGPointMake(cvSize.width / 2, 40);
     } else {
-        attributes.center = CGPointMake(cvSize.width/2, cvSize.height-40);
+        attributes.center = CGPointMake(cvSize.width / 2, cvSize.height - 100);
     }
     
     return attributes;
@@ -93,7 +93,7 @@
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:elementKind withIndexPath:indexPath];
     
     attributes.size = CGSizeMake(140, 40);
-    attributes.center = CGPointMake(cvSize.width/2, cvSize.height/2);
+    attributes.center = CGPointMake(cvSize.width / 2, cvSize.height / 2);
     
     return attributes;
 }

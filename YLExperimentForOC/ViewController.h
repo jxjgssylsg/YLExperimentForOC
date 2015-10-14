@@ -93,8 +93,8 @@
 // 自定义布局 CollectionView 不错!
 - (void)creatUICollectionViewFour;
 
-// 自定义布局 CollectionView CircleLayout, Decoration View
-- (void)creatUICollectionVieFive;
+// 自定义布局 CollectionView CircleLayout, Decoration View, supplementary View, 插入, 删除等
+- (void)creatUICollectionViewFive;
 
 
 // ------------------------------ FCOM ------------------------------- //

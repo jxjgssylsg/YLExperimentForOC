@@ -136,7 +136,7 @@
     
     NSMutableArray *letterArray = [self getLetterArray];
     if(tappedCellPath) {
-        //删除点击的cell
+        // 删除点击的cell
         [letterArray removeObjectAtIndex:tappedCellPath.item];
         [_collectionView deleteItemsAtIndexPaths:[NSArray arrayWithObject:tappedCellPath]];
     }
