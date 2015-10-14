@@ -30,6 +30,9 @@
 
 - (void)testNSCalendar;
 
+// 基本的 navigationController, toolbar 
+- (void)creatNavVCOne;
+
 // 最基本的 UITableView
 - (void)creatUITableViewOne;
 
