@@ -64,6 +64,9 @@
 		C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */; };
 		C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C37310841D5983EE00AF4C2C /* NSTimer+Blocks.m */; };
 		C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C37813131D7A540E00ABF5A0 /* TestKeyWindow.m */; };
+		C37813181D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C37813171D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m */; };
+		C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */; };
+		C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 		C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */; };
 		C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */; };
@@ -197,6 +200,11 @@
 		C37310841D5983EE00AF4C2C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
 		C37813121D7A540E00ABF5A0 /* TestKeyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKeyWindow.h; sourceTree = "<group>"; };
 		C37813131D7A540E00ABF5A0 /* TestKeyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKeyWindow.m; sourceTree = "<group>"; };
+		C37813161D7AA1EE00ABF5A0 /* CollectionViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewControllerOne.h; sourceTree = "<group>"; };
+		C37813171D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewControllerOne.m; sourceTree = "<group>"; };
+		C37813191D7AA25700ABF5A0 /* CollectionViewCellOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellOne.h; sourceTree = "<group>"; };
+		C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellOne.m; sourceTree = "<group>"; };
+		C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCellOne.xib; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		C39ED14A1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerOneFCOM.h; sourceTree = "<group>"; };
@@ -408,6 +416,7 @@
 				C35CC6D11CF42C1F008B9EC2 /* TimeZoneTableView */,
 				C3DE87541D026AE20051E255 /* UITableView */,
 				C3664DDC1D30DB7200D29182 /* UIScrollView */,
+				C37813151D7AA0E200ABF5A0 /* UICollectionView */,
 				C34FEB431D115FE1006E6A51 /* Images ( 尽量复用 ) */,
 				C39ED14D1D66E87100C57AA4 /* Masonry */,
 				C3A52AF41D6D87B800325182 /* MMPlaceHolder */,
@@ -523,6 +532,18 @@
 				C37813131D7A540E00ABF5A0 /* TestKeyWindow.m */,
 			);
 			name = UIWindow;
+			sourceTree = "<group>";
+		};
+		C37813151D7AA0E200ABF5A0 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C37813161D7AA1EE00ABF5A0 /* CollectionViewControllerOne.h */,
+				C37813171D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m */,
+				C37813191D7AA25700ABF5A0 /* CollectionViewCellOne.h */,
+				C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */,
+				C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */,
+			);
+			name = UICollectionView;
 			sourceTree = "<group>";
 		};
 		C38E3AED1CD9860B00A70DD3 /* 算法类 */ = {
@@ -729,6 +750,7 @@
 				C34FEB531D115FE1006E6A51 /* 5.png in Resources */,
 				C34FEB551D115FE1006E6A51 /* 7.png in Resources */,
 				C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */,
+				C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */,
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
 				C34FEB571D115FE1006E6A51 /* 9.png in Resources */,
 				C3664DE71D33965B00D29182 /* imageInfo.plist in Resources */,
@@ -891,6 +913,7 @@
 				C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */,
 				C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
+				C37813181D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m in Sources */,
 				C34FEB1E1D10EF63006E6A51 /* TableViewControllerFive.m in Sources */,
 				C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */,
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
@@ -898,6 +921,7 @@
 				C3A52AEA1D6D339500325182 /* ScrollViewComplexController.m in Sources */,
 				C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
+				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
 				C301DF2E1D49F05400408501 /* AnswerVCCell.m in Sources */,

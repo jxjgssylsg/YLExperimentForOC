@@ -81,6 +81,11 @@
 // MasonrySix  ❤️ ❤️ ❤️ ❤️, 各种类型例子
 - (void)testMasonrySix;
 
+// 基本的 CollectionView
+- (void)creatUICollectionViewOne;
+
+
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;
