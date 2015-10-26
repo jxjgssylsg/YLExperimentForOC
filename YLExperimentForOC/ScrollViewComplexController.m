@@ -7,6 +7,7 @@
 //
 
 #import "ScrollViewComplexController.h"
+#import "MMPlaceHolder.h"
 
 @interface ScrollViewComplexController ()
 
@@ -29,6 +30,7 @@
     UILabel *lastLabel = nil;
     for (NSUInteger i = 0; i < 10; ++i) {
         UILabel *label = [[UILabel alloc] init];
+        [label showPlaceHolderWithLineColor:[UIColor redColor]];
         label.numberOfLines = 0;
         label.layer.borderColor = [UIColor greenColor].CGColor;
         label.layer.borderWidth = 2.0;
