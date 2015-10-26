@@ -19,12 +19,9 @@
 @implementation MMPlaceHolderConfig
 
 
-- (id)init
-{
+- (id)init {
     self = [super init];
-    
     if (self) {
-        
         self.lineColor = [UIColor whiteColor];
         self.backColor = [UIColor clearColor];
         self.arrowSize = 3;
@@ -53,24 +50,17 @@
 }
 
 
-- (void)setVisible:(BOOL)visible
-{
+- (void)setVisible:(BOOL)visible {
     _visible = visible;
-    
     UIResponder<UIApplicationDelegate> *delegate = [UIApplication sharedApplication].delegate;
-    
-    if ( !visible )
-    {
+    if ( !visible ) {
         [delegate.window hidePlaceHolderWithAllSubviews];
-    }
-    else
-    {
+    } else {
         [delegate.window showPlaceHolderWithAllSubviews];
     }
 }
 
-+ (MMPlaceHolderConfig *)defaultConfig
-{
++ (MMPlaceHolderConfig *)defaultConfig {
     static dispatch_once_t  onceQueue;
     static MMPlaceHolderConfig *appInstance;
     
@@ -84,17 +74,14 @@
 
 @interface MMPlaceHolder()
 
-
 @end
 
 @implementation MMPlaceHolder
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.backgroundColor = [UIColor clearColor];
         self.contentMode = UIViewContentModeRedraw;
@@ -113,31 +100,27 @@
     return self;
 }
 
-- (void)setFrameColor:(UIColor *)frameColor
-{
+- (void)setFrameColor:(UIColor *)frameColor {
     _frameColor = frameColor;
     self.layer.borderColor = frameColor.CGColor;
 }
 
-- (void)setFrameWidth:(CGFloat)frameWidth
-{
+- (void)setFrameWidth:(CGFloat)frameWidth {
     _frameWidth = frameWidth;
     self.layer.borderWidth = frameWidth;
 }
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 // 用自动布局的同时,也是会走这个方法的,所以在这里可以捕获 view 的最终位置和宽高
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect {
     // Drawing code
-    
     CGFloat width = rect.size.width;
     CGFloat height = rect.size.height;
     
     CGFloat fontSize = 4 + (MIN(width,height))/10;
     CGFloat arrowSize = self.arrowSize;
     CGFloat lineWidth = self.lineWidth;
-    
     UIFont *font = [UIFont systemFontOfSize:fontSize];
     
     //fill the back
@@ -145,8 +128,7 @@
     CGContextSetFillColorWithColor(ctx, self.backColor.CGColor);
     CGContextFillRect(ctx, rect);
     
-    if ( self.showArrow )
-    {
+    if (self.showArrow) {
         //strike lines & arrows
         CGContextSetLineWidth(ctx, lineWidth);
         CGContextSetStrokeColorWithColor(ctx, self.lineColor.CGColor);
@@ -176,28 +158,28 @@
         CGContextStrokePath(ctx);
     }
     
-    if ( self.showText )
-    {
-        //calculate the text area
-        NSString *strLabel = [NSString stringWithFormat:@"%.0f X %.0f",width, height];
- // 取消 deprecated 的警告 ⚠️
- #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-        const CGSize labelSize = [strLabel sizeWithFont:font forWidth:CGFLOAT_MAX lineBreakMode:NSLineBreakByClipping];
+    if (self.showText) {
+        NSString *strLabel = [NSString stringWithFormat:@"%.0f X %.0f",width, height];  // calculate the text area
         
+        // 取消 deprecated 的警告 ⚠️
+        #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+        
+        const CGSize labelSize = [strLabel sizeWithFont:font forWidth:CGFLOAT_MAX lineBreakMode:NSLineBreakByClipping];
         CGFloat rectWidth = roundf(labelSize.width)+4;
         CGFloat rectHeight = roundf(labelSize.height)+4;
         
-        //clear the area behind the textz
+        // clear the area behind the textz
         CGRect strRect = CGRectMake(width/2-rectWidth/2, height/2-rectHeight/2, rectWidth, rectHeight);
         CGContextClearRect(ctx, strRect);
         CGContextSetFillColorWithColor(ctx, self.backColor.CGColor);
         CGContextFillRect(ctx, strRect);
         
-        //draw text
+        // draw text
         CGContextSetFillColorWithColor(ctx, self.lineColor.CGColor);
         [strLabel drawInRect:CGRectInset(strRect, 0, 2) withFont:font lineBreakMode:NSLineBreakByTruncatingMiddle alignment:NSTextAlignmentCenter];
- // 开启 deprecated 的警告 ⚠️        
-#pragma GCC diagnostic warning "-Wdeprecated-declarations"
+        
+        // 开启 deprecated 的警告 ⚠️
+        #pragma GCC diagnostic warning "-Wdeprecated-declarations"
     }
 }
 
@@ -208,26 +190,21 @@
 @implementation UIView(MMPlaceHolder)
 
 + (void)mm_swizzleSelector:(SEL)originalSelector withSelector:(SEL)swizzledSelector {
-    
     Class class = [self class];
-    
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-    
-    
     
     BOOL didAddMethodInit=class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
     
     if (didAddMethodInit) {
         class_addMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-    }else{
+    } else {
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
 }
 
 
-+(void)load{
-    
++(void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
@@ -242,73 +219,56 @@
     });
 }
 
-- (id)init_mm{
-    
+- (id)init_mm {
     self = [self init_mm];
 //    [self checkAutoDisplay];
     return self;
 }
 
-- (void)awakeFromNib_mm{
+- (void)awakeFromNib_mm {
 //    [self checkAutoDisplay];
 }
 
-- (id)initWithFrame_mm:(CGRect)frame{
+- (id)initWithFrame_mm:(CGRect)frame {
     self = [self initWithFrame_mm:frame];
 //    [self checkAutoDisplay];
     return self;
 }
 
-- (void)didMoveToSuperview
-{
+- (void)didMoveToSuperview {
     [self checkAutoDisplay];
 }
 
-- (void)checkAutoDisplay
-{
-    if ( self.class != [MMPlaceHolder class] )
-    {
-        if ( [MMPlaceHolderConfig defaultConfig].autoDisplay )
-        {
-            //means self is a system bundle view
-            if ( [NSBundle bundleForClass:[UIView class]] == [NSBundle bundleForClass:[self class]] )
-            {
-                if ( ![MMPlaceHolderConfig defaultConfig].autoDisplaySystemView ) {
-                    
-                    //skip if self is not in the white list
-                    if ( ![[MMPlaceHolderConfig defaultConfig].defaultMemberOfClasses containsObject:self.class] )
-                    {
+- (void)checkAutoDisplay {
+    if (self.class != [MMPlaceHolder class]) {
+        if ([MMPlaceHolderConfig defaultConfig].autoDisplay) {
+            // means self is a system bundle view
+            if ([NSBundle bundleForClass:[UIView class]] == [NSBundle bundleForClass:[self class]]) {
+                if (![MMPlaceHolderConfig defaultConfig].autoDisplaySystemView) {
+                    // skip if self is not in the white list
+                    if (![[MMPlaceHolderConfig defaultConfig].defaultMemberOfClasses containsObject:self.class]) {
                         return;
                     }
                 }
             }
             
-            if ([MMPlaceHolderConfig defaultConfig].visibleMemberOfClasses.count>0)
-            {
-                for ( Class cls in [MMPlaceHolderConfig defaultConfig].visibleMemberOfClasses )
-                {
-                    if ( [self isMemberOfClass:cls] )
-                    {
+            if ([MMPlaceHolderConfig defaultConfig].visibleMemberOfClasses.count>0) {
+                for ( Class cls in [MMPlaceHolderConfig defaultConfig].visibleMemberOfClasses ) {
+                    if ( [self isMemberOfClass:cls] ) {
                         [self showPlaceHolder];
                         
                         return;
                     }
                 }
-            }
-            else if ([MMPlaceHolderConfig defaultConfig].visibleKindOfClasses.count>0)
-            {
-                for ( Class cls in [MMPlaceHolderConfig defaultConfig].visibleKindOfClasses )
-                {
-                    if ( [self isKindOfClass:cls] )
-                    {
+            } else if ([MMPlaceHolderConfig defaultConfig].visibleKindOfClasses.count>0) {
+                for ( Class cls in [MMPlaceHolderConfig defaultConfig].visibleKindOfClasses ) {
+                    if ( [self isKindOfClass:cls] ) {
                         [self showPlaceHolder];
                         
                         return;
                     }
                 }
-            }
-            else
-            {
+            } else {
                 [self showPlaceHolder];
                 
             }
@@ -317,22 +277,17 @@
 }
 
 
-- (void)showPlaceHolder
-{
+- (void)showPlaceHolder {
     [self showPlaceHolderWithLineColor:[MMPlaceHolderConfig defaultConfig].lineColor];
 }
 
-- (void)showPlaceHolderWithAllSubviews
-{
+- (void)showPlaceHolderWithAllSubviews {
     [self showPlaceHolderWithAllSubviews:NSIntegerMax];
 }
 
-- (void)showPlaceHolderWithAllSubviews:(NSInteger)maxDepth
-{
-    if ( maxDepth > 0 )
-    {
-        for ( UIView *v in self.subviews )
-        {
+- (void)showPlaceHolderWithAllSubviews:(NSInteger)maxDepth {
+    if (maxDepth > 0) {
+        for ( UIView *v in self.subviews ) {
             [v showPlaceHolderWithAllSubviews:maxDepth-1];
         }
     }
@@ -340,40 +295,32 @@
     [self showPlaceHolder];
 }
 
-- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor
-{
+- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor {
     [self showPlaceHolderWithLineColor:lineColor backColor:[MMPlaceHolderConfig defaultConfig].backColor];
 }
 
-- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor
-{
+- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor {
     [self showPlaceHolderWithLineColor:lineColor backColor:backColor arrowSize:[MMPlaceHolderConfig defaultConfig].arrowSize];
 }
 
 
-- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor arrowSize:(CGFloat)arrowSize
-{
+- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor arrowSize:(CGFloat)arrowSize {
     [self showPlaceHolderWithLineColor:lineColor backColor:backColor arrowSize:arrowSize lineWidth:[MMPlaceHolderConfig defaultConfig].lineWidth];
 }
 
 
-- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor arrowSize:(CGFloat)arrowSize lineWidth:(CGFloat)lineWidth
-{
-    
+- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor arrowSize:(CGFloat)arrowSize lineWidth:(CGFloat)lineWidth {
     [self showPlaceHolderWithLineColor:lineColor backColor:backColor arrowSize:arrowSize lineWidth:[MMPlaceHolderConfig defaultConfig].lineWidth frameWidth:[MMPlaceHolderConfig defaultConfig].frameWidth frameColor:[MMPlaceHolderConfig defaultConfig].frameColor];
 }
 
-- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor arrowSize:(CGFloat)arrowSize lineWidth:(CGFloat)lineWidth frameWidth:(CGFloat)frameWidth frameColor:(UIColor *)frameColor
-{
+- (void)showPlaceHolderWithLineColor:(UIColor *)lineColor backColor:(UIColor *)backColor arrowSize:(CGFloat)arrowSize lineWidth:(CGFloat)lineWidth frameWidth:(CGFloat)frameWidth frameColor:(UIColor *)frameColor {
     NSLog(@"%@",NSStringFromClass(self.class));
 #if RELEASE
     
 #else
     
     MMPlaceHolder *placeHolder = [self getPlaceHolder];
-    
-    if ( !placeHolder )
-    {
+    if (!placeHolder) {
         placeHolder = [[MMPlaceHolder alloc] initWithFrame:self.bounds];
         placeHolder.lineColor  = lineColor;
         placeHolder.backColor  = backColor;
@@ -393,8 +340,7 @@
 #endif
 }
 
-- (void)hidePlaceHolder
-{
+- (void)hidePlaceHolder {
     MMPlaceHolder *placeHolder = [self getPlaceHolder];
     
     if ( placeHolder )
@@ -403,30 +349,24 @@
     }
 }
 
-- (void)hidePlaceHolderWithAllSubviews
-{
-    for ( UIView *v in self.subviews )
-    {
+- (void)hidePlaceHolderWithAllSubviews {
+    for ( UIView *v in self.subviews ) {
         [v hidePlaceHolderWithAllSubviews];
     }
     
     [self hidePlaceHolder];
 }
 
-- (void)removePlaceHolder
-{
+- (void)removePlaceHolder {
     MMPlaceHolder *placeHolder = [self getPlaceHolder];
     
-    if ( placeHolder )
-    {
+    if (placeHolder) {
         [placeHolder removeFromSuperview];
     }
 }
 
-- (void)removePlaceHolderWithAllSubviews
-{
-    for ( UIView *v in self.subviews )
-    {
+- (void)removePlaceHolderWithAllSubviews {
+    for ( UIView *v in self.subviews ) {
         [v removePlaceHolderWithAllSubviews];
     }
     
@@ -434,8 +374,7 @@
 }
 
 
-- (MMPlaceHolder *)getPlaceHolder
-{
+- (MMPlaceHolder *)getPlaceHolder {
     return (MMPlaceHolder*)[self viewWithTag:[NSStringFromClass([MMPlaceHolder class]) hash]+(NSInteger)self];
 }
 

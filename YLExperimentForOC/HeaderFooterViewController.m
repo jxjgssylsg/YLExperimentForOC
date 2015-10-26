@@ -7,6 +7,7 @@
 //
 
 #import "HeaderFooterViewController.h"
+#import "MMPlaceHolder.h"
 
 @interface HeaderFooterViewController ()
 
@@ -107,6 +108,7 @@
     
     NSArray *array = [self headerViewWithHeight:self.view.frame.size.height addToView:self.view];
     UIView *headerView = [array firstObject];
+    [headerView showPlaceHolderWithLineColor:[UIColor blackColor]];
     self.tableView.tableHeaderView = headerView;
     
     /* it seems mean nothing syl
