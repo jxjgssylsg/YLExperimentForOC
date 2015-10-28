@@ -84,6 +84,7 @@
 		C3A52AED1D6D339500325182 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AEC1D6D339500325182 /* TableViewController.m */; };
 		C3A52AF01D6D339500325182 /* HeaderFooterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AEF1D6D339500325182 /* HeaderFooterViewController.m */; };
 		C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AF21D6D3CFF00325182 /* HYMasonryViewController.m */; };
+		C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AF61D6D884200325182 /* MMPlaceHolder.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
@@ -236,6 +237,8 @@
 		C3A52AEF1D6D339500325182 /* HeaderFooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderFooterViewController.m; sourceTree = "<group>"; };
 		C3A52AF11D6D3CFF00325182 /* HYMasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMasonryViewController.h; sourceTree = "<group>"; };
 		C3A52AF21D6D3CFF00325182 /* HYMasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYMasonryViewController.m; sourceTree = "<group>"; };
+		C3A52AF51D6D884200325182 /* MMPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPlaceHolder.h; sourceTree = "<group>"; };
+		C3A52AF61D6D884200325182 /* MMPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPlaceHolder.m; sourceTree = "<group>"; };
 		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
@@ -404,6 +407,7 @@
 				C3664DDC1D30DB7200D29182 /* UIScrollView */,
 				C34FEB431D115FE1006E6A51 /* Images ( 尽量复用 ) */,
 				C39ED14D1D66E87100C57AA4 /* Masonry */,
+				C3A52AF41D6D87B800325182 /* MMPlaceHolder */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -571,6 +575,15 @@
 				C3A52ACE1D6D321800325182 /* TestCell.m */,
 			);
 			name = "Masonry Samples Two";
+			sourceTree = "<group>";
+		};
+		C3A52AF41D6D87B800325182 /* MMPlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				C3A52AF51D6D884200325182 /* MMPlaceHolder.h */,
+				C3A52AF61D6D884200325182 /* MMPlaceHolder.m */,
+			);
+			name = MMPlaceHolder;
 			sourceTree = "<group>";
 		};
 		C3A80C7F1CFED7D10031EA89 /* LocationTool */ = {
@@ -833,6 +846,7 @@
 				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
 				C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */,
 				C3664DE51D33959A00D29182 /* ScrollViewControllerThree.m in Sources */,
+				C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
 				C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */,
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,

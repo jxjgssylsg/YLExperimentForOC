@@ -126,6 +126,7 @@
 }
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
+// 用自动布局的同时,也是会走这个方法的,所以在这里可以捕获 view 的最终位置和宽高
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
