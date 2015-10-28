@@ -180,7 +180,7 @@
     {
         //calculate the text area
         NSString *strLabel = [NSString stringWithFormat:@"%.0f X %.0f",width, height];
- // 去掉 deprecated 的警告 ⚠️
+ // 取消 deprecated 的警告 ⚠️
  #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
         const CGSize labelSize = [strLabel sizeWithFont:font forWidth:CGFLOAT_MAX lineBreakMode:NSLineBreakByClipping];
         
@@ -196,6 +196,7 @@
         //draw text
         CGContextSetFillColorWithColor(ctx, self.lineColor.CGColor);
         [strLabel drawInRect:CGRectInset(strRect, 0, 2) withFont:font lineBreakMode:NSLineBreakByTruncatingMiddle alignment:NSTextAlignmentCenter];
+ // 开启 deprecated 的警告 ⚠️        
 #pragma GCC diagnostic warning "-Wdeprecated-declarations"
     }
 }
