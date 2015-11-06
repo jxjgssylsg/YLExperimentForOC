@@ -31,11 +31,11 @@
     popRecognizer.maximumNumberOfTouches = 1;
     [gestureView addGestureRecognizer:popRecognizer];
     
-#if USE_方案一
+#if false
     _navT = [[NavigationInteractiveTransition alloc] initWithViewController:self];
     [popRecognizer addTarget:_navT action:@selector(handleControllerPop:)];
     
-#elif USE_方案二
+#else 
     /**
      *  获取系统手势的target数组
      */

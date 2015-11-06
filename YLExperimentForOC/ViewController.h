@@ -36,6 +36,13 @@
 // navigationController 各种例子; 透明,下拉放大
 - (void)creatNavVCTwo;
 
+// navigationController 手势滑动, 系统方法或 runtime 机制 KVC
+
+- (void)creatNavVCThree;
+
+// TabBarController NavigationController 混合使用
+- (void)creatTabbarVCOne;
+
 // 最基本的 UITableView
 - (void)creatUITableViewOne;
 

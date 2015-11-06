@@ -79,7 +79,7 @@ typedef NS_ENUM(NSInteger, Test) {
     self.navigationItem.title = @"syl 1"; //
     self.title = @"syl"; // 上两个都能设置, 可以换位置试试
     
-    UIButton *testView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 60)];
+    UIButton *testView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     testView.backgroundColor = [UIColor darkGrayColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:testView];
     [testView addTarget:self action:@selector(clickSure:) forControlEvents:UIControlEventTouchUpInside];

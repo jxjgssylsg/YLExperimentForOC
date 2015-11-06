@@ -25,6 +25,27 @@
 		C3241F671D20C3840015C9FD /* CellSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F661D20C3840015C9FD /* CellSeven.m */; };
 		C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F691D20CD060015C9FD /* ScrollViewSeven.m */; };
 		C335DEAC1D58D55D00CC7A26 /* TimerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C335DEAB1D58D55D00CC7A26 /* TimerTestViewController.m */; };
+		C34C89181D82E3EA008ABA4E /* NavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C89171D82E3EA008ABA4E /* NavigationInteractiveTransition.m */; };
+		C34C891B1D82E3F8008ABA4E /* PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C891A1D82E3F8008ABA4E /* PopAnimation.m */; };
+		C34C891E1D82E403008ABA4E /* NavViewControllerForThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C891D1D82E403008ABA4E /* NavViewControllerForThree.m */; };
+		C34C89211D82E413008ABA4E /* Nav.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C89201D82E413008ABA4E /* Nav.m */; };
+		C34C89231D82E44D008ABA4E /* NavSampleThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34C89221D82E44D008ABA4E /* NavSampleThree.storyboard */; };
+		C34C89271D88031F008ABA4E /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C89261D88031F008ABA4E /* UITabBar+badge.m */; };
+		C34C89321D88036F008ABA4E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C89291D88036F008ABA4E /* AboutViewController.m */; };
+		C34C89331D88036F008ABA4E /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C892B1D88036F008ABA4E /* FavoriteViewController.m */; };
+		C34C89341D88036F008ABA4E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C892D1D88036F008ABA4E /* HomeViewController.m */; };
+		C34C89351D88036F008ABA4E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C892F1D88036F008ABA4E /* SearchViewController.m */; };
+		C34C89361D88036F008ABA4E /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34C89311D88036F008ABA4E /* SettingViewController.m */; };
+		C34C89411D881E10008ABA4E /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C89371D881E10008ABA4E /* about.png */; };
+		C34C89421D881E10008ABA4E /* about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C89381D881E10008ABA4E /* about@2x.png */; };
+		C34C89431D881E10008ABA4E /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C89391D881E10008ABA4E /* fav.png */; };
+		C34C89441D881E10008ABA4E /* fav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C893A1D881E10008ABA4E /* fav@2x.png */; };
+		C34C89451D881E10008ABA4E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C893B1D881E10008ABA4E /* home.png */; };
+		C34C89461D881E10008ABA4E /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C893C1D881E10008ABA4E /* home@2x.png */; };
+		C34C89471D881E10008ABA4E /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C893D1D881E10008ABA4E /* search.png */; };
+		C34C89481D881E10008ABA4E /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C893E1D881E10008ABA4E /* search@2x.png */; };
+		C34C89491D881E10008ABA4E /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C893F1D881E10008ABA4E /* setting.png */; };
+		C34C894A1D881E10008ABA4E /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34C89401D881E10008ABA4E /* setting@2x.png */; };
 		C34FEB1E1D10EF63006E6A51 /* TableViewControllerFive.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB1D1D10EF63006E6A51 /* TableViewControllerFive.m */; };
 		C34FEB221D10FDFE006E6A51 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB201D10FDFE006E6A51 /* CustomCell.m */; };
 		C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB211D10FDFE006E6A51 /* CustomCell.xib */; };
@@ -176,6 +197,37 @@
 		C3241F691D20CD060015C9FD /* ScrollViewSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewSeven.m; sourceTree = "<group>"; };
 		C335DEAA1D58D55D00CC7A26 /* TimerTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerTestViewController.h; sourceTree = "<group>"; };
 		C335DEAB1D58D55D00CC7A26 /* TimerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerTestViewController.m; sourceTree = "<group>"; };
+		C34C89161D82E3E9008ABA4E /* NavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationInteractiveTransition.h; sourceTree = "<group>"; };
+		C34C89171D82E3EA008ABA4E /* NavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationInteractiveTransition.m; sourceTree = "<group>"; };
+		C34C89191D82E3F8008ABA4E /* PopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimation.h; sourceTree = "<group>"; };
+		C34C891A1D82E3F8008ABA4E /* PopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimation.m; sourceTree = "<group>"; };
+		C34C891C1D82E403008ABA4E /* NavViewControllerForThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewControllerForThree.h; sourceTree = "<group>"; };
+		C34C891D1D82E403008ABA4E /* NavViewControllerForThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewControllerForThree.m; sourceTree = "<group>"; };
+		C34C891F1D82E413008ABA4E /* Nav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nav.h; sourceTree = "<group>"; };
+		C34C89201D82E413008ABA4E /* Nav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nav.m; sourceTree = "<group>"; };
+		C34C89221D82E44D008ABA4E /* NavSampleThree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavSampleThree.storyboard; sourceTree = "<group>"; };
+		C34C89251D88031F008ABA4E /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
+		C34C89261D88031F008ABA4E /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
+		C34C89281D88036F008ABA4E /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		C34C89291D88036F008ABA4E /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		C34C892A1D88036F008ABA4E /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		C34C892B1D88036F008ABA4E /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		C34C892C1D88036F008ABA4E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C34C892D1D88036F008ABA4E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C34C892E1D88036F008ABA4E /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		C34C892F1D88036F008ABA4E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		C34C89301D88036F008ABA4E /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		C34C89311D88036F008ABA4E /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		C34C89371D881E10008ABA4E /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		C34C89381D881E10008ABA4E /* about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about@2x.png"; sourceTree = "<group>"; };
+		C34C89391D881E10008ABA4E /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
+		C34C893A1D881E10008ABA4E /* fav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav@2x.png"; sourceTree = "<group>"; };
+		C34C893B1D881E10008ABA4E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		C34C893C1D881E10008ABA4E /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		C34C893D1D881E10008ABA4E /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		C34C893E1D881E10008ABA4E /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		C34C893F1D881E10008ABA4E /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		C34C89401D881E10008ABA4E /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
 		C34FEB1C1D10EF63006E6A51 /* TableViewControllerFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerFive.h; sourceTree = "<group>"; };
 		C34FEB1D1D10EF63006E6A51 /* TableViewControllerFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerFive.m; sourceTree = "<group>"; };
 		C34FEB1F1D10FDFE006E6A51 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
@@ -461,6 +513,25 @@
 			name = "MessagePage - FCOM ";
 			sourceTree = "<group>";
 		};
+		C34C89241D88020D008ABA4E /* UITabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				C34C89281D88036F008ABA4E /* AboutViewController.h */,
+				C34C89291D88036F008ABA4E /* AboutViewController.m */,
+				C34C892A1D88036F008ABA4E /* FavoriteViewController.h */,
+				C34C892B1D88036F008ABA4E /* FavoriteViewController.m */,
+				C34C892C1D88036F008ABA4E /* HomeViewController.h */,
+				C34C892D1D88036F008ABA4E /* HomeViewController.m */,
+				C34C892E1D88036F008ABA4E /* SearchViewController.h */,
+				C34C892F1D88036F008ABA4E /* SearchViewController.m */,
+				C34C89301D88036F008ABA4E /* SettingViewController.h */,
+				C34C89311D88036F008ABA4E /* SettingViewController.m */,
+				C34C89251D88031F008ABA4E /* UITabBar+badge.h */,
+				C34C89261D88031F008ABA4E /* UITabBar+badge.m */,
+			);
+			name = UITabBarController;
+			sourceTree = "<group>";
+		};
 		C34FEB431D115FE1006E6A51 /* Images ( 尽量复用 ) */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +554,16 @@
 				C3A2125B1D80F0E40025B75F /* xianggang.jpg */,
 				C3A2125D1D80F0EF0025B75F /* Back_Arrow.png */,
 				C3A2125F1D80F6840025B75F /* icon.jpg */,
+				C34C89371D881E10008ABA4E /* about.png */,
+				C34C89381D881E10008ABA4E /* about@2x.png */,
+				C34C89391D881E10008ABA4E /* fav.png */,
+				C34C893A1D881E10008ABA4E /* fav@2x.png */,
+				C34C893B1D881E10008ABA4E /* home.png */,
+				C34C893C1D881E10008ABA4E /* home@2x.png */,
+				C34C893D1D881E10008ABA4E /* search.png */,
+				C34C893E1D881E10008ABA4E /* search@2x.png */,
+				C34C893F1D881E10008ABA4E /* setting.png */,
+				C34C89401D881E10008ABA4E /* setting@2x.png */,
 			);
 			name = "Images ( 尽量复用 )";
 			path = Images;
@@ -529,6 +610,7 @@
 				C35B1F6A1CCF5A4800032582 /* Supporting Files */,
 				C35CC6D11CF42C1F008B9EC2 /* TimeZoneTableView */,
 				C3A212201D7E6E3A0025B75F /* UINavigationController */,
+				C34C89241D88020D008ABA4E /* UITabBarController */,
 				C3DE87541D026AE20051E255 /* UITableView */,
 				C3664DDC1D30DB7200D29182 /* UIScrollView */,
 				C37813151D7AA0E200ABF5A0 /* UICollectionView */,
@@ -776,6 +858,7 @@
 				C3A212251D7E6FF80025B75F /* NavSecondViewControllerOne.m */,
 				C3A212261D7E6FF80025B75F /* NavSecondViewControllerOne.xib */,
 				C3A2122F1D80E4600025B75F /* NavSampleTwo */,
+				C3A212611D82AF830025B75F /* NavSampleThree */,
 			);
 			name = UINavigationController;
 			sourceTree = "<group>";
@@ -810,6 +893,22 @@
 				C3A212571D80E8D30025B75F /* UINavigationBar+ST.m */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		C3A212611D82AF830025B75F /* NavSampleThree */ = {
+			isa = PBXGroup;
+			children = (
+				C34C89161D82E3E9008ABA4E /* NavigationInteractiveTransition.h */,
+				C34C89171D82E3EA008ABA4E /* NavigationInteractiveTransition.m */,
+				C34C89191D82E3F8008ABA4E /* PopAnimation.h */,
+				C34C891A1D82E3F8008ABA4E /* PopAnimation.m */,
+				C34C891C1D82E403008ABA4E /* NavViewControllerForThree.h */,
+				C34C891D1D82E403008ABA4E /* NavViewControllerForThree.m */,
+				C34C891F1D82E413008ABA4E /* Nav.h */,
+				C34C89201D82E413008ABA4E /* Nav.m */,
+				C34C89221D82E44D008ABA4E /* NavSampleThree.storyboard */,
+			);
+			name = NavSampleThree;
 			sourceTree = "<group>";
 		};
 		C3A52AC91D6C015400325182 /* Masonry Samples Two */ = {
@@ -985,19 +1084,23 @@
 			files = (
 				C3A2125A1D80F0C60025B75F /* backArrow.png in Resources */,
 				C3A211E71D7BB4FF0025B75F /* HeaderViewTwo.xib in Resources */,
+				C34C89451D881E10008ABA4E /* home.png in Resources */,
 				C3A2125E1D80F0EF0025B75F /* Back_Arrow.png in Resources */,
 				C34FEB531D115FE1006E6A51 /* 5.png in Resources */,
 				C34FEB551D115FE1006E6A51 /* 7.png in Resources */,
 				C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */,
+				C34C89471D881E10008ABA4E /* search.png in Resources */,
 				C3A212051D7D5A070025B75F /* Header.xib in Resources */,
 				C3A212281D7E6FF80025B75F /* NavRootViewControllerOne.xib in Resources */,
 				C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */,
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
 				C3A212101D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard in Resources */,
+				C34C89231D82E44D008ABA4E /* NavSampleThree.storyboard in Resources */,
 				C34FEB571D115FE1006E6A51 /* 9.png in Resources */,
 				C3664DE71D33965B00D29182 /* imageInfo.plist in Resources */,
 				C34FEB871D13E087006E6A51 /* statuses.plist in Resources */,
 				C34FEB4F1D115FE1006E6A51 /* 10.png in Resources */,
+				C34C89481D881E10008ABA4E /* search@2x.png in Resources */,
 				C34FEB501D115FE1006E6A51 /* 2.png in Resources */,
 				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
 				C3A212031D7D5A070025B75F /* Footer.xib in Resources */,
@@ -1008,17 +1111,24 @@
 				C301DF631D4F273A00408501 /* bgEarn@2x.png in Resources */,
 				C35B1F751CCF5A4800032582 /* Main.storyboard in Resources */,
 				C34FEB541D115FE1006E6A51 /* 6.png in Resources */,
+				C34C89441D881E10008ABA4E /* fav@2x.png in Resources */,
 				C3A212601D80F6840025B75F /* icon.jpg in Resources */,
 				C3A2125C1D80F0E40025B75F /* xianggang.jpg in Resources */,
 				C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */,
 				C301DF621D4F273A00408501 /* bgEarn.png in Resources */,
+				C34C89461D881E10008ABA4E /* home@2x.png in Resources */,
 				C34FEB4E1D115FE1006E6A51 /* 1.png in Resources */,
+				C34C89431D881E10008ABA4E /* fav.png in Resources */,
 				C3A212071D7D5A3F0025B75F /* MyCollectionViewControllerThree.storyboard in Resources */,
+				C34C89491D881E10008ABA4E /* setting.png in Resources */,
 				C301DF681D4F27C600408501 /* zhifubao.png in Resources */,
+				C34C89421D881E10008ABA4E /* about@2x.png in Resources */,
+				C34C89411D881E10008ABA4E /* about.png in Resources */,
 				C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */,
 				C34FEB521D115FE1006E6A51 /* 4.png in Resources */,
 				C301DF641D4F273A00408501 /* bgEarn@3x.png in Resources */,
 				C301DF391D4B46DD00408501 /* AnswerMessages.plist in Resources */,
+				C34C894A1D881E10008ABA4E /* setting@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,17 +1232,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34C89211D82E413008ABA4E /* Nav.m in Sources */,
 				C34FEB851D13D1B0006E6A51 /* DataModelFrame.m in Sources */,
 				C3E27FE51D3874A9004C4D15 /* CollectionHeaderView.m in Sources */,
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
 				C3A211DA1D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m in Sources */,
 				C34FEB791D128207006E6A51 /* TableViewControllerSix.m in Sources */,
+				C34C891E1D82E403008ABA4E /* NavViewControllerForThree.m in Sources */,
 				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
 				C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */,
 				C3664DE51D33959A00D29182 /* ScrollViewControllerThree.m in Sources */,
 				C3A2120D1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m in Sources */,
+				C34C89271D88031F008ABA4E /* UITabBar+badge.m in Sources */,
 				C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
+				C34C89351D88036F008ABA4E /* SearchViewController.m in Sources */,
 				C3A212541D80E7600025B75F /* STUI.m in Sources */,
 				C3A212271D7E6FF80025B75F /* NavRootViewControllerOne.m in Sources */,
 				C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */,
@@ -1167,6 +1281,7 @@
 				C3A212481D80E7340025B75F /* TravelNavController.m in Sources */,
 				C3A52AD21D6D339500325182 /* BasicController.m in Sources */,
 				C34FEB7F1D1399B5006E6A51 /* DataModel.m in Sources */,
+				C34C89321D88036F008ABA4E /* AboutViewController.m in Sources */,
 				C34FEB7C1D128BB2006E6A51 /* CustomCellForCode.m in Sources */,
 				C3A211F81D7D59D70025B75F /* MyCollectionViewControllerThree.m in Sources */,
 				C3A52ACF1D6D321800325182 /* TestCell.m in Sources */,
@@ -1176,6 +1291,7 @@
 				C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */,
 				C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
+				C34C89361D88036F008ABA4E /* SettingViewController.m in Sources */,
 				C3A212581D80E8D30025B75F /* UINavigationBar+ST.m in Sources */,
 				C3A211F91D7D59D70025B75F /* MyCollectionViewCell.m in Sources */,
 				C37813181D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m in Sources */,
@@ -1185,10 +1301,12 @@
 				C39ED1531D66E96F00C57AA4 /* MasonryOneViewController.m in Sources */,
 				C3A52AEA1D6D339500325182 /* ScrollViewComplexController.m in Sources */,
 				C3A212171D7D77730025B75F /* CollectionViewDataSource.m in Sources */,
+				C34C89181D82E3EA008ABA4E /* NavigationInteractiveTransition.m in Sources */,
 				C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
+				C34C89331D88036F008ABA4E /* FavoriteViewController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
 				C3A212041D7D5A070025B75F /* Header.m in Sources */,
 				C301DF2E1D49F05400408501 /* AnswerVCCell.m in Sources */,
@@ -1198,6 +1316,7 @@
 				C3664DDF1D30DC0200D29182 /* ScrollViewControllerOne.m in Sources */,
 				C316FE091D6840E100EB3560 /* MasonryFiveViewController.m in Sources */,
 				C3A2121D1D7D777F0025B75F /* MyCollectionReusableView.m in Sources */,
+				C34C89341D88036F008ABA4E /* HomeViewController.m in Sources */,
 				C3A212291D7E6FF80025B75F /* NavSecondViewControllerOne.m in Sources */,
 				C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */,
 				C301DF2B1D49EFAC00408501 /* BFEForeignAnswerViewController.m in Sources */,
@@ -1214,6 +1333,7 @@
 				C3A212411D80E7200025B75F /* BookNavController.m in Sources */,
 				C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */,
 				C301DF5E1D4EEEDD00408501 /* BFEAnswerInfoInterface.m in Sources */,
+				C34C891B1D82E3F8008ABA4E /* PopAnimation.m in Sources */,
 				C3A52AE71D6D339500325182 /* ScrollViewController.m in Sources */,
 				C3664DEC1D34A06700D29182 /* AdjustClassNumController.m in Sources */,
 				C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */,

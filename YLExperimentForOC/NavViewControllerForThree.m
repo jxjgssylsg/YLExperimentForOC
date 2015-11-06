@@ -8,14 +8,21 @@
 
 #import "NavViewControllerForThree.h"
 
-@interface NavViewControllerForThree ()
+@interface NavViewControllerForThree () <UINavigationControllerDelegate>
 @end
 
 @implementation NavViewControllerForThree
 
 - (void)viewDidLoad {
-//    NSLog(@"view did load");
-//    [self.navigationController setNavigationBarHidden:YES animated:NO];
+     NSLog(@"view did load");
+   // [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.navigationController.delegate = self;
 }
 
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    NSLog(@"%s", __func__);
+}
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    NSLog(@"%s", __func__);
+}
 @end

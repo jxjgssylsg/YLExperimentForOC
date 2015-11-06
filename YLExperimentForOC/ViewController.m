@@ -44,7 +44,12 @@
 #import "TravelNav0Controller.h"
 #import "TravelNav1Controller.h"
 #import "BookNavController.h"
-
+#import "Nav.h"
+#import "HomeViewController.h"
+#import "SearchViewController.h"
+#import "AboutViewController.h"
+#import "SettingViewController.h"
+#import "FavoriteViewController.h"
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
 }
@@ -72,7 +77,9 @@
     // [self creatTimeZoneTableView];
     // [self testNSCalendar];
     // [self creatNavVCOne];
-    [self creatNavVCTwo];
+    // [self creatNavVCTwo];
+    // [self creatNavVCThree];
+    [self creatTabbarVCOne];
     // [self creatUITableViewOne];
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
@@ -104,6 +111,81 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+
+- (void)creatTabbarVCOne {
+    // 新建一个 window, TabBar, UITabBarController
+    UIWindow *windowTwo = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    static UIWindow *window;
+    window = windowTwo; // 没有这句就不显示噢
+    
+    
+    HomeViewController *homeView = [[HomeViewController alloc] init];
+    [homeView setTitle:@"HOME"];
+    
+    FavoriteViewController *favView = [[FavoriteViewController alloc] init];
+    [favView setTitle:@"FAVORITE"];
+    
+    SearchViewController *searchView = [[SearchViewController alloc] init];
+    [searchView setTitle:@"SEARCH"];
+    
+    SettingViewController *settingView = [[SettingViewController alloc] init];
+    [settingView setTitle:@"SETTING"];
+    
+    AboutViewController *aboutView = [[AboutViewController alloc] init];
+    [aboutView setTitle:@"ABOUT US"];
+    
+    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController: homeView];
+    UINavigationController *favNav = [[UINavigationController alloc] initWithRootViewController: favView];
+    UINavigationController *searchNav = [[UINavigationController alloc] initWithRootViewController: searchView];
+    UINavigationController *settingNav = [[UINavigationController alloc] initWithRootViewController: settingView];
+    UINavigationController *aboutNav = [[UINavigationController alloc] initWithRootViewController: aboutView];
+    
+    NSArray *menus = [NSArray arrayWithObjects:homeNav,favNav,searchNav,settingNav,aboutNav,nil];
+    
+    UITabBarController *mainTabBar = [[UITabBarController alloc] init];
+    [mainTabBar setViewControllers:menus];
+    
+    UITabBarItem *item0Home = [mainTabBar.tabBar.items objectAtIndex:0];
+    [item0Home setTitle:@"Home"];
+    [item0Home setImage:[UIImage imageNamed:@"home.png"]];
+    
+    UITabBarItem *item1Fav = [mainTabBar.tabBar.items objectAtIndex:1];
+    [item1Fav setTitle:@"Favorite"];
+    [item1Fav setImage:[UIImage imageNamed:@"fav.png"]];
+    
+    UITabBarItem *item2Search = [mainTabBar.tabBar.items objectAtIndex:2];
+    [item2Search setTitle:@"Search"];
+    [item2Search setImage:[UIImage imageNamed:@"search.png"]];
+    
+    UITabBarItem *item3setting = [mainTabBar.tabBar.items objectAtIndex:3];
+    [item3setting setTitle:@"Setting"];
+    [item3setting setImage:[UIImage imageNamed:@"setting.png"]];
+    
+    UITabBarItem *item4About = [mainTabBar.tabBar.items objectAtIndex:4];
+    [item4About setTitle:@"About Us"];
+    [item4About setImage:[UIImage imageNamed:@"about.png"]];
+    
+    window.rootViewController = mainTabBar; // TabBar 设成根控制器,可以承载 navigationController
+    [window makeKeyAndVisible];
+}
+
+- (void)creatNavVCThree {
+    // 新建一个 window, TabBar, UITabBarController
+    UIWindow *windowTwo = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    static UIWindow *window;
+    window = windowTwo; // 没有这句就不显示噢
+    
+    // 多个 Storyboard 跳转使用
+    UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"NavSampleThree" bundle:nil];
+    Nav *NavVCThree = [stroyboard instantiateInitialViewController];
+    
+    window.rootViewController = NavVCThree;
+    [windowTwo makeKeyAndVisible];
+
+}
+
 - (void)creatNavVCTwo {
     // 新建一个 window, TabBar, UITabBarController
    UIWindow *windowTwo = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
@@ -125,8 +207,6 @@
     
     windowTwo.rootViewController = tabVC;
     [windowTwo makeKeyAndVisible];
-    
-
     
 }
 
