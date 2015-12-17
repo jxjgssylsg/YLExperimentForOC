@@ -43,6 +43,9 @@
 // TabBarController NavigationController 混合使用
 - (void)creatTabbarVCOne;
 
+// 自定义 TabBar, 利用 KVC
+- (void)creatTabbarVCTwo;
+
 // 最基本的 UITableView
 - (void)creatUITableViewOne;
 

@@ -63,7 +63,7 @@
     
     DWPublishButton *button = [[DWPublishButton alloc]init];
     
-    [button setImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
     [button setTitle:@"发布" forState:UIControlStateNormal];
     
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];

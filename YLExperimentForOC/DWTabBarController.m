@@ -8,10 +8,10 @@
 
 #import "DWTabBarController.h"
 
-#import "DWHomeViewController.h"
-#import "DWMessageViewController.h"
-#import "DWMineViewController.h"
-#import "DWSameFityViewController.h"
+#import "HomeViewController.h"
+#import "SearchViewController.h"
+#import "AboutViewController.h"
+#import "FavoriteViewController.h"
 
 #import "DWTabBar.h"
 
@@ -80,27 +80,27 @@
  *  添加子控制器，我这里值添加了4个，没有占位自控制器
  */
 - (void)setUpChildViewController {
-    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[DWHomeViewController alloc]init]]
+    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[HomeViewController alloc]init]]
                           WithTitle:@"首页"
-                          imageName:@"home_normal"
-                  selectedImageName:@"home_highlight"];
+                          imageName:@"1"
+                  selectedImageName:@"1"];
     
-    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[DWSameFityViewController alloc] init]]
+    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[FavoriteViewController alloc] init]]
                           WithTitle:@"同城"
-                          imageName:@"mycity_normal"
-                  selectedImageName:@"mycity_highlight"];
+                          imageName:@"2"
+                  selectedImageName:@"2"];
     
     
-    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[DWMessageViewController alloc]init]]
+    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[SearchViewController alloc]init]]
                           WithTitle:@"消息"
-                          imageName:@"message_normal"
-                  selectedImageName:@"message_highlight"];
+                          imageName:@"3"
+                  selectedImageName:@"3"];
     
     
-    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[DWMineViewController alloc]init]]
+    [self addOneChildViewController:[[UINavigationController alloc]initWithRootViewController:[[AboutViewController alloc]init]]
                           WithTitle:@"我的"
-                          imageName:@"account_normal"
-                  selectedImageName:@"account_highlight"];
+                          imageName:@"4"
+                  selectedImageName:@"4"];
     
 }
 
@@ -116,9 +116,9 @@
 - (void)addOneChildViewController:(UIViewController *)viewController WithTitle:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
     viewController.view.backgroundColor     = DWRandomColor;
     viewController.tabBarItem.title         = title;
-    viewController.tabBarItem.image         = [UIImage imageNamed:imageName];
+    viewController.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; // 注意 Rendering Mode, 如果不设置图片可能不出来, 只显示背景色
     UIImage *image = [UIImage imageNamed:selectedImageName];
-    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; // 可换: UIImageRenderingModeAlwaysTemplate 看看效果, 忽略图片,根据背景绘制
     viewController.tabBarItem.selectedImage = image;
     [self addChildViewController:viewController];
     

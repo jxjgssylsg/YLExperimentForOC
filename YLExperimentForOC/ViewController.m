@@ -50,6 +50,8 @@
 #import "AboutViewController.h"
 #import "SettingViewController.h"
 #import "FavoriteViewController.h"
+#import "DWTabBarController.h"
+
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
 }
@@ -79,7 +81,8 @@
     // [self creatNavVCOne];
     // [self creatNavVCTwo];
     // [self creatNavVCThree];
-    [self creatTabbarVCOne];
+    // [self creatTabbarVCOne];
+       [self creatTabbarVCTwo];
     // [self creatUITableViewOne];
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
@@ -111,6 +114,16 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+- (void)creatTabbarVCTwo {
+    // 新建一个 window, TabBar, UITabBarController
+    UIWindow *windowTwo = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    static UIWindow *window;
+    window = windowTwo; // 没有这句就不显示噢
+    
+    window.rootViewController = [[DWTabBarController  alloc] init]; // TabBar 设成根控制器,可以承载 navigationController
+    [window makeKeyAndVisible];
+}
 
 - (void)creatTabbarVCOne {
     // 新建一个 window, TabBar, UITabBarController
@@ -118,7 +131,6 @@
     
     static UIWindow *window;
     window = windowTwo; // 没有这句就不显示噢
-    
     
     HomeViewController *homeView = [[HomeViewController alloc] init];
     [homeView setTitle:@"HOME"];
