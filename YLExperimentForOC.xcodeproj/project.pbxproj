@@ -80,6 +80,7 @@
 		C3A52AE11D6D339500325182 /* AspectFitController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AE01D6D339500325182 /* AspectFitController.m */; };
 		C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AE31D6D339500325182 /* BasicAnimatedController.m */; };
 		C3A52AE71D6D339500325182 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AE61D6D339500325182 /* ScrollViewController.m */; };
+		C3A52AEA1D6D339500325182 /* ScrollViewComplexController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AE91D6D339500325182 /* ScrollViewComplexController.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
@@ -224,6 +225,8 @@
 		C3A52AE31D6D339500325182 /* BasicAnimatedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimatedController.m; sourceTree = "<group>"; };
 		C3A52AE51D6D339500325182 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		C3A52AE61D6D339500325182 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		C3A52AE81D6D339500325182 /* ScrollViewComplexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewComplexController.h; sourceTree = "<group>"; };
+		C3A52AE91D6D339500325182 /* ScrollViewComplexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewComplexController.m; sourceTree = "<group>"; };
 		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
@@ -545,6 +548,8 @@
 				C3A52AE31D6D339500325182 /* BasicAnimatedController.m */,
 				C3A52AE51D6D339500325182 /* ScrollViewController.h */,
 				C3A52AE61D6D339500325182 /* ScrollViewController.m */,
+				C3A52AE81D6D339500325182 /* ScrollViewComplexController.h */,
+				C3A52AE91D6D339500325182 /* ScrollViewComplexController.m */,
 				C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */,
 				C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */,
 				C3A52ACD1D6D321800325182 /* TestCell.h */,
@@ -848,6 +853,7 @@
 				C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */,
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C39ED1531D66E96F00C57AA4 /* MasonryOneViewController.m in Sources */,
+				C3A52AEA1D6D339500325182 /* ScrollViewComplexController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
