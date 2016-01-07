@@ -76,6 +76,7 @@
 		C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD41D6D339500325182 /* UpdateConstraintsController.m */; };
 		C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD71D6D339500325182 /* RemakeContraintsController.m */; };
 		C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ADA1D6D339500325182 /* TotalUpdateController.m */; };
+		C3A52ADE1D6D339500325182 /* CompositeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ADD1D6D339500325182 /* CompositeController.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
@@ -212,6 +213,8 @@
 		C3A52AD71D6D339500325182 /* RemakeContraintsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemakeContraintsController.m; sourceTree = "<group>"; };
 		C3A52AD91D6D339500325182 /* TotalUpdateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalUpdateController.h; sourceTree = "<group>"; };
 		C3A52ADA1D6D339500325182 /* TotalUpdateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalUpdateController.m; sourceTree = "<group>"; };
+		C3A52ADC1D6D339500325182 /* CompositeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompositeController.h; sourceTree = "<group>"; };
+		C3A52ADD1D6D339500325182 /* CompositeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompositeController.m; sourceTree = "<group>"; };
 		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 				C3A52AD71D6D339500325182 /* RemakeContraintsController.m */,
 				C3A52AD91D6D339500325182 /* TotalUpdateController.h */,
 				C3A52ADA1D6D339500325182 /* TotalUpdateController.m */,
+				C3A52ADC1D6D339500325182 /* CompositeController.h */,
+				C3A52ADD1D6D339500325182 /* CompositeController.m */,
 				C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */,
 				C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */,
 				C3A52ACD1D6D321800325182 /* TestCell.h */,
@@ -801,6 +806,7 @@
 				C335DEAC1D58D55D00CC7A26 /* TimerTestViewController.m in Sources */,
 				C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */,
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
+				C3A52ADE1D6D339500325182 /* CompositeController.m in Sources */,
 				C39ED15D1D670D7F00C57AA4 /* MasonryTwoViewController.m in Sources */,
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
 				C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */,
