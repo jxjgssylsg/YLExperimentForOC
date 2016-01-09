@@ -78,6 +78,7 @@
 		C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ADA1D6D339500325182 /* TotalUpdateController.m */; };
 		C3A52ADE1D6D339500325182 /* CompositeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ADD1D6D339500325182 /* CompositeController.m */; };
 		C3A52AE11D6D339500325182 /* AspectFitController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AE01D6D339500325182 /* AspectFitController.m */; };
+		C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AE31D6D339500325182 /* BasicAnimatedController.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
@@ -218,6 +219,8 @@
 		C3A52ADD1D6D339500325182 /* CompositeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompositeController.m; sourceTree = "<group>"; };
 		C3A52ADF1D6D339500325182 /* AspectFitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AspectFitController.h; sourceTree = "<group>"; };
 		C3A52AE01D6D339500325182 /* AspectFitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AspectFitController.m; sourceTree = "<group>"; };
+		C3A52AE21D6D339500325182 /* BasicAnimatedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimatedController.h; sourceTree = "<group>"; };
+		C3A52AE31D6D339500325182 /* BasicAnimatedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimatedController.m; sourceTree = "<group>"; };
 		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
@@ -535,6 +538,8 @@
 				C3A52ADD1D6D339500325182 /* CompositeController.m */,
 				C3A52ADF1D6D339500325182 /* AspectFitController.h */,
 				C3A52AE01D6D339500325182 /* AspectFitController.m */,
+				C3A52AE21D6D339500325182 /* BasicAnimatedController.h */,
+				C3A52AE31D6D339500325182 /* BasicAnimatedController.m */,
 				C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */,
 				C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */,
 				C3A52ACD1D6D321800325182 /* TestCell.h */,
@@ -801,6 +806,7 @@
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
 				C34FEB791D128207006E6A51 /* TableViewControllerSix.m in Sources */,
 				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
+				C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */,
 				C3664DE51D33959A00D29182 /* ScrollViewControllerThree.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
 				C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */,
