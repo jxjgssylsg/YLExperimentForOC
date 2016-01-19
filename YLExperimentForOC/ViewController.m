@@ -71,7 +71,8 @@
     // [self testNSTimer];
     // [self testMasonryOne];
     // [self testMasonryTwo];
-       [self testMasonryThree];
+    // [self testMasonryThree];
+       [self testMasonryFour];
     
 // ------------------------------ FCOM ------------------------------- //
     
@@ -82,6 +83,20 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+
+- (void)testMasonryFour {
+    MasonryFourViewController *masonryViewFour = [[MasonryFourViewController alloc] init];
+    [masonryViewFour.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:masonryViewFour];
+    [self.view addSubview:masonryViewFour.view];
+   
+    // 测试
+    int a = 1;
+    YLNSAssert(a != 3, @"~~意林~~ Assert %@",@"~~意林~~");
+
+}
+
 - (void)testMasonryThree {
     MasonryThreeViewController *masonryViewThree = [[MasonryThreeViewController alloc] init];
     [masonryViewThree.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];

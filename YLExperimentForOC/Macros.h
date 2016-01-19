@@ -177,3 +177,21 @@ view.layer.borderWidth = width;\
 #define PasswordLengthLowerLimit 6
 #define PasswordLengthUpperLimit 32
 #define DefaultUITableCellHeight 44
+
+// ASSET 断言
+#if DEBUG   // debug
+#define YLNSAssert(condition, desc, ...)	\
+__PRAGMA_PUSH_NO_EXTRA_ARG_WARNINGS \
+if (condition && DEBUG) {		\
+NSString *__assert_file__ = [NSString stringWithUTF8String:__FILE__]; \
+__assert_file__ = __assert_file__ ? __assert_file__ : @"<Unknown File>"; \
+[[NSAssertionHandler currentHandler] handleFailureInMethod:_cmd \
+object:self file:__assert_file__ \
+lineNumber:__LINE__ description:(desc), ##__VA_ARGS__]; \
+}				\
+__PRAGMA_POP_NO_EXTRA_ARG_WARNINGS \
+
+#else      // not debug, 注, 因为上一行有 `\`,这里需要换行
+#define YLNSAssert(condition, desc, ...) {}
+#endif
+
