@@ -32,6 +32,7 @@
 #import "MasonryTwoViewController.h"
 #import "MasonryThreeViewController.h"
 #import "MasonryFourViewController.h"
+#import "MasonryFiveViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -72,7 +73,8 @@
     // [self testMasonryOne];
     // [self testMasonryTwo];
     // [self testMasonryThree];
-       [self testMasonryFour];
+    // [self testMasonryFour];
+       [self testMasonryFive];
     
 // ------------------------------ FCOM ------------------------------- //
     
@@ -82,6 +84,13 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     
+}
+- (void)testMasonryFive {
+    MasonryFiveViewController *masonryViewFive = [[MasonryFiveViewController alloc] init];
+    [masonryViewFive.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height - 70)];
+    
+    [self addChildViewController:masonryViewFive];
+    [self.view addSubview:masonryViewFive.view];
 }
 
 - (void)testMasonryFour {
@@ -94,7 +103,6 @@
     // 测试
     int a = 1;
     YLNSAssert(a != 3, @"~~意林~~ Assert %@",@"~~意林~~");
-
 }
 
 - (void)testMasonryThree {
