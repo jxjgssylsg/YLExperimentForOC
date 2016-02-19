@@ -29,6 +29,7 @@
 #import "TimerTestViewController.h"
 #import "ScrollViewControllerOneFCOM.h"
 #import "MasonryOneViewController.h"
+#import "MasonryTwoViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -66,7 +67,8 @@
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     // [self testNSTimer];
-        [self testMasonryOne];
+    // [self testMasonryOne];
+       [self testMasonryTwo];
     
     
     // --------------- FCOM ---------------- //
@@ -76,6 +78,14 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     
+}
+
+- (void)testMasonryTwo {
+    MasonryTwoViewController *masonryViewTwo = [[MasonryTwoViewController alloc] init];
+    [masonryViewTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:masonryViewTwo];
+    [self.view addSubview:masonryViewTwo.view];
 }
 
 - (void)testMasonryOne {

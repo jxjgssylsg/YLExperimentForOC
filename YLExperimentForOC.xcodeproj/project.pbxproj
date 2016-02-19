@@ -66,6 +66,7 @@
 		C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */; };
 		C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */; };
 		C39ED1531D66E96F00C57AA4 /* MasonryOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED1521D66E96F00C57AA4 /* MasonryOneViewController.m */; };
+		C39ED15D1D670D7F00C57AA4 /* MasonryTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED15C1D670D7F00C57AA4 /* MasonryTwoViewController.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
@@ -180,6 +181,8 @@
 		C39ED1511D66E96F00C57AA4 /* MasonryOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryOneViewController.h; sourceTree = "<group>"; };
 		C39ED1521D66E96F00C57AA4 /* MasonryOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryOneViewController.m; sourceTree = "<group>"; };
 		C39ED1541D66E9A700C57AA4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C39ED15B1D670D7F00C57AA4 /* MasonryTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryTwoViewController.h; sourceTree = "<group>"; };
+		C39ED15C1D670D7F00C57AA4 /* MasonryTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryTwoViewController.m; sourceTree = "<group>"; };
 		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
@@ -465,6 +468,8 @@
 				C39ED1521D66E96F00C57AA4 /* MasonryOneViewController.m */,
 				C39ED14E1D66E90200C57AA4 /* AYTableViewCell.h */,
 				C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */,
+				C39ED15B1D670D7F00C57AA4 /* MasonryTwoViewController.h */,
+				C39ED15C1D670D7F00C57AA4 /* MasonryTwoViewController.m */,
 			);
 			name = Masonry;
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 				C335DEAC1D58D55D00CC7A26 /* TimerTestViewController.m in Sources */,
 				C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */,
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
+				C39ED15D1D670D7F00C57AA4 /* MasonryTwoViewController.m in Sources */,
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
 				C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */,
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
