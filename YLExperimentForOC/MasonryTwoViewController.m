@@ -27,7 +27,7 @@
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         // 添加大小约束
         make.size.mas_equalTo(CGSizeMake(100, 100)); // size 优先级感觉很低
-        // 添加居中约束（居中方式与self相同）
+        // 添加居中约束（居中方式与 self 相同）
         make.center.equalTo(self.view);
     }];
  

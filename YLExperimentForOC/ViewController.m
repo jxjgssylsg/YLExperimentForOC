@@ -30,6 +30,8 @@
 #import "ScrollViewControllerOneFCOM.h"
 #import "MasonryOneViewController.h"
 #import "MasonryTwoViewController.h"
+#import "MasonryThreeViewController.h"
+#import "MasonryFourViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -68,16 +70,24 @@
     // [self creatUIScrollViewThree];
     // [self testNSTimer];
     // [self testMasonryOne];
-       [self testMasonryTwo];
+    // [self testMasonryTwo];
+       [self testMasonryThree];
     
+// ------------------------------ FCOM ------------------------------- //
     
-    // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     
+}
+- (void)testMasonryThree {
+    MasonryThreeViewController *masonryViewThree = [[MasonryThreeViewController alloc] init];
+    [masonryViewThree.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:masonryViewThree];
+    [self.view addSubview:masonryViewThree.view];
 }
 
 - (void)testMasonryTwo {
