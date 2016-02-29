@@ -22,9 +22,9 @@
 - (void)creatUITableViewOne;
 // 基本功能:增加,删除,排序,点击等
 - (void)creatUITableViewTwo;
-// 搜索功能 <1>
+// 搜索功能 <1> 逻辑相对复杂
 - (void)creatUITableViewThree;
-// 搜索功能 <2>
+// 搜索功能 <2> 利用UISearchController, 原UISearchDisplayController Deprecated 弃用了
 - (void)creatUITableViewFour;
 
 //--for company

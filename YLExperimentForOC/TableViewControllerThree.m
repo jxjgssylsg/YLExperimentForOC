@@ -71,8 +71,8 @@
 #pragma mark - 搜索框代理
 #pragma mark  取消搜索
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    _isSearching=NO;
-    _searchBar.text=@"";
+    _isSearching = NO;
+    _searchBar.text = @"";
     [_tableView reloadData];
 }
 
