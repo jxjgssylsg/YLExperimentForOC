@@ -118,13 +118,35 @@
    
    大根堆和小根堆：根结点（亦称为堆顶）的关键字是堆里所有结点关键字中最小者的堆称为小根堆，又称最小堆。根结点（亦称为堆顶）的关键字是堆里所有结点关键字中最大者，称为大根堆，又称最大堆。注意：①堆中任一子树亦是堆。②以上讨论的堆实际上是二叉堆（Binary Heap），类似地可定义k叉堆。
 
-   ①.建堆  today forget do someting ,MACHSION learning not work out,shit
-            fast fastforward big heap sort what realy matter is the heap
+   ①.建堆  
    ②.调整堆
    ③.堆排序
    
    [快速排序]
    [BFPRT算法] 分组的思想,比较精妙,也比较麻烦的感觉,利用的是不断分治找中位数,然后根据数学思想的过程.pass
+     
+     int partition(int a[], int l, int r) //对数组a下标从l到r的元素进行划分
+       {
+       //随机选取一个数作为划分的基数
+       int rd = l + rand() % (r-l+1);
+       swap(a[rd], a[r]);
+       
+       int j = l - 1; //左边数字最右的下标
+       for (int i = l; i < r; i++)
+       if (a[i] <= a[r])
+       swap(a[++j], a[i]);
+       swap(a[++j], a[r]);
+       return j;
+       }
+       int NthElement(int a[], int l, int r, int id) //求数组a下标l到r中的第id个数
+       {
+       if (l == r) return a[l];        //只有一个数
+       int m = partition(a, l, r), cur = m - l + 1;
+       if (id == cur) return a[m];                        //刚好是第id个数
+       else if(id < cur) return NthElement(a, l, m-1, id);//第id个数在左边
+       else return(a, m+1, r, id-cur);                    //第id个数在右边
+       }
+   
    [分治思想]
 
    
