@@ -18,6 +18,8 @@
 - (void)testNSDateComponents;
 - (void)testNSCalendar;
 
+//最基本的UITableView
+- (void)creatUITableViewOne;
 //--for company
 - (void)modifyDay;
 - (void)testNSTimerForCompany;

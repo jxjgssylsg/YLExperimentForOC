@@ -12,6 +12,8 @@
 #import "NSTimer+BFEExtension.h"
 #import "KCMainViewController.h"
 #import "KCContactTableViewController.h"
+#import "TableViewControllerOne.h"
+#import "TableViewControllerTwo.h"
 
 @interface ViewController ()
 {
@@ -40,7 +42,16 @@
     // [self testNSTimerForCompany];
     // [self testNSDateComponents];
     // [self creatTimeZoneTableView];
-    [self testNSCalendar];
+    // [self testNSCalendar];
+      [self creatUITableViewOne];
+}
+- (void)creatUITableViewOne
+{
+    TableViewControllerTwo *tableViewTwo = [[TableViewControllerTwo alloc] init];
+    [tableViewTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:tableViewTwo];
+    [self.view addSubview:tableViewTwo.view];
 }
 - (void)testNSCalendar
 {
