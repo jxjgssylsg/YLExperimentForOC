@@ -108,7 +108,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C34FEB431D115FE1006E6A51 /* Images */ = {
+		C34FEB431D115FE1006E6A51 /* Images(尽量复用) */ = {
 			isa = PBXGroup;
 			children = (
 				C34FEB441D115FE1006E6A51 /* 1.png */,
@@ -122,6 +122,7 @@
 				C34FEB4C1D115FE1006E6A51 /* 8.png */,
 				C34FEB4D1D115FE1006E6A51 /* 9.png */,
 			);
+			name = "Images(尽量复用)";
 			path = Images;
 			sourceTree = "<group>";
 		};
@@ -162,6 +163,7 @@
 				C35B1F6A1CCF5A4800032582 /* Supporting Files */,
 				C35CC6D11CF42C1F008B9EC2 /* TimeZoneTableView */,
 				C3DE87541D026AE20051E255 /* UITableView */,
+				C34FEB431D115FE1006E6A51 /* Images(尽量复用) */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -257,7 +259,6 @@
 				C34FEB201D10FDFE006E6A51 /* CustomCell.m */,
 				C34FEB211D10FDFE006E6A51 /* CustomCell.xib */,
 				C34FEB241D1129C6006E6A51 /* friendsInfo.plist */,
-				C34FEB431D115FE1006E6A51 /* Images */,
 			);
 			name = UITableView;
 			sourceTree = "<group>";
