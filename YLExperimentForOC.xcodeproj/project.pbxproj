@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3514AED1CD312AF002F997C /* CalendarViewController.m */; };
 		C35B1F6C1CCF5A4800032582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F6B1CCF5A4800032582 /* main.m */; };
 		C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F6E1CCF5A4800032582 /* AppDelegate.m */; };
 		C35B1F721CCF5A4800032582 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F711CCF5A4800032582 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3514AEC1CD312AF002F997C /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		C3514AED1CD312AF002F997C /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		C35B1F671CCF5A4800032582 /* YLExperimentForOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLExperimentForOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35B1F6B1CCF5A4800032582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C35B1F6D1CCF5A4800032582 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3514AE81CD30D3C002F997C /* 日历文件 */ = {
+			isa = PBXGroup;
+			children = (
+				C3514AEC1CD312AF002F997C /* CalendarViewController.h */,
+				C3514AED1CD312AF002F997C /* CalendarViewController.m */,
+			);
+			name = "日历文件";
+			sourceTree = "<group>";
+		};
 		C35B1F5E1CCF5A4800032582 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				C35B1F851CCF6B9400032582 /* 初始文件 */,
+				C3514AE81CD30D3C002F997C /* 日历文件 */,
 				C35B1F861CCF6BAF00032582 /* QRCode二维码 */,
 				C35B1F6A1CCF5A4800032582 /* Supporting Files */,
 			);
@@ -176,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
+				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,

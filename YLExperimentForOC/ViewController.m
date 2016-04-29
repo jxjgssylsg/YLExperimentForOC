@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QREncoding.h"
+#import "CalendarViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self creatQRCode];
+   // [self creatQRCode];
+    [self creatSimpleCalendar];
 }
 - (void)creatQRCode
 {
@@ -32,6 +34,14 @@
     [self.view addSubview:imageView];
 
 }
+- (void)creatSimpleCalendar
+{
+    CalendarViewController *temp = [[CalendarViewController alloc] init];
+    [temp.view setFrame:CGRectMake(0, 40, self.view.bounds.size.width, self.view.bounds.size.height)];
+    [self addChildViewController:temp];
+    [self.view addSubview:temp.view];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

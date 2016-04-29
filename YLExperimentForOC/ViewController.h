@@ -10,5 +10,6 @@
 
 @interface ViewController : UIViewController
 - (void)creatQRCode;
+- (void)creatSimpleCalendar;
 @end
 
