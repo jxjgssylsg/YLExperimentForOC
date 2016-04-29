@@ -82,7 +82,7 @@
 -(void)drawCalendarDayUnit
 {
    //为了方便计算按钮的frame，i没从0开始
-    for (NSInteger i = firstDayIndexOfWeek - 1 ; i < monthRange.length + firstDayIndexOfWeek -1 ; i ++)
+    for (NSInteger i = firstDayIndexOfWeek - 1 + 10; i < monthRange.length + firstDayIndexOfWeek -1 ; i ++)
     {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         btn.frame = CGRectMake(5 + 40 * (i%7), 30 + 40*(i/7), 30, 30);
