@@ -76,7 +76,8 @@
     dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
     NSLog(@"now:%@", [dateFormatter stringFromDate:now]);
 
-    //-------------------- 通过secondsFromGMTForDate方法获得localtime -----------------------------------------//
+//-------------------- 通过secondsFromGMTForDate方法获得localtime ---------------------//
+    
      NSDate *currentDate = [NSDate date];
      NSLog(@"currentDate: %@",currentDate);
      NSTimeZone *zone = [NSTimeZone systemTimeZone];
@@ -84,6 +85,14 @@
      NSDate *localDate = [currentDate dateByAddingTimeInterval:interval];
      NSLog(@"正确的当前时间localDate: %@",localDate);
     
+//-------------------------------- 设置并获取时区的缩写 ---------------------------------//
+    
+    NSMutableDictionary *abbs = [[NSMutableDictionary alloc] init];
+    [abbs setValuesForKeysWithDictionary:[NSTimeZone abbreviationDictionary]];//获得所有缩写
+    [abbs setValue:@"Asia/Shanghai" forKey:@"CCD"];//增加一个
+    [NSTimeZone setAbbreviationDictionary:abbs];//设置NStimezone的缩写
+    NSLog(@"abbs:%@", [NSTimeZone abbreviationDictionary]);
+
     /*
      NSDate *startDateOfYear;
      NSDate *startDateOfMonth;
