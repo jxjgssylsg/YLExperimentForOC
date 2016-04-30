@@ -12,5 +12,6 @@
 - (void)creatQRCode;
 - (void)creatSimpleCalendar;
 - (void)testNSDate;
+- (void)testNSTimeZone;
 @end
 

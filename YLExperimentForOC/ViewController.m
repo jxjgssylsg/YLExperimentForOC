@@ -19,9 +19,61 @@
     [super viewDidLoad];
    // [self creatQRCode];
    // [self creatSimpleCalendar];
-    [self testNSDate];
+    //[self testNSDate];
+    [self testNSTimeZone];
 }
 
+- (void)testNSTimeZone
+{
+    
+    //
+    //NSTimeZone可以得看看
+    
+    /*
+     NSDate *currentDate = [NSDate date];
+     NSLog(@"%@",currentDate);
+     
+     NSTimeZone *zone = [NSTimeZone systemTimeZone];
+     NSInteger interval = [zone secondsFromGMTForDate:currentDate];
+     
+     NSDate *localDate = [currentDate dateByAddingTimeInterval:interval];
+     
+     NSLog(@"正确的当前时间 %@",localDate);
+     NSDate *startDateOfYear;
+     NSDate *startDateOfMonth;
+     NSDate *startDateOfWeek;
+     NSDate *startDateOfDay;
+     NSTimeInterval TIOfYear;
+     NSTimeInterval TIOfMonth;
+     NSTimeInterval TIOfWeek;
+     NSTimeInterval TIOfDay;
+     [[NSCalendar currentCalendar] rangeOfUnit:NSYearCalendarUnit startDate:&startDateOfYear interval:&TIOfYear forDate:[NSDate date]];
+     [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&startDateOfMonth interval:&TIOfMonth forDate:[NSDate date]];
+     [[NSCalendar currentCalendar] rangeOfUnit:NSWeekCalendarUnit startDate:&startDateOfWeek interval:&TIOfWeek forDate:[NSDate date]];
+     [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit startDate:&startDateOfDay interval:&TIOfDay forDate:[NSDate date]];
+     NSLog(@"firstDateOfYear:%@, FirstDateOfMonth:%@, FirstDateOfWeek:%@, FirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
+     NSLog(@"\nTIOfYear:%f\nTIOfMonth:%f\nTIOfWeek:%f\nTIOfDay:%f\n", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
+     
+     
+     [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+0900"]]; // 只能够修改该程序的defaultTimeZone，不能修改系统的，更不能修改其他程序的。
+     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+     
+     NSDate *now = [NSDate date];
+     NSLog(@"now:%@", [dateFormatter stringFromDate:now]);
+     
+     // 也可直接修改NSDateFormatter的timeZone变量
+     dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
+     NSLog(@"now:%@", [dateFormatter stringFromDate:now]);
+     
+     
+     NSTimeZone *timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
+     NSLog(@"%@",[timeZone description]);
+     */
+    
+
+    
+}
 - (void)testNSDate
 {
 //-------------------------------- NSDate ----> NSString ---------------------------------//
@@ -92,52 +144,6 @@
     BOOL early = ([localDate compare:dateOne] == NSOrderedAscending);
     NSLog(@"%d",early);
 
-    
-//
-    //NSTimeZone可以得看看
-
-    /*
-    NSDate *currentDate = [NSDate date];
-    NSLog(@"%@",currentDate);
-    
-    NSTimeZone *zone = [NSTimeZone systemTimeZone];
-    NSInteger interval = [zone secondsFromGMTForDate:currentDate];
-    
-    NSDate *localDate = [currentDate dateByAddingTimeInterval:interval];
-    
-    NSLog(@"正确的当前时间 %@",localDate);
-    NSDate *startDateOfYear;
-    NSDate *startDateOfMonth;
-    NSDate *startDateOfWeek;
-    NSDate *startDateOfDay;
-    NSTimeInterval TIOfYear;
-    NSTimeInterval TIOfMonth;
-    NSTimeInterval TIOfWeek;
-    NSTimeInterval TIOfDay;
-    [[NSCalendar currentCalendar] rangeOfUnit:NSYearCalendarUnit startDate:&startDateOfYear interval:&TIOfYear forDate:[NSDate date]];
-    [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&startDateOfMonth interval:&TIOfMonth forDate:[NSDate date]];
-    [[NSCalendar currentCalendar] rangeOfUnit:NSWeekCalendarUnit startDate:&startDateOfWeek interval:&TIOfWeek forDate:[NSDate date]];
-    [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit startDate:&startDateOfDay interval:&TIOfDay forDate:[NSDate date]];
-    NSLog(@"firstDateOfYear:%@, FirstDateOfMonth:%@, FirstDateOfWeek:%@, FirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
-    NSLog(@"\nTIOfYear:%f\nTIOfMonth:%f\nTIOfWeek:%f\nTIOfDay:%f\n", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
-    
-    
-    [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+0900"]]; // 只能够修改该程序的defaultTimeZone，不能修改系统的，更不能修改其他程序的。
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    
-    NSDate *now = [NSDate date];
-    NSLog(@"now:%@", [dateFormatter stringFromDate:now]);
-    
-    // 也可直接修改NSDateFormatter的timeZone变量
-    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
-    NSLog(@"now:%@", [dateFormatter stringFromDate:now]);
-    
-    
-    NSTimeZone *timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
-    NSLog(@"%@",[timeZone description]);
-     */
-    
 }
 
 - (void)creatQRCode

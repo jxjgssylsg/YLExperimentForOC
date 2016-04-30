@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B6270329-5FE4-4F5F-BD1A-C8A97E608FC0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YLExperimentForOC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>60F8DA5D0AEC7CBCD5378CACB205261136307B1C</key>
+		<string>https://github.com/jxjgssylsg/YLExperimentForOC.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YLExperimentForOC.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>60F8DA5D0AEC7CBCD5378CACB205261136307B1C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jxjgssylsg/YLExperimentForOC.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>60F8DA5D0AEC7CBCD5378CACB205261136307B1C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>60F8DA5D0AEC7CBCD5378CACB205261136307B1C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>YLExperimentForOC</string>
+		</dict>
+	</array>
+</dict>
+</plist>
