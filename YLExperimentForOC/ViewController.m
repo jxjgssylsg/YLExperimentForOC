@@ -19,14 +19,78 @@
     [super viewDidLoad];
    // [self creatQRCode];
    // [self creatSimpleCalendar];
-    //[self testNSDate];
+   // [self testNSDate];
     [self testNSTimeZone];
 }
 
 - (void)testNSTimeZone
 {
+//------------------------------ 取得各个时区时间  ---------------------------------//
     
-    //
+   //取得已知时区名称
+    NSArray *timeZoneNames = [NSTimeZone knownTimeZoneNames];
+    NSDate *date = [NSDate date];
+    //几百个时区,建议断点调试着看
+    for(NSString *name in timeZoneNames) {
+        NSTimeZone *timezone = [[NSTimeZone alloc] initWithName:name];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        //格式
+        [formatter setDateFormat:@"YYYY-MM-d HH:mm:ss"];
+        //设置时区
+        [formatter setTimeZone:timezone];
+        //NSDate ----> NSString
+        NSString *correctDate = [formatter stringFromDate:date];
+        NSLog(@"地点：%@   当地时间：%@",[timezone name], correctDate);
+        NSLog(
+              @"\nlocalTimeZone = [%@]\nDisplay = [%@]\nGMT = [%d] hours",
+              timezone,
+              [timezone name],
+              (int)[timezone secondsFromGMT] / 60 /60
+              );
+    }
+    
+//-------------------方法timeZoneForSecondsFromGMT自定义时区---------------------------//
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    df.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    df.timeZone = [NSTimeZone systemTimeZone];//系统所在时区
+    NSString *systemTimeZoneStr =  [df stringFromDate:date];
+    df.timeZone = [NSTimeZone defaultTimeZone];//默认时区
+    NSString *defaultTimeZoneStr = [df stringFromDate:date];
+    df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:8*3600];//直接指定时区
+    NSString *plus8TZStr = [df stringFromDate:date];
+    df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0*3600];//这就是GMT+0时区
+    NSString *gmtTZStr = [df stringFromDate: date];
+    NSLog(@"\n SysTime:%@\n DefaultTime:%@\n +8:%@\n GMT_time:%@",systemTimeZoneStr,defaultTimeZoneStr,plus8TZStr,gmtTZStr);
+    
+//-------------------- 修改默认时区会影响时间 -----------------------------------------//
+    
+    // 只能够修改该程序的defaultTimeZone，不能修改系统的，更不能修改其他程序的。
+    [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+0900"]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *now = [NSDate date];
+    NSLog(@"now:%@", [dateFormatter stringFromDate:now]);
+    
+    // 也可直接修改NSDateFormatter的timeZone变量
+    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
+    NSLog(@"now:%@", [dateFormatter stringFromDate:now]);
+
+//    //设置了locale和timeZone似乎也没什么改变......? 减掉了8小时
+//    dateFormatterTwo.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+//    dateFormatterTwo.timeZone = [NSTimeZone localTimeZone];
+//    date = [dateFormatterTwo dateFromString:@"2016-05-29 17:46:03 "];//转的时候会根据-时区-变化,减掉了8小时
+//    NSLog(@"%@",date);//输出2016-05-29 09:46:03 +0000 对比 2016-05-29 17:46:03
+//   //
+//    
+//    //设置了locale和timeZone似乎也没什么改变......? 同样加了8小时
+//    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+//    dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"Pacific/Tarawa"];
+//    NSLog(@"%@",dateFormatter.timeZone);
+//    NSLog(@"%@",dateFormatter.locale);
+//    strDate =[dateFormatter stringFromDate:dateOne];//转的时候会根据-时区-变化,加了8小时
+//    NSLog(@"转换后 = %@", strDate);
+    
     //NSTimeZone可以得看看
     
     /*
@@ -85,15 +149,8 @@
     NSLog(@"%@",dateFormatter.locale);
     NSDate *dateOne = [NSDate date];
     NSLog(@"转换前 = %@", dateOne);
-    NSString *strDate = [dateFormatter stringFromDate:dateOne];//转的时候会根据-时区-变化,加了8小时
-    NSLog(@"转换后 = %@", strDate);
-    
-    //设置了locale和timeZone似乎也没什么改变......? 同样加了8小时
-    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
-    dateFormatter.timeZone = [NSTimeZone localTimeZone];
-    NSLog(@"%@",dateFormatter.timeZone);
-    NSLog(@"%@",dateFormatter.locale);
-    strDate =[dateFormatter stringFromDate:dateOne];//转的时候会根据-时区-变化,加了8小时
+    NSString *strDate = [dateFormatter stringFromDate:dateOne];
+    //转的时候会根据-时区-变化,加了8小时,参考NSTimeZone
     NSLog(@"转换后 = %@", strDate);
     
 //---------------------------- NSString -----> NSDate ------------------------------------//
@@ -101,14 +158,9 @@
     //NSString -----> NSDate
     NSDateFormatter *dateFormatterTwo = [[NSDateFormatter alloc] init];
     [dateFormatterTwo setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate *date = [dateFormatterTwo dateFromString:@"2016-04-29 17:46:03"]; //转的时候会根据-时区-变化,减掉了8小时
+    NSDate *date = [dateFormatterTwo dateFromString:@"2016-04-29 17:46:03"];
+    //转的时候会根据-时区-变化,减掉了8小时,,参考NSTimeZone
     NSLog(@"%@",date);//输出2016-04-29 09:46:03 +0000 对比 2016-04-29 17:46:03
-    
-    //设置了locale和timeZone似乎也没什么改变......? 减掉了8小时
-    dateFormatterTwo.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
-    dateFormatterTwo.timeZone = [NSTimeZone localTimeZone];
-    date = [dateFormatterTwo dateFromString:@"2016-05-29 17:46:03 "];//转的时候会根据-时区-变化,减掉了8小时
-    NSLog(@"%@",date);//输出2016-05-29 09:46:03 +0000 对比 2016-05-29 17:46:03
     
 //--------------------------------------------------------------------------------------------//
     
