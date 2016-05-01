@@ -13,5 +13,6 @@
 - (void)creatSimpleCalendar;
 - (void)testNSDate;
 - (void)testNSTimeZone;
+- (void)testNSLocale;
 @end
 

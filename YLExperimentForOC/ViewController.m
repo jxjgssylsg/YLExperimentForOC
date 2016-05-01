@@ -20,7 +20,61 @@
    // [self creatQRCode];
    // [self creatSimpleCalendar];
    // [self testNSDate];
-    [self testNSTimeZone];
+   //[self testNSTimeZone];
+    [self testNSLocale];
+}
+- (void)testNSLocale
+{
+    // 当前用户设置的本地化对象
+    NSLocale *currentLocale= [NSLocale currentLocale];
+    NSString *localeIdentifier = [currentLocale  objectForKey:NSLocaleIdentifier];
+    NSString *localeLanguageCode = [currentLocale objectForKey:NSLocaleLanguageCode];
+    NSLog(@"%@",currentLocale.localeIdentifier);
+    NSLog(@"localeIdentifier:%@,localeLanguageCode:%@",localeIdentifier,localeLanguageCode);
+    
+    //获取国际化信息的显示名称
+    NSLocale *curLocal = [[NSLocale alloc]initWithLocaleIdentifier:@"zh-Hans"];
+    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"fr_FR"]);//法文（法國）
+    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"en-US"]);//英文（美國)
+    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"en_pl"]);//英文（波蘭）
+    
+    //会根据设备的设置，自动返回不同语言的数据。
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh"];//参数试试fr_FR,en_us
+    NSDateFormatter *secondDateFormatter = [[NSDateFormatter alloc] init];
+    [secondDateFormatter setDateFormat:@"cccc"];
+    secondDateFormatter.locale = locale;
+    NSDate *date = [NSDate date];
+    NSLog(@"%@", [secondDateFormatter stringFromDate:date]);
+    
+    // 获取系统所有本地化标识符数组列表
+    NSArray *localeIdentifiers = [NSLocale availableLocaleIdentifiers];
+    // 获取所有已知国家代码数组列表
+    NSArray * countryCodes = [NSLocale ISOCountryCodes];
+    // 获取所有已知ISO货币代码数组列表
+    NSArray *currenyCodes  = [NSLocale ISOCurrencyCodes];
+    // 获取所有已知ISO语言代码数组列表
+    NSArray *languageCodes = [NSLocale ISOLanguageCodes];
+    //语言偏好设置列表，对应于IOS中Setting>General>Language弹出的面板中的语言列表。
+    NSArray *preferredLanguages = [NSLocale preferredLanguages];
+    NSLog(@"\n%@,\n%@,\n%@,\n%@,\n%@",localeIdentifiers,countryCodes,currenyCodes,languageCodes,preferredLanguages);
+    
+    
+    /*
+     NSDate *startDateOfYear;
+     NSDate *startDateOfMonth;
+     NSDate *startDateOfWeek;
+     NSDate *startDateOfDay;
+     NSTimeInterval TIOfYear;
+     NSTimeInterval TIOfMonth;
+     NSTimeInterval TIOfWeek;
+     NSTimeInterval TIOfDay;
+     [[NSCalendar currentCalendar] rangeOfUnit:NSYearCalendarUnit startDate:&startDateOfYear interval:&TIOfYear forDate:[NSDate date]];
+     [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&startDateOfMonth interval:&TIOfMonth forDate:[NSDate date]];
+     [[NSCalendar currentCalendar] rangeOfUnit:NSWeekCalendarUnit startDate:&startDateOfWeek interval:&TIOfWeek forDate:[NSDate date]];
+     [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit startDate:&startDateOfDay interval:&TIOfDay forDate:[NSDate date]];
+     NSLog(@"firstDateOfYear:%@, FirstDateOfMonth:%@, FirstDateOfWeek:%@, FirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
+     NSLog(@"\nTIOfYear:%f\nTIOfMonth:%f\nTIOfWeek:%f\nTIOfDay:%f\n", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
+     */
 }
 
 - (void)testNSTimeZone
@@ -84,6 +138,8 @@
      NSInteger interval = [zone secondsFromGMTForDate:currentDate];
      NSDate *localDate = [currentDate dateByAddingTimeInterval:interval];
      NSLog(@"正确的当前时间localDate: %@",localDate);
+     NSLog(@"当前时区和格林尼治时区差的秒数:%ld",[zone secondsFromGMT]);
+     NSLog(@"当前时区的缩写:%@",[zone abbreviation]);
     
 //-------------------------------- 设置并获取时区的缩写 ---------------------------------//
     
@@ -93,26 +149,7 @@
     [NSTimeZone setAbbreviationDictionary:abbs];//设置NStimezone的缩写
     NSLog(@"abbs:%@", [NSTimeZone abbreviationDictionary]);
 
-    /*
-     NSDate *startDateOfYear;
-     NSDate *startDateOfMonth;
-     NSDate *startDateOfWeek;
-     NSDate *startDateOfDay;
-     NSTimeInterval TIOfYear;
-     NSTimeInterval TIOfMonth;
-     NSTimeInterval TIOfWeek;
-     NSTimeInterval TIOfDay;
-     [[NSCalendar currentCalendar] rangeOfUnit:NSYearCalendarUnit startDate:&startDateOfYear interval:&TIOfYear forDate:[NSDate date]];
-     [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&startDateOfMonth interval:&TIOfMonth forDate:[NSDate date]];
-     [[NSCalendar currentCalendar] rangeOfUnit:NSWeekCalendarUnit startDate:&startDateOfWeek interval:&TIOfWeek forDate:[NSDate date]];
-     [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit startDate:&startDateOfDay interval:&TIOfDay forDate:[NSDate date]];
-     NSLog(@"firstDateOfYear:%@, FirstDateOfMonth:%@, FirstDateOfWeek:%@, FirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
-     NSLog(@"\nTIOfYear:%f\nTIOfMonth:%f\nTIOfWeek:%f\nTIOfDay:%f\n", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
-     
-     */
-    
 
-    
 }
 - (void)testNSDate
 {
