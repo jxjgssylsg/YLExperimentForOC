@@ -97,38 +97,6 @@
             endingLineNumber = "101"
             landmarkName = "-testNSTimeZone"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController testNSTimeZone]"
-                  moduleName = "YLExperimentForOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr_db/oc_code/YLExperimentForOC/YLExperimentForOC/ViewController.m"
-                  timestampString = "483767892.830751"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "806">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController testNSTimeZone]"
-                  moduleName = "YLExperimentForOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr_db/oc_code/YLExperimentForOC/YLExperimentForOC/ViewController.m"
-                  timestampString = "483767892.831025"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "968">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,6 +176,22 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "-testNSLocale"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YLExperimentForOC/CalendarViewController.m"
+            timestampString = "483932556.324955"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-drawCalendar:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

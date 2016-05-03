@@ -18,10 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    // [self creatQRCode];
-   // [self creatSimpleCalendar];
-   // [self testNSDate];
+    [self creatSimpleCalendar];
+   //[self testNSDate];
    //[self testNSTimeZone];
-    [self testNSLocale];
+    //[self testNSLocale];
 }
 - (void)testNSLocale
 {
