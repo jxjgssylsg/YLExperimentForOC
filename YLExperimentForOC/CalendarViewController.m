@@ -81,11 +81,28 @@
 
 -(void)drawCalendarDayUnit
 {
+    NSInteger startDrawIndex;
+    drawPartMonth = true;
+    currentDayIndexOfMonth = 23;
+   // NSInteger currentDateIndex = 5;
+    NSInteger reduceValue = 0;
+    if(drawPartMonth&&(firstDayIndexOfWeek - 1 + currentDayIndexOfMonth > 7)){
+        NSInteger tempCount = firstDayIndexOfWeek - 1 + currentDayIndexOfMonth ;
+        while ((tempCount%7) != 0) {
+            tempCount--;
+        }
+        reduceValue = tempCount/7;
+        startDrawIndex = tempCount;
+    }
+    else {
+        startDrawIndex = firstDayIndexOfWeek - 1 ;
+    }
+    
    //为了方便计算按钮的frame，i没从0开始
-    for (NSInteger i = firstDayIndexOfWeek - 1 ; i < monthRange.length + firstDayIndexOfWeek -1 ; i ++)
+    for (NSInteger i = startDrawIndex; i < monthRange.length + firstDayIndexOfWeek -1 ; i ++)
     {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        btn.frame = CGRectMake(5 + 40 * (i%7), 30 + 40*(i/7), 30, 30);
+        btn.frame = CGRectMake(5 + 40 * (i%7), 30 + 40*(i/7 - reduceValue), 30, 30);
         btn.tag = i + 2 - firstDayIndexOfWeek;
         
         [btn setTitle:[NSString stringWithFormat:@"%ld",i + 2 - firstDayIndexOfWeek ]

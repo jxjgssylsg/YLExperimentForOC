@@ -15,6 +15,7 @@
 		C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F761CCF5A4800032582 /* Assets.xcassets */; };
 		C35B1F891CCF735800032582 /* QREncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F881CCF735800032582 /* QREncoding.m */; };
 		C35B1F8C1CCF7A7A00032582 /* zhifubao.png in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F8B1CCF7A7A00032582 /* zhifubao.png */; };
+		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		C35B1F871CCF735800032582 /* QREncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QREncoding.h; sourceTree = "<group>"; };
 		C35B1F881CCF735800032582 /* QREncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncoding.m; sourceTree = "<group>"; };
 		C35B1F8B1CCF7A7A00032582 /* zhifubao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhifubao.png; sourceTree = "<group>"; };
+		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 		C35B1F691CCF5A4800032582 /* YLExperimentForOC */ = {
 			isa = PBXGroup;
 			children = (
+				C38E3AED1CD9860B00A70DD3 /* 算法类 */,
 				C35B1F851CCF6B9400032582 /* 初始文件 */,
 				C3514AE81CD30D3C002F997C /* 日历文件 */,
 				C35B1F861CCF6BAF00032582 /* QRCode二维码 */,
@@ -111,6 +115,15 @@
 				C35B1F881CCF735800032582 /* QREncoding.m */,
 			);
 			name = "QRCode二维码";
+			sourceTree = "<group>";
+		};
+		C38E3AED1CD9860B00A70DD3 /* 算法类 */ = {
+			isa = PBXGroup;
+			children = (
+				C38E3AEE1CD986B400A70DD3 /* Algorithm.h */,
+				C38E3AEF1CD986B400A70DD3 /* Algorithm.m */,
+			);
+			name = "算法类";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
+				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,

@@ -1,3 +1,4 @@
+
 //
 //  calendarViewController.h
 //  calendar
@@ -14,5 +15,6 @@
     NSRange monthRange;
     NSInteger   currentDayIndexOfMonth;
     NSInteger   firstDayIndexOfWeek;
+    BOOL  drawPartMonth; //是否是当前月
 }
 @end

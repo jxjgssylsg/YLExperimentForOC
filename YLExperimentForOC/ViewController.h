@@ -14,5 +14,6 @@
 - (void)testNSDate;
 - (void)testNSTimeZone;
 - (void)testNSLocale;
+- (void)testNSDateFormatter;
 @end
 
