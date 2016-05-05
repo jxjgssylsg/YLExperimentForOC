@@ -76,10 +76,10 @@
 		C35B1F691CCF5A4800032582 /* YLExperimentForOC */ = {
 			isa = PBXGroup;
 			children = (
-				C38E3AED1CD9860B00A70DD3 /* 算法类 */,
 				C35B1F851CCF6B9400032582 /* 初始文件 */,
 				C3514AE81CD30D3C002F997C /* 日历文件 */,
 				C35B1F861CCF6BAF00032582 /* QRCode二维码 */,
+				C38E3AED1CD9860B00A70DD3 /* 算法类 */,
 				C35B1F6A1CCF5A4800032582 /* Supporting Files */,
 			);
 			path = YLExperimentForOC;
