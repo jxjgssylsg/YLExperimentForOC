@@ -12,16 +12,70 @@
 - (void)algorithm
 {
 /**********
- 1. Two Sum
+ 1. Two Sum   https://leetcode.com/problems/two-sum/
  Example:
  Given nums = [2, 7, 11, 15], target = 9,
  
  Because nums[0] + nums[1] = 2 + 7 = 9,
  return [0, 1].
- UPDATE (2016/2/13):
- The return format had been changed to zero-based indices. Please read the above updated description carefully.
  
+         vector<int> twoSum(vector<int> &numbers, int target)
+         {
+         //Key is the number and value is its index in the vector.
+         unordered_map<int, int> hash;
+         vector<int> result;
+         for (int i = 0; i < numbers.size(); i++) {
+         int numberToFind = target - numbers[i];
+         
+         //if numberToFind is found in map, return them
+         if (hash.find(numberToFind) != hash.end()) {
+         //+1 because indices are NOT zero based
+         result.push_back(hash[numberToFind] + 1);
+         result.push_back(i + 1);
+         return result;
+         }
+         
+         //number was not found. Put it in the map.
+         hash[numbers[i]] = i;
+         }
+         return result;
+         } 
+ 注:hash表的使用,key,value (选择好谁是key,谁是value,这里key是数组的值,value是数组下标,因为hash是根据key来找的),类似字典呢! hash.find(numberToFind) != hash.end()  //Key is the number and value is its index in the array.
+     https://leetcode.com/discuss/10947/accepted-c-o-n-solution    c++
+     注:边找边将hash(key) = value的要理解,机智
+     https://leetcode.com/discuss/8150/accepted-java-o-n-solution  java
+ 
+ *******/
+ 
+         public class Solution {
+         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+         ListNode c1 = l1;
+         ListNode c2 = l2;
+         ListNode sentinel = new ListNode(0);
+         ListNode d = sentinel;
+         int sum = 0;
+         while (c1 != null || c2 != null) {
+         sum /= 10;
+         if (c1 != null) {
+         sum += c1.val;
+         c1 = c1.next;
+         }
+         if (c2 != null) {
+         sum += c2.val;
+         c2 = c2.next;
+         }
+         d.next = new ListNode(sum % 10);
+         d = d.next;
+         }
+         if (sum / 10 == 1)
+         d.next = new ListNode(1);
+         return sentinel.next;
+         }
+         }
  //-------------------------------------------------------------//
+    
+    
+/******
  【leedcode】
 	第一次：
  【 #67】
@@ -341,5 +395,6 @@
 
  
  */
+    
 }
 @end
