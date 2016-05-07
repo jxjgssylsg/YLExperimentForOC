@@ -49,7 +49,7 @@
  *******/
     
 /*******
- 2. Add Two Numbers
+ 2. Add Two Numbers  https://leetcode.com/problems/add-two-numbers/
     
     You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
      
@@ -81,8 +81,18 @@
          return sentinel.next;
          }
          }
+    注:链表说穿了就是 date + 指针next,date你抽象化理解.
+       https://leetcode.com/discuss/2308/is-this-algorithm-optimal-or-what
  
  *********/
+    
+ /********
+    3. Longest Substring Without Repeating Characters  https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    
+  
+  *********/
+  
+  
  //-------------------------------------------------------------//
     
     
