@@ -88,11 +88,28 @@
     
  /********
     3. Longest Substring Without Repeating Characters  https://leetcode.com/problems/longest-substring-without-repeating-characters/
-    
   
+          public int lengthOfLongestSubstring(String s) {
+          if (s.length()==0) return 0;
+          HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+          int max=0;
+          for (int i=0, j=0; i<s.length(); ++i){
+          if (map.containsKey(s.charAt(i))){
+             j = Math.max(j,map.get(s.charAt(i))+1);
+          }
+          map.put(s.charAt(i),i);
+          max = Math.max(max,i-j+1);
+          }
+              return max;
+          }
+        https://leetcode.com/discuss/23883/11-line-simple-java-solution-o-n-with-explanation
+  
+    注:1.似乎有点类似KMP中的一个环节 2.hashMAP的使用 hash(key) = value  key不能重复,hashset理解为只有KEY的hashmap
   *********/
   
-  
+  /****
+   
+   ******/
  //-------------------------------------------------------------//
     
     
