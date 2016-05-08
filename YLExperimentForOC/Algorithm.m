@@ -95,7 +95,7 @@
           int max=0;
           for (int i=0, j=0; i<s.length(); ++i){
           if (map.containsKey(s.charAt(i))){
-             j = Math.max(j,map.get(s.charAt(i))+1);
+             j = Math.max(j,map.get(s.charAt(i))+1);//参考abcdcb,当从d开始时,到b的时候,第二位b的index(b)<index(d),故无效
           }
           map.put(s.charAt(i),i);
           max = Math.max(max,i-j+1);
@@ -108,6 +108,10 @@
   *********/
   
   /****
+   4. Median of Two Sorted Arrays   https://leetcode.com/problems/median-of-two-sorted-arrays/
+   
+      There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+   这个属于第K小的问题.
    
    ******/
  //-------------------------------------------------------------//
