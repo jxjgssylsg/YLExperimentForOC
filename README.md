@@ -1,4 +1,3 @@
-# YLExperimentForOC
 Welcome to the YLExperimentForOC wiki!
 
 ## 总体注意事项
@@ -59,7 +58,7 @@ cout<<
 
 *aaaaa
 
-//注:**星星**加粗是需要紧挨这的,才能加粗 ,然而分点的一个*是需要间隔一个空格才可以的!
+//注:星星是需要紧挨这的,才能加粗 ,然而分点的一个*是需要间隔一个空格才可以的!
 
 * **AAAAAA**
   * BBBBBB多空几格       
@@ -76,3 +75,4 @@ site of google:
 
 `水平分割线`
 -----------
+[second](second)
