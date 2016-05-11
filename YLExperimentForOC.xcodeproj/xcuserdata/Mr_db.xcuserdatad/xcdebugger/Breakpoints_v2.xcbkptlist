@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "-testNSLocale"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "-testNSLocale"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "-testNSTimeZone"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-testNSDateFormatter"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,59 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "-testNSLocale"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController testNSTimeZone]"
-                  moduleName = "YLExperimentForOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr_db/oc_code/YLExperimentForOC/YLExperimentForOC/ViewController.m"
-                  timestampString = "484105468.808516"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "806">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController testNSTimeZone]"
-                  moduleName = "YLExperimentForOC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mr_db/oc_code/YLExperimentForOC/YLExperimentForOC/ViewController.m"
-                  timestampString = "484105468.808755"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "968">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "-testNSLocale"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +106,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483764101.824913"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "-testNSLocale"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YLExperimentForOC/ViewController.m"
+            timestampString = "484565267.250581"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-testNSDateFormatter"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "-testNSDateFormatter"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766996.127653"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-testNSDateFormatter"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,12 +170,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YLExperimentForOC/ViewController.m"
-            timestampString = "483766990.837328"
+            timestampString = "484565267.250581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-testNSDateFormatter"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YLExperimentForOC/ViewController.m"
+            timestampString = "484565267.250581"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-modifyDay"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

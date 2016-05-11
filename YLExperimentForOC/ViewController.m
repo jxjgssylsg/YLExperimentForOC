@@ -22,7 +22,69 @@
     // [self testNSDate];
     // [self testNSTimeZone];
     // [self testNSLocale];
-       [self testNSDateFormatter];
+    // [self testNSDateFormatter];
+    [self modifyDay];
+}
+- (void)modifyDay
+{
+    /*
+     auth 关键字
+     参见StudentRecordBehaviorManager的createTable
+     参见UserStarsManager的createTable
+     参见WordStatisticManager的createWordListLevelDB
+     参见WordStatisticManager的createWordListDB
+     参见StudentStorageWrapper的createOtherDbTables方法
+     define WrongDateStatusTableName @"WrongDate" //错题本错误日期表
+     define TestWrongNoteTableName @"TestWrongNote" //错题本信息表
+     define DoneCategoryTable @"DoneCategory" //已经完成的目录列表，用于用户的成就统计用
+     define MyCourseTable @"MyCourse" //已经购买的目录列表
+     define TopicStudyCounterTableName @"TopicStudyCounter" //学习主题统计表，用于去重
+     define WordStatisticTableName @"WordStatistic" //单词统计表
+     define PhraseStatisticTable @"PhraseStatistic" //短句统计表
+     define ArticleReadingStatisticTable @"ArticleReadingStatistic"
+     define ArticleListeningStatisticTable @"ArticleListeningStatistic"
+     define LearningStatististicCacheTable @"LearningStatististicCache"
+     define RequestVersionTable @"RequestVersion"
+     define WordLevelTable @"WordLevel"
+     */
+
+    NSDate *dateOne = [NSDate date];
+    NSDateFormatter *formaterTwo = [[NSDateFormatter alloc] init];
+    [formaterTwo setDateFormat:@"dd"];
+    NSString *dateWithOutDay = @"01";//[formaterTwo stringFromDate:dateOne];
+    NSLog(@"%@",dateWithOutDay);
+    NSInteger value  = [dateWithOutDay integerValue];
+    NSInteger tag = 5;
+    
+    NSDate *dateTwo = [NSDate  dateWithTimeInterval:60*60*24*(tag - value) sinceDate:dateOne];
+    NSLog(@"%@",dateTwo);
+    
+                      
+    //---------------------------- NSString -----> NSDate ------------------------------------//
+    
+//    //NSString -----> NSDate
+//    NSDateFormatter *dateFormatterTwo = [[NSDateFormatter alloc] init];
+//    [dateFormatterTwo setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//    NSDate *date = [dateFormatterTwo dateFromString:@"2016-04-29 17:46:03"];
+//    //转的时候会根据-时区-变化,减掉了8小时,,参考NSTimeZone
+//    NSLog(@"%@",date);//输出2016-04-29 09:46:03 +0000 对比 2016-04-29 17:46:03
+//    
+    //--------------------------------------------------------------------------------------------//
+    
+    
+    //一个简单例子
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"一周第 e 天  zzzz:   YYYY-MM-dd  HH:mm:ss"];//e代表一周的第几天,从周日开始计算.zzzz表是时区地点
+    NSDate *date = [NSDate date];
+    NSString *correctDate = [formatter stringFromDate:date];
+    NSLog(@"%@",correctDate);
+    
+    //这个例子综合了各个参数,值得一看
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@" \n '公元前/后:'G ' \n 年份:'u'='yyyy'='yy ' \n 季度:'q'='qqq'='qqqq ' \n 月份:'M'='MMM'='MMMM ' \n 今天是今年第几周:'w ' \n 今天是本月第几周:'W  ' \n 今天是今年第几天:'D ' \n 今天是本月第几天:'d ' \n 星期:'c'='ccc'='cccc ' 上午/下午:'a ' \n 小时:'h'='H '分钟:'m '秒:'s '毫秒:'SSS  ' \n 这一天已过多少毫秒:'A  ' \n 时区名称:'zzzz'='vvvv '时区编号:'Z "];
+    NSLog(@"%@", [dateFormatter stringFromDate:[NSDate date]]);
+    
+    
 }
 - (void)testNSDateFormatter {
    
