@@ -9,7 +9,13 @@
 #import "ViewController.h"
 #import "QREncoding.h"
 #import "CalendarViewController.h"
+#import "NSTimer+BFEExtension.h"
 @interface ViewController ()
+{
+    int _number;
+}
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
 
 @end
 
@@ -17,13 +23,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _number = [self.button.titleLabel.text intValue];
+    // Do any additional setup after loading the view, typically from a nib.
+    
     // [self creatQRCode];
     // [self creatSimpleCalendar];
     // [self testNSDate];
     // [self testNSTimeZone];
     // [self testNSLocale];
     // [self testNSDateFormatter];
-    [self modifyDay];
+    // [self modifyDay];
+    // [NSThread detachNewThreadSelector:@selector(testNSTimerForCompany) toTarget:self withObject:nil];
+    [self testNSTimerForCompany];
+
+}
+- (void)testNSTimerForCompany
+{
+    void (^block_demo)(void);
+    block_demo= ^(void) {
+        
+        NSLog(@"%d",_number);
+        _number --;
+        [self.button setTitle:[NSString stringWithFormat:@"%d",_number] forState:UIControlStateNormal];
+    };
+   NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 count:40 callback:block_demo];
+ //   [[NSRunLoop currentRunLoop] addTimer:temp forMode:NSRunLoopCommonModes];
+
+    //[temp invalidate];
+    
 }
 - (void)modifyDay
 {
@@ -58,19 +86,6 @@
     
     NSDate *dateTwo = [NSDate  dateWithTimeInterval:60*60*24*(tag - value) sinceDate:dateOne];
     NSLog(@"%@",dateTwo);
-    
-                      
-    //---------------------------- NSString -----> NSDate ------------------------------------//
-    
-//    //NSString -----> NSDate
-//    NSDateFormatter *dateFormatterTwo = [[NSDateFormatter alloc] init];
-//    [dateFormatterTwo setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-//    NSDate *date = [dateFormatterTwo dateFromString:@"2016-04-29 17:46:03"];
-//    //转的时候会根据-时区-变化,减掉了8小时,,参考NSTimeZone
-//    NSLog(@"%@",date);//输出2016-04-29 09:46:03 +0000 对比 2016-04-29 17:46:03
-//    
-    //--------------------------------------------------------------------------------------------//
-    
     
     //一个简单例子
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

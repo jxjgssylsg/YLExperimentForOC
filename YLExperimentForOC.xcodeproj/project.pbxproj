@@ -15,7 +15,7 @@
 		C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F761CCF5A4800032582 /* Assets.xcassets */; };
 		C35B1F891CCF735800032582 /* QREncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F881CCF735800032582 /* QREncoding.m */; };
 		C35B1F8C1CCF7A7A00032582 /* zhifubao.png in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F8B1CCF7A7A00032582 /* zhifubao.png */; };
-		C367364D1CE31B1E00F7E54F /* NSTimer+HYBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+HYBExtension.m */; };
+		C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +34,8 @@
 		C35B1F871CCF735800032582 /* QREncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QREncoding.h; sourceTree = "<group>"; };
 		C35B1F881CCF735800032582 /* QREncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncoding.m; sourceTree = "<group>"; };
 		C35B1F8B1CCF7A7A00032582 /* zhifubao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhifubao.png; sourceTree = "<group>"; };
-		C367364B1CE31B1E00F7E54F /* NSTimer+HYBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+HYBExtension.h"; sourceTree = "<group>"; };
-		C367364C1CE31B1E00F7E54F /* NSTimer+HYBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+HYBExtension.m"; sourceTree = "<group>"; };
+		C367364B1CE31B1E00F7E54F /* NSTimer+BFEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BFEExtension.h"; sourceTree = "<group>"; };
+		C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BFEExtension.m"; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,8 +124,8 @@
 		C367364A1CE31AFE00F7E54F /* NSTimerExtention */ = {
 			isa = PBXGroup;
 			children = (
-				C367364B1CE31B1E00F7E54F /* NSTimer+HYBExtension.h */,
-				C367364C1CE31B1E00F7E54F /* NSTimer+HYBExtension.m */,
+				C367364B1CE31B1E00F7E54F /* NSTimer+BFEExtension.h */,
+				C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */,
 			);
 			name = NSTimerExtention;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			files = (
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
-				C367364D1CE31B1E00F7E54F /* NSTimer+HYBExtension.m in Sources */,
+				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,

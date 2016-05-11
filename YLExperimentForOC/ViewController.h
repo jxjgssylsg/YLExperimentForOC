@@ -18,6 +18,7 @@
 
 //--for company
 - (void)modifyDay;
+- (void)testNSTimerForCompany;
 
 @end
 
