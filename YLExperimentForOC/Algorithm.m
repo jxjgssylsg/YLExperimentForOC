@@ -112,6 +112,13 @@
    
       There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
    这个属于第K小的问题.
+    
+   [堆排序]
+   
+   [快速排序]
+   
+   [分治思想]
+
    
    问题描述：设集合S中共有n个数据元素，要在S中找出第k小元素（k任意）。
    思路：
