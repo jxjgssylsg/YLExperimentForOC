@@ -113,6 +113,14 @@
       There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
    这个属于第K小的问题.
    
+   问题描述：设集合S中共有n个数据元素，要在S中找出第k小元素（k任意）。
+   思路：
+     1）首先对于这个问题想到的是直接用排序解决，一般在O（nlogn）解决。
+     2）有没有更好的解决方法呢？因为使用排序有个明显的问题就是，我们现在只需要找出第k小的值是多少，并不要求集合被排的有序，因此，排序有点多余。
+     3）现快速排序给了启发，类似于快速排序的一种分治的算法寻找第k小得元素能够是时间复杂度为近似的O（n），当然并不是比较次数就为n，通过大量的
+       实践证明了比较次数介于2n与3n之间。
+
+   
    ******/
  //-------------------------------------------------------------//
     

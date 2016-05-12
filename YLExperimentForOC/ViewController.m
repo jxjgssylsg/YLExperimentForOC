@@ -48,8 +48,7 @@
         [self.button setTitle:[NSString stringWithFormat:@"%d",_number] forState:UIControlStateNormal];
     };
    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 count:40 callback:block_demo];
- //   [[NSRunLoop currentRunLoop] addTimer:temp forMode:NSRunLoopCommonModes];
-
+    //[[NSRunLoop currentRunLoop] addTimer:temp forMode:NSRunLoopCommonModes];
     //[temp invalidate];
     
 }
