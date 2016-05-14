@@ -118,7 +118,8 @@
    
    大根堆和小根堆：根结点（亦称为堆顶）的关键字是堆里所有结点关键字中最小者的堆称为小根堆，又称最小堆。根结点（亦称为堆顶）的关键字是堆里所有结点关键字中最大者，称为大根堆，又称最大堆。注意：①堆中任一子树亦是堆。②以上讨论的堆实际上是二叉堆（Binary Heap），类似地可定义k叉堆。
 
-   ①.建堆  fast
+   ①.建堆  today forget do someting ,MACHSION learning not work out,shit
+            fast fastforward big heap sort what realy matter is the heap
    ②.调整堆
    ③.堆排序
    
