@@ -118,65 +118,20 @@
    
    大根堆和小根堆：根结点（亦称为堆顶）的关键字是堆里所有结点关键字中最小者的堆称为小根堆，又称最小堆。根结点（亦称为堆顶）的关键字是堆里所有结点关键字中最大者，称为大根堆，又称最大堆。注意：①堆中任一子树亦是堆。②以上讨论的堆实际上是二叉堆（Binary Heap），类似地可定义k叉堆。
 
+ （1）用大根堆  排序  的基本思想
+    ① 先将初始文件R[1..n]建成一个大根堆，此堆为初始的无序区
+    ② 再将关键字最大的记录R[1]（即堆顶）和无序区的最后一个记录R[n]交换，由此得到新的无序区R[1..n-1]和有序区R[n]，且满足R[1..n-1].keys≤R[n].key
+    ③由于交换后新的根R[1]可能违反堆性质，故应将当前无序区R[1..n-1]调整为堆。然后再次将R[1..n-1]中关键字最大的记录R[1]和该区间的最后一个记录R[n-1]交换，由此得到新的无序区R[1..n-2]和有序区R[n-1..n]，且仍满足关系R[1..n-2].keys≤R[n-1..n].keys，同样要将R[1..n-2]调整为堆。
+      ……
+      直到无序区只有一个元素为止。
+
+
    ①.建堆  
    ②.调整堆
    ③.堆排序
    
    [快速排序]
    [BFPRT算法] 分组的思想,比较精妙,也比较麻烦的感觉,利用的是不断分治找中位数,然后根据数学思想的过程.pass
-           def median(A, B):
-           m, n = len(A), len(B)
-           if m > n:
-           A, B, m, n = B, A, n, m
-           if n == 0:
-           raise ValueError
-           
-           imin, imax, half_len = 0, m, (m + n + 1) / 2
-           while imin <= imax:
-           i = (imin + imax) / 2
-           j = half_len - i
-           if j > 0 and i < m and B[j-1] > A[i]:
-           # i is too small, must increase it
-           imin = i + 1
-           elif i > 0 and j < n and A[i-1] > B[j]:
-           # i is too big, must decrease it
-           imax = i - 1
-           else:
-           # i is perfect
-           if i == 0: max_of_left = B[j-1]
-           elif j == 0: max_of_left = A[i-1]
-           else: max_of_left = max(A[i-1], B[j-1])
-           
-           if (m + n) % 2 == 1:
-           return max_of_left
-           
-           if i == m: min_of_right = B[j]
-           elif j == n: min_of_right = A[i]
-           else: min_of_right = min(A[i], B[j])
-           
-           return (max_of_left + min_of_right) / 2.0
-
-     int partition(int a[], int l, int r) //对数组a下标从l到r的元素进行划分
-       {
-       //随机选取一个数作为划分的基数
-       int rd = l + rand() % (r-l+1);
-       swap(a[rd], a[r]);
-       
-       int j = l - 1; //左边数字最右的下标
-       for (int i = l; i < r; i++)
-       if (a[i] <= a[r])
-       swap(a[++j], a[i]);
-       swap(a[++j], a[r]);
-       return j;
-       }
-       int NthElement(int a[], int l, int r, int id) //求数组a下标l到r中的第id个数
-       {
-       if (l == r) return a[l];        //只有一个数
-       int m = partition(a, l, r), cur = m - l + 1;
-       if (id == cur) return a[m];                        //刚好是第id个数
-       else if(id < cur) return NthElement(a, l, m-1, id);//第id个数在左边
-       else return(a, m+1, r, id-cur);                    //第id个数在右边
-       }
    
    [分治思想]
 
