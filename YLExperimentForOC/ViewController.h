@@ -15,6 +15,7 @@
 - (void)testNSTimeZone;
 - (void)testNSLocale;
 - (void)testNSDateFormatter;
+- (void)testNSDateComponents;
 
 //--for company
 - (void)modifyDay;
