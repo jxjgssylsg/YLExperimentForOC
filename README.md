@@ -79,9 +79,10 @@ site of google:
 
 [![Dependency Status](https://www.versioneye.com/objective-c/fmdb/2.3/badge.svg?style=flat)](https://www.versioneye.com/objective-c/fmdb/2.3)
 
+### 下面是图片
 ![BBBBB](https://www.versioneye.com/objective-c/fmdb/2.3/badge.svg?style=flat)
 
-###注意：有图片替代了文字索引,地址不能是简写，否则被wiki认为是内部链接
+### 注意：有图片替代了文字索引,地址不能是简写，否则被wiki认为是内部链接
 [![BBBBB](https://www.versioneye.com/objective-c/fmdb/2.3/badge.svg?style=flat)](https://www.google.com/)
 
 [CCCC](DDDDD)
