@@ -76,3 +76,12 @@ site of google:
 `水平分割线`
 -----------
 [second  这是wiki里面的链接](second)
+
+[![Dependency Status](https://www.versioneye.com/objective-c/fmdb/2.3/badge.svg?style=flat)](https://www.versioneye.com/objective-c/fmdb/2.3)
+
+![BBBBB](https://www.versioneye.com/objective-c/fmdb/2.3/badge.svg?style=flat)
+
+###注意：有图片替代了文字索引,地址不能是简写，否则被wiki认为是内部链接
+[![BBBBB](https://www.versioneye.com/objective-c/fmdb/2.3/badge.svg?style=flat)](https://www.google.com/)
+
+[CCCC](DDDDD)
