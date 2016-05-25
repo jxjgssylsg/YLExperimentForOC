@@ -10,6 +10,7 @@
 #import "QREncoding.h"
 #import "CalendarViewController.h"
 #import "NSTimer+BFEExtension.h"
+#import "KCMainViewController.h"
 @interface ViewController ()
 {
     int _number;
@@ -35,8 +36,17 @@
     // [self modifyDay];
     // [NSThread detachNewThreadSelector:@selector(testNSTimerForCompany) toTarget:self withObject:nil];
     // [self testNSTimerForCompany];
-    [self testNSDateComponents];
-
+    // [self testNSDateComponents];
+    [self creatTimeZoneTableView];
+    
+}
+- (void)creatTimeZoneTableView
+{
+    KCMainViewController *timeZoneController = [[KCMainViewController alloc] init];
+    timeZoneController.view.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height);
+    [self addChildViewController:timeZoneController];
+    [self.view addSubview:timeZoneController.view];
+    
 }
 - (void)testNSDateComponents
 {
@@ -96,39 +106,16 @@
 {
     void (^block_demo)(void);
     block_demo= ^(void) {
-        
         NSLog(@"%d",_number);
         _number --;
         [self.button setTitle:[NSString stringWithFormat:@"%d",_number] forState:UIControlStateNormal];
     };
    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 count:40 callback:block_demo];
    NSLog(@"%@",timer);
-    //[[NSRunLoop currentRunLoop] addTimer:temp forMode:NSRunLoopCommonModes];
-    //[temp invalidate];
     
 }
 - (void)modifyDay
 {
-    /*
-     auth 关键字
-     参见StudentRecordBehaviorManager的createTable
-     参见UserStarsManager的createTable
-     参见WordStatisticManager的createWordListLevelDB
-     参见WordStatisticManager的createWordListDB
-     参见StudentStorageWrapper的createOtherDbTables方法
-     define WrongDateStatusTableName @"WrongDate" //错题本错误日期表
-     define TestWrongNoteTableName @"TestWrongNote" //错题本信息表
-     define DoneCategoryTable @"DoneCategory" //已经完成的目录列表，用于用户的成就统计用
-     define MyCourseTable @"MyCourse" //已经购买的目录列表
-     define TopicStudyCounterTableName @"TopicStudyCounter" //学习主题统计表，用于去重
-     define WordStatisticTableName @"WordStatistic" //单词统计表
-     define PhraseStatisticTable @"PhraseStatistic" //短句统计表
-     define ArticleReadingStatisticTable @"ArticleReadingStatistic"
-     define ArticleListeningStatisticTable @"ArticleListeningStatistic"
-     define LearningStatististicCacheTable @"LearningStatististicCache"
-     define RequestVersionTable @"RequestVersion"
-     define WordLevelTable @"WordLevel"
-     */
 
     NSDate *dateOne = [NSDate date];
     NSDateFormatter *formaterTwo = [[NSDateFormatter alloc] init];

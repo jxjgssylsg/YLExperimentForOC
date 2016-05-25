@@ -15,6 +15,9 @@
 		C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F761CCF5A4800032582 /* Assets.xcassets */; };
 		C35B1F891CCF735800032582 /* QREncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F881CCF735800032582 /* QREncoding.m */; };
 		C35B1F8C1CCF7A7A00032582 /* zhifubao.png in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F8B1CCF7A7A00032582 /* zhifubao.png */; };
+		C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D31CF42C95008B9EC2 /* KCContact.m */; };
+		C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D61CF42D5F008B9EC2 /* KCContactGroup.m */; };
+		C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */; };
 		C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,12 @@
 		C35B1F871CCF735800032582 /* QREncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QREncoding.h; sourceTree = "<group>"; };
 		C35B1F881CCF735800032582 /* QREncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncoding.m; sourceTree = "<group>"; };
 		C35B1F8B1CCF7A7A00032582 /* zhifubao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhifubao.png; sourceTree = "<group>"; };
+		C35CC6D21CF42C95008B9EC2 /* KCContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContact.h; sourceTree = "<group>"; };
+		C35CC6D31CF42C95008B9EC2 /* KCContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContact.m; sourceTree = "<group>"; };
+		C35CC6D51CF42D5F008B9EC2 /* KCContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContactGroup.h; sourceTree = "<group>"; };
+		C35CC6D61CF42D5F008B9EC2 /* KCContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContactGroup.m; sourceTree = "<group>"; };
+		C35CC6D81CF42DC3008B9EC2 /* KCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMainViewController.h; sourceTree = "<group>"; };
+		C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMainViewController.m; sourceTree = "<group>"; };
 		C367364B1CE31B1E00F7E54F /* NSTimer+BFEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BFEExtension.h"; sourceTree = "<group>"; };
 		C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BFEExtension.m"; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
@@ -81,10 +90,11 @@
 			children = (
 				C35B1F851CCF6B9400032582 /* 初始文件 */,
 				C3514AE81CD30D3C002F997C /* 日历文件 */,
-				C35B1F861CCF6BAF00032582 /* QRCode二维码 */,
 				C38E3AED1CD9860B00A70DD3 /* 算法类 */,
 				C367364A1CE31AFE00F7E54F /* NSTimerExtention */,
+				C35B1F861CCF6BAF00032582 /* QRCode二维码 */,
 				C35B1F6A1CCF5A4800032582 /* Supporting Files */,
+				C35CC6D11CF42C1F008B9EC2 /* TimeZoneTableView */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -114,11 +124,24 @@
 		C35B1F861CCF6BAF00032582 /* QRCode二维码 */ = {
 			isa = PBXGroup;
 			children = (
-				C35B1F8B1CCF7A7A00032582 /* zhifubao.png */,
 				C35B1F871CCF735800032582 /* QREncoding.h */,
 				C35B1F881CCF735800032582 /* QREncoding.m */,
+				C35B1F8B1CCF7A7A00032582 /* zhifubao.png */,
 			);
 			name = "QRCode二维码";
+			sourceTree = "<group>";
+		};
+		C35CC6D11CF42C1F008B9EC2 /* TimeZoneTableView */ = {
+			isa = PBXGroup;
+			children = (
+				C35CC6D21CF42C95008B9EC2 /* KCContact.h */,
+				C35CC6D31CF42C95008B9EC2 /* KCContact.m */,
+				C35CC6D51CF42D5F008B9EC2 /* KCContactGroup.h */,
+				C35CC6D61CF42D5F008B9EC2 /* KCContactGroup.m */,
+				C35CC6D81CF42DC3008B9EC2 /* KCMainViewController.h */,
+				C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */,
+			);
+			name = TimeZoneTableView;
 			sourceTree = "<group>";
 		};
 		C367364A1CE31AFE00F7E54F /* NSTimerExtention */ = {
@@ -210,11 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
+				C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */,
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
+				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
 			);
