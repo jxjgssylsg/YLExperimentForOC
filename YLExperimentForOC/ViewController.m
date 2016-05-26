@@ -39,8 +39,44 @@
     // [NSThread detachNewThreadSelector:@selector(testNSTimerForCompany) toTarget:self withObject:nil];
     // [self testNSTimerForCompany];
     // [self testNSDateComponents];
-    [self creatTimeZoneTableView];
+    // [self creatTimeZoneTableView];
+    [self testNSCalendar];
+}
+- (void)testNSCalendar
+{
+    //    当前时间对应的月份中有几天
+    NSInteger daysOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
+    NSLog(@"%ld",daysOfMonth);
     
+    //    当前时间对应的月份中有几周（前面说到的firstWeekday会影响到这个结果）
+    NSInteger weeksOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
+    NSLog(@"%ld",weeksOfMonth);
+    
+    //    当前时间对应的周是当前年中的第几周
+    NSInteger  weekOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfYear inUnit:NSCalendarUnitYear forDate:[NSDate date]];
+    NSLog(@"%ld",weekOfYear);
+    
+    //    当前时间是当前月的哪一周
+    NSInteger weekOfMonth = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]];
+    NSLog(@"%ld",weekOfMonth);
+    
+    
+    NSDate *startDateOfYear;
+    NSDate *startDateOfMonth;
+    NSDate *startDateOfWeek;
+    NSDate *startDateOfDay;
+    NSTimeInterval TIOfYear;
+    NSTimeInterval TIOfMonth;
+    NSTimeInterval TIOfWeek;
+    NSTimeInterval TIOfDay;
+    [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitYear startDate:&startDateOfYear interval:&TIOfYear forDate:[NSDate date]];
+    [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitMonth startDate:&startDateOfMonth interval:&TIOfMonth forDate:[NSDate date]];
+    [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth startDate:&startDateOfWeek interval:&TIOfWeek forDate:[NSDate date]];
+    [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay startDate:&startDateOfDay interval:&TIOfDay forDate:[NSDate date]];
+    NSLog(@"firstDateOfYear:%@, FirstDateOfMonth:%@, FirstDateOfWeek:%@, FirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
+    NSLog(@"\nTIOfYear:%f\nTIOfMonth:%f\nTIOfWeek:%f\nTIOfDay:%f\n", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
+    
+
 }
 - (void)creatTimeZoneTableView
 {
@@ -249,23 +285,6 @@
     NSArray *preferredLanguages = [NSLocale preferredLanguages];
     NSLog(@"\n%@,\n%@,\n%@,\n%@,\n%@",localeIdentifiers,countryCodes,currenyCodes,languageCodes,preferredLanguages);
     
-    
-    /*
-     NSDate *startDateOfYear;
-     NSDate *startDateOfMonth;
-     NSDate *startDateOfWeek;
-     NSDate *startDateOfDay;
-     NSTimeInterval TIOfYear;
-     NSTimeInterval TIOfMonth;
-     NSTimeInterval TIOfWeek;
-     NSTimeInterval TIOfDay;
-     [[NSCalendar currentCalendar] rangeOfUnit:NSYearCalendarUnit startDate:&startDateOfYear interval:&TIOfYear forDate:[NSDate date]];
-     [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&startDateOfMonth interval:&TIOfMonth forDate:[NSDate date]];
-     [[NSCalendar currentCalendar] rangeOfUnit:NSWeekCalendarUnit startDate:&startDateOfWeek interval:&TIOfWeek forDate:[NSDate date]];
-     [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit startDate:&startDateOfDay interval:&TIOfDay forDate:[NSDate date]];
-     NSLog(@"firstDateOfYear:%@, FirstDateOfMonth:%@, FirstDateOfWeek:%@, FirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
-     NSLog(@"\nTIOfYear:%f\nTIOfMonth:%f\nTIOfWeek:%f\nTIOfDay:%f\n", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
-     */
 }
 
 - (void)testNSTimeZone
