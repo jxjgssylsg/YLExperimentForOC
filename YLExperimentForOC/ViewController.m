@@ -11,6 +11,8 @@
 #import "CalendarViewController.h"
 #import "NSTimer+BFEExtension.h"
 #import "KCMainViewController.h"
+#import "KCContactTableViewController.h"
+
 @interface ViewController ()
 {
     int _number;
@@ -42,8 +44,8 @@
 }
 - (void)creatTimeZoneTableView
 {
-    KCMainViewController *timeZoneController = [[KCMainViewController alloc] init];
-    timeZoneController.view.frame = CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height);
+    KCContactTableViewController *timeZoneController = [[KCContactTableViewController alloc] init];
+    timeZoneController.view.frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height);
     [self addChildViewController:timeZoneController];
     [self.view addSubview:timeZoneController.view];
     

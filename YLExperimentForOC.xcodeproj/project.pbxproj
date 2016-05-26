@@ -18,6 +18,7 @@
 		C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D31CF42C95008B9EC2 /* KCContact.m */; };
 		C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D61CF42D5F008B9EC2 /* KCContactGroup.m */; };
 		C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */; };
+		C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35EA0A21CF6E11D00B4356F /* KCContactTableViewController.m */; };
 		C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 		C35CC6D61CF42D5F008B9EC2 /* KCContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContactGroup.m; sourceTree = "<group>"; };
 		C35CC6D81CF42DC3008B9EC2 /* KCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMainViewController.h; sourceTree = "<group>"; };
 		C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMainViewController.m; sourceTree = "<group>"; };
+		C35EA0A11CF6E11D00B4356F /* KCContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContactTableViewController.h; sourceTree = "<group>"; };
+		C35EA0A21CF6E11D00B4356F /* KCContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContactTableViewController.m; sourceTree = "<group>"; };
 		C367364B1CE31B1E00F7E54F /* NSTimer+BFEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BFEExtension.h"; sourceTree = "<group>"; };
 		C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BFEExtension.m"; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				C35CC6D61CF42D5F008B9EC2 /* KCContactGroup.m */,
 				C35CC6D81CF42DC3008B9EC2 /* KCMainViewController.h */,
 				C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */,
+				C35EA0A11CF6E11D00B4356F /* KCContactTableViewController.h */,
+				C35EA0A21CF6E11D00B4356F /* KCContactTableViewController.m */,
 			);
 			name = TimeZoneTableView;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
+				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
 			);
