@@ -44,22 +44,25 @@
 }
 - (void)testNSCalendar
 {
-    //    当前时间对应的月份中有几天
+    //当前时间对应的月份中有几天
     NSInteger daysOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
     NSLog(@"%ld",daysOfMonth);
     
-    //    当前时间对应的月份中有几周（前面说到的firstWeekday会影响到这个结果）
+    //当前时间对应的月份中有几周（前面说到的firstWeekday会影响到这个结果）
     NSInteger weeksOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
     NSLog(@"%ld",weeksOfMonth);
     
-    //    当前时间对应的周是当前年中的第几周
+    //当前时间对应的周是当前年中的第几周
     NSInteger  weekOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfYear inUnit:NSCalendarUnitYear forDate:[NSDate date]];
     NSLog(@"%ld",weekOfYear);
     
-    //    当前时间是当前月的哪一周
+    //当前时间是当前月的哪一周
     NSInteger weekOfMonth = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]];
     NSLog(@"%ld",weekOfMonth);
     
+    //当前时间是这一年的哪一天
+    NSInteger dayOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
+    NSLog(@"%ld",dayOfYear);
     
     NSDate *startDateOfYear;
     NSDate *startDateOfMonth;
@@ -73,8 +76,8 @@
     [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitMonth startDate:&startDateOfMonth interval:&TIOfMonth forDate:[NSDate date]];
     [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth startDate:&startDateOfWeek interval:&TIOfWeek forDate:[NSDate date]];
     [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay startDate:&startDateOfDay interval:&TIOfDay forDate:[NSDate date]];
-    NSLog(@"firstDateOfYear:%@, FirstDateOfMonth:%@, FirstDateOfWeek:%@, FirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
-    NSLog(@"\nTIOfYear:%f\nTIOfMonth:%f\nTIOfWeek:%f\nTIOfDay:%f\n", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
+    NSLog(@"\nFirstDateOfYear:%@, \nFirstDateOfMonth:%@, \nFirstDateOfWeek:%@, \nFirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
+    NSLog(@"\n一年的时间(秒):%f\n一月的时间(秒):%f\n一个星期的时间(秒):%f\n一天的时间(秒):%f", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
     
 
 }
