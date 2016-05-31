@@ -64,6 +64,7 @@
     NSInteger dayOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
     NSLog(@"%ld",dayOfYear);
     
+    //判断时间段和起始时间
     NSDate *startDateOfYear;
     NSDate *startDateOfMonth;
     NSDate *startDateOfWeek;
@@ -79,6 +80,14 @@
     NSLog(@"\nFirstDateOfYear:%@, \nFirstDateOfMonth:%@, \nFirstDateOfWeek:%@, \nFirstDateOfDay:%@", startDateOfYear, startDateOfMonth, startDateOfWeek, startDateOfDay);
     NSLog(@"\n一年的时间(秒):%f\n一月的时间(秒):%f\n一个星期的时间(秒):%f\n一天的时间(秒):%f", TIOfYear, TIOfMonth, TIOfWeek, TIOfDay);
     
+    //日历标示符
+    NSCalendar *calendarOne = [NSCalendar currentCalendar];
+    NSLog(@"%@",calendarOne.calendarIdentifier);
+    //设置每周的第一天从星期几开始(1是周日，2是周一,依次类推),参考creatSimpleCalendar方法
+    [calendarOne setFirstWeekday:2];
+    NSLog(@"%lu",(unsigned long)calendarOne.firstWeekday);
+    
+    //还有一些其他方法:例如设置时区< - (void)setTimeZone:(NSTimeZone *)tz >,设置本地化 < - (void)setLocale:(NSLocale *)locale >就不一一演示了,可以参见 http://www.cnblogs.com/wayne23/archive/2013/03/25/2981009.html http://my.oschina.net/yongbin45/blog/156181?fromerr=c07GCztc
 
 }
 - (void)creatTimeZoneTableView
