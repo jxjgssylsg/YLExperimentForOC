@@ -21,6 +21,7 @@
 		C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35EA0A21CF6E11D00B4356F /* KCContactTableViewController.m */; };
 		C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
+		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BFEExtension.m"; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
+		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
+		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 		C35B1F691CCF5A4800032582 /* YLExperimentForOC */ = {
 			isa = PBXGroup;
 			children = (
+				C3A80C7F1CFED7D10031EA89 /* LocationTool */,
 				C35B1F851CCF6B9400032582 /* 初始文件 */,
 				C3514AE81CD30D3C002F997C /* 日历文件 */,
 				C38E3AED1CD9860B00A70DD3 /* 算法类 */,
@@ -165,6 +169,15 @@
 				C38E3AEF1CD986B400A70DD3 /* Algorithm.m */,
 			);
 			name = "算法类";
+			sourceTree = "<group>";
+		};
+		C3A80C7F1CFED7D10031EA89 /* LocationTool */ = {
+			isa = PBXGroup;
+			children = (
+				C3A80C801CFED8390031EA89 /* YLLocationTool.h */,
+				C3A80C811CFED8390031EA89 /* YLLocationTool.m */,
+			);
+			name = LocationTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +262,7 @@
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
+				C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
