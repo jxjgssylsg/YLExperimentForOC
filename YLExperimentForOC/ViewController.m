@@ -14,6 +14,7 @@
 #import "KCContactTableViewController.h"
 #import "TableViewControllerOne.h"
 #import "TableViewControllerTwo.h"
+#import "TableViewControllerThree.h"
 
 @interface ViewController ()
 {
@@ -43,9 +44,28 @@
     // [self testNSDateComponents];
     // [self creatTimeZoneTableView];
     // [self testNSCalendar];
-      [self creatUITableViewOne];
+    // [self creatUITableViewOne];
+    // [self creatUITableViewTwo];
+       [self creatUITableViewThree];
 }
-- (void)creatUITableViewOne
+- (void)creatUITableViewFour
+{
+    TableViewControllerFour *tableViewFour = [[TableViewControllerFour alloc] init];
+    [tableViewFour.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:tableViewFour];
+    [self.view addSubview:tableViewFour.view];
+}
+- (void)creatUITableViewThree
+{
+    TableViewControllerThree *tableViewThree = [[TableViewControllerThree alloc] init];
+    [tableViewThree.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:tableViewThree];
+    [self.view addSubview:tableViewThree.view];
+}
+
+- (void)creatUITableViewTwo
 {
     TableViewControllerTwo *tableViewTwo = [[TableViewControllerTwo alloc] init];
     [tableViewTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -53,6 +73,16 @@
     [self addChildViewController:tableViewTwo];
     [self.view addSubview:tableViewTwo.view];
 }
+
+- (void)creatUITableViewOne
+{
+    TableViewControllerOne *tableViewOne = [[TableViewControllerOne alloc] init];
+    [tableViewOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:tableViewOne];
+    [self.view addSubview:tableViewOne.view];
+}
+
 - (void)testNSCalendar
 {
     //当前时间对应的月份中有几天

@@ -24,6 +24,8 @@
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
+		C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87621D0290E20051E255 /* TableViewControllerThree.m */; };
+		C3DE87661D044ED30051E255 /* TableViewControllerFour.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87651D044ED30051E255 /* TableViewControllerFour.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,10 @@
 		C3DE87561D026D560051E255 /* TableViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerOne.m; sourceTree = "<group>"; };
 		C3DE875E1D0290E20051E255 /* TableViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTwo.h; sourceTree = "<group>"; };
 		C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerTwo.m; sourceTree = "<group>"; };
+		C3DE87611D0290E20051E255 /* TableViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerThree.h; sourceTree = "<group>"; };
+		C3DE87621D0290E20051E255 /* TableViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerThree.m; sourceTree = "<group>"; };
+		C3DE87641D044ED30051E255 /* TableViewControllerFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerFour.h; sourceTree = "<group>"; };
+		C3DE87651D044ED30051E255 /* TableViewControllerFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerFour.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,10 @@
 				C3DE87561D026D560051E255 /* TableViewControllerOne.m */,
 				C3DE875E1D0290E20051E255 /* TableViewControllerTwo.h */,
 				C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */,
+				C3DE87611D0290E20051E255 /* TableViewControllerThree.h */,
+				C3DE87621D0290E20051E255 /* TableViewControllerThree.m */,
+				C3DE87641D044ED30051E255 /* TableViewControllerFour.h */,
+				C3DE87651D044ED30051E255 /* TableViewControllerFour.m */,
 			);
 			name = UITableView;
 			sourceTree = "<group>";
@@ -271,10 +281,12 @@
 			files = (
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
+				C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */,
 				C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */,
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
 				C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */,
+				C3DE87661D044ED30051E255 /* TableViewControllerFour.m in Sources */,
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,

@@ -18,8 +18,15 @@
 - (void)testNSDateComponents;
 - (void)testNSCalendar;
 
-//最基本的UITableView
+// 最基本的UITableView
 - (void)creatUITableViewOne;
+// 基本功能:增加,删除,排序,点击等
+- (void)creatUITableViewTwo;
+// 搜索功能 <1>
+- (void)creatUITableViewThree;
+// 搜索功能 <2>
+- (void)creatUITableViewFour;
+
 //--for company
 - (void)modifyDay;
 - (void)testNSTimerForCompany;
