@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C34FEB1E1D10EF63006E6A51 /* TableViewControllerFive.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB1D1D10EF63006E6A51 /* TableViewControllerFive.m */; };
+		C34FEB221D10FDFE006E6A51 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB201D10FDFE006E6A51 /* CustomCell.m */; };
+		C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB211D10FDFE006E6A51 /* CustomCell.xib */; };
+		C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB241D1129C6006E6A51 /* friendsInfo.plist */; };
+		C34FEB351D112A90006E6A51 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB261D112A90006E6A51 /* 1.png */; };
+		C34FEB361D112A90006E6A51 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB271D112A90006E6A51 /* 10.png */; };
+		C34FEB3B1D112A90006E6A51 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB2C1D112A90006E6A51 /* 2.png */; };
+		C34FEB3C1D112A90006E6A51 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB2D1D112A90006E6A51 /* 3.png */; };
+		C34FEB3D1D112A90006E6A51 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB2E1D112A90006E6A51 /* 4.png */; };
+		C34FEB3E1D112A90006E6A51 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB2F1D112A90006E6A51 /* 5.png */; };
+		C34FEB3F1D112A90006E6A51 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB301D112A90006E6A51 /* 6.png */; };
+		C34FEB401D112A90006E6A51 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB311D112A90006E6A51 /* 7.png */; };
+		C34FEB411D112A90006E6A51 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB321D112A90006E6A51 /* 8.png */; };
+		C34FEB421D112A90006E6A51 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB331D112A90006E6A51 /* 9.png */; };
 		C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3514AED1CD312AF002F997C /* CalendarViewController.m */; };
 		C35B1F6C1CCF5A4800032582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F6B1CCF5A4800032582 /* main.m */; };
 		C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F6E1CCF5A4800032582 /* AppDelegate.m */; };
@@ -29,6 +43,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C34FEB1C1D10EF63006E6A51 /* TableViewControllerFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerFive.h; sourceTree = "<group>"; };
+		C34FEB1D1D10EF63006E6A51 /* TableViewControllerFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerFive.m; sourceTree = "<group>"; };
+		C34FEB1F1D10FDFE006E6A51 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		C34FEB201D10FDFE006E6A51 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		C34FEB211D10FDFE006E6A51 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		C34FEB241D1129C6006E6A51 /* friendsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friendsInfo.plist; sourceTree = "<group>"; };
+		C34FEB261D112A90006E6A51 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		C34FEB271D112A90006E6A51 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		C34FEB2C1D112A90006E6A51 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		C34FEB2D1D112A90006E6A51 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		C34FEB2E1D112A90006E6A51 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		C34FEB2F1D112A90006E6A51 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		C34FEB301D112A90006E6A51 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		C34FEB311D112A90006E6A51 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		C34FEB321D112A90006E6A51 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		C34FEB331D112A90006E6A51 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		C3514AEC1CD312AF002F997C /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		C3514AED1CD312AF002F997C /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		C35B1F671CCF5A4800032582 /* YLExperimentForOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLExperimentForOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C34FEB341D112A90006E6A51 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C34FEB261D112A90006E6A51 /* 1.png */,
+				C34FEB271D112A90006E6A51 /* 10.png */,
+				C34FEB2C1D112A90006E6A51 /* 2.png */,
+				C34FEB2D1D112A90006E6A51 /* 3.png */,
+				C34FEB2E1D112A90006E6A51 /* 4.png */,
+				C34FEB2F1D112A90006E6A51 /* 5.png */,
+				C34FEB301D112A90006E6A51 /* 6.png */,
+				C34FEB311D112A90006E6A51 /* 7.png */,
+				C34FEB321D112A90006E6A51 /* 8.png */,
+				C34FEB331D112A90006E6A51 /* 9.png */,
+			);
+			name = Images;
+			path = "../../../Downloads/Custom Cell/Custom Cell/Images";
+			sourceTree = "<group>";
+		};
 		C3514AE81CD30D3C002F997C /* 日历文件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +252,13 @@
 				C3DE87621D0290E20051E255 /* TableViewControllerThree.m */,
 				C3DE87641D044ED30051E255 /* TableViewControllerFour.h */,
 				C3DE87651D044ED30051E255 /* TableViewControllerFour.m */,
+				C34FEB1C1D10EF63006E6A51 /* TableViewControllerFive.h */,
+				C34FEB1D1D10EF63006E6A51 /* TableViewControllerFive.m */,
+				C34FEB1F1D10FDFE006E6A51 /* CustomCell.h */,
+				C34FEB201D10FDFE006E6A51 /* CustomCell.m */,
+				C34FEB211D10FDFE006E6A51 /* CustomCell.xib */,
+				C34FEB241D1129C6006E6A51 /* friendsInfo.plist */,
+				C34FEB341D112A90006E6A51 /* Images */,
 			);
 			name = UITableView;
 			sourceTree = "<group>";
@@ -267,7 +322,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
+				C34FEB361D112A90006E6A51 /* 10.png in Resources */,
 				C35B1F751CCF5A4800032582 /* Main.storyboard in Resources */,
+				C34FEB411D112A90006E6A51 /* 8.png in Resources */,
+				C34FEB3E1D112A90006E6A51 /* 5.png in Resources */,
+				C34FEB401D112A90006E6A51 /* 7.png in Resources */,
+				C34FEB3B1D112A90006E6A51 /* 2.png in Resources */,
+				C34FEB3D1D112A90006E6A51 /* 4.png in Resources */,
+				C34FEB3C1D112A90006E6A51 /* 3.png in Resources */,
+				C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */,
+				C34FEB351D112A90006E6A51 /* 1.png in Resources */,
+				C34FEB421D112A90006E6A51 /* 9.png in Resources */,
+				C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */,
+				C34FEB3F1D112A90006E6A51 /* 6.png in Resources */,
 				C35B1F8C1CCF7A7A00032582 /* zhifubao.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,9 +354,11 @@
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
 				C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */,
 				C3DE87661D044ED30051E255 /* TableViewControllerFour.m in Sources */,
+				C34FEB221D10FDFE006E6A51 /* CustomCell.m in Sources */,
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
+				C34FEB1E1D10EF63006E6A51 /* TableViewControllerFive.m in Sources */,
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,

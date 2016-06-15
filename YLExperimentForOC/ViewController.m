@@ -16,6 +16,7 @@
 #import "TableViewControllerTwo.h"
 #import "TableViewControllerThree.h"
 #import "TableViewControllerFour.h"
+#import "TableViewControllerFive.h"
 
 @interface ViewController ()
 {
@@ -48,7 +49,16 @@
     // [self creatUITableViewOne];
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
-       [self creatUITableViewFour];
+    // [self creatUITableViewFour];
+    [self creatUITableViewFive];
+}
+-(void)creatUITableViewFive
+{
+    TableViewControllerFive *tableViewFive = [[TableViewControllerFive alloc] init];
+    [tableViewFive.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:tableViewFive];
+    [self.view addSubview:tableViewFive.view];
 }
 - (void)creatUITableViewFour
 {

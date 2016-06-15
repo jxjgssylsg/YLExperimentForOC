@@ -26,6 +26,8 @@
 - (void)creatUITableViewThree;
 // 搜索功能 <2> 利用UISearchController, 原UISearchDisplayController Deprecated 弃用了
 - (void)creatUITableViewFour;
+// 自定义TableViewcell,通过xib形式
+- (void)creatUITableViewFive;
 
 //--for company
 - (void)modifyDay;
