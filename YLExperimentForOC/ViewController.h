@@ -28,6 +28,8 @@
 - (void)creatUITableViewFour;
 // 自定义TableViewcell,通过xib形式
 - (void)creatUITableViewFive;
+// 自定义TableViewcell,通过代码形式
+- (void)creatUITableViewSix;
 
 //--for company
 - (void)modifyDay;

@@ -57,7 +57,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
     
-    // xib 只加载一次
+    // clients can register a nib or class for each cell, 注册一次
     static BOOL nibsRegistered = NO;
     if (!nibsRegistered) {
         UINib *nib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
