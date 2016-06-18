@@ -28,14 +28,14 @@
     }
 }
 
--(void)setName:(NSString *)n {
+- (void)setName:(NSString *)n {
     if (![n isEqualToString:_name]) {
         _name = [n copy];
         self.nameLabel.text = _name;
     }
 }
 
--(void)setDec:(NSString *)d {
+- (void)setDec:(NSString *)d {
     if (![d isEqualToString:_dec]) {
         _dec = [d copy];
         self.decLabel.text = _dec;

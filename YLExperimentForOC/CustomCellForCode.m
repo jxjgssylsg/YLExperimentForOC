@@ -43,7 +43,7 @@
         UIImageView *iconImageView = [[UIImageView alloc] init];
         [self.contentView addSubview:iconImageView]; // 这里理解为强引用
         self.iconImageView = iconImageView; // 这里是 weak
-        iconImageView.backgroundColor = [UIColor redColor];// 可以从颜色看出重用机制
+        iconImageView.backgroundColor = [UIColor redColor]; // 可以从颜色看出重用机制
  
         //member icon
         UIImageView *vipImageView = [[UIImageView alloc] init];
@@ -74,7 +74,7 @@
 }
 
 // 注意调用 layoutSubviews 的各种时机,既什么情况下会调用 layoutSubviews 方法
--(void)layoutSubviews{
+- (void)layoutSubviews {
     [super layoutSubviews];
     _iconImageView.frame = _frameModel.iconFrame;
     _text_label.frame = _frameModel.textFrame;
@@ -84,7 +84,7 @@
     
 }
 
--(void)setModel:(DataModel *)model{
+- (void)setModel:(DataModel *)model {
     _model = model;
     if (model.picture) {
         _pictureImageView.image = [UIImage imageNamed:model.picture];
@@ -92,7 +92,7 @@
     _nameLabel.text = _model.name;
     if (_model.vip) {
         _vipImageView.hidden = NO;
-    }else{
+    } else {
         _vipImageView.hidden = YES;
     }
     _text_label.text = _model.text;
