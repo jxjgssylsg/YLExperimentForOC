@@ -79,7 +79,7 @@
     cell.dec = [rowData objectForKey:@"dec"];
     cell.loc = [rowData objectForKey:@"loc"];
     cell.image = [_imageList objectAtIndex:row];
-    
+    // cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
