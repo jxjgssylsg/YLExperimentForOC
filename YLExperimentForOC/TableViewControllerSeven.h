@@ -8,15 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-// 试试不用代理
-//@class TableViewControllerSeven;
-//
-//@protocol TableViewControllerSevenDelegate <NSObject>
-//
-//-(void)tableViewController:(TableViewControllerSeven *)viewController didChangeEditing:(BOOL)editing;
-//-(void)presentActionSheet:(UIActionSheet *)actionSheet fromViewController:(TableViewControllerSeven *)viewController;
-//
-//@end
 @interface TableViewControllerSeven : UIViewController
 
 @end
