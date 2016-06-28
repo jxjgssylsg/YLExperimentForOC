@@ -112,34 +112,33 @@
 
 #pragma mark - 代理方法
 #pragma mark 设置分组标题内容高度
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if(section==0){
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if(section==0) {
         return 50;
     }
     return 30;
 }
 
 #pragma mark 设置每行高度（每行高度可以不一样）
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
 }
 
 #pragma mark 设置尾部说明内容高度
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 30;
 }
 
 #pragma mark 点击行
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     _selectedIndexPath=indexPath;
    // KCContactGroup *group=_contacts[indexPath.section];
-  //  KCContact *contact=group.contacts[indexPath.row];
+   // KCContact *contact=group.contacts[indexPath.row];
     NSLog(@"你点击了 %ld  %ld",(long)indexPath.section,(long)indexPath.row);
 }
 
-
 #pragma mark 重写状态样式方法
--(UIStatusBarStyle)preferredStatusBarStyle{
+- (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
 @end

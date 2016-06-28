@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */; };
+		C3241F671D20C3840015C9FD /* CellSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F661D20C3840015C9FD /* CellSeven.m */; };
+		C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F691D20CD060015C9FD /* ScrollViewSeven.m */; };
 		C34FEB1E1D10EF63006E6A51 /* TableViewControllerFive.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB1D1D10EF63006E6A51 /* TableViewControllerFive.m */; };
 		C34FEB221D10FDFE006E6A51 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB201D10FDFE006E6A51 /* CustomCell.m */; };
 		C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB211D10FDFE006E6A51 /* CustomCell.xib */; };
@@ -50,6 +53,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3241F621D20BC8A0015C9FD /* TableViewControllerSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerSeven.h; sourceTree = "<group>"; };
+		C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerSeven.m; sourceTree = "<group>"; };
+		C3241F651D20C3840015C9FD /* CellSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellSeven.h; sourceTree = "<group>"; };
+		C3241F661D20C3840015C9FD /* CellSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellSeven.m; sourceTree = "<group>"; };
+		C3241F681D20CD060015C9FD /* ScrollViewSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewSeven.h; sourceTree = "<group>"; };
+		C3241F691D20CD060015C9FD /* ScrollViewSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewSeven.m; sourceTree = "<group>"; };
 		C34FEB1C1D10EF63006E6A51 /* TableViewControllerFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerFive.h; sourceTree = "<group>"; };
 		C34FEB1D1D10EF63006E6A51 /* TableViewControllerFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerFive.m; sourceTree = "<group>"; };
 		C34FEB1F1D10FDFE006E6A51 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
@@ -290,6 +299,12 @@
 				C34FEB831D13D1B0006E6A51 /* DataModelFrame.h */,
 				C34FEB841D13D1B0006E6A51 /* DataModelFrame.m */,
 				C34FEB861D13E087006E6A51 /* statuses.plist */,
+				C3241F621D20BC8A0015C9FD /* TableViewControllerSeven.h */,
+				C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */,
+				C3241F651D20C3840015C9FD /* CellSeven.h */,
+				C3241F661D20C3840015C9FD /* CellSeven.m */,
+				C3241F681D20CD060015C9FD /* ScrollViewSeven.h */,
+				C3241F691D20CD060015C9FD /* ScrollViewSeven.m */,
 			);
 			name = UITableView;
 			sourceTree = "<group>";
@@ -382,6 +397,7 @@
 				C34FEB851D13D1B0006E6A51 /* DataModelFrame.m in Sources */,
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
 				C34FEB791D128207006E6A51 /* TableViewControllerSix.m in Sources */,
+				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
 				C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */,
 				C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */,
@@ -397,9 +413,11 @@
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
 				C34FEB1E1D10EF63006E6A51 /* TableViewControllerFive.m in Sources */,
+				C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */,
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
+				C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
 				C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */,
 			);
@@ -455,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -493,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,7 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLExperimentForOC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = db.YLExperimentForOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,7 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YLExperimentForOC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = db.YLExperimentForOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";

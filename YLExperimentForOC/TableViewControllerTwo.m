@@ -145,7 +145,7 @@
 }
 
 #pragma mark 切换开关转化事件
--(void)switchValueChange:(UISwitch *)sw {
+- (void)switchValueChange:(UISwitch *)sw {
     NSLog(@"section:%li,switch:%i",(long)sw.tag, sw.on);
     // 跳到指的row or section
     [_tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:6 inSection:1]
@@ -153,15 +153,15 @@
 }
 
 #pragma mark 添加工具栏
--(void)addToolbar{
-    CGRect frame=self.view.frame;
-    _toolbar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, 40)];
+- (void)addToolbar {
+    CGRect frame = self.view.frame;
+    _toolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, 40)];
     [self.view addSubview:_toolbar];
-    UIBarButtonItem *removeButton=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(remove)];
-    UIBarButtonItem *flexibleButton=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *addButton=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
-    NSArray *buttonArray=[NSArray arrayWithObjects:removeButton,flexibleButton,addButton, nil];
-    _toolbar.items=buttonArray;
+    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(remove)];
+    UIBarButtonItem *flexibleButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
+    NSArray *buttonArray = [NSArray arrayWithObjects:removeButton,flexibleButton,addButton, nil];
+    _toolbar.items = buttonArray;
 }
 
 #pragma mark 删除操作和插入
@@ -172,7 +172,7 @@
         [group removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
         
-        //如果当前组中没有数据则移除组刷新整个表格
+        // 如果当前组中没有数据则移除组刷新整个表格
         if (group.count==0) {
             [_cities removeObject:_cities[indexPath.section]];
             [_tableView reloadData];
@@ -194,7 +194,7 @@
     [destinationGroup insertObject:city atIndex:destinationIndexPath.row];
     
     // 如果源数据已经没有了,重新加载
-    if(group.count==0){
+    if(group.count==0) {
         [_cities removeObject:group];
         [_tableView reloadData];
     }
@@ -214,14 +214,12 @@
 
 
 #pragma mark 取得当前操作状态，根据不同的状态左侧出现不同的操作按钮
--(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (_isInsert) {
         return UITableViewCellEditingStyleInsert;
     }
     return UITableViewCellEditingStyleDelete;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

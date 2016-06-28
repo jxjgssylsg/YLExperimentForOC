@@ -18,6 +18,7 @@
 #import "TableViewControllerFour.h"
 #import "TableViewControllerFive.h"
 #import "TableViewControllerSix.h"
+#import "TableViewControllerSeven.h"
 
 @interface ViewController ()
 {
@@ -51,7 +52,25 @@
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
     // [self creatUITableViewFour];
-    [self creatUITableViewSix];
+    // [self creatUITableViewSix];
+       [self creatUITableViewSeven];
+}
+-(void)creatUITableViewSeven
+{
+   
+    TableViewControllerSeven *tableViewSeven = [[TableViewControllerSeven alloc] init];
+    [tableViewSeven.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:tableViewSeven];
+    [self.view addSubview:tableViewSeven.view];
+    
+    self.navigationItem.leftBarButtonItem = tableViewSeven.navigationItem.leftBarButtonItem;
+    // 这里必须设置成 tableView 的 navigationItem 才会有效果,因为是tableview 变成 editing animation,
+    self.navigationItem.rightBarButtonItem = tableViewSeven.navigationItem.rightBarButtonItem;
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = @"Table View";
+    
+   // [self setAppropriateToolbarItems];
 }
 -(void)creatUITableViewSix
 {
