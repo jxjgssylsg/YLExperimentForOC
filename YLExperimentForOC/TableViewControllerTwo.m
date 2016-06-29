@@ -169,6 +169,7 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     NSMutableArray *group = ((NSMutableArray *)_cities[indexPath.section]);
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // 删除某行 cell
         [group removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
         

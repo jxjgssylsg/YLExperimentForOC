@@ -87,6 +87,7 @@ NSString *const CellSevenEnclosingTableViewDidBeginScrollingNotification = @"Cel
     self.scrollViewLabel = scrollViewLabel;
     [self.scrollViewContentView addSubview:scrollViewLabel];
     
+    // $$ 添加通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enclosingTableViewDidScroll) name:CellSevenEnclosingTableViewDidBeginScrollingNotification  object:nil];
 }
 
