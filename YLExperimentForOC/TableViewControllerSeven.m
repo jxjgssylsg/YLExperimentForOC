@@ -62,9 +62,17 @@
 - (void)userDidPressTrashButton:(id)sender {
     // $$ 被选中的 cell
     NSArray *indexPathsOfSelectedCells = [_tableView indexPathsForSelectedRows];
-    
+    // 对象排序
+    NSArray *sortedArray;
+    sortedArray = [indexPathsOfSelectedCells sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        NSInteger first = [(NSIndexPath *)a row];
+        NSInteger second = [(NSIndexPath *)b row];
+        NSLog(@"%ld  %ld", first, second);
+        return first > second ;
+        // return [first compare:second]; 如果是 nsobject
+    }];
     // MUST be enumerated in reverse order otherwise the _objects indices become invalid.
-    [indexPathsOfSelectedCells enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSIndexPath *obj, NSUInteger idx, BOOL *stop) {
+    [sortedArray enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSIndexPath *obj, NSUInteger idx, BOOL *stop) {
         [_cities removeObjectAtIndex:obj.row];
     }];
     
@@ -135,7 +143,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // 取消选中状态
     // [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    // _selectedIndexPath = indexPath;
     NSLog(@"你点击了 %ld  %ld",(long)indexPath.section,(long)indexPath.row);
 }
 
