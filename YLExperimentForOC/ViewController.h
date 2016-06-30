@@ -18,7 +18,7 @@
 - (void)testNSDateComponents;
 - (void)testNSCalendar;
 
-// 最基本的UITableView
+// 最基本的 UITableView
 - (void)creatUITableViewOne;
 // 基本功能:增加,删除,排序,点击等
 - (void)creatUITableViewTwo;
@@ -26,10 +26,12 @@
 - (void)creatUITableViewThree;
 // 搜索功能 <2> 利用UISearchController, 原UISearchDisplayController Deprecated 弃用了
 - (void)creatUITableViewFour;
-// 自定义TableViewcell,通过xib形式
+// 自定义 TableViewcell,通过xib形式
 - (void)creatUITableViewFive;
-// 自定义TableViewcell,通过代码形式
+// 自定义 TableViewcell,通过代码形式
 - (void)creatUITableViewSix;
+// 自定义 TableViewcell 侧滑多按钮等功能
+- (void)creatUITableViewSeven;
 
 //--for company
 - (void)modifyDay;

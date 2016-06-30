@@ -120,7 +120,7 @@ NSString *const CellSevenEnclosingTableViewDidBeginScrollingNotification = @"Cel
 
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
-    NSLog(@"cell setEditing %@",self); // 注. 应该是 TableView 的先调用
+    NSLog(@"cell setEditing "); // 注. 应该是 TableView 的先调用
     [super setEditing:editing animated:animated];
     self.scrollView.scrollEnabled = !self.editing; // scrollView 不可滚动
     // Corrects effect of showing the button labels while selected on editing mode (comment line, build, run, add new items to table, enter edit mode and select an entry)

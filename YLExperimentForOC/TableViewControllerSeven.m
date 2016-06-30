@@ -130,6 +130,15 @@
 //    return 10.0;
 //}
 
+#pragma mark 点击行
+// 这个不会调用的原因是触摸事件处理了①.被 uiscrollview 的触摸事件抢占了 ②.被自定义 cell 的触摸事件抢占了
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 取消选中状态
+    // [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    // _selectedIndexPath = indexPath;
+    NSLog(@"你点击了 %ld  %ld",(long)indexPath.section,(long)indexPath.row);
+}
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
