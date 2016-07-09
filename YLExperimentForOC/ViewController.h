@@ -33,7 +33,10 @@
 // 自定义 TableViewcell 侧滑多按钮等功能
 - (void)creatUITableViewSeven;
 
-//--for company
+// UIScrollView 的基本功能
+- (void)creatUIScrollViewOne;
+
+// --for company
 - (void)modifyDay;
 - (void)testNSTimerForCompany;
 - (void)creatTimeZoneTableView;

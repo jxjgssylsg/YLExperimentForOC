@@ -19,11 +19,12 @@
 #import "TableViewControllerFive.h"
 #import "TableViewControllerSix.h"
 #import "TableViewControllerSeven.h"
+#import "ScrollViewControllerOne.h"
 
-@interface ViewController ()
-{
+@interface ViewController () {
     int _number;
 }
+
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
@@ -33,8 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _number = [self.button.titleLabel.text intValue];
-    // Do any additional setup after loading the view, typically from a nib.
+    // _number = [self.button.titleLabel.text intValue];
     
     // [self creatQRCode];
     // [self creatSimpleCalendar];
@@ -53,11 +53,18 @@
     // [self creatUITableViewThree];
     // [self creatUITableViewFour];
     // [self creatUITableViewSix];
-       [self creatUITableViewSeven];
+    // [self creatUITableViewSeven];
+       [self creatUIScrollViewOne];
 }
--(void)creatUITableViewSeven
-{
-   
+- (void)creatUIScrollViewOne {
+    ScrollViewControllerOne *scrollViewOne = [[ScrollViewControllerOne alloc] init];
+    [scrollViewOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:scrollViewOne];
+    [self.view addSubview:scrollViewOne.view];
+}
+
+-(void)creatUITableViewSeven {
     TableViewControllerSeven *tableViewSeven = [[TableViewControllerSeven alloc] init];
     [tableViewSeven.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -72,32 +79,28 @@
     
    // [self setAppropriateToolbarItems];
 }
--(void)creatUITableViewSix
-{
+-(void)creatUITableViewSix {
     TableViewControllerSix *tableViewSix = [[TableViewControllerSix alloc] init];
     [tableViewSix.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
     [self addChildViewController:tableViewSix];
     [self.view addSubview:tableViewSix.view];
 }
--(void)creatUITableViewFive
-{
+-(void)creatUITableViewFive {
     TableViewControllerFive *tableViewFive = [[TableViewControllerFive alloc] init];
     [tableViewFive.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
     [self addChildViewController:tableViewFive];
     [self.view addSubview:tableViewFive.view];
 }
-- (void)creatUITableViewFour
-{
+- (void)creatUITableViewFour {
     TableViewControllerFour *tableViewFour = [[TableViewControllerFour alloc] init];
     [tableViewFour.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
     [self addChildViewController:tableViewFour];
     [self.view addSubview:tableViewFour.view];
 }
-- (void)creatUITableViewThree
-{
+- (void)creatUITableViewThree {
     TableViewControllerThree *tableViewThree = [[TableViewControllerThree alloc] init];
     [tableViewThree.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -105,8 +108,7 @@
     [self.view addSubview:tableViewThree.view];
 }
 
-- (void)creatUITableViewTwo
-{
+- (void)creatUITableViewTwo {
     TableViewControllerTwo *tableViewTwo = [[TableViewControllerTwo alloc] init];
     [tableViewTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -114,8 +116,7 @@
     [self.view addSubview:tableViewTwo.view];
 }
 
-- (void)creatUITableViewOne
-{
+- (void)creatUITableViewOne {
     TableViewControllerOne *tableViewOne = [[TableViewControllerOne alloc] init];
     [tableViewOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
@@ -123,27 +124,26 @@
     [self.view addSubview:tableViewOne.view];
 }
 
-- (void)testNSCalendar
-{
+- (void)testNSCalendar {
     //当前时间对应的月份中有几天
     NSInteger daysOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
-    NSLog(@"%ld",daysOfMonth);
+    NSLog(@"%ld",(long)daysOfMonth);
     
     //当前时间对应的月份中有几周（前面说到的firstWeekday会影响到这个结果）
     NSInteger weeksOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
-    NSLog(@"%ld",weeksOfMonth);
+    NSLog(@"%ld",(long)weeksOfMonth);
     
     //当前时间对应的周是当前年中的第几周
     NSInteger  weekOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfYear inUnit:NSCalendarUnitYear forDate:[NSDate date]];
-    NSLog(@"%ld",weekOfYear);
+    NSLog(@"%ld",(long)weekOfYear);
     
     //当前时间是当前月的哪一周
     NSInteger weekOfMonth = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]];
-    NSLog(@"%ld",weekOfMonth);
+    NSLog(@"%ld",(long)weekOfMonth);
     
     //当前时间是这一年的哪一天
     NSInteger dayOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
-    NSLog(@"%ld",dayOfYear);
+    NSLog(@"%ld",(long)dayOfYear);
     
     //判断时间段和起始时间
     NSDate *startDateOfYear;
@@ -171,16 +171,14 @@
     //还有一些其他方法:例如设置时区< - (void)setTimeZone:(NSTimeZone *)tz >,设置本地化 < - (void)setLocale:(NSLocale *)locale >就不一一演示了,可以参见 http://www.cnblogs.com/wayne23/archive/2013/03/25/2981009.html http://my.oschina.net/yongbin45/blog/156181?fromerr=c07GCztc
 
 }
-- (void)creatTimeZoneTableView
-{
+- (void)creatTimeZoneTableView {
     KCContactTableViewController *timeZoneController = [[KCContactTableViewController alloc] init];
     timeZoneController.view.frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height);
     [self addChildViewController:timeZoneController];
     [self.view addSubview:timeZoneController.view];
     
 }
-- (void)testNSDateComponents
-{
+- (void)testNSDateComponents {
     //例一:从日期中提取日期组件
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDate *date = [NSDate date];
@@ -195,7 +193,6 @@
     [dateComponents setMinute:20];
     NSDate *dateTwo = [calendar dateFromComponents:dateComponents];
     NSLog(@"%@",dateTwo);
-    
     
     //例三:计算相对日期
     NSDateComponents *components = [[NSDateComponents alloc] init];
@@ -233,8 +230,7 @@
 
     
 }
-- (void)testNSTimerForCompany
-{
+- (void)testNSTimerForCompany {
     void (^block_demo)(void);
     block_demo= ^(void) {
         NSLog(@"%d",_number);
@@ -245,9 +241,7 @@
    NSLog(@"%@",timer);
     
 }
-- (void)modifyDay
-{
-
+- (void)modifyDay {
     NSDate *dateOne = [NSDate date];
     NSDateFormatter *formaterTwo = [[NSDateFormatter alloc] init];
     [formaterTwo setDateFormat:@"dd"];
@@ -259,14 +253,14 @@
     NSDate *dateTwo = [NSDate  dateWithTimeInterval:60*60*24*(tag - value) sinceDate:dateOne];
     NSLog(@"%@",dateTwo);
     
-    //一个简单例子
+    // 一个简单例子
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"一周第 e 天  zzzz:   YYYY-MM-dd  HH:mm:ss"];//e代表一周的第几天,从周日开始计算.zzzz表是时区地点
+    [formatter setDateFormat:@"一周第 e 天  zzzz:   YYYY-MM-dd  HH:mm:ss"];// e代表一周的第几天,从周日开始计算.zzzz表是时区地点
     NSDate *date = [NSDate date];
     NSString *correctDate = [formatter stringFromDate:date];
     NSLog(@"%@",correctDate);
     
-    //这个例子综合了各个参数,值得一看
+    // 这个例子综合了各个参数,值得一看
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@" \n '公元前/后:'G ' \n 年份:'u'='yyyy'='yy ' \n 季度:'q'='qqq'='qqqq ' \n 月份:'M'='MMM'='MMMM ' \n 今天是今年第几周:'w ' \n 今天是本月第几周:'W  ' \n 今天是今年第几天:'D ' \n 今天是本月第几天:'d ' \n 星期:'c'='ccc'='cccc ' 上午/下午:'a ' \n 小时:'h'='H '分钟:'m '秒:'s '毫秒:'SSS  ' \n 这一天已过多少毫秒:'A  ' \n 时区名称:'zzzz'='vvvv '时区编号:'Z "];
     NSLog(@"%@", [dateFormatter stringFromDate:[NSDate date]]);
@@ -274,15 +268,14 @@
     
 }
 - (void)testNSDateFormatter {
-   
-    //一个简单例子
+    // 一个简单例子
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"一周第 e 天  zzzz:   YYYY-MM-dd  HH:mm:ss"];//e代表一周的第几天,从周日开始计算.zzzz表是时区地点
+    [formatter setDateFormat:@"一周第 e 天  zzzz:   YYYY-MM-dd  HH:mm:ss"];// e代表一周的第几天,从周日开始计算.zzzz表是时区地点
     NSDate *date = [NSDate date];
     NSString *correctDate = [formatter stringFromDate:date];
     NSLog(@"%@",correctDate);
   
-    //这个例子综合了各个参数,值得一看
+    // 这个例子综合了各个参数,值得一看
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@" \n '公元前/后:'G ' \n 年份:'u'='yyyy'='yy ' \n 季度:'q'='qqq'='qqqq ' \n 月份:'M'='MMM'='MMMM ' \n 今天是今年第几周:'w ' \n 今天是本月第几周:'W  ' \n 今天是今年第几天:'D ' \n 今天是本月第几天:'d ' \n 星期:'c'='ccc'='cccc ' 上午/下午:'a ' \n 小时:'h'='H '分钟:'m '秒:'s '毫秒:'SSS  ' \n 这一天已过多少毫秒:'A  ' \n 时区名称:'zzzz'='vvvv '时区编号:'Z "];
     NSLog(@"%@", [dateFormatter stringFromDate:[NSDate date]]);
@@ -343,8 +336,7 @@
     
   */
 }
-- (void)testNSLocale
-{
+- (void)testNSLocale {
     // 当前用户设置的本地化对象
     NSLocale *currentLocale= [NSLocale currentLocale];
     NSString *localeIdentifier = [currentLocale  objectForKey:NSLocaleIdentifier];
@@ -352,14 +344,14 @@
     NSLog(@"%@",currentLocale.localeIdentifier);
     NSLog(@"localeIdentifier:%@,localeLanguageCode:%@",localeIdentifier,localeLanguageCode);
     
-    //获取国际化信息的显示名称
+    // 获取国际化信息的显示名称
     NSLocale *curLocal = [[NSLocale alloc]initWithLocaleIdentifier:@"zh-Hans"];
-    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"fr_FR"]);//法文（法國）
-    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"en-US"]);//英文（美國)
-    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"en_pl"]);//英文（波蘭）
+    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"fr_FR"]);// 法文（法國）
+    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"en-US"]);// 英文（美國)
+    NSLog(@"%@",[curLocal displayNameForKey:NSLocaleIdentifier value:@"en_pl"]);// 英文（波蘭）
     
-    //会根据设备的设置，自动返回不同语言的数据。
-    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh"];//参数试试fr_FR,en_us
+    // 会根据设备的设置，自动返回不同语言的数据。
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh"];// 参数试试fr_FR,en_us
     NSDateFormatter *secondDateFormatter = [[NSDateFormatter alloc] init];
     [secondDateFormatter setDateFormat:@"cccc"];
     secondDateFormatter.locale = locale;
@@ -377,25 +369,23 @@
     //语言偏好设置列表，对应于IOS中Setting>General>Language弹出的面板中的语言列表。
     NSArray *preferredLanguages = [NSLocale preferredLanguages];
     NSLog(@"\n%@,\n%@,\n%@,\n%@,\n%@",localeIdentifiers,countryCodes,currenyCodes,languageCodes,preferredLanguages);
-    
 }
 
-- (void)testNSTimeZone
-{
+- (void)testNSTimeZone {
 //------------------------------ 取得各个时区时间  ---------------------------------//
     
-   //取得已知时区名称
+   // 取得已知时区名称
     NSArray *timeZoneNames = [NSTimeZone knownTimeZoneNames];
     NSDate *date = [NSDate date];
-    //几百个时区,建议断点调试着看
+    // 几百个时区,建议断点调试着看
     for(NSString *name in timeZoneNames) {
         NSTimeZone *timezone = [[NSTimeZone alloc] initWithName:name];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        //格式
+        // 格式
         [formatter setDateFormat:@"YYYY-MM-d HH:mm:ss"];
-        //设置时区
+        // 设置时区
         [formatter setTimeZone:timezone];
-        //NSDate ----> NSString
+        // NSDate ----> NSString
         NSString *correctDate = [formatter stringFromDate:date];
         NSLog(@"地点：%@   当地时间：%@",[timezone name], correctDate);
         NSLog(
@@ -410,13 +400,13 @@
     
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     df.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    df.timeZone = [NSTimeZone systemTimeZone];//系统所在时区
+    df.timeZone = [NSTimeZone systemTimeZone];// 系统所在时区
     NSString *systemTimeZoneStr =  [df stringFromDate:date];
-    df.timeZone = [NSTimeZone defaultTimeZone];//默认时区
+    df.timeZone = [NSTimeZone defaultTimeZone];// 默认时区
     NSString *defaultTimeZoneStr = [df stringFromDate:date];
-    df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:8*3600];//直接指定时区
+    df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:8*3600];// 直接指定时区
     NSString *plus8TZStr = [df stringFromDate:date];
-    df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0*3600];//这就是GMT+0时区
+    df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0*3600];// 这就是GMT+0时区
     NSString *gmtTZStr = [df stringFromDate: date];
     NSLog(@"\n SysTime:%@\n DefaultTime:%@\n +8:%@\n GMT_time:%@",systemTimeZoneStr,defaultTimeZoneStr,plus8TZStr,gmtTZStr);
     
@@ -452,41 +442,39 @@
     [NSTimeZone setAbbreviationDictionary:abbs];//设置NStimezone的缩写
     NSLog(@"abbs:%@", [NSTimeZone abbreviationDictionary]);
 
-
 }
-- (void)testNSDate
-{
+- (void)testNSDate {
 //-------------------------------- NSDate ----> NSString ---------------------------------//
     
-    //NSDate ----> NSString
+    // NSDate ----> NSString
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"年月日,时分秒  yyyy - MM - dd HH:mm:ss"]; //似乎只要有对应的就行
+    [dateFormatter setDateFormat:@"年月日,时分秒  yyyy - MM - dd HH:mm:ss"]; // 似乎只要有对应的就行
     NSLog(@"%@",dateFormatter.timeZone);
     NSLog(@"%@",dateFormatter.locale);
     NSDate *dateOne = [NSDate date];
     NSLog(@"转换前 = %@", dateOne);
     NSString *strDate = [dateFormatter stringFromDate:dateOne];
-    //转的时候会根据-时区-变化,加了8小时,参考NSTimeZone
+    // 转的时候会根据-时区-变化,加了8小时,参考NSTimeZone
     NSLog(@"转换后 = %@", strDate);
     
 //---------------------------- NSString -----> NSDate ------------------------------------//
     
-    //NSString -----> NSDate
+    // NSString -----> NSDate
     NSDateFormatter *dateFormatterTwo = [[NSDateFormatter alloc] init];
     [dateFormatterTwo setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate *date = [dateFormatterTwo dateFromString:@"2016-04-29 17:46:03"];
-    //转的时候会根据-时区-变化,减掉了8小时,,参考NSTimeZone
-    NSLog(@"%@",date);//输出2016-04-29 09:46:03 +0000 对比 2016-04-29 17:46:03
+    // 转的时候会根据-时区-变化,减掉了8小时,,参考NSTimeZone
+    NSLog(@"%@",date);// 输出2016-04-29 09:46:03 +0000 对比 2016-04-29 17:46:03
     
 //--------------------------------------------------------------------------------------------//
     
-    //日期创建方式
+    // 日期创建方式
     NSDate *dateTwo = [NSDate date];
     NSString *str = [dateTwo description];
     NSLog(@"%@",str);
-    NSDate *dateThree = [NSDate dateWithTimeIntervalSinceNow:-60*60*24*7]; //负数代表过去
+    NSDate *dateThree = [NSDate dateWithTimeIntervalSinceNow:-60*60*24*7]; // 负数代表过去
     NSLog(@"%@",dateThree);
-    //日期是否相同
+    // 日期是否相同
     BOOL isEqual = [dateTwo isEqual:dateThree];
     NSLog(@"%d",isEqual);
     
@@ -496,17 +484,17 @@
     NSLog(@"%@",dateFour);
     NSLog(@"%@",dateFive);
     
-    //某两个时间相隔多久
+    // 某两个时间相隔多久
     NSInteger gap = [dateThree timeIntervalSinceDate:dateFive];
-    NSLog(@"%ld",gap);
+    NSLog(@"%ld",(long)gap);
     
-    //取得正确的时间,既UTC世界统一时间 + 8小时
+    // 取得正确的时间,既UTC世界统一时间 + 8小时
     NSTimeZone *zone = [NSTimeZone systemTimeZone];
     NSInteger interval = [zone secondsFromGMTForDate:dateTwo];
     NSDate *localDate = [dateTwo  dateByAddingTimeInterval: interval];
     NSLog(@"正确当前时间 localDate = %@",localDate);
     
-    //时间比较
+    // 时间比较
     BOOL later = [dateOne laterDate:localDate];
     NSLog(@"%d",later);
     BOOL early = ([localDate compare:dateOne] == NSOrderedAscending);
@@ -514,8 +502,7 @@
 
 }
 
-- (void)creatQRCode
-{
+- (void)creatQRCode {
     CGFloat imageSize = ceilf(self.view.bounds.size.width * 0.6f);
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(floorf(self.view.bounds.size.width * 0.5f - imageSize * 0.5f), floorf(self.view.bounds.size.height * 0.5f - imageSize * 0.5f), imageSize, imageSize)];
     //生成二维码图片
@@ -528,8 +515,7 @@
     [self.view addSubview:imageView];
 
 }
-- (void)creatSimpleCalendar
-{
+- (void)creatSimpleCalendar {
     CalendarViewController *temp = [[CalendarViewController alloc] init];
     [temp.view setFrame:CGRectMake(0, 40, self.view.bounds.size.width, self.view.bounds.size.height)];
     [self addChildViewController:temp];

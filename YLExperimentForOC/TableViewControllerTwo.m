@@ -27,7 +27,7 @@
     _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.separatorColor = [UIColor redColor]; // cell边框颜色
+    _tableView.separatorColor = [UIColor redColor]; // cell 边框颜色 $$
     [self.view addSubview:_tableView];
     
     [self addToolbar];

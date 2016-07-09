@@ -85,7 +85,6 @@
              NSLog(@"No results were returned.");
              
          } else if (error != nil) {
-             
              NSLog(@"An error occurred = %@", error);
          }
      }];
@@ -104,7 +103,7 @@
     }
 }
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     //当点击了第二个按钮（OK）
     if (buttonIndex==1) {
         if(![CLLocationManager locationServicesEnabled]) {
