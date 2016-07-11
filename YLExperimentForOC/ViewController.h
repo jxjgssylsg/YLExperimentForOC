@@ -35,6 +35,8 @@
 
 // UIScrollView 的基本功能
 - (void)creatUIScrollViewOne;
+// 通过 UIView 的旋转,放大,移动
+- (void)creatUIScrollViewTwo;
 
 // --for company
 - (void)modifyDay;

@@ -44,6 +44,7 @@
 		C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */; };
 		C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35EA0A21CF6E11D00B4356F /* KCContactTableViewController.m */; };
 		C3664DDF1D30DC0200D29182 /* ScrollViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3664DDE1D30DC0200D29182 /* ScrollViewControllerOne.m */; };
+		C3664DE21D33418200D29182 /* ScrollViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3664DE11D33418200D29182 /* ScrollViewControllerTwo.m */; };
 		C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
@@ -112,6 +113,8 @@
 		C35EA0A21CF6E11D00B4356F /* KCContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContactTableViewController.m; sourceTree = "<group>"; };
 		C3664DDD1D30DC0200D29182 /* ScrollViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerOne.h; sourceTree = "<group>"; };
 		C3664DDE1D30DC0200D29182 /* ScrollViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewControllerOne.m; sourceTree = "<group>"; };
+		C3664DE01D33418200D29182 /* ScrollViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerTwo.h; sourceTree = "<group>"; };
+		C3664DE11D33418200D29182 /* ScrollViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewControllerTwo.m; sourceTree = "<group>"; };
 		C367364B1CE31B1E00F7E54F /* NSTimer+BFEExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+BFEExtension.h"; sourceTree = "<group>"; };
 		C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BFEExtension.m"; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 			children = (
 				C3664DDD1D30DC0200D29182 /* ScrollViewControllerOne.h */,
 				C3664DDE1D30DC0200D29182 /* ScrollViewControllerOne.m */,
+				C3664DE01D33418200D29182 /* ScrollViewControllerTwo.h */,
+				C3664DE11D33418200D29182 /* ScrollViewControllerTwo.m */,
 			);
 			name = UIScrollView;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
+				C3664DE21D33418200D29182 /* ScrollViewControllerTwo.m in Sources */,
 				C3664DDF1D30DC0200D29182 /* ScrollViewControllerOne.m in Sources */,
 				C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
