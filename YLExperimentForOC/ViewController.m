@@ -573,11 +573,10 @@
     CGRect rect = [attrStr boundingRectWithSize:CGSizeMake(200, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
     lbTemp.frame = CGRectMake(50, 50, rect.size.width, rect.size.height);
     lbTemp.attributedText = attrStr;
-    
 }
 
 - (void)testNSDictionary {
-    NSDictionary *dicOne = [NSDictionary dictionaryWithObject: @"hello"  forKey:@"key"];
+    NSDictionary *dicOne = [NSDictionary dictionaryWithObject: @"hello" forKey:@"key"];
     NSString *dicOneValue = dicOne[@"key"];
     NSLog(@"%@",dicOneValue);
     
@@ -609,19 +608,17 @@
         NSLog(@"key:%@ value:%@",key,obj);
     }];
     
-    // NSMutableDictionary 简单使用
+    // ---------------- NSMutableDictionary 简单使用 ---------------------//
     NSMutableDictionary *dictFive = [NSMutableDictionary dictionary];
     // 像字典中追加一个新的 key5 和 value5
     [dictFive setObject:@"value5" forKey:@"key5"];
     [dictFive addEntriesFromDictionary:dicThree];
-    for(NSString *key in dictFive)
-    {
+    for(NSString *key in dictFive) {
         NSLog(@"key:%@ value:%@",key,dictFive[key]);
     }
     // 将字典5的对象内容设置与字典1的对象内容相同
     [dictFive setDictionary:dicThree];
-    for(NSString *key in dictFive)
-    {
+    for(NSString *key in dictFive) {
         NSLog(@"key:%@ value:%@",key,dictFive[key]);
     }
     // 删除键所对应的键值对
