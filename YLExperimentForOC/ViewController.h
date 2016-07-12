@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
+- (void)testBoundingRectWithSizeMethods;
+- (void)testNSDictionary;
 - (void)creatQRCode;
 - (void)creatSimpleCalendar;
 - (void)testNSDate;
@@ -44,5 +47,7 @@
 - (void)modifyDay;
 - (void)testNSTimerForCompany;
 - (void)creatTimeZoneTableView;
+- (void)creatAddSubInterface;
+
 @end
 

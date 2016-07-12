@@ -22,23 +22,21 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	
     myCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    //设置每周的第一天从星期几开始(1是周日，2是周一)
+    // 设置每周的第一天从星期几开始(1是周日，2是周一)
     [myCalendar setFirstWeekday:2];
-    //设置每个月或者每年的第一周必须包含的最少天数
+    // 设置每个月或者每年的第一周必须包含的最少天数
     [myCalendar setMinimumDaysInFirstWeek:1];
-    //设置时区
+    // 设置时区
     [myCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"]];
-    //绘制日期当月日历
+    // 绘制日期当月日历
     [self drawCalendar:[NSDate date]];
-    //title
+    // title
      NSArray *weekArray = @[@"Mon",@"Tue",@"Wen",@"Thu",@"Fri",@"Sat",@"Sun"];
-    for (int i = 0; i < 7; i ++)
-    {
+    for (int i = 0; i < 7; i ++) {
         UILabel *label = [[UILabel alloc] init];
         label.frame = CGRectMake(15 + 40 * (i%7), 5, 30, 15);
         label.text  = weekArray[i];
@@ -48,9 +46,7 @@
     
 }
 
--(void)drawCalendar:(NSDate *)date
-{
-    
+-(void)drawCalendar:(NSDate *)date {
     //获取date所在月的天数
     monthRange = [myCalendar rangeOfUnit:NSCalendarUnitDay
                                           inUnit:NSCalendarUnitMonth
@@ -86,26 +82,26 @@
     currentDayIndexOfMonth = 23;
    // NSInteger currentDateIndex = 5;
     NSInteger reduceValue = 0;
-    if(drawPartMonth&&(firstDayIndexOfWeek - 1 + currentDayIndexOfMonth > 7)){
+    if(drawPartMonth && (firstDayIndexOfWeek - 1 + currentDayIndexOfMonth > 7)){
         NSInteger tempCount = firstDayIndexOfWeek - 1 + currentDayIndexOfMonth ;
-        while ((tempCount%7) != 0) {
+        while ((tempCount % 7) != 0) {
             tempCount--;
         }
-        reduceValue = tempCount/7;
+        reduceValue = tempCount / 7;
         startDrawIndex = tempCount;
     }
     else {
         startDrawIndex = firstDayIndexOfWeek - 1 ;
     }
     
-   //为了方便计算按钮的frame，i没从0开始
+   // 为了方便计算按钮的frame，i没从0开始
     for (NSInteger i = startDrawIndex; i < monthRange.length + firstDayIndexOfWeek -1 ; i ++)
     {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        btn.frame = CGRectMake(5 + 40 * (i%7), 30 + 40*(i/7 - reduceValue), 30, 30);
+        btn.frame = CGRectMake(5 + 40 * (i % 7), 30 + 40 * (i / 7 - reduceValue), 30, 30);
         btn.tag = i + 2 - firstDayIndexOfWeek;
         
-        [btn setTitle:[NSString stringWithFormat:@"%ld",i + 2 - firstDayIndexOfWeek ]
+        [btn setTitle:[NSString stringWithFormat:@"%ld",i + 2 - firstDayIndexOfWeek]
              forState:UIControlStateNormal];
         
         [btn addTarget:self

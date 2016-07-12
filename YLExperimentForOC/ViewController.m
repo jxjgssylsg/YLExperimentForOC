@@ -22,6 +22,7 @@
 #import "ScrollViewControllerOne.h"
 #import "ScrollViewControllerTwo.h"
 #import "ScrollViewControllerThree.h"
+#import "AdjustClassNumController.h"
 
 @interface ViewController () {
     int _number;
@@ -58,9 +59,19 @@
     // [self creatUITableViewSeven];
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
-    [self creatUIScrollViewThree];
+    // [self creatUIScrollViewThree];
+    
+    
+    // for cp
+    [self creatAddSubInterface];
 }
-
+- (void)creatAddSubInterface {
+    AdjustClassNumController *tmp = [[AdjustClassNumController alloc] init];
+    [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:tmp];
+    [self.view addSubview:tmp.view];
+}
 - (void)creatUIScrollViewThree {
     ScrollViewControllerThree *scrollViewThree = [[ScrollViewControllerThree alloc] init];
     [scrollViewThree.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -541,6 +552,88 @@
     [temp.view setFrame:CGRectMake(0, 40, self.view.bounds.size.width, self.view.bounds.size.height)];
     [self addChildViewController:temp];
     [self.view addSubview:temp.view];
+}
+
+- (void)testBoundingRectWithSizeMethods {
+    UILabel *lbTemp =[[UILabel alloc] initWithFrame:CGRectMake(20, 20, 100, 700)];
+    lbTemp.backgroundColor = [UIColor brownColor];
+    lbTemp.lineBreakMode =  NSLineBreakByCharWrapping;
+    lbTemp.numberOfLines = 0;
+    lbTemp.text = @"天天\n上课,还挂科,是在是蛋疼.....希望这个地球更加美丽漂亮,随便写些东西都不是容易的事情啊";
+    NSRange allRange = [lbTemp.text rangeOfString:lbTemp.text];
+    [self.view addSubview:lbTemp];
+    
+    
+    NSMutableParagraphStyle *tempParagraph = [[NSMutableParagraphStyle alloc] init];
+    tempParagraph.lineSpacing = 20;
+    tempParagraph.firstLineHeadIndent = 20.f;
+    
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:lbTemp.text];
+    [attrStr addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:25],NSForegroundColorAttributeName:[UIColor redColor],NSParagraphStyleAttributeName:tempParagraph} range:allRange];
+    CGRect rect = [attrStr boundingRectWithSize:CGSizeMake(200, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
+    lbTemp.frame = CGRectMake(50, 50, rect.size.width, rect.size.height);
+    lbTemp.attributedText = attrStr;
+    
+}
+
+- (void)testNSDictionary {
+    NSDictionary *dicOne = [NSDictionary dictionaryWithObject: @"hello"  forKey:@"key"];
+    NSString *dicOneValue = dicOne[@"key"];
+    NSLog(@"%@",dicOneValue);
+    
+    NSDictionary *dicTwo = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @"Kate", @"name",
+                            @"080-123-456", @"tel",
+                            @"東京都", @"address",nil];
+    
+    NSArray *key = [NSArray arrayWithObjects:@"name", @"tel", @"address", nil];
+    NSArray *value = [NSArray arrayWithObjects:@"Kate", @"080-123-456", @"中国", nil];
+    NSDictionary *dicThree = [NSDictionary dictionaryWithObjects:value
+                                                         forKeys:key];
+    NSInteger count = [dicThree count];
+    NSLog(@"%ld",count);
+    NSArray *allKey = [dicThree allKeys];
+    NSLog(@"%@",allKey);
+    NSArray *allValue = [dicThree allValues];
+    NSLog(@"%@",allValue);
+    BOOL isEqual = [dicThree isEqualToDictionary:dicTwo]; // 两个字典是否相等
+    NSLog(@"%ld,%@,%@,@%d",count,allKey,allValue,isEqual);
+    // 遍历
+    for(NSString *key in dicThree)
+    {
+        NSLog(@"key:%@ value:%@",key,dicThree[key]);
+    }
+    
+    NSDictionary *dictFour = @{@"name":@"Kate", @"tel":@"080-123-456",@"address":@"中国"};
+    [dictFour enumerateKeysAndObjectsUsingBlock:^(id  key, id  obj, BOOL *  stop) {
+        NSLog(@"key:%@ value:%@",key,obj);
+    }];
+    
+    // NSMutableDictionary 简单使用
+    NSMutableDictionary *dictFive = [NSMutableDictionary dictionary];
+    // 像字典中追加一个新的 key5 和 value5
+    [dictFive setObject:@"value5" forKey:@"key5"];
+    [dictFive addEntriesFromDictionary:dicThree];
+    for(NSString *key in dictFive)
+    {
+        NSLog(@"key:%@ value:%@",key,dictFive[key]);
+    }
+    // 将字典5的对象内容设置与字典1的对象内容相同
+    [dictFive setDictionary:dicThree];
+    for(NSString *key in dictFive)
+    {
+        NSLog(@"key:%@ value:%@",key,dictFive[key]);
+    }
+    // 删除键所对应的键值对
+    [dictFive removeObjectForKey:@"name"];
+    // 修改key对应的value的值
+    dictFive[@"address"] = @"beijing";
+    // 删除数组中的所有key 对应的键值对
+    NSArray *array = @[@"tel",@"address",@"key3"];
+    [dictFive removeObjectsForKeys:array];
+    // 移除字典中的所有对象
+    [dictFive removeAllObjects];
+    
 }
 
 - (void)didReceiveMemoryWarning {
