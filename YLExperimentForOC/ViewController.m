@@ -21,6 +21,7 @@
 #import "TableViewControllerSeven.h"
 #import "ScrollViewControllerOne.h"
 #import "ScrollViewControllerTwo.h"
+#import "ScrollViewControllerThree.h"
 
 @interface ViewController () {
     int _number;
@@ -56,8 +57,18 @@
     // [self creatUITableViewSix];
     // [self creatUITableViewSeven];
     // [self creatUIScrollViewOne];
-    [self creatUIScrollViewTwo];
+    // [self creatUIScrollViewTwo];
+    [self creatUIScrollViewThree];
 }
+
+- (void)creatUIScrollViewThree {
+    ScrollViewControllerThree *scrollViewThree = [[ScrollViewControllerThree alloc] init];
+    [scrollViewThree.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:scrollViewThree];
+    [self.view addSubview:scrollViewThree.view];
+}
+
 - (void)creatUIScrollViewTwo {
     ScrollViewControllerTwo *scrollViewTwo = [[ScrollViewControllerTwo alloc] init];
     [scrollViewTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];

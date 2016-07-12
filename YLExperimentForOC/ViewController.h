@@ -37,6 +37,8 @@
 - (void)creatUIScrollViewOne;
 // 通过 UIView 的旋转,放大,移动
 - (void)creatUIScrollViewTwo;
+// UIScrollView 的循环图片浏览器
+- (void)creatUIScrollViewThree;
 
 // --for company
 - (void)modifyDay;
