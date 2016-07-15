@@ -13,9 +13,9 @@
     UIButton *_addBtn;
     UIButton *_confirmBtn;
     
-    UILabel  *_nameLabel;
-    UILabel  *_numLabel; // num
-    UILabel  *_contentLabel;
+    UILabel *_nameLabel;
+    UILabel *_numLabel; // num
+    UILabel *_contentLabel;
     
     NSInteger _numClassNumber;
     NSDictionary *_contentsDic;
@@ -25,11 +25,18 @@
 
 @implementation AdjustClassNumController
 
+- (instancetype)initWithFrame:(CGRect)frame contentLabelString:(NSString*)contentLabelString
+{
+    if (self = [super init]) {
+        self.view.frame = frame; // 有意思的地方,运行到这里会先去执行 viewDidLoad 方法,因为 self.view 会调用 get 方法~
+        _contentLabel.text = contentLabelString;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-
-    
 }
 
 - (void)initUI {
@@ -104,6 +111,8 @@
     _numClassNumber--;
     _numLabel.text = [NSString  stringWithFormat:@"%ld", (long)_numClassNumber];
     [_numLabel sizeToFit];
+    __weak AdjustClassNumController *weakself = self;
+    [self.delegate confirmBtnPressed:weakself]; //
 }
 - (void)subtractBtnPressed:(id)sender {
     _numClassNumber--;

@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class AdjustClassNumController;
+
+@protocol AdjustClassNumControllerDelegate <NSObject>
+
+- (void)confirmBtnPressed:(AdjustClassNumController *)ClassNumController; // 点击了确定
+
+@end
+
 @interface AdjustClassNumController : UIViewController
+
+- (instancetype)initWithFrame:(CGRect)frame contentLabelString:(NSString*)contentLabelString;
+@property (nonatomic, weak) id<AdjustClassNumControllerDelegate> delegate;
 
 @end

@@ -13,12 +13,13 @@ extern NSString *const  CellSevenEnclosingTableViewDidBeginScrollingNotification
 
 @protocol CellSevenDelegate <NSObject>
 
--(void)cellDidSelectDelete:(CellSeven *)cell;
--(void)cellDidSelectMore:(CellSeven *)cell;
+- (void)cellDidSelectDelete:(CellSeven *)cell;
+- (void)cellDidSelectMore:(CellSeven *)cell;
 
 @end
 @interface CellSeven : UITableViewCell
 
+- (id)initWithFrame:(CGRect)frame urlString:(NSString*)urlString title:(NSString*)title;
 @property (nonatomic, weak) id<CellSevenDelegate> delegate;
 @property (nonatomic, weak) UILabel *scrollViewLabel;
 

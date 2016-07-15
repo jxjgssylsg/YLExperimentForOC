@@ -24,7 +24,7 @@
 #import "ScrollViewControllerThree.h"
 #import "AdjustClassNumController.h"
 
-@interface ViewController () {
+@interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
 }
 
@@ -61,14 +61,13 @@
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     
-    
     // for cp
     [self creatAddSubInterface];
 }
 - (void)creatAddSubInterface {
-    AdjustClassNumController *tmp = [[AdjustClassNumController alloc] init];
-    [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
-    
+    AdjustClassNumController *tmp = [[AdjustClassNumController alloc] initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height) contentLabelString:@"1112121"];
+  // [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    tmp.delegate = self; //
     [self addChildViewController:tmp];
     [self.view addSubview:tmp.view];
 }
@@ -106,7 +105,7 @@
     self.navigationItem.leftBarButtonItem = tableViewSeven.navigationItem.leftBarButtonItem;
     // 这里必须设置成 tableView 的 navigationItem 才会有效果,因为是tableview 变成 editing animation,
     self.navigationItem.rightBarButtonItem = tableViewSeven.navigationItem.rightBarButtonItem;
-    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"Table View";
     
    // [self setAppropriateToolbarItems];
@@ -633,6 +632,11 @@
     
 }
 
+#pragma mark - AdjustClassNumControllerDelegate 代理方法
+- (void)confirmBtnPressed:(AdjustClassNumController *)ClassNumController {
+    NSLog(@"%@",ClassNumController);
+    NSLog(@"hahahah");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
