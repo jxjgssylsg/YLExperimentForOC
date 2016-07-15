@@ -55,6 +55,10 @@
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
 		C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87621D0290E20051E255 /* TableViewControllerThree.m */; };
 		C3DE87661D044ED30051E255 /* TableViewControllerFour.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87651D044ED30051E255 /* TableViewControllerFour.m */; };
+		C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FE11D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m */; };
+		C3E27FE51D3874A9004C4D15 /* CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FE41D3874A9004C4D15 /* CollectionHeaderView.m */; };
+		C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FE71D3874B0004C4D15 /* CollectionViewCell.m */; };
+		C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FEA1D387504004C4D15 /* TagSelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +142,14 @@
 		C3DE87621D0290E20051E255 /* TableViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerThree.m; sourceTree = "<group>"; };
 		C3DE87641D044ED30051E255 /* TableViewControllerFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerFour.h; sourceTree = "<group>"; };
 		C3DE87651D044ED30051E255 /* TableViewControllerFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerFour.m; sourceTree = "<group>"; };
+		C3E27FE01D387464004C4D15 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
+		C3E27FE11D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
+		C3E27FE31D3874A9004C4D15 /* CollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderView.h; sourceTree = "<group>"; };
+		C3E27FE41D3874A9004C4D15 /* CollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderView.m; sourceTree = "<group>"; };
+		C3E27FE61D3874B0004C4D15 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		C3E27FE71D3874B0004C4D15 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		C3E27FE91D387504004C4D15 /* TagSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagSelectViewController.h; sourceTree = "<group>"; };
+		C3E27FEA1D387504004C4D15 /* TagSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagSelectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,8 +221,8 @@
 				C35CC6D11CF42C1F008B9EC2 /* TimeZoneTableView */,
 				C3DE87541D026AE20051E255 /* UITableView */,
 				C3664DDC1D30DB7200D29182 /* UIScrollView */,
-				C3664DE81D349FDE00D29182 /* 加减课程-FCOM */,
-				C3E27FDF1D387378004C4D15 /* Tag标签-FCOM */,
+				C3664DE81D349FDE00D29182 /* 加减课程 - FCOM */,
+				C3E27FDF1D387378004C4D15 /* Tag 标签 - FCOM */,
 				C34FEB431D115FE1006E6A51 /* Images(尽量复用) */,
 			);
 			path = YLExperimentForOC;
@@ -277,13 +289,13 @@
 			name = UIScrollView;
 			sourceTree = "<group>";
 		};
-		C3664DE81D349FDE00D29182 /* 加减课程-FCOM */ = {
+		C3664DE81D349FDE00D29182 /* 加减课程 - FCOM */ = {
 			isa = PBXGroup;
 			children = (
 				C3664DEA1D34A06700D29182 /* AdjustClassNumController.h */,
 				C3664DEB1D34A06700D29182 /* AdjustClassNumController.m */,
 			);
-			name = "加减课程-FCOM";
+			name = "加减课程 - FCOM";
 			sourceTree = "<group>";
 		};
 		C3664DF01D36202000D29182 /* 代码规范 */ = {
@@ -359,11 +371,19 @@
 			name = UITableView;
 			sourceTree = "<group>";
 		};
-		C3E27FDF1D387378004C4D15 /* Tag标签-FCOM */ = {
+		C3E27FDF1D387378004C4D15 /* Tag 标签 - FCOM */ = {
 			isa = PBXGroup;
 			children = (
+				C3E27FE01D387464004C4D15 /* UICollectionViewLeftAlignedLayout.h */,
+				C3E27FE11D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m */,
+				C3E27FE31D3874A9004C4D15 /* CollectionHeaderView.h */,
+				C3E27FE41D3874A9004C4D15 /* CollectionHeaderView.m */,
+				C3E27FE61D3874B0004C4D15 /* CollectionViewCell.h */,
+				C3E27FE71D3874B0004C4D15 /* CollectionViewCell.m */,
+				C3E27FE91D387504004C4D15 /* TagSelectViewController.h */,
+				C3E27FEA1D387504004C4D15 /* TagSelectViewController.m */,
 			);
-			name = "Tag标签-FCOM";
+			name = "Tag 标签 - FCOM";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34FEB851D13D1B0006E6A51 /* DataModelFrame.m in Sources */,
+				C3E27FE51D3874A9004C4D15 /* CollectionHeaderView.m in Sources */,
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
 				C34FEB791D128207006E6A51 /* TableViewControllerSix.m in Sources */,
 				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
@@ -460,6 +481,7 @@
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
 				C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */,
 				C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */,
+				C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */,
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
 				C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */,
@@ -475,11 +497,13 @@
 				C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */,
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
+				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
 				C3664DE21D33418200D29182 /* ScrollViewControllerTwo.m in Sources */,
 				C3664DDF1D30DC0200D29182 /* ScrollViewControllerOne.m in Sources */,
 				C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
+				C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				C3664DEC1D34A06700D29182 /* AdjustClassNumController.m in Sources */,
 				C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */,
 			);

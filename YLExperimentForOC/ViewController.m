@@ -23,6 +23,7 @@
 #import "ScrollViewControllerTwo.h"
 #import "ScrollViewControllerThree.h"
 #import "AdjustClassNumController.h"
+#import "TagSelectViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -61,9 +62,18 @@
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     
-    // for cp
-    [self creatAddSubInterface];
+    // --------------- for cp --------------//
+    // [self creatAddSubInterface];
+    [self creatTagSelectInterface];
 }
+- (void)creatTagSelectInterface {
+    TagSelectViewController *tmp = [[TagSelectViewController alloc] init];
+    [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    [self addChildViewController:tmp];
+    [self.view addSubview:tmp.view];
+    
+}
+
 - (void)creatAddSubInterface {
     AdjustClassNumController *tmp = [[AdjustClassNumController alloc] initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height) contentLabelString:@"1112121"];
   // [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
