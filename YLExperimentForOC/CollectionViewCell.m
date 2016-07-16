@@ -41,15 +41,15 @@
     self.titleLabel.layer.borderWidth = 0;
     self.layer.borderColor = [UIColor redColor].CGColor;
     self.layer.borderWidth = 1;
-    self.layer.cornerRadius = 10;
+    self.layer.cornerRadius = 4.0;
     self.titleLabel.layer.masksToBounds = YES;
     
     // 选中时 image
-     _selectedImage = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width - 17, self.bounds.size.height - 17, 37, 37)];
-    _selectedImage.image = [UIImage imageNamed:@"vip"];
-    _selectedImage.backgroundColor = [UIColor grayColor];
-    _selectedImage.contentMode = UIViewContentModeCenter;
-    
+    UIImage *image = [UIImage imageNamed:@"selectedBackground.png"];
+    image = [UIImage imageWithCGImage:image.CGImage scale:2 orientation:UIImageOrientationUp]; // 缩小成 1/2
+    _selectedImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
+    _selectedImage.image = image;
+    // _selectedImage.contentMode = UIViewContentModeScaleAspectFit;
     
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:_selectedImage];

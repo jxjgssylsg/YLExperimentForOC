@@ -21,7 +21,7 @@ float CYLFilterHeaderViewHeigt = 38;
 }
 
 - (id)headViewInit {
-   // self.backgroundColor = [UIColor colorWithRed:188.0/255.0 green:188.0/255.0 blue:188.0/255.0 alpha:1.0];
+    self.backgroundColor = [UIColor colorWithRed:188.0/255.0 green:188.0/255.0 blue:188.0/255.0 alpha:1.0];
     UIView *yellowSmallIcon = [[UIView alloc] initWithFrame:CGRectMake(15, 7, 6, 17)];
     yellowSmallIcon.backgroundColor = [UIColor colorWithRed:255 / 255.0 green:204 / 255.0 blue:36 / 255.0 alpha:1.0];
     self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(26, 0, 200, 30)];

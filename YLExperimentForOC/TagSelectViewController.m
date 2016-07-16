@@ -39,7 +39,7 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.dataSource =  [@[@"不够有趣", @"不够温柔", @"讲解不清楚", @"说中文太多",@"热点", @"不够漂亮啊, 下次来个萌妹子", @"反正就是不喜欢这个老师"] mutableCopy];
+    self.dataSource =  [@[@"不够有趣", @"不够温柔", @"讲解不清楚", @"说中文太多",@"热点", @"不够漂亮啊, 下次来个萌妹子", @"反正就是不喜欢这个老师1", @"反正就是不喜欢这个老师2", @"反正就是不喜欢这个老师3"] mutableCopy];
     self.selectedTags = [[NSMutableArray alloc] init];
     [self addCollectionView];
     
@@ -61,6 +61,13 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     self.collectionView.scrollsToTop = NO;
     // self.collectionView.scrollEnabled = NO;
     [self.view addSubview:self.collectionView];
+    
+    CGSize contentSize =  _collectionView.collectionViewLayout.collectionViewContentSize; // 内容的大小
+    _collectionView.backgroundColor = [UIColor redColor];
+    self.preferredContentSize = contentSize; // controller 内容大小
+    self.view.frame = CGRectMake(0, 0, contentSize.width, contentSize.height);
+    self.view.clipsToBounds = YES; // 边界减掉
+    
 }
 #pragma mark - UICollectionViewDataSource
 
@@ -75,6 +82,7 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionViewCell *cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
+    cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 24);
     cell.titleLabel.frame = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
     
     NSString *text = self.dataSource[indexPath.row];
@@ -85,8 +93,14 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
         cell.selectedImage.hidden = NO;
     }
     // cell.titleLabel.textAlignment = NSTextAlignmentLeft;
-    [cell.selectedImage setFrame:CGRectMake(cell.bounds.size.width - 17, cell.bounds.size.height -17, 17, 17)];
-    
+    [cell.selectedImage setFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)];
+    CGFloat top = 5; // 顶端盖高度
+    CGFloat bottom = 17 ; // 底端盖高度
+    CGFloat left = 5; // 左端盖宽度
+    CGFloat right = 17; // 右端盖宽度
+    UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
+    // 指定为拉伸模式，伸缩后重新赋值
+    cell.selectedImage.image = [cell.selectedImage.image resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
     return cell;
 }
 // 点击事件
@@ -131,7 +145,6 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
   
     return cellWidth;
 }
-
 
 - (float)checkCellLimitWidth:(float)cellWidth isLimitWidth:(IsLimitWidth)isLimitWidth {
     float limitWidth = (CGRectGetWidth(self.collectionView.frame) - kCollectionViewToLeftMargin - kCollectionViewToRightMargin);

@@ -59,6 +59,7 @@
 		C3E27FE51D3874A9004C4D15 /* CollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FE41D3874A9004C4D15 /* CollectionHeaderView.m */; };
 		C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FE71D3874B0004C4D15 /* CollectionViewCell.m */; };
 		C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FEA1D387504004C4D15 /* TagSelectViewController.m */; };
+		C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E27FEC1D38E90B004C4D15 /* selectedBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +151,7 @@
 		C3E27FE71D3874B0004C4D15 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		C3E27FE91D387504004C4D15 /* TagSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagSelectViewController.h; sourceTree = "<group>"; };
 		C3E27FEA1D387504004C4D15 /* TagSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagSelectViewController.m; sourceTree = "<group>"; };
+		C3E27FEC1D38E90B004C4D15 /* selectedBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +376,7 @@
 		C3E27FDF1D387378004C4D15 /* Tag 标签 - FCOM */ = {
 			isa = PBXGroup;
 			children = (
+				C3E27FEC1D38E90B004C4D15 /* selectedBackground.png */,
 				C3E27FE01D387464004C4D15 /* UICollectionViewLeftAlignedLayout.h */,
 				C3E27FE11D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m */,
 				C3E27FE31D3874A9004C4D15 /* CollectionHeaderView.h */,
@@ -446,6 +449,7 @@
 			files = (
 				C34FEB531D115FE1006E6A51 /* 5.png in Resources */,
 				C34FEB551D115FE1006E6A51 /* 7.png in Resources */,
+				C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */,
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
 				C34FEB571D115FE1006E6A51 /* 9.png in Resources */,
 				C3664DE71D33965B00D29182 /* imageInfo.plist in Resources */,

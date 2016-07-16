@@ -67,11 +67,22 @@
     [self creatTagSelectInterface];
 }
 - (void)creatTagSelectInterface {
+    [self.navigationController setNavigationBarHidden:YES];
     TagSelectViewController *tmp = [[TagSelectViewController alloc] init];
-    [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    // [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     [self addChildViewController:tmp];
     [self.view addSubview:tmp.view];
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor grayColor];
+    [button setFrame:CGRectMake(0, 400, 50, 50)];
+    [button addTarget:self action:@selector(tagSelectButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+- (void)tagSelectButtonPressed:(id)sender {
+    NSLog(@"hehe");
+//    UIButton *button = (UIButton *)sender;
+//    button.backgroundColor = [UIColor redColor];
 }
 
 - (void)creatAddSubInterface {
@@ -118,7 +129,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"Table View";
     
-   // [self setAppropriateToolbarItems];
+    // [self setAppropriateToolbarItems];
 }
 -(void)creatUITableViewSix {
     TableViewControllerSix *tableViewSix = [[TableViewControllerSix alloc] init];
@@ -166,27 +177,27 @@
 }
 
 - (void)testNSCalendar {
-    //当前时间对应的月份中有几天
+    // 当前时间对应的月份中有几天
     NSInteger daysOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
     NSLog(@"%ld",(long)daysOfMonth);
     
-    //当前时间对应的月份中有几周（前面说到的firstWeekday会影响到这个结果）
+    // 当前时间对应的月份中有几周（前面说到的firstWeekday会影响到这个结果）
     NSInteger weeksOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]].length;
     NSLog(@"%ld",(long)weeksOfMonth);
     
-    //当前时间对应的周是当前年中的第几周
+    // 当前时间对应的周是当前年中的第几周
     NSInteger  weekOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfYear inUnit:NSCalendarUnitYear forDate:[NSDate date]];
     NSLog(@"%ld",(long)weekOfYear);
     
-    //当前时间是当前月的哪一周
+    // 当前时间是当前月的哪一周
     NSInteger weekOfMonth = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth forDate:[NSDate date]];
     NSLog(@"%ld",(long)weekOfMonth);
     
-    //当前时间是这一年的哪一天
+    // 当前时间是这一年的哪一天
     NSInteger dayOfYear = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
     NSLog(@"%ld",(long)dayOfYear);
     
-    //判断时间段和起始时间
+    // 判断时间段和起始时间
     NSDate *startDateOfYear;
     NSDate *startDateOfMonth;
     NSDate *startDateOfWeek;

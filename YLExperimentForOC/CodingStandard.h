@@ -48,7 +48,12 @@ typedef NSComparisonResult (^NSComparator)(id obj1, id obj2);
 typedef void (^CoverDecodeBlock)(id src);
 typedef void (^SingleFrameDecodeBlock)(id src, NSUInteger index);
 typedef void (^AllFrameDecodeBlock)(id src, BOOL reverseOrder);
+ 
+UIViewAnimationOptionBeginFromCurrentState animations:^{
+   .....
+}
 
-*/
-
+[self enumerateAttribute:YYTextBackedStringAttributeName inRange:range options:kNilOptions usingBlock:^(id value, NSRange range, BOOL *stop) {
+    ......
+}
 #endif /* CodingStandard_h */
