@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lorem" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="SsP-Ts-fFN">
-                                <rect key="frame" x="299" y="122" width="240" height="262"/>
+                                <rect key="frame" x="428" y="122" width="111" height="177"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="0.3722525578906436" blue="0.39764953973633543" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

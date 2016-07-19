@@ -8,6 +8,11 @@
 
 #import "AdjustClassNumController.h"
 
+#define TransformToChineseNum(a) \
+_contentsDic[[NSString stringWithFormat:@"%ld",a]]
+
+#define ViewCenter self.view.center
+
 @interface AdjustClassNumController () {
     UIButton *_subtractBtn;
     UIButton *_addBtn;
@@ -17,6 +22,8 @@
     UILabel *_numLabel; // num
     UILabel *_contentLabel;
     
+    NSInteger _initialNum; // 初始课程数
+    NSInteger _maxClassNum;
     NSInteger _numClassNumber;
     NSDictionary *_contentsDic;
 }
@@ -25,11 +32,11 @@
 
 @implementation AdjustClassNumController
 
-- (instancetype)initWithFrame:(CGRect)frame contentLabelString:(NSString*)contentLabelString
-{
+- (instancetype)initWithMaxClassNum:(NSInteger)maxNum currentClassNum:(NSInteger)currentNum {
     if (self = [super init]) {
-        self.view.frame = frame; // 有意思的地方,运行到这里会先去执行 viewDidLoad 方法,因为 self.view 会调用 get 方法~
-        _contentLabel.text = contentLabelString;
+       // _numClass.text = [NSString  stringWithFormat:@"%ld",currentNum];
+        _initialNum = _numClassNumber = currentNum;
+        _maxClassNum = maxNum;
     }
     return self;
 }
@@ -37,7 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-    // self.preferredContentSize =;
+    self.preferredContentSize = CGSizeMake(230, 254);
 }
 
 - (void)initUI {
@@ -84,16 +91,15 @@
     _numLabel.font = [UIFont systemFontOfSize:60];
     _numLabel.textColor = [UIColor colorWithRed:240 / 255.0f green:184 / 255.0 blue:1 / 255.0 alpha:1];
 
-    _numLabel.text  = @"3";
+    _numLabel.text  = [NSString stringWithFormat:@"%ld",_initialNum];
     [_numLabel sizeToFit];
     [self.view addSubview:_numLabel];
-    _numClassNumber = 3;
     
     _contentLabel = [[UILabel alloc] init];
     _contentLabel.frame = CGRectMake(99, 178, 0, 0);
     _contentLabel.font = [UIFont systemFontOfSize:14];
     _contentLabel.textColor = [UIColor colorWithRed:157 / 255.0f green:157 / 255.0 blue:157 / 255.0 alpha:1];
-    _contentLabel.text = @"你好呀是是";
+    _contentLabel.text = @"课程数不变";
     [_contentLabel sizeToFit];
     [self.view addSubview:_contentLabel];
     
@@ -106,35 +112,106 @@
     [_confirmBtn addTarget:self action:@selector(confirmBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_confirmBtn];
     
-    _contentsDic = @{@"0":@"取消该课型", @"1":@"减少两节课", @"2":@"减少一节课", @"3":@"数目不变", @"4":@"增加一节课"};
+    
+    _contentsDic = @{@"1":@"一", @"2":@"二", @"3":@"三", @"4":@"四", @"5":@"五", @"6":@"六", @"7":@"七"};
 }
 - (void)confirmBtnPressed:(id)sender {
-    _numClassNumber--;
-    _numLabel.text = [NSString  stringWithFormat:@"%ld", (long)_numClassNumber];
-    [_numLabel sizeToFit];
     __weak AdjustClassNumController *weakself = self;
     [self.delegate confirmBtnPressed:weakself]; //
 }
 - (void)subtractBtnPressed:(id)sender {
+    if (_numClassNumber <= 0) {
+        _contentLabel.text =  [NSString stringWithFormat:@"取消该课程"];;
+        _subtractBtn.userInteractionEnabled = NO;
+        _subtractBtn.alpha = 0.4;
+        return;
+    }
     _numClassNumber--;
-    _numLabel.text = [NSString  stringWithFormat:@"%ld", (long)_numClassNumber];
+    if (_numClassNumber > _initialNum) {
+        _contentLabel.text = [NSString stringWithFormat:@"增加%@节课",TransformToChineseNum((_numClassNumber - _initialNum))];
+    } else {
+        _contentLabel.text = [NSString stringWithFormat:@"减少%@节课",TransformToChineseNum((_initialNum - _numClassNumber))];
+    }
+    _numLabel.text = [NSString stringWithFormat:@"%ld", (long)_numClassNumber];
     [_numLabel sizeToFit];
+
+    if (_numClassNumber == _initialNum) {
+        _contentLabel.text =  [NSString stringWithFormat:@"课程数不变"];;
+    }
     
-    _contentLabel.text = _contentsDic[_numLabel.text];
-    [_contentLabel sizeToFit];
+    if (_numClassNumber <= 0) {
+        _contentLabel.text =  [NSString stringWithFormat:@"取消该课程"];;
+        _subtractBtn.userInteractionEnabled = NO;
+        _subtractBtn.alpha = 0.4;
+    }
+    _addBtn.userInteractionEnabled = YES;
+    _addBtn.alpha = 1.0;
 }
 
 - (void)addBtnPressed:(id)sender {
+    if (_numClassNumber >= _maxClassNum) {
+        _addBtn.userInteractionEnabled = NO;
+        _addBtn.alpha = 0.4;
+        return;
+    }
     _numClassNumber++;
-    _numLabel.text = [NSString  stringWithFormat:@"%ld", (long)_numClassNumber];
+    if (_numClassNumber > _initialNum) { // 增加
+        _contentLabel.text = [NSString stringWithFormat:@"增加%@节课",TransformToChineseNum((_numClassNumber - _initialNum))];
+    } else {
+        _contentLabel.text = [NSString stringWithFormat:@"减少%@节课",TransformToChineseNum((_initialNum - _numClassNumber))];
+    }
+    _numLabel.text = [NSString stringWithFormat:@"%ld", (long)_numClassNumber];
     [_numLabel sizeToFit];
     
-    _contentLabel.text = _contentsDic[_numLabel.text];
-    [_contentLabel sizeToFit];
+    if (_numClassNumber == _initialNum) {
+        _contentLabel.text =  [NSString stringWithFormat:@"课程数不变"];;
+    }
+    if (_numClassNumber >= _maxClassNum) {
+        _addBtn.userInteractionEnabled = NO;
+        _addBtn.alpha = 0.4;
+    }
+    
+    _subtractBtn.userInteractionEnabled = YES;
+    _subtractBtn.alpha = 1.0;
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/*
+  动画效果, 淡出淡入
+#pragma mark -- Animation
+// 显示动画
+- (void)show{
+    _backgroundView.alpha = 0;
+    self.alpha = 0;
+    self.transform = CGAffineTransformMakeTranslation(0, 5);
+    [UIView animateWithDuration:0.15 animations:^{
+        _backgroundView.alpha = 0.4;
+    }];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.alpha = 1;
+        self.transform = CGAffineTransformIdentity;
+    }];
+}
+// 隐藏动画
+- (void)hide{
+    [UIView animateWithDuration:0.15 animations:^{
+        self.alpha = 0;
+        self.transform = CGAffineTransformMakeTranslation(0, 5);
+    }];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        _backgroundView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [_backgroundView removeFromSuperview];
+        _backgroundView = nil;
+        [self removeFromSuperview];
+    }];
+}
+
+*/
 @end

@@ -94,7 +94,7 @@ typedef void (^ButtonHandle)();
 #pragma mark 图片缩放方法
 - (void)scale:(UIButton *)btn {
     // 通常使用 UIView 的静态方法实现动画而不是自己写一个方法
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{ // 系统动画 $$
         CGFloat scalleOffset = 0.9;
         // _imageView.transform=CGAffineTransformMakeScale(scalleOffset, scalleOffset);
         _imageView.transform = CGAffineTransformScale(_imageView.transform, scalleOffset, scalleOffset);

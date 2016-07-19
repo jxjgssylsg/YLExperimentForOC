@@ -18,7 +18,9 @@
 
 @interface AdjustClassNumController : UIViewController
 
-- (instancetype)initWithFrame:(CGRect)frame contentLabelString:(NSString*)contentLabelString;
-@property (nonatomic, weak) id<AdjustClassNumControllerDelegate> delegate;
+- (instancetype)initWithMaxClassNum:(NSInteger)maxNum currentClassNum:(NSInteger)currentNum;
+
+@property (weak, nonatomic) id<AdjustClassNumControllerDelegate> delegate;
+@property (strong, nonatomic) UIView *maskView; // 遮罩层
 
 @end

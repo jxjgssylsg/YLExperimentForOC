@@ -56,4 +56,27 @@ UIViewAnimationOptionBeginFromCurrentState animations:^{
 [self enumerateAttribute:YYTextBackedStringAttributeName inRange:range options:kNilOptions usingBlock:^(id value, NSRange range, BOOL *stop) {
     ......
 }
+ 
+// ------------------------  宏定义 定义 ------------------------//
+#define Me @"shengyilin"   // 一般情况下
+ 
+#define ParagraphAttribute(_attr_) \
+NSParagraphStyle *style = self.paragraphStyle; \
+if (!style) style = [NSParagraphStyle defaultParagraphStyle]; \
+return style. _attr_;
+ 
+#define ParagraphAttributeAtIndex(_attr_) \
+NSParagraphStyle *style = [self paragraphStyleAtIndex:index]; \
+if (!style) style = [NSParagraphStyle defaultParagraphStyle]; \
+return style. _attr_;
+ 
+ - (NSTextAlignment)alignment {
+     ParagraphAttribute(alignment); // 这个宏包括了 return
+ }
+
+
 #endif /* CodingStandard_h */
+
+
+
+

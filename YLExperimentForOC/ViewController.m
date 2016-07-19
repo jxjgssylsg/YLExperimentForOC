@@ -62,9 +62,9 @@
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     
-    // --------------- for cp --------------//
-    // [self creatAddSubInterface];
-    [self creatTagSelectInterface];
+    // --------------- FCOM ---------------- //
+    [self creatAddSubInterface];
+    // [self creatTagSelectInterface];
 }
 - (void)creatTagSelectInterface {
     [self.navigationController setNavigationBarHidden:YES];
@@ -86,11 +86,27 @@
 }
 
 - (void)creatAddSubInterface {
-    AdjustClassNumController *tmp = [[AdjustClassNumController alloc] initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height) contentLabelString:@"1112121"];
-  // [tmp.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    self.view.backgroundColor = [UIColor whiteColor]; // 背景设透明
+    
+    AdjustClassNumController *tmp = [[AdjustClassNumController alloc] initWithMaxClassNum:7 currentClassNum:2];
     tmp.delegate = self; //
+    tmp.maskView = [[UIView alloc] init];
+    tmp.maskView.backgroundColor = [UIColor blackColor];
+    tmp.maskView.frame = [UIApplication sharedApplication].keyWindow.frame;
+    tmp.maskView.alpha = 0.4;
+    /// tmp.maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2f]; //
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:tmp.maskView]; // 加遮罩层
+    [tmp.view setFrame:CGRectMake(50, 100, 270, 300)];
+    tmp.view.backgroundColor = [UIColor whiteColor]; // 控件颜色白色
+    tmp.view.center = [UIApplication sharedApplication].keyWindow.center; // 中心一致
+    [[UIApplication sharedApplication].keyWindow addSubview:tmp.view];
+    [UIView animateWithDuration:0.5 animations:^{
+        // View.transform=CGAffineTransformMakeScale(scalleOffset, scalleOffset);
+        // tmp.view.transform = CGAffineTransformMakeScale(0.5, 0.5); // 动画
+    }];
+    
     [self addChildViewController:tmp];
-    [self.view addSubview:tmp.view];
 }
 - (void)creatUIScrollViewThree {
     ScrollViewControllerThree *scrollViewThree = [[ScrollViewControllerThree alloc] init];
@@ -597,7 +613,7 @@
 
 - (void)testNSDictionary {
     NSDictionary *dicOne = [NSDictionary dictionaryWithObject: @"hello" forKey:@"key"];
-    NSString *dicOneValue = dicOne[@"key"];
+    NSString *dicOneValue = dicOne[@"key"]; // 取值
     NSLog(@"%@",dicOneValue);
     
     NSDictionary *dicTwo = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -624,7 +640,7 @@
     }
     
     NSDictionary *dictFour = @{@"name":@"Kate", @"tel":@"080-123-456",@"address":@"中国"};
-    [dictFour enumerateKeysAndObjectsUsingBlock:^(id  key, id  obj, BOOL *  stop) {
+    [dictFour enumerateKeysAndObjectsUsingBlock:^(id  key, id  obj, BOOL *stop) {
         NSLog(@"key:%@ value:%@",key,obj);
     }];
     
