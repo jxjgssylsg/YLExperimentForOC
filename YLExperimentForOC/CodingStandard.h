@@ -10,14 +10,18 @@
 #define CodingStandard_h
 
 /*
+
+// -------------------------------- 宏 --------------------------------//
+ #define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
+ #define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
  
 // ------------------------  类,属性 ------------------------//
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @end
-
+ 
 @implementation _YYWebImageSetter {
     NSURL *_imageURL;
     NSOperation *_operation; // 空一格
@@ -73,7 +77,19 @@ return style. _attr_;
  - (NSTextAlignment)alignment {
      ParagraphAttribute(alignment); // 这个宏包括了 return
  }
-
+ 
+// ------------------------  Switch case ------------------------//
+switch (property->_type & YYEncodingTypeMask) {
+     case YYEncodingTypeObject: {
+         id v = ((id (*)(id, SEL))(void *) objc_msgSend)((id)model, property->_getter);
+         if (!propertyDesc) propertyDesc = @"<nil>";
+     } break;
+     case YYEncodingTypeStruct: case YYEncodingTypeUnion: {
+         NSValue *value = [model valueForKey:property->_name];
+     } break;
+     default: propertyDesc = @"<unknown>"; break;
+ }
+}
 
 #endif /* CodingStandard_h */
 

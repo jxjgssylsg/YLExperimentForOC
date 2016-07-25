@@ -8,15 +8,17 @@
 
 #import "DataModelFrame.h"
 
+@class DataModelFrame;
+
 @implementation DataModelFrame
 
 + (instancetype)DataModelFrameWithModel:(DataModel *)model {
-    return [[self alloc] initWithModel:model];
+    return [[DataModelFrame alloc] initWithModel:model];
 }
 + (NSMutableArray *)DataModelFrameWithArray:(NSMutableArray *)arr {
     NSMutableArray *data = [NSMutableArray array];
     for (DataModel *mo in arr) {
-        DataModelFrame *newM = [self DataModelFrameWithModel:mo];
+        DataModelFrame *newM = [DataModelFrame DataModelFrameWithModel:mo];
         [data addObject:newM];
     }
     return data;

@@ -39,7 +39,7 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.dataSource =  [@[@"不够有趣", @"不够温柔", @"讲解不清楚", @"说中文太多",@"热点", @"不够漂亮啊, 下次来个萌妹子", @"反正就是不喜欢这个老师1", @"反正就是不喜欢这个老师2", @"反正就是不喜欢这个老师3"] mutableCopy];
+    self.dataSource = [@[@"不够有趣", @"不够温柔", @"讲解不清楚", @"说中文太多",@"热点", @"不够漂亮啊, 下次来个萌妹子", @"反正就是不喜欢这个老师1", @"反正就是不喜欢这个老师2", @"反正就是不喜欢这个老师3"] mutableCopy];
     self.selectedTags = [[NSMutableArray alloc] init];
     [self addCollectionView];
     

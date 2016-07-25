@@ -18,7 +18,7 @@ static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
 @interface TableViewControllerSix ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic, strong) NSMutableArray *dataArray; // 数据源
-@property(nonatomic, strong) NSMutableArray *frameArray; // cell高度
+@property(nonatomic, strong) NSMutableArray *frameArray; // cell 高度
 @property(nonatomic, strong) UITableView *tab; // tableView
 @end
 
@@ -57,7 +57,7 @@ static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CustomCellForCode *cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier ];
-    // 发现当cell队列没用可重用的时候,会自动去调用 initWithStyle:reuseIdentifier: 方法,cell似乎不会为空,但还是建议做空处理,至少没有坏处吧,且规范.
+    // 发现当 cell 队列没用可重用的时候,会自动去调用 initWithStyle:reuseIdentifier: 方法, cell 似乎不会为空,但还是建议做空处理,至少没有坏处吧,且规范.
     if (!cell) {
         NSLog(@"cell kong kong kong kong kong kong kong");
         cell = [[CustomCellForCode alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CustomCellIdentifier];

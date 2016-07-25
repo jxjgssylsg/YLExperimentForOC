@@ -56,14 +56,14 @@
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
     // [self creatUITableViewFour];
-    // [self creatUITableViewSix];
+       [self creatUITableViewSix];
     // [self creatUITableViewSeven];
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     
     // --------------- FCOM ---------------- //
-    [self creatAddSubInterface];
+    // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
 }
 - (void)creatTagSelectInterface {
