@@ -63,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C301DF231D49A1C900408501 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		C3241F621D20BC8A0015C9FD /* TableViewControllerSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerSeven.h; sourceTree = "<group>"; };
 		C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerSeven.m; sourceTree = "<group>"; };
 		C3241F651D20C3840015C9FD /* CellSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellSeven.h; sourceTree = "<group>"; };
@@ -320,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				C3664DF11D3620B700D29182 /* CodingStandard.h */,
+				C301DF231D49A1C900408501 /* Macros.h */,
 			);
 			name = "代码规范";
 			sourceTree = "<group>";

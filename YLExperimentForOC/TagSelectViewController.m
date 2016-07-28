@@ -12,7 +12,7 @@
 #import "CollectionHeaderView.h"
 
 #define kCollectionViewCellsHorizonMargin 12          // cell 之间的间隔
-#define kCollectionViewCellHeight 30                  // cell 的高
+#define kCollectionViewCellHeight 24                  // cell 的高
 
 #define kCollectionViewToLeftMargin 16                // 左
 #define kCollectionViewToTopMargin 12                 // 上
@@ -24,8 +24,8 @@
 typedef void (^IsLimitWidth)(BOOL yesORNo,float *data);
 
 
-static NSString * const kCellIdentifier = @"CellIdentifier"; // Cell 标识
-static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier"; // HeadView 标识
+static NSString *const kCellIdentifier = @"CellIdentifier"; // Cell 标识
+static NSString *const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier"; // HeadView 标识
 
 @interface TagSelectViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -63,7 +63,7 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     [self.view addSubview:self.collectionView];
     
     CGSize contentSize =  _collectionView.collectionViewLayout.collectionViewContentSize; // 内容的大小
-    _collectionView.backgroundColor = [UIColor redColor];
+    // _collectionView.backgroundColor = [UIColor redColor];
     self.preferredContentSize = contentSize; // controller 内容大小
     self.view.frame = CGRectMake(0, 0, contentSize.width, contentSize.height);
     self.view.clipsToBounds = YES; // 边界减掉
@@ -95,7 +95,7 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     // cell.titleLabel.textAlignment = NSTextAlignmentLeft;
     [cell.selectedImage setFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)];
     CGFloat top = 5; // 顶端盖高度
-    CGFloat bottom = 17 ; // 底端盖高度
+    CGFloat bottom = 17; // 底端盖高度
     CGFloat left = 5; // 左端盖宽度
     CGFloat right = 17; // 右端盖宽度
     UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
@@ -115,6 +115,7 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
     }
     
     [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    selectItem.backgroundColor = [UIColor darkGrayColor];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
@@ -166,7 +167,7 @@ static NSString * const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier";
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return kCollectionViewCellsHorizonMargin; // cell之间的间隔
+    return kCollectionViewCellsHorizonMargin; // cell 之间的间隔
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {

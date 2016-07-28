@@ -56,7 +56,7 @@
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
     // [self creatUITableViewFour];
-       [self creatUITableViewSix];
+    // [self creatUITableViewSix];
     // [self creatUITableViewSeven];
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
@@ -64,7 +64,7 @@
     
     // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
-    // [self creatTagSelectInterface];
+     [self creatTagSelectInterface];
 }
 - (void)creatTagSelectInterface {
     [self.navigationController setNavigationBarHidden:YES];
@@ -75,9 +75,9 @@
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor grayColor];
-    [button setFrame:CGRectMake(0, 400, 50, 50)];
+    [button setFrame:CGRectMake(50, 400, 50, 50)];
     [button addTarget:self action:@selector(tagSelectButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    [self.view addSubview:button]; // $$
 }
 - (void)tagSelectButtonPressed:(id)sender {
     NSLog(@"hehe");
