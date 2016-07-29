@@ -8,21 +8,23 @@
 
 #import "AnswerVCCellDataModelFrame.h"
 
+#define CELLHEIGHT 100
+
 @class AnswerVCCellDataModelFrame;
 
 @implementation AnswerVCCellDataModelFrame
 
-+ (instancetype)DataModelFrameWithModel:(AnswerVCCellDataModel *)model {
++ (instancetype)AnswerVCCellDataModelFrameWithModel:(AnswerVCCellDataModel *)model {
     return [[AnswerVCCellDataModelFrame alloc] initWithModel:model];
 }
 
-+ (NSMutableArray *)DataModelFrameWithArray:(NSMutableArray *)arr {
-    NSMutableArray *data = [NSMutableArray array];
++ (NSMutableArray *)AnswerVCCellDataModelFrameWithArray:(NSMutableArray *)arr {
+    NSMutableArray *modelFrames = [NSMutableArray array];
     for (AnswerVCCellDataModel *model in arr) {
-        AnswerVCCellDataModelFrame *newM = [AnswerVCCellDataModelFrame DataModelFrameWithModel:model];
-        [data addObject:newM];
+        AnswerVCCellDataModelFrame *modelframe = [AnswerVCCellDataModelFrame AnswerVCCellDataModelFrameWithModel:model];
+        [modelFrames addObject:modelframe];
     }
-    return data;
+    return modelFrames;
 }
 
 - (instancetype)initWithModel:(AnswerVCCellDataModel *)model {
@@ -35,52 +37,43 @@
 
 - (CGFloat)cellHeight {
     if (_cellHeight == 0) { // only calculate once
-        CGFloat margin = 10;
+        // new label
+        CGFloat readLabelFrameX = 26;
+        CGFloat readLabelFrameY = 15;
+        CGFloat readLabelFrameW = 31;
+        CGFloat readLabelFrameH = 14;
+        self.readLabelFrame = CGRectMake(readLabelFrameX, readLabelFrameY, readLabelFrameW, readLabelFrameH);
         
-        // 头像
-        CGFloat iconX = margin;
-        CGFloat iconY = margin;
-        CGFloat iconWH = 30;
-        self.iconFrame = CGRectMake(iconX, iconY, iconWH, iconWH);
+        // avatarFrame 头像
+        CGFloat avatarFrameX = 32;
+        CGFloat avatarFrameY = 18;
+        CGFloat avatarFrameW = 64;
+        CGFloat avatarFrameH = 64;
+        self.avatarFrame = CGRectMake(avatarFrameX, avatarFrameY, avatarFrameW, avatarFrameH);
         
-        // 昵称(姓名)
-        CGFloat nameY = iconY;
-        CGFloat nameX = CGRectGetMaxX(self.iconFrame) + margin;
-        // 计算文字所占据的尺寸
-        NSDictionary *nameAttrs = @{ NSFontAttributeName : [UIFont systemFontOfSize:17] };
-        CGSize nameSize = [self.model.name sizeWithAttributes:nameAttrs];
-        self.nameFrame = (CGRect){{nameX, nameY}, nameSize};
+        // contentFrame 课程内容
+        CGFloat contentFrameX = 116;
+        CGFloat contentFrameY = 29;
+        CGFloat contentFrameW = 178;
+        CGFloat contentFrameH = 40;
+        self.contentFrame = CGRectMake(contentFrameX, contentFrameY, contentFrameW, contentFrameH);
+ 
         
-        // 会员图标
-        if (self.model.vip) {
-            CGFloat vipW = 14;
-            CGFloat vipH = nameSize.height;
-            CGFloat vipY = nameY;
-            CGFloat vipX = CGRectGetMaxX(self.nameFrame) + margin;
-            self.vipFrame = CGRectMake(vipX, vipY, vipW, vipH);
-        }
+        // gapLineFrame
+        CGFloat gapLineFrameX = 304;
+        CGFloat gapLineFrameY = 55;
+        CGFloat gapLineFrameW = 3;
+        CGFloat gapLineFrameH = 11;
+        self.gapLineFrame = CGRectMake(gapLineFrameX, gapLineFrameY, gapLineFrameW, gapLineFrameH);
         
-        // 文字
-        CGFloat textX = iconX;
-        CGFloat textY = CGRectGetMaxY(self.iconFrame) + margin;
-        CGFloat textW = [UIScreen mainScreen].bounds.size.width - 2 * textX;
-        CGSize textMaxSize = CGSizeMake(textW, MAXFLOAT);
-        NSDictionary *textAttrs = @{NSFontAttributeName : [UIFont systemFontOfSize:14]};
-        CGFloat textH = [self.model.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttrs context:nil].size.height;
-        self.textFrame = CGRectMake(textX, textY, textW, textH);
-        
-        // 配图
-        if (self.model.picture) {
-            CGFloat pictureWH = 100;
-            CGFloat pictureX = textX;
-            CGFloat pictureY = CGRectGetMaxY(self.textFrame) + margin;
-            self.pictureFrame = CGRectMake(pictureX, pictureY, pictureWH, pictureWH);
-            
-            _cellHeight = CGRectGetMaxY(self.pictureFrame);
-        } else {
-            _cellHeight = CGRectGetMaxY(self.textFrame);
-        }
-        _cellHeight += margin;
+        // timeFrame 时间
+        CGFloat timeFrameX = 311;
+        CGFloat timeFrameY = 53;
+        CGFloat timeFrameW = 35;
+        CGFloat timeFrameH = 14;
+        self.timeFrame = CGRectMake(timeFrameX, timeFrameY, timeFrameW, timeFrameH);
+
+        _cellHeight = CELLHEIGHT;
     }
     return _cellHeight;
 }

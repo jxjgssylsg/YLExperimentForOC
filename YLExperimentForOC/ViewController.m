@@ -24,6 +24,7 @@
 #import "ScrollViewControllerThree.h"
 #import "AdjustClassNumController.h"
 #import "TagSelectViewController.h"
+#import "BFEForeignAnswerViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -64,7 +65,16 @@
     
     // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
-     [self creatTagSelectInterface];
+    // [self creatTagSelectInterface];
+    [self creatTeacherAnswerInterface];
+}
+- (void)creatTeacherAnswerInterface {
+    BFEForeignAnswerViewController *answerVC = [[BFEForeignAnswerViewController alloc] init];
+    [answerVC.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:answerVC];
+    [self.view addSubview:answerVC.view];
+    
 }
 - (void)creatTagSelectInterface {
     [self.navigationController setNavigationBarHidden:YES];

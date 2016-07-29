@@ -61,6 +61,7 @@
 - (void)creatUIScrollViewThree;
 
 // --------------- FCOM ---------------- //
+
 - (void)modifyDay;
 
 - (void)testNSTimerForCompany;
@@ -72,6 +73,9 @@
 
 // Tags 选择
 - (void)creatTagSelectInterface;
+
+// Answer interface UI
+- (void)creatTeacherAnswerInterface;
 @end
 
 

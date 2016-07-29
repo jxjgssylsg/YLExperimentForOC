@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class AnswerVCCellDataModel;
+@class AnswerVCCellDataModelFrame;
+@class AnswerVCCellDataModelGroup;
+
 @interface AnswerVCCell : UITableViewCell
+
+@property (strong, nonatomic) AnswerVCCellDataModel *model; // 数据
+@property (strong, nonatomic) AnswerVCCellDataModelFrame *frameModel; // 数据frame
 
 @end

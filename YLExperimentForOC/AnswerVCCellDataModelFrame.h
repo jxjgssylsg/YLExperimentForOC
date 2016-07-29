@@ -18,7 +18,11 @@
 @property (assign, nonatomic) CGRect contentFrame;          // content frame
 @property (assign, nonatomic) CGRect gapLineFrame;          // line frame
 @property (assign, nonatomic) CGRect timeFrame;             // time frame
-@property (strong, nonatomic) AnswerVCCellDataModel *model; // 
+
+@property (strong, nonatomic) AnswerVCCellDataModel *model; // model <----> frame 
 @property (assign, nonatomic) CGFloat cellHeight;           // height of cell
+
++ (instancetype)AnswerVCCellDataModelFrameWithModel:(AnswerVCCellDataModel *)model;
++ (NSMutableArray *)AnswerVCCellDataModelFrameWithArray:(NSMutableArray *)arr;
 
 @end

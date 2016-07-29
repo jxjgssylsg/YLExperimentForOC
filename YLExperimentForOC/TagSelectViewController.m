@@ -139,7 +139,7 @@ static NSString *const kHeaderViewCellIdentifier = @"HeaderViewCellIdentifier"; 
     float cellWidth;
     CGSize size = [text sizeWithAttributes:
                    @{NSFontAttributeName:
-                         [UIFont systemFontOfSize:13]}];
+                         [UIFont systemFontOfSize:13]}]; // 计算单行文本
     
     cellWidth = ceilf(size.width) + kCellTextExtrarMargin;
     cellWidth = [self checkCellLimitWidth:cellWidth isLimitWidth:nil]; // 尝试把 block 实现

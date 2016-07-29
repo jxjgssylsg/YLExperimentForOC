@@ -70,7 +70,7 @@ _contentsDic[[NSString stringWithFormat:@"%ld",a]]
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.frame = CGRectMake(83, 30, 101, 52);
     _nameLabel.text  = @"Examination \n 课型数目";
-    _nameLabel.lineBreakMode =  NSLineBreakByCharWrapping;
+    _nameLabel.lineBreakMode = NSLineBreakByCharWrapping;
     _nameLabel.numberOfLines = 0;
     
     NSRange allRange = [_nameLabel.text rangeOfString:_nameLabel.text];

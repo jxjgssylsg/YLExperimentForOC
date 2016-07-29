@@ -12,6 +12,7 @@
 		C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C301DF301D49F50F00408501 /* AnswerVCCellDataModel.m */; };
 		C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C301DF331D49F8FA00408501 /* AnswerVCCellDataModelFrame.m */; };
 		C301DF371D4A02FA00408501 /* AnswerVCCellDataModelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C301DF361D4A02FA00408501 /* AnswerVCCellDataModelGroup.m */; };
+		C301DF391D4B46DD00408501 /* AnswerMessages.plist in Resources */ = {isa = PBXBuildFile; fileRef = C301DF381D4B46DD00408501 /* AnswerMessages.plist */; };
 		C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */; };
 		C3241F671D20C3840015C9FD /* CellSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F661D20C3840015C9FD /* CellSeven.m */; };
 		C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F691D20CD060015C9FD /* ScrollViewSeven.m */; };
@@ -79,6 +80,7 @@
 		C301DF331D49F8FA00408501 /* AnswerVCCellDataModelFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerVCCellDataModelFrame.m; sourceTree = "<group>"; };
 		C301DF351D4A02FA00408501 /* AnswerVCCellDataModelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerVCCellDataModelGroup.h; sourceTree = "<group>"; };
 		C301DF361D4A02FA00408501 /* AnswerVCCellDataModelGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerVCCellDataModelGroup.m; sourceTree = "<group>"; };
+		C301DF381D4B46DD00408501 /* AnswerMessages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AnswerMessages.plist; sourceTree = "<group>"; };
 		C3241F621D20BC8A0015C9FD /* TableViewControllerSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerSeven.h; sourceTree = "<group>"; };
 		C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerSeven.m; sourceTree = "<group>"; };
 		C3241F651D20C3840015C9FD /* CellSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellSeven.h; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				C301DF331D49F8FA00408501 /* AnswerVCCellDataModelFrame.m */,
 				C301DF351D4A02FA00408501 /* AnswerVCCellDataModelGroup.h */,
 				C301DF361D4A02FA00408501 /* AnswerVCCellDataModelGroup.m */,
+				C301DF381D4B46DD00408501 /* AnswerMessages.plist */,
 			);
 			name = "AnswerTabUI - FCOM";
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				C34FEB891D140121006E6A51 /* bigPicture.jpeg in Resources */,
 				C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */,
 				C34FEB521D115FE1006E6A51 /* 4.png in Resources */,
+				C301DF391D4B46DD00408501 /* AnswerMessages.plist in Resources */,
 				C35B1F8C1CCF7A7A00032582 /* zhifubao.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
