@@ -109,6 +109,8 @@
     _model = model;
     if (_model.isRead) {
         _readLabel.hidden = YES;
+    } else {
+        _readLabel.hidden = NO;
     }
     _readLabel.text = @" NEW";
     _avatarImageView.image = [UIImage imageNamed:_model.avatarPicture];

@@ -17,8 +17,8 @@
     NSMutableArray *arr = [NSMutableArray arrayWithContentsOfFile:path];
     
     for (NSDictionary *dic in arr) {
-        AnswerVCCellDataModel *mo = [AnswerVCCellDataModel AnswerVCCellDataModelWithDict:dic];
-        [dataArr addObject:mo];
+        AnswerVCCellDataModel *model = [AnswerVCCellDataModel AnswerVCCellDataModelWithDict:dic];
+        [dataArr addObject:model];
     }
     
     return dataArr;
