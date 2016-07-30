@@ -29,7 +29,7 @@
 
 - (instancetype)initWithModel:(AnswerVCCellDataModel *)model {
     if (self = [super init]) {
-        self.model = model;
+         self.model = model;
     }
     return self;
 }

@@ -30,7 +30,7 @@
     
     [self.view addSubview:_tableView];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;  // Return an Edit|Done button
-    //注. 当启用了下面两句的时候, editingStyleForRowAtIndexPath 方法就不会调用了! 要注意!
+    // 注. 当启用了下面两句的时候, editingStyleForRowAtIndexPath 方法就不会调用了! 要注意!
     // _tableView.allowsSelectionDuringEditing = YES; // 允许选择
     // _tableView.allowsMultipleSelectionDuringEditing = YES; // 允许多行选择
      _toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 500, 414, 40)];
@@ -62,7 +62,7 @@
 - (void)userDidPressTrashButton:(id)sender {
     // $$ 被选中的 cell
     NSArray *indexPathsOfSelectedCells = [_tableView indexPathsForSelectedRows];
-    // 对象排序
+    // 对象排序 $$
     NSArray *sortedArray;
     sortedArray = [indexPathsOfSelectedCells sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
         NSInteger first = [(NSIndexPath *)a row];

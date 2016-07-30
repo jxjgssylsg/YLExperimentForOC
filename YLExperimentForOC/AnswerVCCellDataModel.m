@@ -7,13 +7,15 @@
 //
 
 #import "AnswerVCCellDataModel.h"
+#import "AnswerVCCellDataModelFrame.h"
 
 @implementation AnswerVCCellDataModel
 
 + (instancetype)AnswerVCCellDataModelWithDict:(NSDictionary *)dict {
     AnswerVCCellDataModel *cellData = [[AnswerVCCellDataModel alloc] init];
     [cellData setValuesForKeysWithDictionary:dict];
-    
+    __weak AnswerVCCellDataModel *weakSelf = cellData;
+    cellData.modelFrame = [AnswerVCCellDataModelFrame  AnswerVCCellDataModelFrameWithModel:weakSelf];
     return cellData;
 }
 

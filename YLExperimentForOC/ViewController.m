@@ -70,10 +70,11 @@
 }
 - (void)creatTeacherAnswerInterface {
     BFEForeignAnswerViewController *answerVC = [[BFEForeignAnswerViewController alloc] init];
-    [answerVC.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
+  // [self.navigationController pushViewController:answerVC animated:YES];
     [self addChildViewController:answerVC];
-    [self.view addSubview:answerVC.view];
+    [self.view addSubview:answerVC.view]; // 注. 要理解 viewDidload 调用的时机
+    [answerVC.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
 }
 - (void)creatTagSelectInterface {
