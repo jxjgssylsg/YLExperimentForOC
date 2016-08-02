@@ -152,6 +152,27 @@ view.layer.borderWidth = width;\
 
 #define LogDealloced(class) NSLog(@"class is dealloced here.");
 
-// 教师版班级封面按钮的tag值
-#define TeacherDoneButtonTag 1000
-#define TeacherDeleteButtonTag 200
+// 数字相关
+#define PageTransitionTime 0.5f
+#define PageControlHeight 30
+#define TitleFontSize (32 * 4 / 3) //32是point 乘以4/3是转化为pixel单位
+
+// for student
+#define StatisticReductionConstant 10
+
+#define StatusBarHeight 20
+#define NavigationBarHeight 44
+#define NavigationAndStatusHeight 64
+#define TabBarHeight 49
+
+#define TestContentHeight (1024 - StatusBarHeight - NavigationBarHeight)
+#define iPHoneTestContentHeight (480 - StatusBarHeight)
+
+#define DefaultAnswerItemNumber 4
+
+#define GroupNameLimit 10
+#define NameLengthLowerLimit 2
+#define NameLengthUpperLimit 64
+#define PasswordLengthLowerLimit 6
+#define PasswordLengthUpperLimit 32
+#define DefaultUITableCellHeight 44

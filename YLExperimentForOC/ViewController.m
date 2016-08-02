@@ -5,7 +5,7 @@
 //  Created by syl on 16/4/26.
 //  Copyright © 2016年 yilin. All rights reserved.
 //
-
+#import "Macros.h"
 #import "ViewController.h"
 #import "QREncoding.h"
 #import "CalendarViewController.h"
@@ -25,6 +25,7 @@
 #import "AdjustClassNumController.h"
 #import "TagSelectViewController.h"
 #import "BFEForeignAnswerViewController.h"
+#import "BFEAnswerInfoInterface.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -66,8 +67,17 @@
     // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
-    [self creatTeacherAnswerInterface];
+    // [self creatTeacherAnswerInterface];
+     [self creatAnswerInfoInterface];
+    
 }
+
+- (void)creatAnswerInfoInterface {
+    // [self.navigationController setNavigationBarHidden:YES];
+    BFEAnswerInfoInterface *infoView = [[BFEAnswerInfoInterface alloc] initWithFrame:CGRectMake(0, NavigationAndStatusHeight, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    [self.view addSubview:infoView];
+}
+
 - (void)creatTeacherAnswerInterface {
     BFEForeignAnswerViewController *answerVC = [[BFEForeignAnswerViewController alloc] init];
     
@@ -610,11 +620,10 @@
     NSRange allRange = [lbTemp.text rangeOfString:lbTemp.text];
     [self.view addSubview:lbTemp];
     
-    
     NSMutableParagraphStyle *tempParagraph = [[NSMutableParagraphStyle alloc] init];
     tempParagraph.lineSpacing = 20;
     tempParagraph.firstLineHeadIndent = 20.f;
-    
+
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:lbTemp.text];
     [attrStr addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:25],NSForegroundColorAttributeName:[UIColor redColor],NSParagraphStyleAttributeName:tempParagraph} range:allRange];
     CGRect rect = [attrStr boundingRectWithSize:CGSizeMake(200, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];

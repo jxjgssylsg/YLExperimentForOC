@@ -13,6 +13,12 @@
 		C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C301DF331D49F8FA00408501 /* AnswerVCCellDataModelFrame.m */; };
 		C301DF371D4A02FA00408501 /* AnswerVCCellDataModelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C301DF361D4A02FA00408501 /* AnswerVCCellDataModelGroup.m */; };
 		C301DF391D4B46DD00408501 /* AnswerMessages.plist in Resources */ = {isa = PBXBuildFile; fileRef = C301DF381D4B46DD00408501 /* AnswerMessages.plist */; };
+		C301DF5E1D4EEEDD00408501 /* BFEAnswerInfoInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = C301DF5D1D4EEEDD00408501 /* BFEAnswerInfoInterface.m */; };
+		C301DF621D4F273A00408501 /* bgEarn.png in Resources */ = {isa = PBXBuildFile; fileRef = C301DF5F1D4F273A00408501 /* bgEarn.png */; };
+		C301DF631D4F273A00408501 /* bgEarn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C301DF601D4F273A00408501 /* bgEarn@2x.png */; };
+		C301DF641D4F273A00408501 /* bgEarn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C301DF611D4F273A00408501 /* bgEarn@3x.png */; };
+		C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C301DF651D4F27C600408501 /* bigPicture.jpeg */; };
+		C301DF681D4F27C600408501 /* zhifubao.png in Resources */ = {isa = PBXBuildFile; fileRef = C301DF661D4F27C600408501 /* zhifubao.png */; };
 		C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */; };
 		C3241F671D20C3840015C9FD /* CellSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F661D20C3840015C9FD /* CellSeven.m */; };
 		C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = C3241F691D20CD060015C9FD /* ScrollViewSeven.m */; };
@@ -36,7 +42,6 @@
 		C34FEB821D13CE1D006E6A51 /* DataModelGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB811D13CE1D006E6A51 /* DataModelGroup.m */; };
 		C34FEB851D13D1B0006E6A51 /* DataModelFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB841D13D1B0006E6A51 /* DataModelFrame.m */; };
 		C34FEB871D13E087006E6A51 /* statuses.plist in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB861D13E087006E6A51 /* statuses.plist */; };
-		C34FEB891D140121006E6A51 /* bigPicture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB881D140121006E6A51 /* bigPicture.jpeg */; };
 		C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3514AED1CD312AF002F997C /* CalendarViewController.m */; };
 		C35B1F6C1CCF5A4800032582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F6B1CCF5A4800032582 /* main.m */; };
 		C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F6E1CCF5A4800032582 /* AppDelegate.m */; };
@@ -44,7 +49,6 @@
 		C35B1F751CCF5A4800032582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F731CCF5A4800032582 /* Main.storyboard */; };
 		C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F761CCF5A4800032582 /* Assets.xcassets */; };
 		C35B1F891CCF735800032582 /* QREncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C35B1F881CCF735800032582 /* QREncoding.m */; };
-		C35B1F8C1CCF7A7A00032582 /* zhifubao.png in Resources */ = {isa = PBXBuildFile; fileRef = C35B1F8B1CCF7A7A00032582 /* zhifubao.png */; };
 		C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D31CF42C95008B9EC2 /* KCContact.m */; };
 		C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D61CF42D5F008B9EC2 /* KCContactGroup.m */; };
 		C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CC6D91CF42DC3008B9EC2 /* KCMainViewController.m */; };
@@ -81,6 +85,13 @@
 		C301DF351D4A02FA00408501 /* AnswerVCCellDataModelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerVCCellDataModelGroup.h; sourceTree = "<group>"; };
 		C301DF361D4A02FA00408501 /* AnswerVCCellDataModelGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerVCCellDataModelGroup.m; sourceTree = "<group>"; };
 		C301DF381D4B46DD00408501 /* AnswerMessages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AnswerMessages.plist; sourceTree = "<group>"; };
+		C301DF5C1D4EEEDD00408501 /* BFEAnswerInfoInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFEAnswerInfoInterface.h; sourceTree = "<group>"; };
+		C301DF5D1D4EEEDD00408501 /* BFEAnswerInfoInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFEAnswerInfoInterface.m; sourceTree = "<group>"; };
+		C301DF5F1D4F273A00408501 /* bgEarn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgEarn.png; sourceTree = "<group>"; };
+		C301DF601D4F273A00408501 /* bgEarn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgEarn@2x.png"; sourceTree = "<group>"; };
+		C301DF611D4F273A00408501 /* bgEarn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgEarn@3x.png"; sourceTree = "<group>"; };
+		C301DF651D4F27C600408501 /* bigPicture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bigPicture.jpeg; sourceTree = "<group>"; };
+		C301DF661D4F27C600408501 /* zhifubao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhifubao.png; sourceTree = "<group>"; };
 		C3241F621D20BC8A0015C9FD /* TableViewControllerSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerSeven.h; sourceTree = "<group>"; };
 		C3241F631D20BC8A0015C9FD /* TableViewControllerSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerSeven.m; sourceTree = "<group>"; };
 		C3241F651D20C3840015C9FD /* CellSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellSeven.h; sourceTree = "<group>"; };
@@ -114,7 +125,6 @@
 		C34FEB831D13D1B0006E6A51 /* DataModelFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModelFrame.h; sourceTree = "<group>"; };
 		C34FEB841D13D1B0006E6A51 /* DataModelFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModelFrame.m; sourceTree = "<group>"; };
 		C34FEB861D13E087006E6A51 /* statuses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statuses.plist; sourceTree = "<group>"; };
-		C34FEB881D140121006E6A51 /* bigPicture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bigPicture.jpeg; path = ../bigPicture.jpeg; sourceTree = "<group>"; };
 		C3514AEC1CD312AF002F997C /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		C3514AED1CD312AF002F997C /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		C35B1F671CCF5A4800032582 /* YLExperimentForOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLExperimentForOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +138,6 @@
 		C35B1F7B1CCF5A4800032582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35B1F871CCF735800032582 /* QREncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QREncoding.h; sourceTree = "<group>"; };
 		C35B1F881CCF735800032582 /* QREncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QREncoding.m; sourceTree = "<group>"; };
-		C35B1F8B1CCF7A7A00032582 /* zhifubao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhifubao.png; sourceTree = "<group>"; };
 		C35CC6D21CF42C95008B9EC2 /* KCContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContact.h; sourceTree = "<group>"; };
 		C35CC6D31CF42C95008B9EC2 /* KCContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCContact.m; sourceTree = "<group>"; };
 		C35CC6D51CF42D5F008B9EC2 /* KCContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCContactGroup.h; sourceTree = "<group>"; };
@@ -201,9 +210,19 @@
 			name = "AnswerTabUI - FCOM";
 			sourceTree = "<group>";
 		};
+		C301DF581D4EEDDF00408501 /* AnswerInfoInterface */ = {
+			isa = PBXGroup;
+			children = (
+				C301DF5C1D4EEEDD00408501 /* BFEAnswerInfoInterface.h */,
+				C301DF5D1D4EEEDD00408501 /* BFEAnswerInfoInterface.m */,
+			);
+			name = AnswerInfoInterface;
+			sourceTree = "<group>";
+		};
 		C319E35D1D3F28F500286755 /* FCOM */ = {
 			isa = PBXGroup;
 			children = (
+				C301DF581D4EEDDF00408501 /* AnswerInfoInterface */,
 				C301DF281D49EF2200408501 /* AnswerTabUI - FCOM */,
 				C32CFE891D3F19DF0079334D /* MessagePage - FCOM  */,
 				C3664DE81D349FDE00D29182 /* 加减课程 - FCOM */,
@@ -232,7 +251,11 @@
 				C34FEB4C1D115FE1006E6A51 /* 8.png */,
 				C34FEB4D1D115FE1006E6A51 /* 9.png */,
 				C34FEB451D115FE1006E6A51 /* 10.png */,
-				C34FEB881D140121006E6A51 /* bigPicture.jpeg */,
+				C301DF651D4F27C600408501 /* bigPicture.jpeg */,
+				C301DF661D4F27C600408501 /* zhifubao.png */,
+				C301DF5F1D4F273A00408501 /* bgEarn.png */,
+				C301DF601D4F273A00408501 /* bgEarn@2x.png */,
+				C301DF611D4F273A00408501 /* bgEarn@3x.png */,
 			);
 			name = "Images ( 尽量复用 )";
 			path = Images;
@@ -310,7 +333,6 @@
 			children = (
 				C35B1F871CCF735800032582 /* QREncoding.h */,
 				C35B1F881CCF735800032582 /* QREncoding.m */,
-				C35B1F8B1CCF7A7A00032582 /* zhifubao.png */,
 			);
 			name = "QRCode 二维码";
 			sourceTree = "<group>";
@@ -510,17 +532,20 @@
 				C34FEB871D13E087006E6A51 /* statuses.plist in Resources */,
 				C34FEB4F1D115FE1006E6A51 /* 10.png in Resources */,
 				C34FEB501D115FE1006E6A51 /* 2.png in Resources */,
+				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
 				C34FEB511D115FE1006E6A51 /* 3.png in Resources */,
 				C34FEB561D115FE1006E6A51 /* 8.png in Resources */,
+				C301DF631D4F273A00408501 /* bgEarn@2x.png in Resources */,
 				C35B1F751CCF5A4800032582 /* Main.storyboard in Resources */,
 				C34FEB541D115FE1006E6A51 /* 6.png in Resources */,
 				C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */,
+				C301DF621D4F273A00408501 /* bgEarn.png in Resources */,
 				C34FEB4E1D115FE1006E6A51 /* 1.png in Resources */,
-				C34FEB891D140121006E6A51 /* bigPicture.jpeg in Resources */,
+				C301DF681D4F27C600408501 /* zhifubao.png in Resources */,
 				C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */,
 				C34FEB521D115FE1006E6A51 /* 4.png in Resources */,
+				C301DF641D4F273A00408501 /* bgEarn@3x.png in Resources */,
 				C301DF391D4B46DD00408501 /* AnswerMessages.plist in Resources */,
-				C35B1F8C1CCF7A7A00032582 /* zhifubao.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +593,7 @@
 				C301DF2B1D49EFAC00408501 /* BFEForeignAnswerViewController.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
 				C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */,
+				C301DF5E1D4EEEDD00408501 /* BFEAnswerInfoInterface.m in Sources */,
 				C3664DEC1D34A06700D29182 /* AdjustClassNumController.m in Sources */,
 				C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */,
 			);

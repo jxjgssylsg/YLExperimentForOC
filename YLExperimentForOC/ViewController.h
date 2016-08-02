@@ -71,11 +71,14 @@
 // 加减界面
 - (void)creatAddSubInterface;
 
-// Tags 选择
+// Tags 选择 collectionView
 - (void)creatTagSelectInterface;
 
-// Answer interface UI
+// Answer interface UI UItableview 自定义 cell
 - (void)creatTeacherAnswerInterface;
+
+// Font NSMutableParagraphStyle
+- (void)creatAnswerInfoInterface;
 @end
 
 
