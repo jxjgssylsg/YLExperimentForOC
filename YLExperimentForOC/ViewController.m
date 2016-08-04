@@ -42,6 +42,7 @@
     
     // _number = [self.button.titleLabel.text intValue];
     
+    // [self testNSDictionary];
     // [self creatQRCode];
     // [self creatSimpleCalendar];
     // [self testNSDate];
@@ -68,7 +69,7 @@
     // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
     // [self creatTeacherAnswerInterface];
-     [self creatAnswerInfoInterface];
+      [self creatAnswerInfoInterface];
     
 }
 
@@ -686,6 +687,14 @@
     [dictFive removeObjectsForKeys:array];
     // 移除字典中的所有对象
     [dictFive removeAllObjects];
+    
+    // ---------------- NSDictionary ----> NSMutableDictionary  转换 ---------------------//
+    NSMutableDictionary *dictSix = [@{@"name":@"Kate", @"tel":@"080-123-456",@"address":@"中国"} mutableCopy];
+    // 像字典中追加一个新的 key5 和 value5
+    [dictSix setObject:@"value5" forKey:@"key5"];
+    for(NSString *key in dictSix) {
+        NSLog(@"key:%@ value:%@",key,dictSix[key]);
+    }
     
 }
 

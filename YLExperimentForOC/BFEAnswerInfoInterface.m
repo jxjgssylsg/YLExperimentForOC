@@ -35,7 +35,7 @@
 }
 
 - (void)setContentLabel {
-    _content = @"Step 1: Receive questions and answers in audios from students. \nStep 2: Assess the answers with 2-minute videos. \nStep 3: Send back and get $1. \n\nYou can choose how many answers to assess every day \n\nAssessments should be more postive to encourage students. \nFocus more on the opinions or things students said.\n ";
+    _content = @"Step 1: Receive questions and answers in audios from students. \nStep 2: Assess the answers with 2-minute videos. \nStep 3: Send back and get $1. \nYou can choose how many answers to assess every day \nAssessments should be more postive to encourage students. \nFocus more on the opinions or things students said.\n ";
     UILabel *contentLabel = [[UILabel alloc] init];
     // contentLabel.frame = CGRectMake(25, 372, 0, 0);
     // contentLabel.font = [UIFont systemFontOfSize:16];
@@ -44,8 +44,9 @@
     contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
     contentLabel.numberOfLines = 0;
     // [contentLabel sizeToFit];
+    
     // 正则表达式
-    NSRange stepRange = [contentLabel.text rangeOfString:@"You can choose[.\\n]*day" options: NSRegularExpressionSearch]; // 注. [.?(] 中括号中的字符并非元字符,变成了普通的字符,请看定义
+    NSRange stepRange = [contentLabel.text rangeOfString:@"You can choose[.\\n]*day" options: NSRegularExpressionSearch]; // 注. [.?(] 中括号中的字符并非元字符,变成了普通的字符,所以无效,请看定义
     stepRange = [contentLabel.text rangeOfString:@"You can choose[\\s\\S]*said." options:NSRegularExpressionSearch];
     stepRange = [contentLabel.text rangeOfString:@"You can choose(.|\\n)*said." options:NSRegularExpressionSearch];
     stepRange = [contentLabel.text rangeOfString:@"You can choose(.|\\n)*said/." options:NSRegularExpressionSearch];
@@ -53,7 +54,7 @@
     stepRange = [contentLabel.text rangeOfString:@"You can choose(.|\\n)*said" options:NSRegularExpressionSearch];
     stepRange = [contentLabel.text rangeOfString:@"You can choose(.|\\n)*said\.\\." options:NSRegularExpressionSearch];
     
-    _content =@"///\\"; // 这里是 ///\
+    _content =@"///\\"; // 这里是 ///\ 噢
     stepRange = [_content rangeOfString:@"/" options:NSRegularExpressionSearch];
     stepRange = [_content rangeOfString:@"\/" options:NSRegularExpressionSearch];
     stepRange = [_content rangeOfString:@"." options:NSRegularExpressionSearch];
@@ -70,6 +71,9 @@
     stepRange = [_content rangeOfString:@"\w" options:NSRegularExpressionSearch]; // 这里是 w
     stepRange = [_content rangeOfString:@"\\w" options:NSRegularExpressionSearch]; // 这里才是 \w,要理解好, 转义后的字符串才是输入, 所以 \w 转义成了 w, 而 \\w 转义成了 \w, 才是元字符
     
+    // 上面的都是测试
+    _content = @"Step 1: Receive questions and answers in audios from students. \nStep 2: Assess the answers with 2-minute videos. \nStep 3: Send back and get $1. \nYou can choose how many answers to assess every day \nAssessments should be more postive to encourage students. \nFocus more on the opinions or things students said.\n ";
+    stepRange = [contentLabel.text rangeOfString:@"Step 1:[\\s\\S]*said." options:NSRegularExpressionSearch];
     NSMutableParagraphStyle *tempParagraph = [[NSMutableParagraphStyle alloc] init];
     tempParagraph.lineSpacing = 4;
     tempParagraph.paragraphSpacing = 4;
@@ -78,6 +82,20 @@
     
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:contentLabel.text];
     [attrStr addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17],NSParagraphStyleAttributeName:tempParagraph} range:stepRange];
+    // 第二个属性
+    stepRange = [contentLabel.text rangeOfString:@"You can choose[\\s\\S]*said." options:NSRegularExpressionSearch];
+    tempParagraph.paragraphSpacing = 7;
+    [attrStr addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15],NSParagraphStyleAttributeName:tempParagraph} range:stepRange];
+    
+    stepRange = [contentLabel.text rangeOfString:@"Step 1:" options:NSRegularExpressionSearch];
+    [attrStr addAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} range:stepRange];
+    
+    stepRange = [contentLabel.text rangeOfString:@"Step 2:" options:NSRegularExpressionSearch];
+    [attrStr addAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} range:stepRange];
+    
+    stepRange = [contentLabel.text rangeOfString:@"Step 3:" options:NSRegularExpressionSearch];
+    [attrStr addAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} range:stepRange];
+    
     CGRect rect = [attrStr boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 25, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
     contentLabel.frame = CGRectMake(25, 278, rect.size.width, rect.size.height);
     contentLabel.attributedText = attrStr;
