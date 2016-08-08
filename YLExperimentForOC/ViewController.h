@@ -60,6 +60,9 @@
 // UIScrollView 的循环图片浏览器
 - (void)creatUIScrollViewThree;
 
+// NSTimer
+- (void)testNSTimer;
+
 // --------------- FCOM ---------------- //
 
 - (void)modifyDay;

@@ -26,6 +26,7 @@
 #import "TagSelectViewController.h"
 #import "BFEForeignAnswerViewController.h"
 #import "BFEAnswerInfoInterface.h"
+#import "TimerTestViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -64,15 +65,22 @@
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
-    
+    [self testNSTimer];
     // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
     // [self creatTeacherAnswerInterface];
-      [self creatAnswerInfoInterface];
+    // [self creatAnswerInfoInterface];
     
 }
 
+- (void)testNSTimer {
+    TimerTestViewController *scrollViewOne = [[TimerTestViewController alloc] init];
+    [scrollViewOne.view setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self.navigationController pushViewController:scrollViewOne animated:YES];
+
+}
 - (void)creatAnswerInfoInterface {
     // [self.navigationController setNavigationBarHidden:YES];
     BFEAnswerInfoInterface *infoView = [[BFEAnswerInfoInterface alloc] initWithFrame:CGRectMake(0, NavigationAndStatusHeight, SCREEN_WIDTH, SCREEN_HEIGHT)];
@@ -86,8 +94,8 @@
     [self addChildViewController:answerVC];
     [self.view addSubview:answerVC.view]; // 注. 要理解 viewDidload 调用的时机
     [answerVC.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
-    
 }
+
 - (void)creatTagSelectInterface {
     [self.navigationController setNavigationBarHidden:YES];
     TagSelectViewController *tmp = [[TagSelectViewController alloc] init];

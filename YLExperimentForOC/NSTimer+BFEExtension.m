@@ -84,9 +84,7 @@
   }
 }
 
-- (void)dealloc
-{
-    //[super dealloc];
+- (void)dealloc {
     NSLog(@"here i come");
 }
 @end
