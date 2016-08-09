@@ -18,7 +18,7 @@
                                         selector:@selector(onTimerUpdateBlock:)
                                         userInfo:[callback copy]
                                          repeats:repeats];
-  [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+  [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes]; // runloopMode
   return timer;
 }
 
@@ -36,7 +36,7 @@
                                         selector:@selector(onTimerUpdateCountBlock:)
                                         userInfo:userInfo
                                          repeats:YES];
- [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+ [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes]; // runloopMode
     return timer;
 }
 
@@ -63,10 +63,6 @@
   } else {
     currentCount = 0;
     [timer unfireTimer];
-      
-//      //syl
-//      [timer invalid];
-//      timer = nil;
   }
 }
 
@@ -84,7 +80,4 @@
   }
 }
 
-- (void)dealloc {
-    NSLog(@"here i come");
-}
 @end

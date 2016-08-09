@@ -7,10 +7,14 @@
 //
 
 #import "TimerTestViewController.h"
+#import "NSTimer+Blocks.h"
+#import "NSTimer+BFEExtension.h"
 
 @interface TimerTestViewController () <UIScrollViewDelegate> {
     UIScrollView *_scrollView;
-    NSTimer *_timer;
+    NSTimer *_timer;        // 采用系统的方法
+    NSTimer *_timerTwo;     // 采用分类的 NSTimer+Blocks 方法
+    NSTimer *_timerThree;   // 采用分类的 NSTimer+BFEExtension 方法
 }
 
 @end
@@ -53,33 +57,62 @@
     _scrollView.maximumZoomScale = 3.0f;
     _scrollView.minimumZoomScale = 0.5f;
     
-   _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(Timer:) userInfo:nil repeats:YES];
+    __weak TimerTestViewController *weakSelf = self;
+    // TimerTestViewController *_strongOrWeak = weakSelf; // _strongOrWeak 是强引用! 要加上 __weak 才是弱引用
     
-
-}
-
-- (void)Timer: (NSTimer *)timer{
-    // 修改NSTimer的 run loop
-    // [[NSRunLoop currentRunLoop] addTimer:timer forMode:UITrackingRunLoopMode];
-    /*
-     *或者
+    // NStimer 系统方法, 注意这里有循环引用, 即使这里使用了 weakSelf, 就如 id tmp = weakSelf, 这里 tmp 也是对 self 的强引用
+     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:weakSelf selector:@selector(Timer:) userInfo:nil repeats:YES];
+    
+    // 修改 NSTimer 的 runloop, 如果不加的话,在 UI 操作时(例如滑动), 定时操作方法便不会执行
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:UITrackingRunLoopMode];
+    /* 或者
      *[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-     *
      */
     
-    NSLog(@"hahahha");
+ // ------------------------------ 分类 Timer NSTimer+Blocks ------------------------------------ //
     
+    _timerTwo = [NSTimer scheduledTimerWithTimeInterval:1 block:^{
+        [weakSelf TimerExtension];  // 这里可以且必须 weakSelf, 否则循环引用. 可以试试改成 self
+    } repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timerTwo forMode:NSRunLoopCommonModes]; // 加入 runloopMode
+    
+// ------------------------------ 分类 Timer NSTimer+Blocks ------------------------------------ //
+    
+    _timerThree = [NSTimer scheduledTimerWithTimeInterval:1 count:10 callback:^{
+        [weakSelf TimerExtensionTwo];
+    }];
+    
+}
+
+- (void)Timer: (NSTimer *)timer {
+    NSLog(@" hahahha "); //
+}
+
+- (void)TimerExtension {
+    NSLog(@" hahahha  NSTimer+Blocks  "); //
+}
+
+- (void)TimerExtensionTwo {
+    NSLog(@" hahahha  NSTimer+BFEExtension "); //
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     NSLog(@"disappear");
-    [_timer invalidate];
-    _timer = nil;
+    [_timer invalidate]; // 移除了对 taget 的强引用,将计时器从 runloop 中移除了
+     _timer = nil;
+    
+    [_timerTwo invalidate];
+    _timerTwo = nil;
+    
+    [_timerThree invalid]; // NSTimer+BFEExtension 内方法
 }
+
 - (void)dealloc {
     NSLog(@"delloc");
 }
+
 #pragma mark ScrollViewDelegate Method
+
 // 拖动
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
    // NSLog(@"scrollViewDidScroll");
@@ -113,11 +146,6 @@
 
 - (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
     NSLog(@"scrollViewDidScrollToTop");
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
