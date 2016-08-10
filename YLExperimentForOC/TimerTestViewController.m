@@ -64,9 +64,9 @@
      _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:weakSelf selector:@selector(Timer:) userInfo:nil repeats:YES];
     
     // 修改 NSTimer 的 runloop, 如果不加的话,在 UI 操作时(例如滑动), 定时操作方法便不会执行
-    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:UITrackingRunLoopMode];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:UITrackingRunLoopMode]; // UITrackingRunLoopMode, NSDefaultRunLoopMode, NSRunLoopCommonModes
     /* 或者
-     *[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+     *[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes]; // 模式集合,相当于绑定了集合内的每一个模式
      */
     
  // ------------------------------ 分类 Timer NSTimer+Blocks ------------------------------------ //
@@ -108,7 +108,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"delloc");
+    NSLog(@"delloc"); // 测试 viewController 的释放
 }
 
 #pragma mark ScrollViewDelegate Method
