@@ -216,19 +216,19 @@
 			name = "AnswerTabUI - FCOM";
 			sourceTree = "<group>";
 		};
-		C301DF581D4EEDDF00408501 /* AnswerInfoInterface */ = {
+		C301DF581D4EEDDF00408501 /* AnswerInfoInterface - FCOM */ = {
 			isa = PBXGroup;
 			children = (
 				C301DF5C1D4EEEDD00408501 /* BFEAnswerInfoInterface.h */,
 				C301DF5D1D4EEEDD00408501 /* BFEAnswerInfoInterface.m */,
 			);
-			name = AnswerInfoInterface;
+			name = "AnswerInfoInterface - FCOM";
 			sourceTree = "<group>";
 		};
 		C319E35D1D3F28F500286755 /* FCOM */ = {
 			isa = PBXGroup;
 			children = (
-				C301DF581D4EEDDF00408501 /* AnswerInfoInterface */,
+				C301DF581D4EEDDF00408501 /* AnswerInfoInterface - FCOM */,
 				C301DF281D49EF2200408501 /* AnswerTabUI - FCOM */,
 				C32CFE891D3F19DF0079334D /* MessagePage - FCOM  */,
 				C3664DE81D349FDE00D29182 /* 加减课程 - FCOM */,

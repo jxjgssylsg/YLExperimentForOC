@@ -27,10 +27,10 @@
 
 - (void)setHeaderImage {
     _imagePath = @"bgEarn.png";
-    UIImageView *ImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 268)];
-    ImageView.image = [UIImage imageNamed:_imagePath];
-    ImageView.contentMode = UIViewContentModeScaleAspectFit; // UIViewContentModeScaleAspectFit;
-    _headerImageView = ImageView;
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 268)];
+    imageView.image = [UIImage imageNamed:_imagePath];
+    imageView.contentMode = UIViewContentModeScaleAspectFit; // UIViewContentModeScaleAspectFit;
+    _headerImageView = imageView;
     [self addSubview:_headerImageView];
 }
 

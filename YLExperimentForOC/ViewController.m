@@ -65,12 +65,12 @@
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
-    [self testNSTimer];
+    // [self testNSTimer];
     // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
     // [self creatTeacherAnswerInterface];
-    // [self creatAnswerInfoInterface];
+     [self creatAnswerInfoInterface];
     
 }
 
