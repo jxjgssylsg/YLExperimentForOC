@@ -27,6 +27,7 @@
 #import "BFEForeignAnswerViewController.h"
 #import "BFEAnswerInfoInterface.h"
 #import "TimerTestViewController.h"
+#import "ScrollViewControllerOneFCOM.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -66,12 +67,21 @@
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     // [self testNSTimer];
+    
     // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
     // [self creatTeacherAnswerInterface];
-     [self creatAnswerInfoInterface];
+    // [self creatAnswerInfoInterface];
+     [self creatUIScrollViewOneFCOM];
     
+}
+- (void)creatUIScrollViewOneFCOM {
+    ScrollViewControllerOneFCOM *scrollViewOne = [[ScrollViewControllerOneFCOM alloc] init];
+    [scrollViewOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:scrollViewOne];
+    [self.view addSubview:scrollViewOne.view];
 }
 
 - (void)testNSTimer {

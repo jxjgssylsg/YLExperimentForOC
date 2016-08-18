@@ -82,6 +82,10 @@
 
 // Font NSMutableParagraphStyle
 - (void)creatAnswerInfoInterface;
+
+// scrollView use as uiview to addPullRefreshAction
+- (void)creatUIScrollViewOneFCOM;
+
 @end
 
 
