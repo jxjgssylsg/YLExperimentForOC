@@ -1,7 +1,12 @@
+
+### Xcode ###
 build
 *.xcodeproj/xcuserdata
-Pods/
 *.xcworkspace/
 xcuserdata/
 .DS_Store
+
+### Pods/
+Pods/
+Podfile.lock
 
