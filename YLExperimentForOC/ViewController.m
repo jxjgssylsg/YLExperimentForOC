@@ -28,6 +28,7 @@
 #import "BFEAnswerInfoInterface.h"
 #import "TimerTestViewController.h"
 #import "ScrollViewControllerOneFCOM.h"
+#import "MasonryOneViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -41,8 +42,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // _number = [self.button.titleLabel.text intValue];
     
     // [self testNSDictionary];
     // [self creatQRCode];
@@ -67,15 +66,26 @@
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     // [self testNSTimer];
+        [self testMasonryOne];
+    
     
     // --------------- FCOM ---------------- //
     // [self creatAddSubInterface];
     // [self creatTagSelectInterface];
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
-     [self creatUIScrollViewOneFCOM];
+    // [self creatUIScrollViewOneFCOM];
     
 }
+
+- (void)testMasonryOne {
+    MasonryOneViewController *masonryViewOne = [[MasonryOneViewController alloc] init];
+    [masonryViewOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:masonryViewOne];
+    [self.view addSubview:masonryViewOne.view];
+}
+
 - (void)creatUIScrollViewOneFCOM {
     ScrollViewControllerOneFCOM *scrollViewOne = [[ScrollViewControllerOneFCOM alloc] init];
     [scrollViewOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
