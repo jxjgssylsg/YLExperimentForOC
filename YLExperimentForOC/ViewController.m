@@ -33,6 +33,7 @@
 #import "MasonryThreeViewController.h"
 #import "MasonryFourViewController.h"
 #import "MasonryFiveViewController.h"
+#import "HYMasonryViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -74,7 +75,8 @@
     // [self testMasonryTwo];
     // [self testMasonryThree];
     // [self testMasonryFour];
-     [self testMasonryFive];
+    // [self testMasonryFive];
+     [self testMasonrySix];
     
 // ------------------------------ FCOM ------------------------------- //
     
@@ -85,6 +87,14 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+- (void)testMasonrySix {
+    HYMasonryViewController *masonryViewSix = [[HYMasonryViewController alloc] init];
+    [masonryViewSix.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height - 70)];
+    
+    [self addChildViewController:masonryViewSix];
+    [self.view addSubview:masonryViewSix.view];
+}
+
 - (void)testMasonryFive {
     MasonryFiveViewController *masonryViewFive = [[MasonryFiveViewController alloc] init];
     [masonryViewFive.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height - 70)];

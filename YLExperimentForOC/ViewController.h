@@ -78,6 +78,9 @@
 // MasonryFive  ❤️ ❤️ ❤️, textField 跟随着键盘移动~
 - (void)testMasonryFive;
 
+// MasonrySix  ❤️ ❤️ ❤️ ❤️, 各种类型例子
+- (void)testMasonrySix;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;
