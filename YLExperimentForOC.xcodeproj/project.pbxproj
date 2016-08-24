@@ -72,6 +72,7 @@
 		C39ED1631D680BF500C57AA4 /* MasonryFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED1621D680BF500C57AA4 /* MasonryFourViewController.m */; };
 		C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */; };
 		C3A52ACF1D6D321800325182 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACE1D6D321800325182 /* TestCell.m */; };
+		C3A52AD21D6D339500325182 /* BasicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD11D6D339500325182 /* BasicController.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
@@ -200,6 +201,8 @@
 		C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseController.m; sourceTree = "<group>"; };
 		C3A52ACD1D6D321800325182 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
 		C3A52ACE1D6D321800325182 /* TestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
+		C3A52AD01D6D339500325182 /* BasicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicController.h; sourceTree = "<group>"; };
+		C3A52AD11D6D339500325182 /* BasicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicController.m; sourceTree = "<group>"; };
 		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
@@ -505,6 +508,8 @@
 		C3A52AC91D6C015400325182 /* Masonry Samples Two */ = {
 			isa = PBXGroup;
 			children = (
+				C3A52AD01D6D339500325182 /* BasicController.h */,
+				C3A52AD11D6D339500325182 /* BasicController.m */,
 				C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */,
 				C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */,
 				C3A52ACD1D6D321800325182 /* TestCell.h */,
@@ -792,6 +797,7 @@
 				C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */,
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C34FEB821D13CE1D006E6A51 /* DataModelGroup.m in Sources */,
+				C3A52AD21D6D339500325182 /* BasicController.m in Sources */,
 				C34FEB7F1D1399B5006E6A51 /* DataModel.m in Sources */,
 				C34FEB7C1D128BB2006E6A51 /* CustomCellForCode.m in Sources */,
 				C3A52ACF1D6D321800325182 /* TestCell.m in Sources */,
