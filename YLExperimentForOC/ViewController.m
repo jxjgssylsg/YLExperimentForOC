@@ -73,8 +73,8 @@
     // [self testMasonryOne];
     // [self testMasonryTwo];
     // [self testMasonryThree];
-     [self testMasonryFour];
-    // [self testMasonryFive];
+    // [self testMasonryFour];
+     [self testMasonryFive];
     
 // ------------------------------ FCOM ------------------------------- //
     
