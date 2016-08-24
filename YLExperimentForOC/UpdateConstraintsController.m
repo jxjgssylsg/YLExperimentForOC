@@ -39,6 +39,12 @@
     // 最大放大到整个view
     make.width.height.lessThanOrEqualTo(self.view);
   }];
+   
+    // 调用 layoutIfNeeded 就会把自动布局计算出来了!
+    NSLog(@"%@",self.growingButton);
+    [self.view layoutIfNeeded];
+    NSLog(@"%@",self.growingButton);
+    
 }
 
 #pragma mark - updateViewConstraints
