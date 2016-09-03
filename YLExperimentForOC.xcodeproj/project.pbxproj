@@ -63,6 +63,7 @@
 		C3664DEC1D34A06700D29182 /* AdjustClassNumController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3664DEB1D34A06700D29182 /* AdjustClassNumController.m */; };
 		C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */; };
 		C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C37310841D5983EE00AF4C2C /* NSTimer+Blocks.m */; };
+		C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C37813131D7A540E00ABF5A0 /* TestKeyWindow.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 		C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */; };
 		C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */; };
@@ -194,6 +195,8 @@
 		C367364C1CE31B1E00F7E54F /* NSTimer+BFEExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+BFEExtension.m"; sourceTree = "<group>"; };
 		C37310831D5983EE00AF4C2C /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
 		C37310841D5983EE00AF4C2C /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		C37813121D7A540E00ABF5A0 /* TestKeyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKeyWindow.h; sourceTree = "<group>"; };
+		C37813131D7A540E00ABF5A0 /* TestKeyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKeyWindow.m; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		C39ED14A1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerOneFCOM.h; sourceTree = "<group>"; };
@@ -408,6 +411,7 @@
 				C34FEB431D115FE1006E6A51 /* Images ( 尽量复用 ) */,
 				C39ED14D1D66E87100C57AA4 /* Masonry */,
 				C3A52AF41D6D87B800325182 /* MMPlaceHolder */,
+				C37813111D7A53EF00ABF5A0 /* UIWindow */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -510,6 +514,15 @@
 				C37310841D5983EE00AF4C2C /* NSTimer+Blocks.m */,
 			);
 			name = NSTimerExtention;
+			sourceTree = "<group>";
+		};
+		C37813111D7A53EF00ABF5A0 /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				C37813121D7A540E00ABF5A0 /* TestKeyWindow.h */,
+				C37813131D7A540E00ABF5A0 /* TestKeyWindow.m */,
+			);
+			name = UIWindow;
 			sourceTree = "<group>";
 		};
 		C38E3AED1CD9860B00A70DD3 /* 算法类 */ = {
@@ -883,6 +896,7 @@
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C39ED1531D66E96F00C57AA4 /* MasonryOneViewController.m in Sources */,
 				C3A52AEA1D6D339500325182 /* ScrollViewComplexController.m in Sources */,
+				C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
