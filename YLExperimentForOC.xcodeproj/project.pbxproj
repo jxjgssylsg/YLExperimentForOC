@@ -74,6 +74,14 @@
 		C39ED15D1D670D7F00C57AA4 /* MasonryTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED15C1D670D7F00C57AA4 /* MasonryTwoViewController.m */; };
 		C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED15F1D6807F100C57AA4 /* MasonryThreeViewController.m */; };
 		C39ED1631D680BF500C57AA4 /* MasonryFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED1621D680BF500C57AA4 /* MasonryFourViewController.m */; };
+		C3A211DA1D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211D71D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m */; };
+		C3A211DB1D7BB4E00025B75F /* CalendarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211D91D7BB4E00025B75F /* CalendarDataSource.m */; };
+		C3A211E01D7BB4F10025B75F /* WeekCalendarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211DD1D7BB4F10025B75F /* WeekCalendarLayout.m */; };
+		C3A211E11D7BB4F10025B75F /* CalendarEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211DF1D7BB4F10025B75F /* CalendarEventCell.m */; };
+		C3A211E61D7BB4FF0025B75F /* HeaderViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211E31D7BB4FF0025B75F /* HeaderViewTwo.m */; };
+		C3A211E71D7BB4FF0025B75F /* HeaderViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A211E41D7BB4FF0025B75F /* HeaderViewTwo.xib */; };
+		C3A211EA1D7BB5090025B75F /* SampleCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211E91D7BB5090025B75F /* SampleCalendarEvent.m */; };
+		C3A211EE1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A211ED1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard */; };
 		C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */; };
 		C3A52ACF1D6D321800325182 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACE1D6D321800325182 /* TestCell.m */; };
 		C3A52AD21D6D339500325182 /* BasicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD11D6D339500325182 /* BasicController.m */; };
@@ -220,6 +228,21 @@
 		C39ED15F1D6807F100C57AA4 /* MasonryThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryThreeViewController.m; sourceTree = "<group>"; };
 		C39ED1611D680BF500C57AA4 /* MasonryFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryFourViewController.h; sourceTree = "<group>"; };
 		C39ED1621D680BF500C57AA4 /* MasonryFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryFourViewController.m; sourceTree = "<group>"; };
+		C3A211D61D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarCollectionViewControllerTwo.h; sourceTree = "<group>"; };
+		C3A211D71D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarCollectionViewControllerTwo.m; sourceTree = "<group>"; };
+		C3A211D81D7BB4E00025B75F /* CalendarDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDataSource.h; sourceTree = "<group>"; };
+		C3A211D91D7BB4E00025B75F /* CalendarDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDataSource.m; sourceTree = "<group>"; };
+		C3A211DC1D7BB4F10025B75F /* WeekCalendarLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekCalendarLayout.h; sourceTree = "<group>"; };
+		C3A211DD1D7BB4F10025B75F /* WeekCalendarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekCalendarLayout.m; sourceTree = "<group>"; };
+		C3A211DE1D7BB4F10025B75F /* CalendarEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEventCell.h; sourceTree = "<group>"; };
+		C3A211DF1D7BB4F10025B75F /* CalendarEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEventCell.m; sourceTree = "<group>"; };
+		C3A211E21D7BB4FF0025B75F /* HeaderViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewTwo.h; sourceTree = "<group>"; };
+		C3A211E31D7BB4FF0025B75F /* HeaderViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewTwo.m; sourceTree = "<group>"; };
+		C3A211E41D7BB4FF0025B75F /* HeaderViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderViewTwo.xib; sourceTree = "<group>"; };
+		C3A211E51D7BB4FF0025B75F /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
+		C3A211E81D7BB5090025B75F /* SampleCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleCalendarEvent.h; sourceTree = "<group>"; };
+		C3A211E91D7BB5090025B75F /* SampleCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleCalendarEvent.m; sourceTree = "<group>"; };
+		C3A211ED1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarCollectionViewControllerTwoSB.storyboard; sourceTree = "<group>"; };
 		C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseController.h; sourceTree = "<group>"; };
 		C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseController.m; sourceTree = "<group>"; };
 		C3A52ACD1D6D321800325182 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
@@ -542,6 +565,7 @@
 				C37813191D7AA25700ABF5A0 /* CollectionViewCellOne.h */,
 				C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */,
 				C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */,
+				C3A211D31D7BABB30025B75F /* CollectionViewSampleTwo */,
 			);
 			name = UICollectionView;
 			sourceTree = "<group>";
@@ -574,6 +598,28 @@
 				C3A52AC91D6C015400325182 /* Masonry Samples Two */,
 			);
 			name = Masonry;
+			sourceTree = "<group>";
+		};
+		C3A211D31D7BABB30025B75F /* CollectionViewSampleTwo */ = {
+			isa = PBXGroup;
+			children = (
+				C3A211D61D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.h */,
+				C3A211D71D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m */,
+				C3A211ED1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard */,
+				C3A211D81D7BB4E00025B75F /* CalendarDataSource.h */,
+				C3A211D91D7BB4E00025B75F /* CalendarDataSource.m */,
+				C3A211DC1D7BB4F10025B75F /* WeekCalendarLayout.h */,
+				C3A211DD1D7BB4F10025B75F /* WeekCalendarLayout.m */,
+				C3A211DE1D7BB4F10025B75F /* CalendarEventCell.h */,
+				C3A211DF1D7BB4F10025B75F /* CalendarEventCell.m */,
+				C3A211E21D7BB4FF0025B75F /* HeaderViewTwo.h */,
+				C3A211E31D7BB4FF0025B75F /* HeaderViewTwo.m */,
+				C3A211E41D7BB4FF0025B75F /* HeaderViewTwo.xib */,
+				C3A211E51D7BB4FF0025B75F /* CalendarEvent.h */,
+				C3A211E81D7BB5090025B75F /* SampleCalendarEvent.h */,
+				C3A211E91D7BB5090025B75F /* SampleCalendarEvent.m */,
+			);
+			name = CollectionViewSampleTwo;
 			sourceTree = "<group>";
 		};
 		C3A52AC91D6C015400325182 /* Masonry Samples Two */ = {
@@ -747,6 +793,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A211E71D7BB4FF0025B75F /* HeaderViewTwo.xib in Resources */,
 				C34FEB531D115FE1006E6A51 /* 5.png in Resources */,
 				C34FEB551D115FE1006E6A51 /* 7.png in Resources */,
 				C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */,
@@ -759,6 +806,7 @@
 				C34FEB501D115FE1006E6A51 /* 2.png in Resources */,
 				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
 				C34FEB511D115FE1006E6A51 /* 3.png in Resources */,
+				C3A211EE1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard in Resources */,
 				C34FEB561D115FE1006E6A51 /* 8.png in Resources */,
 				C301DF631D4F273A00408501 /* bgEarn@2x.png in Resources */,
 				C35B1F751CCF5A4800032582 /* Main.storyboard in Resources */,
@@ -877,6 +925,7 @@
 				C34FEB851D13D1B0006E6A51 /* DataModelFrame.m in Sources */,
 				C3E27FE51D3874A9004C4D15 /* CollectionHeaderView.m in Sources */,
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
+				C3A211DA1D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m in Sources */,
 				C34FEB791D128207006E6A51 /* TableViewControllerSix.m in Sources */,
 				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
 				C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */,
@@ -884,6 +933,7 @@
 				C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
 				C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */,
+				C3A211DB1D7BB4E00025B75F /* CalendarDataSource.m in Sources */,
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
 				C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */,
 				C301DF371D4A02FA00408501 /* AnswerVCCellDataModelGroup.m in Sources */,
@@ -898,6 +948,7 @@
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
 				C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */,
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
+				C3A211E11D7BB4F10025B75F /* CalendarEventCell.m in Sources */,
 				C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */,
 				C3DE87661D044ED30051E255 /* TableViewControllerFour.m in Sources */,
 				C3A52AE11D6D339500325182 /* AspectFitController.m in Sources */,
@@ -909,6 +960,7 @@
 				C34FEB7F1D1399B5006E6A51 /* DataModel.m in Sources */,
 				C34FEB7C1D128BB2006E6A51 /* CustomCellForCode.m in Sources */,
 				C3A52ACF1D6D321800325182 /* TestCell.m in Sources */,
+				C3A211E01D7BB4F10025B75F /* WeekCalendarLayout.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */,
 				C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */,
@@ -934,6 +986,8 @@
 				C301DF2B1D49EFAC00408501 /* BFEForeignAnswerViewController.m in Sources */,
 				C3A52AF01D6D339500325182 /* HeaderFooterViewController.m in Sources */,
 				C39ED1631D680BF500C57AA4 /* MasonryFourViewController.m in Sources */,
+				C3A211E61D7BB4FF0025B75F /* HeaderViewTwo.m in Sources */,
+				C3A211EA1D7BB5090025B75F /* SampleCalendarEvent.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
 				C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */,

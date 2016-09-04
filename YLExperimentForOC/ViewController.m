@@ -35,6 +35,7 @@
 #import "MasonryFiveViewController.h"
 #import "HYMasonryViewController.h"
 #import "CollectionViewControllerOne.h"
+#import "CalendarCollectionViewControllerTwo.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -79,7 +80,7 @@
     // [self testMasonryFive];
     // [self testMasonrySix];
     [self creatUICollectionViewOne];
-    
+    [self creatUICollectionViewTwo];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -89,6 +90,15 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+- (void)creatUICollectionViewTwo {
+    UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"CalendarCollectionViewControllerTwoSB" bundle:nil];
+    CalendarCollectionViewControllerTwo *CollectionViewTwo = [stroyboard instantiateInitialViewController];
+    [CollectionViewTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:CollectionViewTwo];
+    [self.view addSubview:CollectionViewTwo.view];
+}
+
 - (void)creatUICollectionViewOne {
     CollectionViewControllerOne *CollectionViewOne = [[CollectionViewControllerOne alloc] init];
     [CollectionViewOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
