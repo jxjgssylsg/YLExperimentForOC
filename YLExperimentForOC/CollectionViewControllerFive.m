@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setLetters];
     self.view.backgroundColor = [UIColor blueColor];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:self.changeLayout];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.batchUpload];
@@ -32,7 +33,15 @@
     [self.view addSubview:self.collectionView];
 
 }
-
+- (void)setLetters {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.letterArray = [NSMutableArray array]; // set 方法
+    NSMutableArray *letterArray = [self getLetterArray];
+    
+    for(int i = 0; i < 26; i++){
+        [letterArray addObject:[NSString stringWithFormat:@"%C",(unichar)(65+i)]];
+    }
+}
 - (UICollectionView *)collectionView {
     if (_collectionView == nil) {
         CircleLayout *layout = [[CircleLayout alloc] init];
@@ -68,7 +77,7 @@
 }
 
 
-- (UIButton *)batchUpload{
+- (UIButton *)batchUpload {
     if (_batchUpload == nil) {
         _batchUpload = [UIButton buttonWithType:UIButtonTypeCustom];
         _batchUpload.frame = CGRectMake(0, 0, 100, 40);
@@ -132,7 +141,7 @@
         [_collectionView deleteItemsAtIndexPaths:[NSArray arrayWithObject:tappedCellPath]];
     }
     else {
-        //如果点击空白处，在末尾添加一个随机小写字母
+        // 如果点击空白处，在末尾添加一个随机小写字母
         unichar asciiX = (unichar)[self getRandomNumber:97 to:97+26];
         [letterArray addObject:[NSString stringWithFormat:@"%C",asciiX]];
         NSIndexPath *path = [NSIndexPath indexPathForItem:letterArray.count - 1 inSection:0];

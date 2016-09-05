@@ -94,6 +94,10 @@
 		C3A2120D1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2120A1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m */; };
 		C3A2120E1D7D5DA70025B75F /* CustomCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2120C1D7D5DA70025B75F /* CustomCollectionViewLayout.m */; };
 		C3A212101D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A2120F1D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard */; };
+		C3A212141D7D77660025B75F /* CollectionViewControllerFive.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212131D7D77660025B75F /* CollectionViewControllerFive.m */; };
+		C3A212171D7D77730025B75F /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212161D7D77730025B75F /* CollectionViewDataSource.m */; };
+		C3A2121C1D7D777F0025B75F /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212191D7D777F0025B75F /* CircleLayout.m */; };
+		C3A2121D1D7D777F0025B75F /* MyCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2121B1D7D777F0025B75F /* MyCollectionReusableView.m */; };
 		C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */; };
 		C3A52ACF1D6D321800325182 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACE1D6D321800325182 /* TestCell.m */; };
 		C3A52AD21D6D339500325182 /* BasicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD11D6D339500325182 /* BasicController.m */; };
@@ -275,6 +279,14 @@
 		C3A2120B1D7D5DA70025B75F /* CustomCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewLayout.h; sourceTree = "<group>"; };
 		C3A2120C1D7D5DA70025B75F /* CustomCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewLayout.m; sourceTree = "<group>"; };
 		C3A2120F1D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnotherCollectionViewControllerFour.storyboard; sourceTree = "<group>"; };
+		C3A212121D7D77660025B75F /* CollectionViewControllerFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewControllerFive.h; sourceTree = "<group>"; };
+		C3A212131D7D77660025B75F /* CollectionViewControllerFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewControllerFive.m; sourceTree = "<group>"; };
+		C3A212151D7D77730025B75F /* CollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
+		C3A212161D7D77730025B75F /* CollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
+		C3A212181D7D777F0025B75F /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
+		C3A212191D7D777F0025B75F /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
+		C3A2121A1D7D777F0025B75F /* MyCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionReusableView.h; sourceTree = "<group>"; };
+		C3A2121B1D7D777F0025B75F /* MyCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionReusableView.m; sourceTree = "<group>"; };
 		C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseController.h; sourceTree = "<group>"; };
 		C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseController.m; sourceTree = "<group>"; };
 		C3A52ACD1D6D321800325182 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
@@ -600,6 +612,7 @@
 				C3A211D31D7BABB30025B75F /* CollectionViewSampleTwo */,
 				C3A211EF1D7D58D30025B75F /* CollectionViewSampleThree */,
 				C3A212081D7D5D1C0025B75F /* CollectionViewSampleFour */,
+				C3A212111D7D6D340025B75F /* CollectionViewSampleFive */,
 			);
 			name = UICollectionView;
 			sourceTree = "<group>";
@@ -688,6 +701,21 @@
 				C3A2120C1D7D5DA70025B75F /* CustomCollectionViewLayout.m */,
 			);
 			name = CollectionViewSampleFour;
+			sourceTree = "<group>";
+		};
+		C3A212111D7D6D340025B75F /* CollectionViewSampleFive */ = {
+			isa = PBXGroup;
+			children = (
+				C3A212121D7D77660025B75F /* CollectionViewControllerFive.h */,
+				C3A212131D7D77660025B75F /* CollectionViewControllerFive.m */,
+				C3A212151D7D77730025B75F /* CollectionViewDataSource.h */,
+				C3A212161D7D77730025B75F /* CollectionViewDataSource.m */,
+				C3A212181D7D777F0025B75F /* CircleLayout.h */,
+				C3A212191D7D777F0025B75F /* CircleLayout.m */,
+				C3A2121A1D7D777F0025B75F /* MyCollectionReusableView.h */,
+				C3A2121B1D7D777F0025B75F /* MyCollectionReusableView.m */,
+			);
+			name = CollectionViewSampleFive;
 			sourceTree = "<group>";
 		};
 		C3A52AC91D6C015400325182 /* Masonry Samples Two */ = {
@@ -1036,6 +1064,7 @@
 				C34FEB7C1D128BB2006E6A51 /* CustomCellForCode.m in Sources */,
 				C3A211F81D7D59D70025B75F /* MyCollectionViewControllerThree.m in Sources */,
 				C3A52ACF1D6D321800325182 /* TestCell.m in Sources */,
+				C3A212141D7D77660025B75F /* CollectionViewControllerFive.m in Sources */,
 				C3A211E01D7BB4F10025B75F /* WeekCalendarLayout.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */,
@@ -1048,6 +1077,7 @@
 				C35EA0A31CF6E11D00B4356F /* KCContactTableViewController.m in Sources */,
 				C39ED1531D66E96F00C57AA4 /* MasonryOneViewController.m in Sources */,
 				C3A52AEA1D6D339500325182 /* ScrollViewComplexController.m in Sources */,
+				C3A212171D7D77730025B75F /* CollectionViewDataSource.m in Sources */,
 				C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
@@ -1060,6 +1090,7 @@
 				C3664DE21D33418200D29182 /* ScrollViewControllerTwo.m in Sources */,
 				C3664DDF1D30DC0200D29182 /* ScrollViewControllerOne.m in Sources */,
 				C316FE091D6840E100EB3560 /* MasonryFiveViewController.m in Sources */,
+				C3A2121D1D7D777F0025B75F /* MyCollectionReusableView.m in Sources */,
 				C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */,
 				C301DF2B1D49EFAC00408501 /* BFEForeignAnswerViewController.m in Sources */,
 				C3A52AF01D6D339500325182 /* HeaderFooterViewController.m in Sources */,
@@ -1069,6 +1100,7 @@
 				C3A212021D7D5A070025B75F /* Footer.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
 				C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */,
+				C3A2121C1D7D777F0025B75F /* CircleLayout.m in Sources */,
 				C3A2120E1D7D5DA70025B75F /* CustomCollectionViewLayout.m in Sources */,
 				C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */,
 				C301DF5E1D4EEEDD00408501 /* BFEAnswerInfoInterface.m in Sources */,

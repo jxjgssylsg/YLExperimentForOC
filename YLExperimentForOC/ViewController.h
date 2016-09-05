@@ -87,11 +87,14 @@
 // 日历.课程表 自定义布局 CollectionView
 - (void)creatUICollectionViewTwo;
 
-// 基础 CollectionView, footer and header
+// 基础 CollectionView, footer and header, 点击放大,缩小
 - (void)creatUICollectionViewThree;
 
 // 自定义布局 CollectionView 不错!
 - (void)creatUICollectionViewFour;
+
+// 自定义布局 CollectionView CircleLayout, Decoration View
+- (void)creatUICollectionVieFive;
 
 
 // ------------------------------ FCOM ------------------------------- //

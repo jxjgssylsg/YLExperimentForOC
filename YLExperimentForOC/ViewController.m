@@ -38,6 +38,7 @@
 #import "CalendarCollectionViewControllerTwo.h"
 #import "MyCollectionViewControllerThree.h"
 #import "AnotherCollectionViewControllerFour.h"
+#import "CollectionViewControllerFive.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -84,7 +85,9 @@
     // [self creatUICollectionViewOne];
     // [self creatUICollectionViewTwo];
     // [self creatUICollectionViewThree];
-     [self creatUICollectionViewFour];
+    // [self creatUICollectionViewFour];
+     [self creatUICollectionViewFive];
+
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -93,6 +96,14 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     
+}
+
+- (void)creatUICollectionViewFive {
+    CollectionViewControllerFive *collectionViewFive = [[CollectionViewControllerFive alloc] init];
+    [collectionViewFive.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height - 70)];
+    
+    [self addChildViewController:collectionViewFive];
+    [self.view addSubview:collectionViewFive.view];
 }
 
 - (void)creatUICollectionViewFour {
@@ -114,7 +125,6 @@
     [self addChildViewController:CollectionViewThree];
     [self.view addSubview:CollectionViewThree.view];
 }
-
 
 - (void)creatUICollectionViewTwo {
     // 多个 Storyboard 跳转使用
