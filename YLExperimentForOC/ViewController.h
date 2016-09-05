@@ -84,6 +84,14 @@
 // 基本的 CollectionView
 - (void)creatUICollectionViewOne;
 
+// 日历.课程表 自定义布局 CollectionView
+- (void)creatUICollectionViewTwo;
+
+// 基础 CollectionView, footer and header
+- (void)creatUICollectionViewThree;
+
+// 自定义布局 CollectionView 不错!
+- (void)creatUICollectionViewFour;
 
 
 // ------------------------------ FCOM ------------------------------- //
