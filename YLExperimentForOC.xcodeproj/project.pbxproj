@@ -82,6 +82,18 @@
 		C3A211E71D7BB4FF0025B75F /* HeaderViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A211E41D7BB4FF0025B75F /* HeaderViewTwo.xib */; };
 		C3A211EA1D7BB5090025B75F /* SampleCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211E91D7BB5090025B75F /* SampleCalendarEvent.m */; };
 		C3A211EE1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A211ED1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard */; };
+		C3A211F81D7D59D70025B75F /* MyCollectionViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211F11D7D59D70025B75F /* MyCollectionViewControllerThree.m */; };
+		C3A211F91D7D59D70025B75F /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211F31D7D59D70025B75F /* MyCollectionViewCell.m */; };
+		C3A211FA1D7D59D70025B75F /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211F51D7D59D70025B75F /* UIColor+RandomColor.m */; };
+		C3A211FB1D7D59D70025B75F /* MyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211F71D7D59D70025B75F /* MyDetailsViewController.m */; };
+		C3A212021D7D5A070025B75F /* Footer.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A211FD1D7D5A070025B75F /* Footer.m */; };
+		C3A212031D7D5A070025B75F /* Footer.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A211FE1D7D5A070025B75F /* Footer.xib */; };
+		C3A212041D7D5A070025B75F /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A212001D7D5A070025B75F /* Header.m */; };
+		C3A212051D7D5A070025B75F /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A212011D7D5A070025B75F /* Header.xib */; };
+		C3A212071D7D5A3F0025B75F /* MyCollectionViewControllerThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A212061D7D5A3F0025B75F /* MyCollectionViewControllerThree.storyboard */; };
+		C3A2120D1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2120A1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m */; };
+		C3A2120E1D7D5DA70025B75F /* CustomCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2120C1D7D5DA70025B75F /* CustomCollectionViewLayout.m */; };
+		C3A212101D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A2120F1D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard */; };
 		C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */; };
 		C3A52ACF1D6D321800325182 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACE1D6D321800325182 /* TestCell.m */; };
 		C3A52AD21D6D339500325182 /* BasicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD11D6D339500325182 /* BasicController.m */; };
@@ -243,6 +255,26 @@
 		C3A211E81D7BB5090025B75F /* SampleCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleCalendarEvent.h; sourceTree = "<group>"; };
 		C3A211E91D7BB5090025B75F /* SampleCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleCalendarEvent.m; sourceTree = "<group>"; };
 		C3A211ED1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarCollectionViewControllerTwoSB.storyboard; sourceTree = "<group>"; };
+		C3A211F01D7D59D70025B75F /* MyCollectionViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewControllerThree.h; sourceTree = "<group>"; };
+		C3A211F11D7D59D70025B75F /* MyCollectionViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewControllerThree.m; sourceTree = "<group>"; };
+		C3A211F21D7D59D70025B75F /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		C3A211F31D7D59D70025B75F /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		C3A211F41D7D59D70025B75F /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		C3A211F51D7D59D70025B75F /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
+		C3A211F61D7D59D70025B75F /* MyDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDetailsViewController.h; sourceTree = "<group>"; };
+		C3A211F71D7D59D70025B75F /* MyDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDetailsViewController.m; sourceTree = "<group>"; };
+		C3A211FC1D7D5A070025B75F /* Footer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Footer.h; sourceTree = "<group>"; };
+		C3A211FD1D7D5A070025B75F /* Footer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Footer.m; sourceTree = "<group>"; };
+		C3A211FE1D7D5A070025B75F /* Footer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Footer.xib; sourceTree = "<group>"; };
+		C3A211FF1D7D5A070025B75F /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		C3A212001D7D5A070025B75F /* Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Header.m; sourceTree = "<group>"; };
+		C3A212011D7D5A070025B75F /* Header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
+		C3A212061D7D5A3F0025B75F /* MyCollectionViewControllerThree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyCollectionViewControllerThree.storyboard; sourceTree = "<group>"; };
+		C3A212091D7D5DA70025B75F /* AnotherCollectionViewControllerFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherCollectionViewControllerFour.h; sourceTree = "<group>"; };
+		C3A2120A1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherCollectionViewControllerFour.m; sourceTree = "<group>"; };
+		C3A2120B1D7D5DA70025B75F /* CustomCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewLayout.h; sourceTree = "<group>"; };
+		C3A2120C1D7D5DA70025B75F /* CustomCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewLayout.m; sourceTree = "<group>"; };
+		C3A2120F1D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnotherCollectionViewControllerFour.storyboard; sourceTree = "<group>"; };
 		C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseController.h; sourceTree = "<group>"; };
 		C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseController.m; sourceTree = "<group>"; };
 		C3A52ACD1D6D321800325182 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
@@ -566,6 +598,8 @@
 				C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */,
 				C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */,
 				C3A211D31D7BABB30025B75F /* CollectionViewSampleTwo */,
+				C3A211EF1D7D58D30025B75F /* CollectionViewSampleThree */,
+				C3A212081D7D5D1C0025B75F /* CollectionViewSampleFour */,
 			);
 			name = UICollectionView;
 			sourceTree = "<group>";
@@ -620,6 +654,40 @@
 				C3A211E91D7BB5090025B75F /* SampleCalendarEvent.m */,
 			);
 			name = CollectionViewSampleTwo;
+			sourceTree = "<group>";
+		};
+		C3A211EF1D7D58D30025B75F /* CollectionViewSampleThree */ = {
+			isa = PBXGroup;
+			children = (
+				C3A211F01D7D59D70025B75F /* MyCollectionViewControllerThree.h */,
+				C3A211F11D7D59D70025B75F /* MyCollectionViewControllerThree.m */,
+				C3A212061D7D5A3F0025B75F /* MyCollectionViewControllerThree.storyboard */,
+				C3A211F21D7D59D70025B75F /* MyCollectionViewCell.h */,
+				C3A211F31D7D59D70025B75F /* MyCollectionViewCell.m */,
+				C3A211F41D7D59D70025B75F /* UIColor+RandomColor.h */,
+				C3A211F51D7D59D70025B75F /* UIColor+RandomColor.m */,
+				C3A211F61D7D59D70025B75F /* MyDetailsViewController.h */,
+				C3A211F71D7D59D70025B75F /* MyDetailsViewController.m */,
+				C3A211FC1D7D5A070025B75F /* Footer.h */,
+				C3A211FD1D7D5A070025B75F /* Footer.m */,
+				C3A211FE1D7D5A070025B75F /* Footer.xib */,
+				C3A211FF1D7D5A070025B75F /* Header.h */,
+				C3A212001D7D5A070025B75F /* Header.m */,
+				C3A212011D7D5A070025B75F /* Header.xib */,
+			);
+			name = CollectionViewSampleThree;
+			sourceTree = "<group>";
+		};
+		C3A212081D7D5D1C0025B75F /* CollectionViewSampleFour */ = {
+			isa = PBXGroup;
+			children = (
+				C3A212091D7D5DA70025B75F /* AnotherCollectionViewControllerFour.h */,
+				C3A2120A1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m */,
+				C3A2120F1D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard */,
+				C3A2120B1D7D5DA70025B75F /* CustomCollectionViewLayout.h */,
+				C3A2120C1D7D5DA70025B75F /* CustomCollectionViewLayout.m */,
+			);
+			name = CollectionViewSampleFour;
 			sourceTree = "<group>";
 		};
 		C3A52AC91D6C015400325182 /* Masonry Samples Two */ = {
@@ -797,14 +865,17 @@
 				C34FEB531D115FE1006E6A51 /* 5.png in Resources */,
 				C34FEB551D115FE1006E6A51 /* 7.png in Resources */,
 				C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */,
+				C3A212051D7D5A070025B75F /* Header.xib in Resources */,
 				C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */,
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
+				C3A212101D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard in Resources */,
 				C34FEB571D115FE1006E6A51 /* 9.png in Resources */,
 				C3664DE71D33965B00D29182 /* imageInfo.plist in Resources */,
 				C34FEB871D13E087006E6A51 /* statuses.plist in Resources */,
 				C34FEB4F1D115FE1006E6A51 /* 10.png in Resources */,
 				C34FEB501D115FE1006E6A51 /* 2.png in Resources */,
 				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
+				C3A212031D7D5A070025B75F /* Footer.xib in Resources */,
 				C34FEB511D115FE1006E6A51 /* 3.png in Resources */,
 				C3A211EE1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard in Resources */,
 				C34FEB561D115FE1006E6A51 /* 8.png in Resources */,
@@ -814,6 +885,7 @@
 				C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */,
 				C301DF621D4F273A00408501 /* bgEarn.png in Resources */,
 				C34FEB4E1D115FE1006E6A51 /* 1.png in Resources */,
+				C3A212071D7D5A3F0025B75F /* MyCollectionViewControllerThree.storyboard in Resources */,
 				C301DF681D4F27C600408501 /* zhifubao.png in Resources */,
 				C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */,
 				C34FEB521D115FE1006E6A51 /* 4.png in Resources */,
@@ -930,6 +1002,7 @@
 				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
 				C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */,
 				C3664DE51D33959A00D29182 /* ScrollViewControllerThree.m in Sources */,
+				C3A2120D1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m in Sources */,
 				C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
 				C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */,
@@ -941,6 +1014,7 @@
 				C335DEAC1D58D55D00CC7A26 /* TimerTestViewController.m in Sources */,
 				C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */,
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
+				C3A211FB1D7D59D70025B75F /* MyDetailsViewController.m in Sources */,
 				C3A52ADE1D6D339500325182 /* CompositeController.m in Sources */,
 				C39ED15D1D670D7F00C57AA4 /* MasonryTwoViewController.m in Sources */,
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
@@ -954,17 +1028,20 @@
 				C3A52AE11D6D339500325182 /* AspectFitController.m in Sources */,
 				C34FEB221D10FDFE006E6A51 /* CustomCell.m in Sources */,
 				C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */,
+				C3A211FA1D7D59D70025B75F /* UIColor+RandomColor.m in Sources */,
 				C3514AEE1CD312AF002F997C /* CalendarViewController.m in Sources */,
 				C34FEB821D13CE1D006E6A51 /* DataModelGroup.m in Sources */,
 				C3A52AD21D6D339500325182 /* BasicController.m in Sources */,
 				C34FEB7F1D1399B5006E6A51 /* DataModel.m in Sources */,
 				C34FEB7C1D128BB2006E6A51 /* CustomCellForCode.m in Sources */,
+				C3A211F81D7D59D70025B75F /* MyCollectionViewControllerThree.m in Sources */,
 				C3A52ACF1D6D321800325182 /* TestCell.m in Sources */,
 				C3A211E01D7BB4F10025B75F /* WeekCalendarLayout.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */,
 				C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
+				C3A211F91D7D59D70025B75F /* MyCollectionViewCell.m in Sources */,
 				C37813181D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m in Sources */,
 				C34FEB1E1D10EF63006E6A51 /* TableViewControllerFive.m in Sources */,
 				C3241F6A1D20CD060015C9FD /* ScrollViewSeven.m in Sources */,
@@ -976,6 +1053,7 @@
 				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
+				C3A212041D7D5A070025B75F /* Header.m in Sources */,
 				C301DF2E1D49F05400408501 /* AnswerVCCell.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
 				C3A52AED1D6D339500325182 /* TableViewController.m in Sources */,
@@ -988,8 +1066,10 @@
 				C39ED1631D680BF500C57AA4 /* MasonryFourViewController.m in Sources */,
 				C3A211E61D7BB4FF0025B75F /* HeaderViewTwo.m in Sources */,
 				C3A211EA1D7BB5090025B75F /* SampleCalendarEvent.m in Sources */,
+				C3A212021D7D5A070025B75F /* Footer.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
 				C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */,
+				C3A2120E1D7D5DA70025B75F /* CustomCollectionViewLayout.m in Sources */,
 				C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */,
 				C301DF5E1D4EEEDD00408501 /* BFEAnswerInfoInterface.m in Sources */,
 				C3A52AE71D6D339500325182 /* ScrollViewController.m in Sources */,

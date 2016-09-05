@@ -36,6 +36,8 @@
 #import "HYMasonryViewController.h"
 #import "CollectionViewControllerOne.h"
 #import "CalendarCollectionViewControllerTwo.h"
+#import "MyCollectionViewControllerThree.h"
+#import "AnotherCollectionViewControllerFour.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -79,8 +81,10 @@
     // [self testMasonryFour];
     // [self testMasonryFive];
     // [self testMasonrySix];
-    [self creatUICollectionViewOne];
-    [self creatUICollectionViewTwo];
+    // [self creatUICollectionViewOne];
+    // [self creatUICollectionViewTwo];
+    // [self creatUICollectionViewThree];
+     [self creatUICollectionViewFour];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -90,6 +94,28 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+
+- (void)creatUICollectionViewFour {
+    // 多个 Storyboard 跳转使用
+    UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"AnotherCollectionViewControllerFour" bundle:nil];
+    AnotherCollectionViewControllerFour *CollectionViewFour = [stroyboard instantiateInitialViewController];
+    [CollectionViewFour.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:CollectionViewFour];
+    [self.view addSubview:CollectionViewFour.view];
+}
+
+- (void)creatUICollectionViewThree {
+    // 多个 Storyboard 跳转使用
+    UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"MyCollectionViewControllerThree" bundle:nil];
+    MyCollectionViewControllerThree *CollectionViewThree = [stroyboard instantiateInitialViewController];
+    [CollectionViewThree.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:CollectionViewThree];
+    [self.view addSubview:CollectionViewThree.view];
+}
+
+
 - (void)creatUICollectionViewTwo {
     // 多个 Storyboard 跳转使用
     UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"CalendarCollectionViewControllerTwoSB" bundle:nil];
