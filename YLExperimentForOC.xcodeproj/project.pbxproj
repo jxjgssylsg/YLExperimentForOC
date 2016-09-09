@@ -113,6 +113,7 @@
 		C3A2125A1D80F0C60025B75F /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A212591D80F0C60025B75F /* backArrow.png */; };
 		C3A2125C1D80F0E40025B75F /* xianggang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3A2125B1D80F0E40025B75F /* xianggang.jpg */; };
 		C3A2125E1D80F0EF0025B75F /* Back_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A2125D1D80F0EF0025B75F /* Back_Arrow.png */; };
+		C3A212601D80F6840025B75F /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3A2125F1D80F6840025B75F /* icon.jpg */; };
 		C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */; };
 		C3A52ACF1D6D321800325182 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52ACE1D6D321800325182 /* TestCell.m */; };
 		C3A52AD21D6D339500325182 /* BasicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AD11D6D339500325182 /* BasicController.m */; };
@@ -325,9 +326,10 @@
 		C3A212521D80E7600025B75F /* UIView+ST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ST.m"; sourceTree = "<group>"; };
 		C3A212561D80E8D30025B75F /* UINavigationBar+ST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ST.h"; sourceTree = "<group>"; };
 		C3A212571D80E8D30025B75F /* UINavigationBar+ST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ST.m"; sourceTree = "<group>"; };
-		C3A212591D80F0C60025B75F /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow.png; sourceTree = "<group>"; };
-		C3A2125B1D80F0E40025B75F /* xianggang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xianggang.jpg; sourceTree = "<group>"; };
-		C3A2125D1D80F0EF0025B75F /* Back_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_Arrow.png; sourceTree = "<group>"; };
+		C3A212591D80F0C60025B75F /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backArrow.png; path = ../backArrow.png; sourceTree = "<group>"; };
+		C3A2125B1D80F0E40025B75F /* xianggang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = xianggang.jpg; path = ../xianggang.jpg; sourceTree = "<group>"; };
+		C3A2125D1D80F0EF0025B75F /* Back_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back_Arrow.png; path = ../Back_Arrow.png; sourceTree = "<group>"; };
+		C3A2125F1D80F6840025B75F /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = ../icon.jpg; sourceTree = "<group>"; };
 		C3A52ACA1D6D2FBB00325182 /* HYBBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBBaseController.h; sourceTree = "<group>"; };
 		C3A52ACB1D6D2FBB00325182 /* HYBBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBBaseController.m; sourceTree = "<group>"; };
 		C3A52ACD1D6D321800325182 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
@@ -477,6 +479,10 @@
 				C301DF5F1D4F273A00408501 /* bgEarn.png */,
 				C301DF601D4F273A00408501 /* bgEarn@2x.png */,
 				C301DF611D4F273A00408501 /* bgEarn@3x.png */,
+				C3A212591D80F0C60025B75F /* backArrow.png */,
+				C3A2125B1D80F0E40025B75F /* xianggang.jpg */,
+				C3A2125D1D80F0EF0025B75F /* Back_Arrow.png */,
+				C3A2125F1D80F6840025B75F /* icon.jpg */,
 			);
 			name = "Images ( 尽量复用 )";
 			path = Images;
@@ -786,9 +792,6 @@
 				C3A212451D80E7340025B75F /* TravelNav0Controller.m */,
 				C3A212461D80E7340025B75F /* TravelNav1Controller.h */,
 				C3A212471D80E7340025B75F /* TravelNav1Controller.m */,
-				C3A212591D80F0C60025B75F /* backArrow.png */,
-				C3A2125B1D80F0E40025B75F /* xianggang.jpg */,
-				C3A2125D1D80F0EF0025B75F /* Back_Arrow.png */,
 			);
 			name = NavSampleTwo;
 			sourceTree = "<group>";
@@ -1005,6 +1008,7 @@
 				C301DF631D4F273A00408501 /* bgEarn@2x.png in Resources */,
 				C35B1F751CCF5A4800032582 /* Main.storyboard in Resources */,
 				C34FEB541D115FE1006E6A51 /* 6.png in Resources */,
+				C3A212601D80F6840025B75F /* icon.jpg in Resources */,
 				C3A2125C1D80F0E40025B75F /* xianggang.jpg in Resources */,
 				C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */,
 				C301DF621D4F273A00408501 /* bgEarn.png in Resources */,

@@ -105,10 +105,11 @@
     
 }
 - (void)creatNavVCTwo {
-   UIWindow *window2 = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    // 新建一个 window, TabBar, UITabBarController
+   UIWindow *windowTwo = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     static UIWindow *window;
-    window = window2;
+    window = windowTwo; // 没有这句就不显示噢
     // 1.客路的
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[TravelNavController new]];
     nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"demo0" image:nil selectedImage:nil];
@@ -122,8 +123,8 @@
     UITabBarController *tabVC = [[UITabBarController alloc]init];
     tabVC.viewControllers = @[nav, nav0, nav1,nav2];
     
-    window2.rootViewController = tabVC;
-    [window2 makeKeyAndVisible];
+    windowTwo.rootViewController = tabVC;
+    [windowTwo makeKeyAndVisible];
     
 
     
