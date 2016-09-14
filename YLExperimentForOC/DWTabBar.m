@@ -23,7 +23,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
         DWPublishButton *button = [DWPublishButton publishButton];
         [self addSubview:button];
         self.publishButton = button;
@@ -53,7 +52,6 @@
     self.publishButton.center = CGPointMake(barWidth * 0.5, barHeight * 0.3);
     
     for (UIView *view in self.subviews) {
-        
         NSString *viewClass = NSStringFromClass([view class]);
         if (![viewClass isEqualToString:@"UITabBarButton"]) continue;
 
@@ -65,7 +63,6 @@
         view.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
         buttonIndex ++;
-        
         
     }
 }

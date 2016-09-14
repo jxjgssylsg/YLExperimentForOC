@@ -114,8 +114,8 @@
  */
 
 - (void)addOneChildViewController:(UIViewController *)viewController WithTitle:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
-    viewController.view.backgroundColor     = DWRandomColor;
-    viewController.tabBarItem.title         = title;
+    viewController.view.backgroundColor = DWRandomColor;
+    viewController.tabBarItem.title = title;
     viewController.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; // 注意 Rendering Mode, 如果不设置图片可能不出来, 只显示背景色
     UIImage *image = [UIImage imageNamed:selectedImageName];
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; // 可换: UIImageRenderingModeAlwaysTemplate 看看效果, 忽略图片,根据背景绘制
