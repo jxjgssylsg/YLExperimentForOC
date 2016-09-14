@@ -51,6 +51,7 @@
 #import "SettingViewController.h"
 #import "FavoriteViewController.h"
 #import "DWTabBarController.h"
+#import "PthreadViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -82,7 +83,7 @@
     // [self creatNavVCTwo];
     // [self creatNavVCThree];
     // [self creatTabbarVCOne];
-       [self creatTabbarVCTwo];
+    // [self creatTabbarVCTwo];
     // [self creatUITableViewOne];
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
@@ -104,7 +105,7 @@
     // [self creatUICollectionViewThree];
     // [self creatUICollectionViewFour];
     // [self creatUICollectionViewFive];
-
+    [self testPthread];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -114,6 +115,16 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+
+- (void)testPthread {
+    PthreadViewController *PthreadOne = [[PthreadViewController alloc] init];
+    [PthreadOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:PthreadOne];
+    [self.view addSubview:PthreadOne.view];
+
+}
+
 - (void)creatTabbarVCTwo {
     // 新建一个 window, TabBar, UITabBarController
     UIWindow *windowTwo = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

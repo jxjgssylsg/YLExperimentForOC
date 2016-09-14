@@ -154,6 +154,7 @@
 		C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AF21D6D3CFF00325182 /* HYMasonryViewController.m */; };
 		C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AF61D6D884200325182 /* MMPlaceHolder.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
+		C3D7854D1D896C2100B945DF /* PthreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7854C1D896C2100B945DF /* PthreadViewController.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
 		C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87621D0290E20051E255 /* TableViewControllerThree.m */; };
@@ -423,6 +424,8 @@
 		C3A52AF61D6D884200325182 /* MMPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPlaceHolder.m; sourceTree = "<group>"; };
 		C3A80C801CFED8390031EA89 /* YLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocationTool.h; sourceTree = "<group>"; };
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
+		C3D7854B1D896C2100B945DF /* PthreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PthreadViewController.h; sourceTree = "<group>"; };
+		C3D7854C1D896C2100B945DF /* PthreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PthreadViewController.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
 		C3DE87561D026D560051E255 /* TableViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerOne.m; sourceTree = "<group>"; };
 		C3DE875E1D0290E20051E255 /* TableViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTwo.h; sourceTree = "<group>"; };
@@ -641,6 +644,7 @@
 				C39ED14D1D66E87100C57AA4 /* Masonry */,
 				C3A52AF41D6D87B800325182 /* MMPlaceHolder */,
 				C37813111D7A53EF00ABF5A0 /* UIWindow */,
+				C3D785491D896B1800B945DF /* 多线程 */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -987,6 +991,23 @@
 			name = LocationTool;
 			sourceTree = "<group>";
 		};
+		C3D785491D896B1800B945DF /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7854A1D896B5700B945DF /* pthread */,
+			);
+			name = "多线程";
+			sourceTree = "<group>";
+		};
+		C3D7854A1D896B5700B945DF /* pthread */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7854B1D896C2100B945DF /* PthreadViewController.h */,
+				C3D7854C1D896C2100B945DF /* PthreadViewController.m */,
+			);
+			name = pthread;
+			sourceTree = "<group>";
+		};
 		C3DE87541D026AE20051E255 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1315,6 +1336,7 @@
 				C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */,
 				C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */,
 				C35CC6DA1CF42DC3008B9EC2 /* KCMainViewController.m in Sources */,
+				C3D7854D1D896C2100B945DF /* PthreadViewController.m in Sources */,
 				C34C89361D88036F008ABA4E /* SettingViewController.m in Sources */,
 				C3A212581D80E8D30025B75F /* UINavigationBar+ST.m in Sources */,
 				C3A211F91D7D59D70025B75F /* MyCollectionViewCell.m in Sources */,

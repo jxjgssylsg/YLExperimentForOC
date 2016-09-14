@@ -112,6 +112,8 @@
 // 自定义布局 CollectionView CircleLayout, Decoration View, supplementary View, 插入, 删除等
 - (void)creatUICollectionViewFive;
 
+// 测试下 Pthread
+- (void)testPthread;
 
 // ------------------------------ FCOM ------------------------------- //
 
