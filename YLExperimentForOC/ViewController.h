@@ -115,6 +115,9 @@
 // 测试下 Pthread
 - (void)testPthread;
 
+// 测试下 NSThread
+- (void)testNSThread;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;

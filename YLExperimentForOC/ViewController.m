@@ -52,6 +52,7 @@
 #import "FavoriteViewController.h"
 #import "DWTabBarController.h"
 #import "PthreadViewController.h"
+#import "NSThreadViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -105,7 +106,8 @@
     // [self creatUICollectionViewThree];
     // [self creatUICollectionViewFour];
     // [self creatUICollectionViewFive];
-    [self testPthread];
+    // [self testPthread];
+    [self testNSThread];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -113,6 +115,15 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testNSThread {
+    NSThreadViewController *NSThreadOne = [[NSThreadViewController alloc] init];
+    [NSThreadOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:NSThreadOne];
+    [self.view addSubview:NSThreadOne.view];
     
 }
 

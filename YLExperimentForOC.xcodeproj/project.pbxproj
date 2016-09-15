@@ -155,6 +155,8 @@
 		C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A52AF61D6D884200325182 /* MMPlaceHolder.m */; };
 		C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A80C811CFED8390031EA89 /* YLLocationTool.m */; };
 		C3D7854D1D896C2100B945DF /* PthreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7854C1D896C2100B945DF /* PthreadViewController.m */; };
+		C3D785521D8A222A00B945DF /* NSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785501D8A222A00B945DF /* NSThreadViewController.m */; };
+		C3D785531D8A222A00B945DF /* NSThreadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D785511D8A222A00B945DF /* NSThreadViewController.xib */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
 		C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87621D0290E20051E255 /* TableViewControllerThree.m */; };
@@ -426,6 +428,9 @@
 		C3A80C811CFED8390031EA89 /* YLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocationTool.m; sourceTree = "<group>"; };
 		C3D7854B1D896C2100B945DF /* PthreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PthreadViewController.h; sourceTree = "<group>"; };
 		C3D7854C1D896C2100B945DF /* PthreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PthreadViewController.m; sourceTree = "<group>"; };
+		C3D7854F1D8A222A00B945DF /* NSThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadViewController.h; sourceTree = "<group>"; };
+		C3D785501D8A222A00B945DF /* NSThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadViewController.m; sourceTree = "<group>"; };
+		C3D785511D8A222A00B945DF /* NSThreadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSThreadViewController.xib; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
 		C3DE87561D026D560051E255 /* TableViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerOne.m; sourceTree = "<group>"; };
 		C3DE875E1D0290E20051E255 /* TableViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTwo.h; sourceTree = "<group>"; };
@@ -994,6 +999,7 @@
 		C3D785491D896B1800B945DF /* 多线程 */ = {
 			isa = PBXGroup;
 			children = (
+				C3D7854E1D8A207100B945DF /* NSThread */,
 				C3D7854A1D896B5700B945DF /* pthread */,
 			);
 			name = "多线程";
@@ -1006,6 +1012,16 @@
 				C3D7854C1D896C2100B945DF /* PthreadViewController.m */,
 			);
 			name = pthread;
+			sourceTree = "<group>";
+		};
+		C3D7854E1D8A207100B945DF /* NSThread */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7854F1D8A222A00B945DF /* NSThreadViewController.h */,
+				C3D785501D8A222A00B945DF /* NSThreadViewController.m */,
+				C3D785511D8A222A00B945DF /* NSThreadViewController.xib */,
+			);
+			name = NSThread;
 			sourceTree = "<group>";
 		};
 		C3DE87541D026AE20051E255 /* UITableView */ = {
@@ -1145,6 +1161,7 @@
 				C34FEB871D13E087006E6A51 /* statuses.plist in Resources */,
 				C34FEB4F1D115FE1006E6A51 /* 10.png in Resources */,
 				C34C89481D881E10008ABA4E /* search@2x.png in Resources */,
+				C3D785531D8A222A00B945DF /* NSThreadViewController.xib in Resources */,
 				C34FEB501D115FE1006E6A51 /* 2.png in Resources */,
 				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
 				C3A212031D7D5A070025B75F /* Footer.xib in Resources */,
@@ -1355,6 +1372,7 @@
 				C34C89331D88036F008ABA4E /* FavoriteViewController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
 				C3A212041D7D5A070025B75F /* Header.m in Sources */,
+				C3D785521D8A222A00B945DF /* NSThreadViewController.m in Sources */,
 				C301DF2E1D49F05400408501 /* AnswerVCCell.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
 				C3A52AED1D6D339500325182 /* TableViewController.m in Sources */,
