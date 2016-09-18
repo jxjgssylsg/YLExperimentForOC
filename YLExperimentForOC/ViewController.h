@@ -118,6 +118,9 @@
 // 测试下 NSThread
 - (void)testNSThread;
 
+// 测试下 GCD
+- (void)testGCD;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;

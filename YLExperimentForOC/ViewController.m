@@ -53,6 +53,7 @@
 #import "DWTabBarController.h"
 #import "PthreadViewController.h"
 #import "NSThreadViewController.h"
+#import "GCDViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -107,7 +108,8 @@
     // [self creatUICollectionViewFour];
     // [self creatUICollectionViewFive];
     // [self testPthread];
-    [self testNSThread];
+    // [self testNSThread];
+       [self testGCD];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -115,6 +117,14 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+- (void)testGCD {
+    GCDViewController *GCDOne = [[GCDViewController alloc] init];
+    [GCDOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:GCDOne];
+    [self.view addSubview:GCDOne.view];
     
 }
 

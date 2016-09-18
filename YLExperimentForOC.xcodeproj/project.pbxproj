@@ -157,6 +157,8 @@
 		C3D7854D1D896C2100B945DF /* PthreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7854C1D896C2100B945DF /* PthreadViewController.m */; };
 		C3D785521D8A222A00B945DF /* NSThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785501D8A222A00B945DF /* NSThreadViewController.m */; };
 		C3D785531D8A222A00B945DF /* NSThreadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D785511D8A222A00B945DF /* NSThreadViewController.xib */; };
+		C3D785581D8E377300B945DF /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785561D8E377300B945DF /* GCDViewController.m */; };
+		C3D785591D8E377300B945DF /* GCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D785571D8E377300B945DF /* GCDViewController.xib */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
 		C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87621D0290E20051E255 /* TableViewControllerThree.m */; };
@@ -431,6 +433,9 @@
 		C3D7854F1D8A222A00B945DF /* NSThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadViewController.h; sourceTree = "<group>"; };
 		C3D785501D8A222A00B945DF /* NSThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadViewController.m; sourceTree = "<group>"; };
 		C3D785511D8A222A00B945DF /* NSThreadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSThreadViewController.xib; sourceTree = "<group>"; };
+		C3D785551D8E377300B945DF /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		C3D785561D8E377300B945DF /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		C3D785571D8E377300B945DF /* GCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDViewController.xib; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
 		C3DE87561D026D560051E255 /* TableViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerOne.m; sourceTree = "<group>"; };
 		C3DE875E1D0290E20051E255 /* TableViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTwo.h; sourceTree = "<group>"; };
@@ -999,6 +1004,7 @@
 		C3D785491D896B1800B945DF /* 多线程 */ = {
 			isa = PBXGroup;
 			children = (
+				C3D785541D8E2AC100B945DF /* GCD */,
 				C3D7854E1D8A207100B945DF /* NSThread */,
 				C3D7854A1D896B5700B945DF /* pthread */,
 			);
@@ -1022,6 +1028,16 @@
 				C3D785511D8A222A00B945DF /* NSThreadViewController.xib */,
 			);
 			name = NSThread;
+			sourceTree = "<group>";
+		};
+		C3D785541D8E2AC100B945DF /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				C3D785551D8E377300B945DF /* GCDViewController.h */,
+				C3D785561D8E377300B945DF /* GCDViewController.m */,
+				C3D785571D8E377300B945DF /* GCDViewController.xib */,
+			);
+			name = GCD;
 			sourceTree = "<group>";
 		};
 		C3DE87541D026AE20051E255 /* UITableView */ = {
@@ -1156,6 +1172,7 @@
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
 				C3A212101D7D5DBE0025B75F /* AnotherCollectionViewControllerFour.storyboard in Resources */,
 				C34C89231D82E44D008ABA4E /* NavSampleThree.storyboard in Resources */,
+				C3D785591D8E377300B945DF /* GCDViewController.xib in Resources */,
 				C34FEB571D115FE1006E6A51 /* 9.png in Resources */,
 				C3664DE71D33965B00D29182 /* imageInfo.plist in Resources */,
 				C34FEB871D13E087006E6A51 /* statuses.plist in Resources */,
@@ -1393,6 +1410,7 @@
 				C3A211EA1D7BB5090025B75F /* SampleCalendarEvent.m in Sources */,
 				C3A212021D7D5A070025B75F /* Footer.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
+				C3D785581D8E377300B945DF /* GCDViewController.m in Sources */,
 				C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				C3A2121C1D7D777F0025B75F /* CircleLayout.m in Sources */,
 				C3A2120E1D7D5DA70025B75F /* CustomCollectionViewLayout.m in Sources */,
