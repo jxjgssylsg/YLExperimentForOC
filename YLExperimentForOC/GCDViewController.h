@@ -59,9 +59,9 @@ http://www.cnblogs.com/wendingding/p/3806821.html#undefined
  
  异步函数
  
- （1）并发队列：能开启N条线程
+ （1）并发队列：能开启 N 条线程
  
- （2）串行队列：开启1条线程
+ （2）串行队列：开启 1 条线程
  
  补充：
  

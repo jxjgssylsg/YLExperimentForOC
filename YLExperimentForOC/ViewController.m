@@ -54,6 +54,7 @@
 #import "PthreadViewController.h"
 #import "NSThreadViewController.h"
 #import "GCDViewController.h"
+#import "NSOperationViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -109,7 +110,8 @@
     // [self creatUICollectionViewFive];
     // [self testPthread];
     // [self testNSThread];
-       [self testGCD];
+    // [self testGCD];
+    [self testNSOperation];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -119,6 +121,16 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+
+- (void)testNSOperation {
+    NSOperationViewController *NSOperationOne = [[NSOperationViewController alloc] init];
+    [NSOperationOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:NSOperationOne];
+    [self.view addSubview:NSOperationOne.view];
+    
+}
+
 - (void)testGCD {
     GCDViewController *GCDOne = [[GCDViewController alloc] init];
     [GCDOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];

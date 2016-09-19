@@ -115,7 +115,7 @@
 
 //dispatch_barrier_async
 - (void)dispatchBarrierAsyncDemo {
-    //防止文件读写冲突，可以创建一个串行队列，操作都在这个队列中进行，没有更新数据读用并行，写用串行。
+    // 防止文件读写冲突，可以创建一个串行队列，操作都在这个队列中进行，没有更新数据读用并行，写用串行。
     dispatch_queue_t dataQueue = dispatch_queue_create("com.starming.gcddemo.dataqueue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(dataQueue, ^{
         [NSThread sleepForTimeInterval:2.f];
@@ -124,7 +124,7 @@
     dispatch_async(dataQueue, ^{
         NSLog(@"read data 2");
     });
-    //等待前面的都完成，在执行barrier后面的
+    // 等待前面的都完成，在执行 barrier 后面的
     dispatch_barrier_async(dataQueue, ^{
         NSLog(@"write data 1");
         [NSThread sleepForTimeInterval:1];
@@ -138,7 +138,7 @@
     });
 }
 
-//dispatch_apply
+// dispatch_apply
 - (void)dispatchApplyDemo {
     dispatch_queue_t concurrentQueue = dispatch_queue_create("com.starming.gcddemo.concurrentqueue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_apply(10, concurrentQueue, ^(size_t i) {
@@ -147,10 +147,10 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         
     });
-    NSLog(@"The end"); //这里有个需要注意的是，dispatch_apply这个是会阻塞主线程的。这个log打印会在dispatch_apply都结束后才开始执行，但是使用dispatch_async包一下就不会阻塞了。
+    NSLog(@"The end"); //这里有个需要注意的是，dispatch_apply 这个是会阻塞主线程的。这个log打印会在dispatch_apply都结束后才开始执行，但是使用 dispatch_async 包一下就不会阻塞了。
 }
 
-//dispatch_apply
+// dispatch_apply
 - (void)dispatchDealWiththreadWithMaybeExplode:(BOOL)explode {
     dispatch_queue_t concurrentQueue = dispatch_queue_create("com.starming.gcddemo.concurrentqueue",DISPATCH_QUEUE_CONCURRENT);
     if (explode) {
@@ -200,7 +200,7 @@
     NSLog(@"ok, now can go on");
 }
 
-//dispatch_block_notify
+// dispatch_block_notify
 - (void)dispatchBlockNotifyDemo {
     dispatch_queue_t serialQueue = dispatch_queue_create("com.starming.gcddemo.serialqueue", DISPATCH_QUEUE_SERIAL);
     dispatch_block_t firstBlock = dispatch_block_create(0, ^{
@@ -216,7 +216,7 @@
     dispatch_block_notify(firstBlock, serialQueue, secondBlock);
 }
 
-//dispatch_block_cancel(iOS8+)
+// dispatch_block_cancel(iOS8+)
 - (void)dispatchBlockCancelDemo {
     dispatch_queue_t serialQueue = dispatch_queue_create("com.starming.gcddemo.serialqueue", DISPATCH_QUEUE_SERIAL);
     dispatch_block_t firstBlock = dispatch_block_create(0, ^{
@@ -265,9 +265,9 @@
     NSLog(@"can continue");
 }
 
-//dispatch semaphore
+// dispatch semaphore
 - (void)dispatchSemaphoreDemo {
-    //创建semaphore
+    // 创建 semaphore
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"start");
@@ -279,7 +279,7 @@
     NSLog(@"continue");
 }
 
-//dispatch source directory demo
+// dispatch source directory demo
 - (void)dispatchSourceDirectoryDemo {
     NSURL *directoryURL; // assume this is set to a directory
     int const fd = open([[directoryURL path] fileSystemRepresentation], O_EVTONLY);
