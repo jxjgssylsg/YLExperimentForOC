@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GCDViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
@@ -161,4 +162,54 @@ http://www.cnblogs.com/wendingding/p/3806821.html#undefined
  dispatch_queue_t queue = dispatch_queue_create("com.example.MyQueue", DISPATCH_QUEUE_CONCURRENT);
  
  注. dispatch_after是延迟提交，不是延迟运行
+ 
+ http://blog.devtang.com/2012/02/22/use-gcd/
+ 
+ - (void)applicationDidEnterBackground:(UIApplication *)application
+ {
+ [self beingBackgroundUpdateTask];
+ NSLog(@"hahahah jin houtai 后台 ");
+ [self endBackgroundUpdateTask];
+ }
+ - (void)beingBackgroundUpdateTask
+ {
+ self.backgroundUpdateTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+ NSLog(@"hahhahahah 过期了!");
+ [self endBackgroundUpdateTask];
+ }];
+ }
+ 
+ - (void)endBackgroundUpdateTask
+ {
+ [[UIApplication sharedApplication] endBackgroundTask:self.backgroundUpdateTask];
+ self.backgroundUpdateTask = UIBackgroundTaskInvalid;
+ NSLog(@"ending 啦啦啦");
+ }
+ 
+ https://github.com/ming1016/study/wiki/%E7%BB%86%E8%AF%B4GCD%EF%BC%88Grand-Central-Dispatch%EF%BC%89%E5%A6%82%E4%BD%95%E7%94%A8  // 字典级详细
+ 
+ dispatch_barrier_async使用Barrier Task方法Dispatch Barrier解决多线程并发读写同一个资源发生死锁
+ 
+ http://blog.csdn.net/zhangao0086/article/details/38904923
+ 
+ //暂停
+ dispatch_suspend(globalQueue)
+ //恢复
+ dispatch_resume(globalQueue)
+ 
+ http://www.beauty-soft.net/blog/ceiba/object-c/20130513/639.html
+ 
+ 一、线程管理常用方法
+ 
+ 1.performSelector(InBackground or MainThread)
+ 这个方法比较方便，但是问题在于参数传递只能支持一个对象（传多个参数，我是将其打包在一个NSDictionary里面）
+ 2.NSOperationQueue
+ 这个方法稍微复杂，提供了每个任务的封装(NSOperation)。可以继承NSOperation之后，在main函数中写一些同步执行的代码，然后放到一个Queue之中，Queue自动管理Operation的执行和调度（在UI线程以外）。对于异步执行的代码，需要重载NSOperation的好几个函数才能正常工作（告诉Queue关于这个任务的进度以及执行情况）。
+ 3.NSThread
+ 轻量级的线程管理机制
+ 4.GCD
+ 在UI线程和其它线程之间切换很方便，可以和NSOperationQueue搭配使用。本文着重介绍这个方法。
+ 
+ 5,pthread
+ 
  */
