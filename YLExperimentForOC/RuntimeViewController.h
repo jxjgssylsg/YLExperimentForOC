@@ -483,7 +483,7 @@ Aspect-Oriented Programming(AOP)
  
  注. 见 Sample two person 类
  
- 2.  交换方法
+ 2.  交换方法, 动态增加属性
  class_getInstanceMethod（） //类方法和实例方法存在不同的地方,所以两个不同的方法获得
  class_getClassMethod（）    //以上两个函数传入返回Method类型
  method_exchangeImplementations    //（）交换两个方法的实现
@@ -515,5 +515,163 @@ Aspect-Oriented Programming(AOP)
  return [objc_getAssociatedObject(self, KTextFieldMaxLength) integerValue];
  }
  
+ https://my.oschina.net/panyong/blog/298631
+ 
+ 2> 相关应用
+ 
+ NSCoding(归档和解档, 利用runtime遍历模型对象的所有属性)
+ 字典 --> 模型 (利用runtime遍历模型对象的所有属性, 根据属性名从字典中取出对应的值, 设置到模型的属性上)
+ KVO(利用runtime动态产生一个类)
+ 用于封装框架(想怎么改就怎么改) 这就是我们runtime机制的只要运用方向
+ 3> 相关函数
+ 
+ objc_msgSend : 给对象发送消息
+ class_copyMethodList : 遍历某个类所有的方法
+ class_copyIvarList : 遍历某个类所有的成员变量
+ class_..... 这是我们学习runtime必须知道的函数！
+ 
+ 
+ http://www.jianshu.com/p/54c190542aa8
+ 
+ Class object_getClass(id obj)
+ {
+ if (obj) return obj->getIsa();
+ else return Nil;
+ }
+ 
+ + (Class)class {   // 类方法 在 meta class 元类内
+ return self;
+ }
+ 
+ - (Class)class {   // 实例方法,在 class 类对象里
+ return object_getClass(self);
+ }
+ 这是NSObject类里实例方法class与类方法class的实现，这里再强调一下：类方法是在meta class里的，类方法就是把自己返回，而实例方法中是返回实例isa的类，我们要验证这个isa的指向链的时候不能用这种方法，千万记住，为什么，一会说明。
+ 
+ #import <objc/runtime.h>
+ #import "Person.h"
+ 
+ ...
+ 
+ Person *obj = [Person new];
+ NSLog(@"instance         :%p", obj);
+ NSLog(@"class            :%p", object_getClass(obj));
+ NSLog(@"meta class       :%p", object_getClass(object_getClass(obj)));
+ NSLog(@"root meta        :%p", object_getClass(object_getClass(object_getClass(obj))));
+ NSLog(@"root meta's meta :%p", object_getClass(object_getClass(object_getClass(object_getClass(obj)))));
+ NSLog(@"---------------------------------------------");
+ NSLog(@"class            :%p", [obj class]);
+ NSLog(@"meta class       :%p", [[obj class] class]);
+ NSLog(@"root meta        :%p", [[[obj class] class] class]);
+ NSLog(@"root meta's meta :%p", [[[[obj class] class] class] class]);
+ 
+ // Log输出：
+ 2016-02-02 18:06:11.443 TimerDemo[1718:248402] instance         :0x7fc792530f20
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] class            :0x10ae0e178
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] meta class       :0x10ae0e150
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] root meta        :0x10b66a198
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] root meta's meta :0x10b66a198
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] ---------------------------------------------
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] class            :0x10ae0e178
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] meta class       :0x10ae0e178
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] root meta        :0x10ae0e178
+ 2016-02-02 18:06:11.444 TimerDemo[1718:248402] root meta's meta :0x10ae0e178
+ 
+ #import <objc/runtime.h>
+ 
+ ...
+ 
+ NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(test) userInfo:nil repeats:YES];
+ NSLog(@"instance       :%p", timer1);
+ NSLog(@"class          :%p", object_getClass(timer1));
+ NSLog(@"meta class     :%p", object_getClass(object_getClass(timer1)));
+ NSLog(@"root meta class:%p", object_getClass(object_getClass(object_getClass(timer1))));
+ NSLog(@"------------------------------");
+ NSLog(@"[NSTimer class]:%p", [NSTimer class]);
+ 
+ // Log输出：
+ 
+ 2016-02-02 18:19:11.643 TimerDemo[1745:255746] instance       :0x7fee8bc7a810
+ 2016-02-02 18:19:11.644 TimerDemo[1745:255746] class          :0x10ece02c0
+ 2016-02-02 18:19:11.644 TimerDemo[1745:255746] meta class     :0x10ece02e8
+ 2016-02-02 18:19:11.644 TimerDemo[1745:255746] root meta class:0x10e895198
+ 2016-02-02 18:19:11.644 TimerDemo[1745:255746] ------------------------------
+ 2016-02-02 18:19:11.644 TimerDemo[1745:255746] [NSTimer class]:0x10ecdfe38
+ 
+ 问题来了：
+ 为什么[NSTimer class]:0x10ecdfe38与class:0x10ece02c0得到的指针不一样？
+ 
+ 就是说为什么object_getClass(obj)与[OBJ class]返回的指针不同？
+ 答案来了
+ 答案非常简单，两个字：类簇  (抽象工厂设计模式！)
+ 
+ NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(test) userInfo:nil repeats:YES];
+ NSLog(@"instance       :%@", timer1);
+ NSLog(@"class          :%@", object_getClass(timer1));
+ NSLog(@"meta class     :%@", object_getClass(object_getClass(timer1)));
+ NSLog(@"root meta class:%@", object_getClass(object_getClass(object_getClass(timer1))));
+ NSLog(@"------------------------------");
+ NSLog(@"[NSTimer class]:%@", [NSTimer class]);
+ 
+ // Log输出：
+ 
+ 2016-02-02 18:31:54.405 TimerDemo[1772:263501] instance       :<__NSCFTimer: 0x7ff83841e530>
+ 2016-02-02 18:31:54.405 TimerDemo[1772:263501] class          :__NSCFTimer
+ 2016-02-02 18:31:54.405 TimerDemo[1772:263501] meta class     :__NSCFTimer
+ 2016-02-02 18:31:54.406 TimerDemo[1772:263501] root meta class:NSObject
+ 2016-02-02 18:31:54.406 TimerDemo[1772:263501] ------------------------------
+ 2016-02-02 18:31:54.406 TimerDemo[1772:263501] [NSTimer class]:NSTimer
+ 
+ NSNumber *intNum = [NSNumber numberWithInt:1];
+ NSNumber *boolNum = [NSNumber numberWithBool:YES];
+ NSLog(@"intNum :%@", [intNum class]);
+ NSLog(@"boolNum:%@", [boolNum class]);
+ 
+ // Log输出：
+ 
+ 2016-02-02 23:15:23.868 TimerDemo[1018:35735] intNum :__NSCFNumber
+ 2016-02-02 23:15:25.027 TimerDemo[1018:35735] boolNum:__NSCFBoolean
+ 
+ 
+ 如何证明__NSCFTimer就是NSTimer的子类，如何证明类簇是真的？其实很简单：
+ 
+ NSLog(@"[NSTimer class]    :%p", [NSTimer class]);
+ NSLog(@"class_getSuperClass:%p", class_getSuperclass([timer1 class]));
+ 
+ 
+ // Log输出：
+ 
+ 2016-02-02 23:22:54.367 TimerDemo[1038:39690] [NSTimer class]    :0x109ee4e38
+ 2016-02-02 23:22:54.367 TimerDemo[1038:39690] class_getSuperClass:0x109ee4e38
+ 
+ http://www.cocoachina.com/ios/20150104/10826.html
+ 
+ 1. load 和 initialize 的共同特点以及区别
+ 
+ load和initialize有很多共同特点，下面简单列一下：
+ 
+ 在不考虑开发者主动使用的情况下，系统最多会调用一次
+ 如果父类和子类都被调用，父类的调用一定在子类之前
+ 都是为了应用运行提前创建合适的运行环境
+ 在使用时都不要过重地依赖于这两个方法，除非真正必要
+ 2. load方法相关要点
+ 
+ 废话不多说，直接上要点列表：
+ 
+ 调用时机比较早，运行环境有不确定因素。具体说来，在iOS上通常就是App启动时进行加载，但当load调用的时候，并不能保证所有类都加载完成且可用，必要时还要自己负责做auto release处理。
+ 补充上面一点，对于有依赖关系的两个库中，被依赖的类的load会优先调用。但在一个库之内，调用顺序是不确定的。
+ 对于一个类而言，没有load方法实现就不会调用，不会考虑对NSObject的继承。
+ 一个类的load方法不用写明[super load]，父类就会收到调用，并且在子类之前。
+ Category的load也会收到调用，但顺序上在主类的load调用之后。
+ 不会直接触发initialize的调用。
+ 3. initialize方法相关要点
+ 
+ 同样，直接整理要点：
+ 
+ initialize的自然调用是在第一次主动使用当前类的时候（lazy，这一点和Java类的“clinit”的很像）。
+ 在initialize方法收到调用时，运行环境基本健全。
+ initialize的运行过程中是能保证线程安全的。
+ 和load不同，即使子类不实现initialize方法，会把父类的实现继承过来调用一遍。注意的是在此之前，父类的方法已经被执行过一次了，同样不需要super调用。
+ 由于initialize的这些特点，使得其应用比load要略微广泛一些。可用来做一些初始化工作，或者单例模式的一种实现方案。
  
  */
