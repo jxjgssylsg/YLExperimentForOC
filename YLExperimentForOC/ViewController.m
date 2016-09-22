@@ -55,6 +55,8 @@
 #import "NSThreadViewController.h"
 #import "GCDViewController.h"
 #import "NSOperationViewController.h"
+#import "RuntimeViewController.h"
+#import "RuntimeViewControllerTwo.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -111,7 +113,9 @@
     // [self testPthread];
     // [self testNSThread];
     // [self testGCD];
-    [self testNSOperation];
+    // [self testNSOperation];
+    // [self testRuntime];
+    [self testRuntimeTwo];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -119,6 +123,25 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testRuntimeTwo {
+    RuntimeViewControllerTwo *RuntimeVCTwo = [[RuntimeViewControllerTwo alloc] init];
+    [RuntimeVCTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:RuntimeVCTwo];
+    [self.view addSubview:RuntimeVCTwo.view];
+    
+}
+
+
+- (void)testRuntime {
+    RuntimeViewController *RuntimeVCOne = [[RuntimeViewController alloc] init];
+    [RuntimeVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:RuntimeVCOne];
+    [self.view addSubview:RuntimeVCOne.view];
     
 }
 

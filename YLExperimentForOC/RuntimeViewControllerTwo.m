@@ -9,8 +9,8 @@
 #import "RuntimeViewControllerTwo.h"
 #import <objc/runtime.h>
 
-#import "UIButton+CS_BackgroundColor/UIButton+CS_BackgroundColor.h"
-#import "UIControl+CS_FixMultiClick/UIControl+CS_FixMultiClick.h"
+#import "UIButton+CS_BackgroundColor.h"
+#import "UIControl+CS_FixMultiClick.h"
 
 #import "PersonModel.h"
 

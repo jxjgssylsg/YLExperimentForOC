@@ -121,6 +121,11 @@
 // 测试下 GCD
 - (void)testGCD;
 
+// Runtime 常用方法 动态添加
+- (void)testRuntime;
+
+// Runtime 常用方法
+- (void)testRuntimeTwo;
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;
