@@ -126,6 +126,9 @@
 
 // Runtime 常用方法
 - (void)testRuntimeTwo;
+
+// KVC 常用方法
+- (void)testKVC;
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;

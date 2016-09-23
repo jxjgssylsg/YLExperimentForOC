@@ -57,6 +57,7 @@
 #import "NSOperationViewController.h"
 #import "RuntimeViewController.h"
 #import "RuntimeViewControllerTwo.h"
+#import "KVCViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -115,7 +116,8 @@
     // [self testGCD];
     // [self testNSOperation];
     // [self testRuntime];
-    [self testRuntimeTwo];
+    // [self testRuntimeTwo];
+    [self testKVC];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -123,6 +125,15 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testKVC {
+    KVCViewController *KVCVCOne = [[KVCViewController alloc] init];
+    [KVCVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:KVCVCOne];
+    [self.view addSubview:KVCVCOne.view];
     
 }
 

@@ -170,6 +170,7 @@
 		C3D785761D92D2C300B945DF /* UIButton+CS_BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785751D92D2C300B945DF /* UIButton+CS_BackgroundColor.m */; };
 		C3D785791D92D2E300B945DF /* UIControl+CS_FixMultiClick.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785781D92D2E300B945DF /* UIControl+CS_FixMultiClick.m */; };
 		C3D7857C1D92D2EE00B945DF /* RuntimeViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7857B1D92D2EE00B945DF /* RuntimeViewControllerTwo.m */; };
+		C3D785801D955B3D00B945DF /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7857F1D955B3D00B945DF /* KVCViewController.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
 		C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87621D0290E20051E255 /* TableViewControllerThree.m */; };
@@ -468,6 +469,8 @@
 		C3D785781D92D2E300B945DF /* UIControl+CS_FixMultiClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CS_FixMultiClick.m"; sourceTree = "<group>"; };
 		C3D7857A1D92D2EE00B945DF /* RuntimeViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeViewControllerTwo.h; sourceTree = "<group>"; };
 		C3D7857B1D92D2EE00B945DF /* RuntimeViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewControllerTwo.m; sourceTree = "<group>"; };
+		C3D7857E1D955B3D00B945DF /* KVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
+		C3D7857F1D955B3D00B945DF /* KVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
 		C3DE87561D026D560051E255 /* TableViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerOne.m; sourceTree = "<group>"; };
 		C3DE875E1D0290E20051E255 /* TableViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTwo.h; sourceTree = "<group>"; };
@@ -688,6 +691,7 @@
 				C37813111D7A53EF00ABF5A0 /* UIWindow */,
 				C3D785491D896B1800B945DF /* 多线程 */,
 				C3D7855E1D9266B500B945DF /* Runtime */,
+				C3D7857D1D955A4300B945DF /* KVC  KVO */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -1117,6 +1121,15 @@
 			name = "Runtime Sample Two";
 			sourceTree = "<group>";
 		};
+		C3D7857D1D955A4300B945DF /* KVC  KVO */ = {
+			isa = PBXGroup;
+			children = (
+				C3D7857E1D955B3D00B945DF /* KVCViewController.h */,
+				C3D7857F1D955B3D00B945DF /* KVCViewController.m */,
+			);
+			name = "KVC  KVO";
+			sourceTree = "<group>";
+		};
 		C3DE87541D026AE20051E255 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1411,6 +1424,7 @@
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
 				C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */,
 				C301DF371D4A02FA00408501 /* AnswerVCCellDataModelGroup.m in Sources */,
+				C3D785801D955B3D00B945DF /* KVCViewController.m in Sources */,
 				C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */,
 				C335DEAC1D58D55D00CC7A26 /* TimerTestViewController.m in Sources */,
 				C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */,
