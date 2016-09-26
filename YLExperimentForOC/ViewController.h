@@ -129,6 +129,13 @@
 
 // KVC 常用方法
 - (void)testKVC;
+
+// KVO 监听
+- (void)testKVO;
+
+// KVO 监听
+- (void)testKVOTwo;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;

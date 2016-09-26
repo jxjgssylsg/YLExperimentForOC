@@ -171,6 +171,10 @@
 		C3D785791D92D2E300B945DF /* UIControl+CS_FixMultiClick.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785781D92D2E300B945DF /* UIControl+CS_FixMultiClick.m */; };
 		C3D7857C1D92D2EE00B945DF /* RuntimeViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7857B1D92D2EE00B945DF /* RuntimeViewControllerTwo.m */; };
 		C3D785801D955B3D00B945DF /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7857F1D955B3D00B945DF /* KVCViewController.m */; };
+		C3D785851D96104C00B945DF /* KVOViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785841D96104C00B945DF /* KVOViewControllerOne.m */; };
+		C3D7858C1D9611F300B945DF /* KVOViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785871D9611F300B945DF /* KVOViewControllerTwo.m */; };
+		C3D7858D1D9611F300B945DF /* PersonObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D785891D9611F300B945DF /* PersonObserver.m */; };
+		C3D7858E1D9611F300B945DF /* PersonForKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7858B1D9611F300B945DF /* PersonForKVO.m */; };
 		C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87561D026D560051E255 /* TableViewControllerOne.m */; };
 		C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE875F1D0290E20051E255 /* TableViewControllerTwo.m */; };
 		C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE87621D0290E20051E255 /* TableViewControllerThree.m */; };
@@ -471,6 +475,14 @@
 		C3D7857B1D92D2EE00B945DF /* RuntimeViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewControllerTwo.m; sourceTree = "<group>"; };
 		C3D7857E1D955B3D00B945DF /* KVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
 		C3D7857F1D955B3D00B945DF /* KVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
+		C3D785831D96104C00B945DF /* KVOViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewControllerOne.h; sourceTree = "<group>"; };
+		C3D785841D96104C00B945DF /* KVOViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewControllerOne.m; sourceTree = "<group>"; };
+		C3D785861D9611F300B945DF /* KVOViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewControllerTwo.h; sourceTree = "<group>"; };
+		C3D785871D9611F300B945DF /* KVOViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewControllerTwo.m; sourceTree = "<group>"; };
+		C3D785881D9611F300B945DF /* PersonObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonObserver.h; sourceTree = "<group>"; };
+		C3D785891D9611F300B945DF /* PersonObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonObserver.m; sourceTree = "<group>"; };
+		C3D7858A1D9611F300B945DF /* PersonForKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonForKVO.h; sourceTree = "<group>"; };
+		C3D7858B1D9611F300B945DF /* PersonForKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonForKVO.m; sourceTree = "<group>"; };
 		C3DE87551D026D560051E255 /* TableViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerOne.h; sourceTree = "<group>"; };
 		C3DE87561D026D560051E255 /* TableViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerOne.m; sourceTree = "<group>"; };
 		C3DE875E1D0290E20051E255 /* TableViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTwo.h; sourceTree = "<group>"; };
@@ -692,6 +704,7 @@
 				C3D785491D896B1800B945DF /* 多线程 */,
 				C3D7855E1D9266B500B945DF /* Runtime */,
 				C3D7857D1D955A4300B945DF /* KVC  KVO */,
+				C3D7858F1D98B93C00B945DF /* RunLoop */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -1126,8 +1139,39 @@
 			children = (
 				C3D7857E1D955B3D00B945DF /* KVCViewController.h */,
 				C3D7857F1D955B3D00B945DF /* KVCViewController.m */,
+				C3D785811D960EB300B945DF /* KVO Sample One */,
+				C3D785821D960EEE00B945DF /* KVO Sample Two */,
 			);
 			name = "KVC  KVO";
+			sourceTree = "<group>";
+		};
+		C3D785811D960EB300B945DF /* KVO Sample One */ = {
+			isa = PBXGroup;
+			children = (
+				C3D785831D96104C00B945DF /* KVOViewControllerOne.h */,
+				C3D785841D96104C00B945DF /* KVOViewControllerOne.m */,
+			);
+			name = "KVO Sample One";
+			sourceTree = "<group>";
+		};
+		C3D785821D960EEE00B945DF /* KVO Sample Two */ = {
+			isa = PBXGroup;
+			children = (
+				C3D785861D9611F300B945DF /* KVOViewControllerTwo.h */,
+				C3D785871D9611F300B945DF /* KVOViewControllerTwo.m */,
+				C3D785881D9611F300B945DF /* PersonObserver.h */,
+				C3D785891D9611F300B945DF /* PersonObserver.m */,
+				C3D7858A1D9611F300B945DF /* PersonForKVO.h */,
+				C3D7858B1D9611F300B945DF /* PersonForKVO.m */,
+			);
+			name = "KVO Sample Two";
+			sourceTree = "<group>";
+		};
+		C3D7858F1D98B93C00B945DF /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RunLoop;
 			sourceTree = "<group>";
 		};
 		C3DE87541D026AE20051E255 /* UITableView */ = {
@@ -1407,6 +1451,7 @@
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
 				C3A211DA1D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m in Sources */,
 				C34FEB791D128207006E6A51 /* TableViewControllerSix.m in Sources */,
+				C3D7858C1D9611F300B945DF /* KVOViewControllerTwo.m in Sources */,
 				C34C891E1D82E403008ABA4E /* NavViewControllerForThree.m in Sources */,
 				C3241F671D20C3840015C9FD /* CellSeven.m in Sources */,
 				C3A52AE41D6D339500325182 /* BasicAnimatedController.m in Sources */,
@@ -1436,6 +1481,7 @@
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
 				C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */,
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
+				C3D7858D1D9611F300B945DF /* PersonObserver.m in Sources */,
 				C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */,
 				C3D785631D92701900B945DF /* RuntimeViewController.m in Sources */,
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
@@ -1460,6 +1506,7 @@
 				C3A52ACF1D6D321800325182 /* TestCell.m in Sources */,
 				C3A212141D7D77660025B75F /* CollectionViewControllerFive.m in Sources */,
 				C3A211E01D7BB4F10025B75F /* WeekCalendarLayout.m in Sources */,
+				C3D7858E1D9611F300B945DF /* PersonForKVO.m in Sources */,
 				C35B1F891CCF735800032582 /* QREncoding.m in Sources */,
 				C39ED1601D6807F100C57AA4 /* MasonryThreeViewController.m in Sources */,
 				C3A52ADB1D6D339500325182 /* TotalUpdateController.m in Sources */,
@@ -1494,6 +1541,7 @@
 				C3D785641D92701900B945DF /* Message.m in Sources */,
 				C3664DDF1D30DC0200D29182 /* ScrollViewControllerOne.m in Sources */,
 				C316FE091D6840E100EB3560 /* MasonryFiveViewController.m in Sources */,
+				C3D785851D96104C00B945DF /* KVOViewControllerOne.m in Sources */,
 				C3A2121D1D7D777F0025B75F /* MyCollectionReusableView.m in Sources */,
 				C34C89341D88036F008ABA4E /* HomeViewController.m in Sources */,
 				C3A212291D7E6FF80025B75F /* NavSecondViewControllerOne.m in Sources */,

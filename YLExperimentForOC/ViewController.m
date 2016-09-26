@@ -58,6 +58,8 @@
 #import "RuntimeViewController.h"
 #import "RuntimeViewControllerTwo.h"
 #import "KVCViewController.h"
+#import "KVOViewControllerOne.h"
+#import "KVOViewControllerTwo.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -117,7 +119,9 @@
     // [self testNSOperation];
     // [self testRuntime];
     // [self testRuntimeTwo];
-    [self testKVC];
+    // [self testKVC];
+    // [self testKVO];
+    [self testKVOTwo];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -125,6 +129,24 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testKVOTwo {
+    KVOViewControllerTwo *KVOVCTwo = [[KVOViewControllerTwo alloc] init];
+    [KVOVCTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:KVOVCTwo];
+    [self.view addSubview:KVOVCTwo.view];
+    
+}
+
+- (void)testKVO {
+    KVOViewControllerOne *KVOVCOne = [[KVOViewControllerOne alloc] init];
+    [KVOVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:KVOVCOne];
+    [self.view addSubview:KVOVCOne.view];
     
 }
 
