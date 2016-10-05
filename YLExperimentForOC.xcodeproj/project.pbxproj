@@ -91,6 +91,7 @@
 		C37813181D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C37813171D7AA1EE00ABF5A0 /* CollectionViewControllerOne.m */; };
 		C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */; };
 		C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */; };
+		C37B83701DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B836F1DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 		C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */; };
 		C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */; };
@@ -327,6 +328,8 @@
 		C37813191D7AA25700ABF5A0 /* CollectionViewCellOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCellOne.h; sourceTree = "<group>"; };
 		C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCellOne.m; sourceTree = "<group>"; };
 		C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCellOne.xib; sourceTree = "<group>"; };
+		C37B836E1DA4EBC100BFF5E1 /* CCTestRunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTestRunLoopViewController.h; sourceTree = "<group>"; };
+		C37B836F1DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTestRunLoopViewController.m; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		C39ED14A1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerOneFCOM.h; sourceTree = "<group>"; };
@@ -1170,6 +1173,8 @@
 		C3D7858F1D98B93C00B945DF /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
+				C37B836E1DA4EBC100BFF5E1 /* CCTestRunLoopViewController.h */,
+				C37B836F1DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m */,
 			);
 			name = RunLoop;
 			sourceTree = "<group>";
@@ -1536,6 +1541,7 @@
 				C301DF2E1D49F05400408501 /* AnswerVCCell.m in Sources */,
 				C3D7856B1D92702500B945DF /* MessageForwarding.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
+				C37B83701DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m in Sources */,
 				C3A52AED1D6D339500325182 /* TableViewController.m in Sources */,
 				C3664DE21D33418200D29182 /* ScrollViewControllerTwo.m in Sources */,
 				C3D785641D92701900B945DF /* Message.m in Sources */,

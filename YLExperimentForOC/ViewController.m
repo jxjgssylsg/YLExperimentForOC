@@ -60,6 +60,7 @@
 #import "KVCViewController.h"
 #import "KVOViewControllerOne.h"
 #import "KVOViewControllerTwo.h"
+#import "CCTestRunLoopViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -121,7 +122,8 @@
     // [self testRuntimeTwo];
     // [self testKVC];
     // [self testKVO];
-    [self testKVOTwo];
+    // [self testKVOTwo];
+    [self testRunLoop];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -129,6 +131,15 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testRunLoop {
+    CCTestRunLoopViewController *runLoopVCOne = [[CCTestRunLoopViewController alloc] init];
+    [runLoopVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:runLoopVCOne];
+    [self.view addSubview:runLoopVCOne.view];
     
 }
 
