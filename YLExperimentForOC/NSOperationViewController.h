@@ -34,7 +34,7 @@
  
  注意：操作对象默认在主线程中执行，只有添加到队列中才会开启新的线程。即默认情况下，如果操作没有放到队列中queue中，都是同步执行。只有将NSOperation放到一个NSOperationQueue中,才会异步执行操作
  
- //创建NSBlockOperation操作对象
+ //创建 NSBlockOperation 操作对象
  NSBlockOperation *operation=[NSBlockOperation blockOperationWithBlock:^{
  //......
  }];
@@ -44,7 +44,7 @@
  //....
  }];
 
- //创建NSBlockOperation操作对象
+ //创建 NSBlockOperation 操作对象
  NSBlockOperation *operation=[NSBlockOperation blockOperationWithBlock:^{
  NSLog(@"NSBlockOperation------%@",[NSThread currentThread]);
  }];
@@ -74,20 +74,20 @@
 
  3.NSOperationQueue
  
- NSOperationQueue的作⽤：NSOperation可以调⽤start⽅法来执⾏任务,但默认是同步执行的
+ NSOperationQueue 的作⽤：NSOperation可以调⽤start⽅法来执⾏任务,但默认是同步执行的
  
- 如果将NSOperation添加到NSOperationQueue(操作队列)中,系统会自动异步执行NSOperation中的操作
+ 如果将 NSOperation 添加到NSOperationQueue(操作队列)中,系统会自动异步执行NSOperation中的操作
  
- 添加操作到NSOperationQueue中，自动执行操作，自动开启线程
+ 添加操作到 NSOperationQueue 中，自动执行操作，自动开启线程
 
- //创建NSOperationQueue
+ // 创建 NSOperationQueue
  NSOperationQueue * queue=[[NSOperationQueue alloc]init];
- //把操作添加到队列中
- //第一种方式
+ // 把操作添加到队列中
+ // 第一种方式
  [queue addOperation:operation1];
  [queue addOperation:operation2];
  [queue addOperation:operation3];
- //第二种方式
+ // 第二种方式
  [queue addOperationWithBlock:^{
  NSLog(@"NSBlockOperation3--4----%@",[NSThread currentThread]);
  }];
@@ -98,10 +98,10 @@
 {
  [super viewDidLoad];
  
- //创建NSInvocationOperation对象，封装操作
+ // 创建 NSInvocationOperation 对象，封装操作
  NSInvocationOperation *operation1=[[NSInvocationOperation alloc]initWithTarget:self selector:@selector(test1) object:nil];
  NSInvocationOperation *operation2=[[NSInvocationOperation alloc]initWithTarget:self selector:@selector(test2) object:nil];
- //创建对象，封装操作
+ // 创建对象，封装操作
  NSBlockOperation *operation3=[NSBlockOperation blockOperationWithBlock:^{
  NSLog(@"NSBlockOperation3--1----%@",[NSThread currentThread]);
  }];
@@ -109,9 +109,9 @@
  NSLog(@"NSBlockOperation3--2----%@",[NSThread currentThread]);
  }];
  
- //创建NSOperationQueue
+ // 创建 NSOperationQueue
  NSOperationQueue * queue=[[NSOperationQueue alloc]init];
- //把操作添加到队列中
+ // 把操作添加到队列中
  [queue addOperation:operation1];
  [queue addOperation:operation2];
  [queue addOperation:operation3];
@@ -119,12 +119,12 @@
  
  -(void)test1
  {
- NSLog(@"NSInvocationOperation--test1--%@",[NSThread currentThread]);
+   NSLog(@"NSInvocationOperation--test1--%@",[NSThread currentThread]);
  }
  
  -(void)test2
  {
- NSLog(@"NSInvocationOperation--test2--%@",[NSThread currentThread]);
+   NSLog(@"NSInvocationOperation--test2--%@",[NSThread currentThread]);
  }
  
  http://www.cnblogs.com/wendingding/p/3809150.html

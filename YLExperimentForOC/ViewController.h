@@ -139,6 +139,12 @@
 // RunLoop
 - (void)testRunLoop;
 
+// NotificationCenter 使用
+- (void)testNotificationCenter;
+
+// NotificationCenter post 线程转发
+- (void)testNotificationCenterMultiThread;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;

@@ -92,6 +92,11 @@
 		C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C378131A1D7AA25700ABF5A0 /* CollectionViewCellOne.m */; };
 		C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */; };
 		C37B83701DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B836F1DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m */; };
+		C37B83751DA7503400BFF5E1 /* NotificationCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83741DA7503400BFF5E1 /* NotificationCenterViewController.m */; };
+		C37B837A1DA7504200BFF5E1 /* NotificationCenterSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83771DA7504200BFF5E1 /* NotificationCenterSecondViewController.m */; };
+		C37B837B1DA7504200BFF5E1 /* NotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83791DA7504200BFF5E1 /* NotificationObserver.m */; };
+		C37B837D1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37B837C1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard */; };
+		C37B83811DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83801DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 		C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */; };
 		C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */; };
@@ -330,6 +335,15 @@
 		C378131B1D7AA25700ABF5A0 /* CollectionViewCellOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCellOne.xib; sourceTree = "<group>"; };
 		C37B836E1DA4EBC100BFF5E1 /* CCTestRunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTestRunLoopViewController.h; sourceTree = "<group>"; };
 		C37B836F1DA4EBC200BFF5E1 /* CCTestRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTestRunLoopViewController.m; sourceTree = "<group>"; };
+		C37B83731DA7503400BFF5E1 /* NotificationCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCenterViewController.h; sourceTree = "<group>"; };
+		C37B83741DA7503400BFF5E1 /* NotificationCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenterViewController.m; sourceTree = "<group>"; };
+		C37B83761DA7504200BFF5E1 /* NotificationCenterSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCenterSecondViewController.h; sourceTree = "<group>"; };
+		C37B83771DA7504200BFF5E1 /* NotificationCenterSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenterSecondViewController.m; sourceTree = "<group>"; };
+		C37B83781DA7504200BFF5E1 /* NotificationObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationObserver.h; sourceTree = "<group>"; };
+		C37B83791DA7504200BFF5E1 /* NotificationObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationObserver.m; sourceTree = "<group>"; };
+		C37B837C1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NSNotificationCenterOne.storyboard; sourceTree = "<group>"; };
+		C37B837F1DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationMultiThreadViewController.h; sourceTree = "<group>"; };
+		C37B83801DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationMultiThreadViewController.m; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		C39ED14A1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerOneFCOM.h; sourceTree = "<group>"; };
@@ -708,6 +722,7 @@
 				C3D7855E1D9266B500B945DF /* Runtime */,
 				C3D7857D1D955A4300B945DF /* KVC  KVO */,
 				C3D7858F1D98B93C00B945DF /* RunLoop */,
+				C37B83711DA74D1D00BFF5E1 /* 通知 */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -835,6 +850,38 @@
 				C3A212111D7D6D340025B75F /* CollectionViewSampleFive */,
 			);
 			name = UICollectionView;
+			sourceTree = "<group>";
+		};
+		C37B83711DA74D1D00BFF5E1 /* 通知 */ = {
+			isa = PBXGroup;
+			children = (
+				C37B83721DA74D4B00BFF5E1 /* NSNotificationCenter */,
+			);
+			name = "通知";
+			sourceTree = "<group>";
+		};
+		C37B83721DA74D4B00BFF5E1 /* NSNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				C37B83731DA7503400BFF5E1 /* NotificationCenterViewController.h */,
+				C37B83741DA7503400BFF5E1 /* NotificationCenterViewController.m */,
+				C37B83761DA7504200BFF5E1 /* NotificationCenterSecondViewController.h */,
+				C37B83771DA7504200BFF5E1 /* NotificationCenterSecondViewController.m */,
+				C37B83781DA7504200BFF5E1 /* NotificationObserver.h */,
+				C37B83791DA7504200BFF5E1 /* NotificationObserver.m */,
+				C37B837C1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard */,
+				C37B837E1DA7B3C500BFF5E1 /* NSNotificationWithMutiThreadSafe */,
+			);
+			name = NSNotificationCenter;
+			sourceTree = "<group>";
+		};
+		C37B837E1DA7B3C500BFF5E1 /* NSNotificationWithMutiThreadSafe */ = {
+			isa = PBXGroup;
+			children = (
+				C37B837F1DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.h */,
+				C37B83801DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m */,
+			);
+			name = NSNotificationWithMutiThreadSafe;
 			sourceTree = "<group>";
 		};
 		C38E3AED1CD9860B00A70DD3 /* 算法类 */ = {
@@ -1306,6 +1353,7 @@
 				C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */,
 				C34C89471D881E10008ABA4E /* search.png in Resources */,
 				C3A212051D7D5A070025B75F /* Header.xib in Resources */,
+				C37B837D1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard in Resources */,
 				C3A212281D7E6FF80025B75F /* NavRootViewControllerOne.xib in Resources */,
 				C378131D1D7AA25700ABF5A0 /* CollectionViewCellOne.xib in Resources */,
 				C35B1F771CCF5A4800032582 /* Assets.xcassets in Resources */,
@@ -1454,6 +1502,7 @@
 				C34FEB851D13D1B0006E6A51 /* DataModelFrame.m in Sources */,
 				C3E27FE51D3874A9004C4D15 /* CollectionHeaderView.m in Sources */,
 				C35CC6D41CF42C95008B9EC2 /* KCContact.m in Sources */,
+				C37B837A1DA7504200BFF5E1 /* NotificationCenterSecondViewController.m in Sources */,
 				C3A211DA1D7BB4E00025B75F /* CalendarCollectionViewControllerTwo.m in Sources */,
 				C34FEB791D128207006E6A51 /* TableViewControllerSix.m in Sources */,
 				C3D7858C1D9611F300B945DF /* KVOViewControllerTwo.m in Sources */,
@@ -1486,6 +1535,7 @@
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
 				C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */,
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
+				C37B83811DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m in Sources */,
 				C3D7858D1D9611F300B945DF /* PersonObserver.m in Sources */,
 				C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */,
 				C3D785631D92701900B945DF /* RuntimeViewController.m in Sources */,
@@ -1534,10 +1584,12 @@
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
+				C37B83751DA7503400BFF5E1 /* NotificationCenterViewController.m in Sources */,
 				C34C89331D88036F008ABA4E /* FavoriteViewController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
 				C3A212041D7D5A070025B75F /* Header.m in Sources */,
 				C3D785521D8A222A00B945DF /* NSThreadViewController.m in Sources */,
+				C37B837B1DA7504200BFF5E1 /* NotificationObserver.m in Sources */,
 				C301DF2E1D49F05400408501 /* AnswerVCCell.m in Sources */,
 				C3D7856B1D92702500B945DF /* MessageForwarding.m in Sources */,
 				C35B1F6C1CCF5A4800032582 /* main.m in Sources */,
@@ -1682,6 +1734,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = YLExperimentForOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1700,6 +1753,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = YLExperimentForOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -61,6 +61,7 @@
 #import "KVOViewControllerOne.h"
 #import "KVOViewControllerTwo.h"
 #import "CCTestRunLoopViewController.h"
+#import "NotificationMultiThreadViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -123,7 +124,10 @@
     // [self testKVC];
     // [self testKVO];
     // [self testKVOTwo];
-    [self testRunLoop];
+    // [self testRunLoop];
+    // [self testNotificationCenter];
+    [self testNotificationCenterMultiThread];
+   
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -131,6 +135,31 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testNotificationCenterMultiThread {
+    NotificationMultiThreadViewController *notificationMultiThreadVCOne = [[NotificationMultiThreadViewController alloc] init];
+    [notificationMultiThreadVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:notificationMultiThreadVCOne];
+    [self.view addSubview:notificationMultiThreadVCOne.view];
+    
+}
+
+- (void)testNotificationCenter {
+    // 新建一个 window, TabBar, UITabBarController
+    UIWindow *windowTwo = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    static UIWindow *window;
+    window = windowTwo; // 没有这句就不显示噢
+    
+    // 多个 Storyboard 跳转使用
+    UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"NSNotificationCenterOne" bundle:nil];
+    Nav *NavVCThree = [stroyboard instantiateInitialViewController];
+    
+    window.rootViewController = NavVCThree;
+    [windowTwo makeKeyAndVisible];
     
 }
 
