@@ -126,7 +126,9 @@
     // [self testKVOTwo];
     // [self testRunLoop];
     // [self testNotificationCenter];
-    [self testNotificationCenterMultiThread];
+    // [self testNotificationCenterMultiThread];
+    // [self testLocalNotification];
+    [self testRemoteNotification];
    
 // ------------------------------ FCOM ------------------------------- //
     
@@ -136,6 +138,16 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     
+}
+- (void)testRemoteNotification {
+    /*
+      需要开发者账号,先掌握知识
+     */
+}
+- (void)testLocalNotification {
+  /*
+   因涉及到 AppDelegateForLocalNotification 类,可以新建一个工程,拖入代码修改覆盖一下就可以运行了.
+   */
 }
 
 - (void)testNotificationCenterMultiThread {

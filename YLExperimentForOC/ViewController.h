@@ -145,6 +145,11 @@
 // NotificationCenter post 线程转发
 - (void)testNotificationCenterMultiThread;
 
+// LocalNotification 本地通知
+- (void)testLocalNotification;
+
+// RemoteNotification 本地通知
+- (void)testRemoteNotification;
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;

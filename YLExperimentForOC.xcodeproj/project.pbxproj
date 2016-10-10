@@ -97,6 +97,8 @@
 		C37B837B1DA7504200BFF5E1 /* NotificationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83791DA7504200BFF5E1 /* NotificationObserver.m */; };
 		C37B837D1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37B837C1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard */; };
 		C37B83811DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83801DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m */; };
+		C37B83851DA9EA8E00BFF5E1 /* LocalNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83841DA9EA8E00BFF5E1 /* LocalNotificationViewController.m */; };
+		C37B83881DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83871DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
 		C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */; };
 		C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */; };
@@ -344,6 +346,10 @@
 		C37B837C1DA7509200BFF5E1 /* NSNotificationCenterOne.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NSNotificationCenterOne.storyboard; sourceTree = "<group>"; };
 		C37B837F1DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationMultiThreadViewController.h; sourceTree = "<group>"; };
 		C37B83801DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationMultiThreadViewController.m; sourceTree = "<group>"; };
+		C37B83831DA9EA8E00BFF5E1 /* LocalNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalNotificationViewController.h; sourceTree = "<group>"; };
+		C37B83841DA9EA8E00BFF5E1 /* LocalNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalNotificationViewController.m; sourceTree = "<group>"; };
+		C37B83861DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateForLocalNotification.h; sourceTree = "<group>"; };
+		C37B83871DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateForLocalNotification.m; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		C39ED14A1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerOneFCOM.h; sourceTree = "<group>"; };
@@ -856,6 +862,8 @@
 			isa = PBXGroup;
 			children = (
 				C37B83721DA74D4B00BFF5E1 /* NSNotificationCenter */,
+				C37B83821DA9EA7200BFF5E1 /* LocalNotification */,
+				C37B83891DABAC6B00BFF5E1 /* RemoteNotification */,
 			);
 			name = "通知";
 			sourceTree = "<group>";
@@ -882,6 +890,24 @@
 				C37B83801DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m */,
 			);
 			name = NSNotificationWithMutiThreadSafe;
+			sourceTree = "<group>";
+		};
+		C37B83821DA9EA7200BFF5E1 /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				C37B83861DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.h */,
+				C37B83871DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.m */,
+				C37B83831DA9EA8E00BFF5E1 /* LocalNotificationViewController.h */,
+				C37B83841DA9EA8E00BFF5E1 /* LocalNotificationViewController.m */,
+			);
+			name = LocalNotification;
+			sourceTree = "<group>";
+		};
+		C37B83891DABAC6B00BFF5E1 /* RemoteNotification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RemoteNotification;
 			sourceTree = "<group>";
 		};
 		C38E3AED1CD9860B00A70DD3 /* 算法类 */ = {
@@ -1318,6 +1344,11 @@
 					C35B1F661CCF5A4800032582 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 87VJUKA92U;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -1523,6 +1554,7 @@
 				C35B1F721CCF5A4800032582 /* ViewController.m in Sources */,
 				C3DE87631D0290E20051E255 /* TableViewControllerThree.m in Sources */,
 				C301DF371D4A02FA00408501 /* AnswerVCCellDataModelGroup.m in Sources */,
+				C37B83881DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.m in Sources */,
 				C3D785801D955B3D00B945DF /* KVCViewController.m in Sources */,
 				C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */,
 				C335DEAC1D58D55D00CC7A26 /* TimerTestViewController.m in Sources */,
@@ -1581,6 +1613,7 @@
 				C3D785761D92D2C300B945DF /* UIButton+CS_BackgroundColor.m in Sources */,
 				C34C89181D82E3EA008ABA4E /* NavigationInteractiveTransition.m in Sources */,
 				C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */,
+				C37B83851DA9EA8E00BFF5E1 /* LocalNotificationViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
