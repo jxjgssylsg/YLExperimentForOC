@@ -128,8 +128,8 @@
     // [self testNotificationCenter];
     // [self testNotificationCenterMultiThread];
     // [self testLocalNotification];
-    [self testRemoteNotification];
-   
+    // [self testRemoteNotification];
+    [self testNSUserDefaults];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -139,11 +139,41 @@
     // [self creatUIScrollViewOneFCOM];
     
 }
+
+- (void)testNSUserDefaults {
+    // 相对简单, 具体可以看 NSUserDefaultsKnowledge.h
+    NSLog(@"key1 - %@", [[NSUserDefaults standardUserDefaults] valueForKey:@"key1"]);
+    [[NSUserDefaults standardUserDefaults] setValue:@"value1" forKey:@"key1"];
+    NSLog(@"key1 - %@", [[NSUserDefaults standardUserDefaults] valueForKey:@"key1"]);
+    
+    NSLog(@"key2 - %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"key2"]);
+    [[NSUserDefaults standardUserDefaults] setObject:@100 forKey:@"key2"];
+    NSLog(@"key2 - %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"key2"]);
+    
+    
+    NSUserDefaults *customUserDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"CustomUserDefaults"];
+    NSLog(@"key3 - %@", [customUserDefaults valueForKey:@"key3"]);
+    [customUserDefaults setValue:@"value3" forKey:@"key3"];
+    NSLog(@"key3 - %@", [customUserDefaults valueForKey:@"key3"]);
+    
+    NSLog(@"key4 - %@", [customUserDefaults objectForKey:@"key4"]);
+    [customUserDefaults setObject:@200 forKey:@"key4"];
+    NSLog(@"key4 - %@", [customUserDefaults objectForKey:@"key4"]);
+    
+    // 强制让数据立刻保存
+    [customUserDefaults synchronize];
+    
+    // 输出所有 NSUserDefaults 的设置
+    NSDictionary* defaults = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
+    NSLog(@"Defaults: %@", defaults);
+}
+
 - (void)testRemoteNotification {
     /*
       需要开发者账号,先掌握知识
      */
 }
+
 - (void)testLocalNotification {
   /*
    因涉及到 AppDelegateForLocalNotification 类,可以新建一个工程,拖入代码修改覆盖一下就可以运行了.

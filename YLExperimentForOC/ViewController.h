@@ -150,6 +150,9 @@
 
 // RemoteNotification 本地通知
 - (void)testRemoteNotification;
+
+// NSUserDefaults 使用
+- (void)testNSUserDefaults;
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;
