@@ -220,12 +220,12 @@
  
  http://www.jianshu.com/p/9cb6ea37f46c
  # iOS 清空 NSUserDefaults 下的内容 #
- //方法一
+ // 方法一
  
  NSString *appDomain = [[NSBundlemainBundle] bundleIdentifier];
  [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
  
- //方法二
+ // 方法二
  - (void)resetDefaults {
  
  NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];

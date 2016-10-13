@@ -62,6 +62,7 @@
 #import "KVOViewControllerTwo.h"
 #import "CCTestRunLoopViewController.h"
 #import "NotificationMultiThreadViewController.h"
+#import "NSCodingViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -129,7 +130,8 @@
     // [self testNotificationCenterMultiThread];
     // [self testLocalNotification];
     // [self testRemoteNotification];
-    [self testNSUserDefaults];
+    // [self testNSUserDefaults];
+    [self testNSCoding];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -138,6 +140,16 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     
+}
+
+- (void)testNSCoding {
+    // 多个 Storyboard 跳转使用
+    UIStoryboard *stroyboard = [UIStoryboard storyboardWithName:@"NSCoding" bundle:nil];
+    NSCodingViewController *nsCodingVC = [stroyboard instantiateInitialViewController];
+    [nsCodingVC.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:nsCodingVC];
+    [self.view addSubview:nsCodingVC.view];
 }
 
 - (void)testNSUserDefaults {
