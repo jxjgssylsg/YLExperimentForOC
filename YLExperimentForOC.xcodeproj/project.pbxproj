@@ -196,6 +196,10 @@
 		C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FE71D3874B0004C4D15 /* CollectionViewCell.m */; };
 		C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E27FEA1D387504004C4D15 /* TagSelectViewController.m */; };
 		C3E27FED1D38E90B004C4D15 /* selectedBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E27FEC1D38E90B004C4D15 /* selectedBackground.png */; };
+		C3E45C181DAEB6FB00AB0D35 /* SqlitePeople.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C171DAEB6FB00AB0D35 /* SqlitePeople.m */; };
+		C3E45C1B1DAEB70900AB0D35 /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C1A1DAEB70900AB0D35 /* SqliteManager.m */; };
+		C3E45C1E1DAEB71300AB0D35 /* SqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C1D1DAEB71300AB0D35 /* SqliteViewController.m */; };
+		C3E45C201DAEB81200AB0D35 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E45C1F1DAEB81200AB0D35 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -535,6 +539,13 @@
 		C3E27FE91D387504004C4D15 /* TagSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagSelectViewController.h; sourceTree = "<group>"; };
 		C3E27FEA1D387504004C4D15 /* TagSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagSelectViewController.m; sourceTree = "<group>"; };
 		C3E27FEC1D38E90B004C4D15 /* selectedBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedBackground.png; sourceTree = "<group>"; };
+		C3E45C161DAEB6FB00AB0D35 /* SqlitePeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlitePeople.h; sourceTree = "<group>"; };
+		C3E45C171DAEB6FB00AB0D35 /* SqlitePeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlitePeople.m; sourceTree = "<group>"; };
+		C3E45C191DAEB70900AB0D35 /* SqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
+		C3E45C1A1DAEB70900AB0D35 /* SqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
+		C3E45C1C1DAEB71300AB0D35 /* SqliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteViewController.h; sourceTree = "<group>"; };
+		C3E45C1D1DAEB71300AB0D35 /* SqliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteViewController.m; sourceTree = "<group>"; };
+		C3E45C1F1DAEB81200AB0D35 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -543,6 +554,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E45C201DAEB81200AB0D35 /* libsqlite3.0.dylib in Frameworks */,
 				33F7863DA89F529A2CB47A34 /* libPods-YLExperimentForOC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +576,7 @@
 		75786762FE357881E2E499C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3E45C1F1DAEB81200AB0D35 /* libsqlite3.0.dylib */,
 				9E27233A3F10810DEB969BBA /* libPods.a */,
 				D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */,
 			);
@@ -926,6 +939,7 @@
 		C37B838A1DABD43E00BFF5E1 /* 数据持久化 */ = {
 			isa = PBXGroup;
 			children = (
+				C37B83991DAE69A700BFF5E1 /* SQLite */,
 				C37B838D1DACF85700BFF5E1 /* NSCoding */,
 				C37B838B1DABD46500BFF5E1 /* NSUserDefaults */,
 			);
@@ -952,6 +966,19 @@
 				C37B83911DACF88C00BFF5E1 /* NSCoding.storyboard */,
 			);
 			name = NSCoding;
+			sourceTree = "<group>";
+		};
+		C37B83991DAE69A700BFF5E1 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				C3E45C161DAEB6FB00AB0D35 /* SqlitePeople.h */,
+				C3E45C171DAEB6FB00AB0D35 /* SqlitePeople.m */,
+				C3E45C191DAEB70900AB0D35 /* SqliteManager.h */,
+				C3E45C1A1DAEB70900AB0D35 /* SqliteManager.m */,
+				C3E45C1C1DAEB71300AB0D35 /* SqliteViewController.h */,
+				C3E45C1D1DAEB71300AB0D35 /* SqliteViewController.m */,
+			);
+			name = SQLite;
 			sourceTree = "<group>";
 		};
 		C38E3AED1CD9860B00A70DD3 /* 算法类 */ = {
@@ -1607,8 +1634,10 @@
 				C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */,
 				C3A211FB1D7D59D70025B75F /* MyDetailsViewController.m in Sources */,
 				C3A52ADE1D6D339500325182 /* CompositeController.m in Sources */,
+				C3E45C1B1DAEB70900AB0D35 /* SqliteManager.m in Sources */,
 				C39ED15D1D670D7F00C57AA4 /* MasonryTwoViewController.m in Sources */,
 				C3A212491D80E7340025B75F /* TravelNav0Controller.m in Sources */,
+				C3E45C181DAEB6FB00AB0D35 /* SqlitePeople.m in Sources */,
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
 				C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */,
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
@@ -1709,6 +1738,7 @@
 				C34C891B1D82E3F8008ABA4E /* PopAnimation.m in Sources */,
 				C3A52AE71D6D339500325182 /* ScrollViewController.m in Sources */,
 				C3664DEC1D34A06700D29182 /* AdjustClassNumController.m in Sources */,
+				C3E45C1E1DAEB71300AB0D35 /* SqliteViewController.m in Sources */,
 				C3A80C821CFED8390031EA89 /* YLLocationTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

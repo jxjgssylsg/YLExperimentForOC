@@ -63,6 +63,7 @@
 #import "CCTestRunLoopViewController.h"
 #import "NotificationMultiThreadViewController.h"
 #import "NSCodingViewController.h"
+#import "SqliteViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -131,7 +132,8 @@
     // [self testLocalNotification];
     // [self testRemoteNotification];
     // [self testNSUserDefaults];
-    [self testNSCoding];
+    // [self testNSCoding];
+     [self testSQLite];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -139,6 +141,15 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testSQLite {
+    SqliteViewController *sqliteVCOne = [[SqliteViewController alloc] init];
+    [sqliteVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:sqliteVCOne];
+    [self.view addSubview:sqliteVCOne.view];
     
 }
 
