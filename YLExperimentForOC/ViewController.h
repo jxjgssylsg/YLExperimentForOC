@@ -153,6 +153,16 @@
 
 // NSUserDefaults 使用
 - (void)testNSUserDefaults;
+
+// NSCoding 知识点
+- (void)testNSCoding;
+
+// SQLite 知识点
+- (void)testSQLite;
+
+// FDMB 知识点
+- (void)testFMDB;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;

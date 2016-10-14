@@ -200,6 +200,13 @@
 		C3E45C1B1DAEB70900AB0D35 /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C1A1DAEB70900AB0D35 /* SqliteManager.m */; };
 		C3E45C1E1DAEB71300AB0D35 /* SqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C1D1DAEB71300AB0D35 /* SqliteViewController.m */; };
 		C3E45C201DAEB81200AB0D35 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E45C1F1DAEB81200AB0D35 /* libsqlite3.0.dylib */; };
+		C3E45C251DB0FB5800AB0D35 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C231DB0FB5800AB0D35 /* FMDBViewController.m */; };
+		C3E45C261DB0FB5800AB0D35 /* FMDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E45C241DB0FB5800AB0D35 /* FMDBViewController.xib */; };
+		C3E45C431DB0FFB500AB0D35 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C391DB0FFB500AB0D35 /* FMDatabase.m */; };
+		C3E45C441DB0FFB500AB0D35 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C3B1DB0FFB500AB0D35 /* FMDatabaseAdditions.m */; };
+		C3E45C451DB0FFB500AB0D35 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C3D1DB0FFB500AB0D35 /* FMDatabasePool.m */; };
+		C3E45C461DB0FFB500AB0D35 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C3F1DB0FFB500AB0D35 /* FMDatabaseQueue.m */; };
+		C3E45C471DB0FFB500AB0D35 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C421DB0FFB500AB0D35 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -546,6 +553,21 @@
 		C3E45C1C1DAEB71300AB0D35 /* SqliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteViewController.h; sourceTree = "<group>"; };
 		C3E45C1D1DAEB71300AB0D35 /* SqliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteViewController.m; sourceTree = "<group>"; };
 		C3E45C1F1DAEB81200AB0D35 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		C3E45C221DB0FB5800AB0D35 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
+		C3E45C231DB0FB5800AB0D35 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		C3E45C241DB0FB5800AB0D35 /* FMDBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMDBViewController.xib; sourceTree = "<group>"; };
+		C3E45C371DB0FD2100AB0D35 /* MacroUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroUtils.h; sourceTree = "<group>"; };
+		C3E45C381DB0FFB500AB0D35 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		C3E45C391DB0FFB500AB0D35 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		C3E45C3A1DB0FFB500AB0D35 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		C3E45C3B1DB0FFB500AB0D35 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		C3E45C3C1DB0FFB500AB0D35 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		C3E45C3D1DB0FFB500AB0D35 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		C3E45C3E1DB0FFB500AB0D35 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		C3E45C3F1DB0FFB500AB0D35 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		C3E45C401DB0FFB500AB0D35 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		C3E45C411DB0FFB500AB0D35 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		C3E45C421DB0FFB500AB0D35 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -939,6 +961,7 @@
 		C37B838A1DABD43E00BFF5E1 /* 数据持久化 */ = {
 			isa = PBXGroup;
 			children = (
+				C3E45C211DB0FB3C00AB0D35 /* FMDBDemo */,
 				C37B83991DAE69A700BFF5E1 /* SQLite */,
 				C37B838D1DACF85700BFF5E1 /* NSCoding */,
 				C37B838B1DABD46500BFF5E1 /* NSUserDefaults */,
@@ -1377,6 +1400,36 @@
 			name = "Tag 标签 - FCOM";
 			sourceTree = "<group>";
 		};
+		C3E45C211DB0FB3C00AB0D35 /* FMDBDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C3E45C271DB0FCDE00AB0D35 /* FMDB */,
+				C3E45C221DB0FB5800AB0D35 /* FMDBViewController.h */,
+				C3E45C231DB0FB5800AB0D35 /* FMDBViewController.m */,
+				C3E45C241DB0FB5800AB0D35 /* FMDBViewController.xib */,
+			);
+			name = FMDBDemo;
+			sourceTree = "<group>";
+		};
+		C3E45C271DB0FCDE00AB0D35 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				C3E45C381DB0FFB500AB0D35 /* FMDatabase.h */,
+				C3E45C391DB0FFB500AB0D35 /* FMDatabase.m */,
+				C3E45C3A1DB0FFB500AB0D35 /* FMDatabaseAdditions.h */,
+				C3E45C3B1DB0FFB500AB0D35 /* FMDatabaseAdditions.m */,
+				C3E45C3C1DB0FFB500AB0D35 /* FMDatabasePool.h */,
+				C3E45C3D1DB0FFB500AB0D35 /* FMDatabasePool.m */,
+				C3E45C3E1DB0FFB500AB0D35 /* FMDatabaseQueue.h */,
+				C3E45C3F1DB0FFB500AB0D35 /* FMDatabaseQueue.m */,
+				C3E45C401DB0FFB500AB0D35 /* FMDB.h */,
+				C3E45C411DB0FFB500AB0D35 /* FMResultSet.h */,
+				C3E45C421DB0FFB500AB0D35 /* FMResultSet.m */,
+				C3E45C371DB0FD2100AB0D35 /* MacroUtils.h */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1481,6 +1534,7 @@
 				C37B83921DACF88C00BFF5E1 /* NSCoding.storyboard in Resources */,
 				C34FEB541D115FE1006E6A51 /* 6.png in Resources */,
 				C34C89441D881E10008ABA4E /* fav@2x.png in Resources */,
+				C3E45C261DB0FB5800AB0D35 /* FMDBViewController.xib in Resources */,
 				C3A212601D80F6840025B75F /* icon.jpg in Resources */,
 				C3A2125C1D80F0E40025B75F /* xianggang.jpg in Resources */,
 				C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */,
@@ -1628,6 +1682,7 @@
 				C301DF371D4A02FA00408501 /* AnswerVCCellDataModelGroup.m in Sources */,
 				C37B83881DA9EEA200BFF5E1 /* AppDelegateForLocalNotification.m in Sources */,
 				C3D785801D955B3D00B945DF /* KVCViewController.m in Sources */,
+				C3E45C431DB0FFB500AB0D35 /* FMDatabase.m in Sources */,
 				C3DE87571D026D560051E255 /* TableViewControllerOne.m in Sources */,
 				C335DEAC1D58D55D00CC7A26 /* TimerTestViewController.m in Sources */,
 				C3E27FE81D3874B0004C4D15 /* CollectionViewCell.m in Sources */,
@@ -1648,6 +1703,7 @@
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
 				C3A211E11D7BB4F10025B75F /* CalendarEventCell.m in Sources */,
 				C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */,
+				C3E45C251DB0FB5800AB0D35 /* FMDBViewController.m in Sources */,
 				C3DE87661D044ED30051E255 /* TableViewControllerFour.m in Sources */,
 				C3A52AE11D6D339500325182 /* AspectFitController.m in Sources */,
 				C3A212531D80E7600025B75F /* STConst.m in Sources */,
@@ -1688,10 +1744,12 @@
 				C3D785761D92D2C300B945DF /* UIButton+CS_BackgroundColor.m in Sources */,
 				C34C89181D82E3EA008ABA4E /* NavigationInteractiveTransition.m in Sources */,
 				C37813141D7A540E00ABF5A0 /* TestKeyWindow.m in Sources */,
+				C3E45C461DB0FFB500AB0D35 /* FMDatabaseQueue.m in Sources */,
 				C37B83851DA9EA8E00BFF5E1 /* LocalNotificationViewController.m in Sources */,
 				C35B1F6F1CCF5A4800032582 /* AppDelegate.m in Sources */,
 				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
+				C3E45C451DB0FFB500AB0D35 /* FMDatabasePool.m in Sources */,
 				C37B83751DA7503400BFF5E1 /* NotificationCenterViewController.m in Sources */,
 				C34C89331D88036F008ABA4E /* FavoriteViewController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
@@ -1714,6 +1772,7 @@
 				C34C894E1D885C1F008ABA4E /* DWTabBarController.m in Sources */,
 				C3241F641D20BC8A0015C9FD /* TableViewControllerSeven.m in Sources */,
 				C301DF2B1D49EFAC00408501 /* BFEForeignAnswerViewController.m in Sources */,
+				C3E45C441DB0FFB500AB0D35 /* FMDatabaseAdditions.m in Sources */,
 				C37B83971DACF99D00BFF5E1 /* NSCAnimal.m in Sources */,
 				C34C89541D885C34008ABA4E /* DWPublishButton.m in Sources */,
 				C3A52AF01D6D339500325182 /* HeaderFooterViewController.m in Sources */,
@@ -1730,6 +1789,7 @@
 				C3E27FE21D387464004C4D15 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				C3A2121C1D7D777F0025B75F /* CircleLayout.m in Sources */,
 				C3D7855D1D8F7DB700B945DF /* NSOperationViewController.m in Sources */,
+				C3E45C471DB0FFB500AB0D35 /* FMResultSet.m in Sources */,
 				C3A2120E1D7D5DA70025B75F /* CustomCollectionViewLayout.m in Sources */,
 				C3A212411D80E7200025B75F /* BookNavController.m in Sources */,
 				C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */,

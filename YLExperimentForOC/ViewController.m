@@ -64,6 +64,7 @@
 #import "NotificationMultiThreadViewController.h"
 #import "NSCodingViewController.h"
 #import "SqliteViewController.h"
+#import "FMDBViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -133,7 +134,8 @@
     // [self testRemoteNotification];
     // [self testNSUserDefaults];
     // [self testNSCoding];
-     [self testSQLite];
+    // [self testSQLite];
+     [self testFMDB];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -141,6 +143,15 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testFMDB {
+    FMDBViewController *FMDBVCOne = [[FMDBViewController alloc] init];
+    [FMDBVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:FMDBVCOne];
+    [self.view addSubview:FMDBVCOne.view];
     
 }
 
