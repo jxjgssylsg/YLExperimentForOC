@@ -104,6 +104,7 @@
 		C37B83971DACF99D00BFF5E1 /* NSCAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83941DACF99D00BFF5E1 /* NSCAnimal.m */; };
 		C37B83981DACF99D00BFF5E1 /* NSCDog.m in Sources */ = {isa = PBXBuildFile; fileRef = C37B83961DACF99D00BFF5E1 /* NSCDog.m */; };
 		C38E3AF01CD986B400A70DD3 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = C38E3AEF1CD986B400A70DD3 /* Algorithm.m */; };
+		C390BD3F1DB531FC006A922B /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C390BD3E1DB531FB006A922B /* CoreDataViewController.m */; };
 		C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */; };
 		C39ED1501D66E90200C57AA4 /* AYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED14F1D66E90200C57AA4 /* AYTableViewCell.m */; };
 		C39ED1531D66E96F00C57AA4 /* MasonryOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39ED1521D66E96F00C57AA4 /* MasonryOneViewController.m */; };
@@ -375,6 +376,8 @@
 		C37B83961DACF99D00BFF5E1 /* NSCDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCDog.m; sourceTree = "<group>"; };
 		C38E3AEE1CD986B400A70DD3 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		C38E3AEF1CD986B400A70DD3 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
+		C390BD3D1DB531FB006A922B /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
+		C390BD3E1DB531FB006A922B /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
 		C39ED14A1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewControllerOneFCOM.h; sourceTree = "<group>"; };
 		C39ED14B1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewControllerOneFCOM.m; sourceTree = "<group>"; };
 		C39ED14E1D66E90200C57AA4 /* AYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYTableViewCell.h; sourceTree = "<group>"; };
@@ -961,6 +964,7 @@
 		C37B838A1DABD43E00BFF5E1 /* 数据持久化 */ = {
 			isa = PBXGroup;
 			children = (
+				C390BD3C1DB53120006A922B /* CoreData */,
 				C3E45C211DB0FB3C00AB0D35 /* FMDBDemo */,
 				C37B83991DAE69A700BFF5E1 /* SQLite */,
 				C37B838D1DACF85700BFF5E1 /* NSCoding */,
@@ -1011,6 +1015,15 @@
 				C38E3AEF1CD986B400A70DD3 /* Algorithm.m */,
 			);
 			name = "算法类";
+			sourceTree = "<group>";
+		};
+		C390BD3C1DB53120006A922B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C390BD3D1DB531FB006A922B /* CoreDataViewController.h */,
+				C390BD3E1DB531FB006A922B /* CoreDataViewController.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		C39ED14D1D66E87100C57AA4 /* Masonry */ = {
@@ -1696,6 +1709,7 @@
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
 				C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */,
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
+				C390BD3F1DB531FC006A922B /* CoreDataViewController.m in Sources */,
 				C37B83811DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m in Sources */,
 				C3D7858D1D9611F300B945DF /* PersonObserver.m in Sources */,
 				C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */,

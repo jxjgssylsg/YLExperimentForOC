@@ -135,7 +135,8 @@
     // [self testNSUserDefaults];
     // [self testNSCoding];
     // [self testSQLite];
-     [self testFMDB];
+    // [self testFMDB];
+    [self testCoreData];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -143,6 +144,13 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+    
+}
+
+- (void)testCoreData {
+    /*
+     内容较多,较为繁杂,看笔记,demo  #import "CoreDataViewController.h"
+     */
     
 }
 

@@ -163,6 +163,9 @@
 // FDMB 知识点
 - (void)testFMDB;
 
+// CoreData 知识点
+- (void)testCoreData;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;
