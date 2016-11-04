@@ -121,6 +121,9 @@
 // 测试下 GCD
 - (void)testGCD;
 
+// 测试下 NSOperation
+- (void)testNSOperation;
+
 // Runtime 常用方法 动态添加
 - (void)testRuntime;
 

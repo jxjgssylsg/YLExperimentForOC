@@ -23,13 +23,13 @@
  name:(NSString *)notificationName
  object:(id)notificationSender
  这个方法带有4个参数，分别指定了通知的观察者、处理通知的回调、通知名及通知的发送对象。这里需要注意几个问题：
- 1. notificationObserver不能为nil。
+ 1. notificationObserver 不能为nil。
  2. notificationSelector 回调方法有且只有一个参数( NSNotification 对象) 。
- 3. 如果 notificationName 为 nil，则会接收所有的通知(如果 notificationSender 不为空，则接收所有来自于   notificationSender的所有通知)。如代码清单1所示。
+ 3. 如果 notificationName 为 nil，则会接收所有的通知(如果 notificationSender 不为空，则接收所有来自于  notificationSender的所有通知)。如代码清单1所示。
  4. 如果 notificationSender 为 nil，则会接收所有 notificationName 定义的通知；否则，接收由 notificationSender 发送的通知。
  5. 监听同一条通知的多个观察者，在通知到达时，它们执行回调的顺序是不确定的，所以我们不能去假设操作的执行会按照添加观察者的顺序来执行。
  
- 代码清单1：添加一个Observer，其中notificationName为nil
+ 代码清单1：添加一个 Observer，其中 notificationName 为 nil
  @implementation ViewController
  - (void)viewDidLoad {
  [super viewDidLoad];
@@ -58,9 +58,9 @@
  
  可以看出，我们的对象基本上监听了测试程序启动后的所示消息。当然，我们很少会去这么做。
  
- 而对于第4条，使用得比较多的场景是监听 UITextField 的修改事件，通常我们在一个 viewController 中，只希望去监听当前视图中的 UITextField 修改事件，而不希望监听所有 UITextField 的修改事件，这时我们就可以将当前页面的UITextField 对象指定为 notificationSender。
+ 而对于第4条，使用得比较多的场景是监听 UITextField 的修改事件，通常我们在一个 viewController 中，只希望去监听当前视图中的 UITextField 修改事件，而不希望监听所有 UITextField 的修改事件，这时我们就可以将当前页面的 UITextField 对象指定为 notificationSender。
  
- 在iOS 4.0之后，NSNotificationCenter为了跟上时代，又提供了一个以block方式实现的添加观察者的方法，如下所示：
+ 在iOS 4.0之后，NSNotificationCenter 为了跟上时代，又提供了一个以 block 方式实现的添加观察者的方法，如下所示：
  
  - (id<NSObject>)addObserverForName:(NSString *)name
  object:(id)obj
@@ -104,9 +104,9 @@
  
  可以看到，消息的 post 与接收处理并不是在同一个线程中。如上面所提到的，如果 queue 为 nil，则消息是默认在 post 线程中同步处理，大家可以试一下。
  
- 对于第3点，由于使用的是 block，所以需要注意的就是避免引起循环引用的问题，如代码清单3所示：
+ 对于第 3 点，由于使用的是 block，所以需要注意的就是避免引起循环引用的问题，如代码清单3所示：
  
- 代码清单3：block 引发的循环引用问题
+ 代码清单 3：block 引发的循环引用问题
  
  @interface Observer : NSObject
  @property (nonatomic, assign) NSInteger i;
@@ -159,7 +159,7 @@
  Log:
 	Init Observer
 	handle notification
- 我们可以看到createObserver中创建的observer并没有被释放。所以，使用addObserverForName:object:queue:usingBlock:一定要注意这个问题。
+ 我们可以看到 createObserver 中创建的 observer 并没有被释放。所以，使用addObserverForName:object:queue:usingBlock: 一定要注意这个问题。
  
  # 除观察者 #
  与注册观察者相对应的，NSNotificationCenter 为我们提供了两个移除观察者的方法。它们的定义如下：
@@ -173,7 +173,7 @@
  2. 对于第二个方法，如果 notificationName 为 nil，则会移除所有匹配 notificationObserver 和 notificationSender 的通知，同理 notificationSender 也是一样的。而如果 notificationName 和 notificationSender 都为 nil，则其效果就与第一个方法是一样的了。大家可以试一下。
  3. 最有趣的应该是这两个方法的使用时机。–removeObserver: 适合于在类的 dealloc 方法中调用，这样可以确保将对象从通知中心中清除；而在 viewWillDisappear: 这样的方法中，则适合于使用 -removeObserver:name:object: 方法，以避免不知情的情况下移除了不应该移除的通知观察者。例如，假设我们的 viewController 继承自一个类库的某个ViewController 类(假设为 SKViewController 吧)，可能 SKViewController 自身也监听了某些通知以执行特定的操作，但我们使用时并不知道。如果直接在 viewWillDisappear: 中调用 –removeObserver:，则也会把父类监听的通知也给移除。
  
- 注. 关于注册监听者，还有一个需要注意的问题是，每次调用addObserver时，都会在通知中心重新注册一次，即使是同一对象监听同一个消息，而不是去覆盖原来的监听。这样，当通知中心转发某一消息时，如果同一对象多次注册了这个通知的观察者，则会收到多个通知，如代码清单4所示
+ 注. 关于注册监听者，还有一个需要注意的问题是，每次调用 addObserver 时，都会在通知中心重新注册一次，即使是同一对象监听同一个消息，而不是去覆盖原来的监听。这样，当通知中心转发某一消息时，如果同一对象多次注册了这个通知的观察者，则会收到多个通知，如代码清单4所示
  代码清单4：同一对象多次注册同一消息
  
  @implementation ViewController
@@ -248,9 +248,9 @@
  1. 通信对象是一对一的还是一对多的
  2. 对象之间的耦合度，是强耦合还是松耦合
  
- Objective-C中的通知由于其广播性及松耦合性，非常适合于大的范围内对象之间的通信(模块与模块，或一些框架层级)。通知使用起来非常方便，也正因为如此，所以容易导致滥用。所以在使用前还是需要多想想，是否有更好的方法来实现我们所需要的对象间通信。毕竟，通知机制会在一定程度上会影响到程序的性能。
+ Objective-C 中的通知由于其广播性及松耦合性，非常适合于大的范围内对象之间的通信(模块与模块，或一些框架层级)。通知使用起来非常方便，也正因为如此，所以容易导致滥用。所以在使用前还是需要多想想，是否有更好的方法来实现我们所需要的对象间通信。毕竟，通知机制会在一定程度上会影响到程序的性能。
  
- 对于使用NSNotificationCenter，最后总结一些小建议：
+ 对于使用 NSNotificationCenter，最后总结一些小建议：
  1. 在需要的地方使用通知。
  2. 注册的观察者在不使用时一定要记得移除，即添加和移除要配对出现。
  3. 尽可能迟地去注册一个观察者，并尽可能早将其移除，这样可以改善程序的性能。因为，每post一个通知，都会是4. 遍历通知中心的分发表，确保通知发给每一个观察者。
@@ -358,7 +358,7 @@
  // 程序在self.i = 10处抛出了"Thread 6: EXC_BAD_ACCESS(code=EXC_I386_GPFLT)"
  
  经典的内存错误，程序崩溃了。其实从输出结果中，我们就可以看到到底是发生了什么事。我们简要描述一下：
- 1.当我们注册一个观察者是，通知中心会持有观察者的一个弱引用，来确保观察者是可用的。
+ 1. 当我们注册一个观察者是，通知中心会持有观察者的一个弱引用，来确保观察者是可用的。
  2. 主线程调用 dealloc 操作会让 observer 对象的引用计数减为0，这时对象会被释放掉。
  3. 后台线程发送一个通知，如果此时 observer 还未被释放，则会向其转发消息，并执行回调方法。而如果在回调执行的过程中对象被释放了，就会出现上面的问题。
  4. 当然，上面这个例子是故意而为之，但不排除在实际编码中会遇到类似的问题。虽然 NSNotificationCenter 是线程安全的，但并不意味着我们在使用时就可以保证线程安全的，如果稍不注意，还是会出现线程问题。
@@ -452,7 +452,7 @@
  
  http://www.jianshu.com/p/a4d519e4e0d5
  
- 那我们如何证明呢？由于我们看不到源码，所以也不知道有没有调用。这个时候，我们可以从这个通知中心下手！！！怎么下手呢？我只要证明UIViewController在销毁的时候调用了remove方法，就可以证明我们的猜想是对的了！这个时候，就需要用到我们强大的类别这个特性了。我们为NSNotificationCenter添加个类别，重写他的- (void)removeObserver:(id)observer方法：
+ 那我们如何证明呢？由于我们看不到源码，所以也不知道有没有调用。这个时候，我们可以从这个通知中心下手！！！怎么下手呢？我只要证明 UIViewController 在销毁的时候调用了remove方法，就可以证明我们的猜想是对的了！这个时候，就需要用到我们强大的类别这个特性了。我们为NSNotificationCenter添加个类别，重写他的- (void)removeObserver:(id)observer方法：
  
  - (void)removeObserver:(id)observer {
  NSLog(@"====%@ remove===", [observer class]);

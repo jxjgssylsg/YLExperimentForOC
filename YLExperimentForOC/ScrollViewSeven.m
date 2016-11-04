@@ -10,15 +10,13 @@
 
 @implementation ScrollViewSeven
 // 触摸事件
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"- - - - ScrollView touchesBegan - - - -");
     // 可以接着调用 cell 的触摸事件
     // [self.tableViewCell touchesBegan: touches withEvent: event];
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     NSLog(@"- - - -ScrollView touchesEnded - - - -");
     // [self.tableViewCell touchesEnded:touches withEvent: event];
 }

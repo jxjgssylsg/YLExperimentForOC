@@ -102,7 +102,7 @@
     // [self creatUITableViewThree];
     // [self creatUITableViewFour];
     // [self creatUITableViewSix];
-    // [self creatUITableViewSeven];
+     [self creatUITableViewSeven];
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
@@ -136,7 +136,7 @@
     // [self testNSCoding];
     // [self testSQLite];
     // [self testFMDB];
-    [self testCoreData];
+    // [self testCoreData];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -668,14 +668,14 @@
     
     // [self setAppropriateToolbarItems];
 }
--(void)creatUITableViewSix {
+- (void)creatUITableViewSix {
     TableViewControllerSix *tableViewSix = [[TableViewControllerSix alloc] init];
     [tableViewSix.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
     [self addChildViewController:tableViewSix];
     [self.view addSubview:tableViewSix.view];
 }
--(void)creatUITableViewFive {
+- (void)creatUITableViewFive {
     TableViewControllerFive *tableViewFive = [[TableViewControllerFive alloc] init];
     [tableViewFive.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     

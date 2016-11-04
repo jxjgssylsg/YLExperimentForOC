@@ -16,22 +16,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //初始化数据
+    // 初始化数据
     [self initData];
     
-    //创建一个分组样式的UITableView
+    // 创建一个分组样式的 UITableView
     _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
-    //设置数据源，注意必须实现对应的UITableViewDataSource协议
+    // 设置数据源，注意必须实现对应的 UITableViewDataSource 协议
     _tableView.dataSource=self;
-    //设置代理
+    // 设置代理
     _tableView.delegate=self;
     
     [self.view addSubview:_tableView];
 }
 
 #pragma mark 加载数据
--(void)initData{
+-(void)initData {
     _contacts=[[NSMutableArray alloc]init];
     
     KCContact *contact1=[KCContact initWithFirstName:@"Cui" andLastName:@"Kenshin" andPhoneNumber:@"18500131234"];

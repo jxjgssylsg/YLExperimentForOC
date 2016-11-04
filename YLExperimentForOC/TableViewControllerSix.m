@@ -25,7 +25,7 @@ static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
 @implementation TableViewControllerSix
 #pragma mark ------------------ 获取数据源（模型数据源、模型高度数据源） ------------------
 
-- (NSArray *)dataArray{
+- (NSArray *)dataArray {
     if (!_dataArray) {
         _dataArray = [DataModelGroup DataModelGroupWithNameOfContent:@"statuses.plist"];
         _frameArray = [DataModelFrame DataModelFrameWithArray:_dataArray];
@@ -38,9 +38,9 @@ static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
     [super viewDidLoad];
     [self setUpTabelView];
 }
-#pragma mark ------------------ 创建tableView ------------------
+#pragma mark ------------------ Creat tableView ------------------
 
-- (void)setUpTabelView{
+- (void)setUpTabelView {
     UITableView *vi = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     vi.delegate = self;
     vi.dataSource = self;
@@ -52,11 +52,12 @@ static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
 
 #pragma mark ------------------ tableViewDelegate ------------------
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CustomCellForCode *cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier ];
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomCellForCode *cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
     // 发现当 cell 队列没用可重用的时候,会自动去调用 initWithStyle:reuseIdentifier: 方法, cell 似乎不会为空,但还是建议做空处理,至少没有坏处吧,且规范.
     if (!cell) {
         NSLog(@"cell kong kong kong kong kong kong kong");
@@ -66,19 +67,21 @@ static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
     cell.frameModel = [_frameArray objectAtIndex:indexPath.row];
     return cell;
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    DataModelFrame *mo = [_frameArray objectAtIndex:indexPath.row];
-    return mo.cellHeight;
+    DataModelFrame *modelFrame = [_frameArray objectAtIndex:indexPath.row];
+    return modelFrame.cellHeight;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomCellForCode *selCell = (CustomCellForCode *)_dataArray[indexPath.row];
     NSLog(@"%@",selCell);
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
