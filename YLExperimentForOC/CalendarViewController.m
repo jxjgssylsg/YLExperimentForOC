@@ -60,17 +60,17 @@
     
     NSTimeInterval interval;
     NSDate *firstDayOfMonth;
-    //注意观察firstDayOfMonth
+    // 注意观察firstDayOfMonth
     if ([myCalendar rangeOfUnit: NSCalendarUnitMonth startDate:&firstDayOfMonth interval:&interval forDate:date])
     {
         NSLog(@"%@",firstDayOfMonth);
         NSLog(@"%f",interval);
     }
-    //获取date所在月的第一天在其所在周的位置，即第几天。
+    // 获取date所在月的第一天在其所在周的位置，即第几天。
     firstDayIndexOfWeek = [myCalendar ordinalityOfUnit:NSCalendarUnitDay
                                                inUnit:NSCalendarUnitWeekOfMonth
                                               forDate:firstDayOfMonth];
-    //绘制日历单元
+    // 绘制日历单元
     [self drawCalendarDayUnit];
     
 }

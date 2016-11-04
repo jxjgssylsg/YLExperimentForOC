@@ -10,7 +10,6 @@
 
 @implementation KCContactGroup
 
-
 -(KCContactGroup *)initWithName:(NSString *)name andDetail:(NSString *)detail andContacts:(NSMutableArray *)contacts{
     if (self = [super init]) {
         self.name = name;

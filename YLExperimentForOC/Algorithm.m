@@ -22,26 +22,26 @@
  
          vector<int> twoSum(vector<int> &numbers, int target)
          {
-         //Key is the number and value is its index in the vector.
-         unordered_map<int, int> hash;
-         vector<int> result;
-         for (int i = 0; i < numbers.size(); i++) {
-         int numberToFind = target - numbers[i];
-         
-         //if numberToFind is found in map, return them
+           // Key is the number and value is its index in the vector.
+            unordered_map<int, int> hash;
+            vector<int> result;
+            for (int i = 0; i < numbers.size(); i++) {
+            int numberToFind = target - numbers[i];
+ 
+            // if numberToFind is found in map, return them
          if (hash.find(numberToFind) != hash.end()) {
-         //+1 because indices are NOT zero based
-         result.push_back(hash[numberToFind] + 1);
-         result.push_back(i + 1);
-         return result;
+            // +1 because indices are NOT zero based
+            result.push_back(hash[numberToFind] + 1);
+            result.push_back(i + 1);
+            return result;
          }
          
-         //number was not found. Put it in the map.
-         hash[numbers[i]] = i;
+          // number 没有找到，将 num 存入哈希表
+           hash[numbers[i]] = i;
          }
-         return result;
+            return result;
          } 
- 注:hash表的使用,key,value (选择好谁是key,谁是value,这里key是数组的值,value是数组下标,因为hash是根据key来找的),类似字典呢! hash.find(numberToFind) != hash.end()  //Key is the number and value is its index in the array.
+ 注:hash 表的使用,key,value (选择好谁是 key,谁是 value,这里 key 是数组的值,value 是数组下标,因为 hash 是根据 key 来找的),类似字典呢! hash.find(numberToFind) != hash.end()  // Key is the number and value is its index in the array.
      https://leetcode.com/discuss/10947/accepted-c-o-n-solution    c++
      注:边找边将hash(key) = value的要理解,机智
      https://leetcode.com/discuss/8150/accepted-java-o-n-solution  java
@@ -81,7 +81,7 @@
          return sentinel.next;
          }
          }
-    注:链表说穿了就是 date + 指针next,date你抽象化理解.
+    注:链表说穿了就是 date + 指针 next,date 你抽象化理解.
        https://leetcode.com/discuss/2308/is-this-algorithm-optimal-or-what
  
  *********/
@@ -91,20 +91,20 @@
   
           public int lengthOfLongestSubstring(String s) {
           if (s.length()==0) return 0;
-          HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+          HashMap <Character, Integer> map = new HashMap <Character, Integer>();
           int max=0;
           for (int i=0, j=0; i<s.length(); ++i){
           if (map.containsKey(s.charAt(i))){
-             j = Math.max(j,map.get(s.charAt(i))+1);//参考abcdcb,当从d开始时,到b的时候,第二位b的index(b)<index(d),故无效
+             j = Math.max(j,map.get(s.charAt(i))+1);//参考 abcdcb,当从 d 开始时,到 b 的时候,第二位 b 的index(b)<index(d),故无效
           }
           map.put(s.charAt(i),i);
-          max = Math.max(max,i-j+1);
+          max = Math.max(max,i-j+1); // 注意这行的意思
           }
               return max;
           }
         https://leetcode.com/discuss/23883/11-line-simple-java-solution-o-n-with-explanation
   
-    注:1.似乎有点类似KMP中的一个环节 2.hashMAP的使用 hash(key) = value  key不能重复,hashset理解为只有KEY的hashmap
+    注:1.似乎有点类似 KMP 中的一个环节 2.hashMAP的使用 hash(key) = value  key 不能重复,hashset 理解为只有 KEY 的 hashmap
   *********/
   
   /****
@@ -395,7 +395,7 @@
  
  【94】Binary Tree Inorder Traversal
 	①.中序遍历
- //递归
+ // 递归
  void inorder(TreeNode *root)
  {
  if (root == NULL)
@@ -420,7 +420,7 @@
  int[] count = new int[n];
  count[0] = 1;
  count[1] = 2;
- for(int i = 2; i < n; i++){ //依次循环记录出每增加一个台阶可行的方案
+ for(int i = 2; i < n; i++){ // 依次循环记录出每增加一个台阶可行的方案
  count[i] = count[i-1] + count[i-2];
  
  ②.表达式列出来了就还好

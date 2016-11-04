@@ -17,7 +17,7 @@
  
  http://blog.csdn.net/wzzvictory/article/details/9674431
  
- 1、Key和Key Path
+ 1、Key 和 Key Path
  
  - (id)valueForKey:(NSString *)key;
  - (void)setValue:(id)value forKey:(NSString *)key;

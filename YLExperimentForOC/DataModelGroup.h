@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface DataModelGroup : NSObject
+
 + (NSMutableArray*)DataModelGroupWithNameOfContent:(NSString*)name;
+
 @end

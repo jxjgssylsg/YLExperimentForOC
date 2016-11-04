@@ -95,7 +95,7 @@ NSString *const CellSevenEnclosingTableViewDidBeginScrollingNotification = @"Cel
     [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
- // 有必要! 原因是 CGRectGetWidth(self.bounds) 开始默认 320, 当加载到 tableview 时, 才会改变相应的宽度 (例如 6p宽度414)
+ // 有必要! 原因是 CGRectGetWidth(self.bounds) 开始默认 320, 当加载到 tableview 时, 才会改变相应的宽度 (例如 6p 宽度 414)
 - (void)layoutSubviews {
     [super layoutSubviews];
 

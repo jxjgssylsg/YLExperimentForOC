@@ -19,24 +19,24 @@
 /*
  ttp://chun.tips/blog/2014/10/20/zou-jin-run-loopde-shi-jie-%5B%3F%5D-:shi-yao-shi-run-loop%3F/
  
- UIApplicationMain()方法在这里不仅完成了初始化我们的程序并设置程序Delegate的任务，而且随之开启了主线程的Run Loop, 开始接受处理事件。
+ UIApplicationMain()方法在这里不仅完成了初始化我们的程序并设置程序 Delegate 的任务，而且随之开启了主线程的 Run Loop, 开始接受处理事件。
  
- 从图中可以看出，Run Loop是线程中的一个循环，并对接收到的事件进行处理。我们的代码可以通过提供while或者for循环来驱动Run Loop。在循环中，Run Loop对象来负责事件处理代码（接收事件并且调用事件处理方法）。
+ 从图中可以看出，Run Loop 是线程中的一个循环，并对接收到的事件进行处理。我们的代码可以通过提供 while 或者 for 循环来驱动 Run Loop。在循环中，Run Loop 对象来负责事件处理代码（接收事件并且调用事件处理方法）。
  
- Run Loop从两个不同的事件源中接收消息:
- 1. Input source用来投递异步消息，通常消息来自另外的"线程"或者程序。在接收到消息并调用程序指定方法时，线程中对应的NSRunLoop对象会通过执行runUntilDate:方法来退出。
+ Run Loop 从两个不同的事件源中接收消息:
+ 1. Input source 用来投递异步消息，通常消息来自另外的"线程"或者程序。在接收到消息并调用程序指定方法时，线程中对应的NSRunLoop对象会通过执行runUntilDate:方法来退出。
  2. Timer source 用来投递 timer 事件（Schedule 或者 Repeat）中的同步消息。在处理消息时，并"不会"退出Run Loop。
- 3. Run Loop还有一个观察者Observer的概念，可以往Run Loop中加入自己的观察者以便监控Run Loop的运行过程。
+ 3. Run Loop 还有一个观察者 Observer 的概念，可以往Run Loop中加入自己的观察者以便监控Run Loop的运行过程。
  
  # Run Loop modes #
  
  Run Loop mode 可以理解为一个集合中包括所有要监视的事件源和要通知的 Run Loop 中注册的观察者。每一次运行自己的 Run Loop 时，都需要显示或者隐示的指定其运行于哪一种 Mode。在设置 Run Loop mode 后，你的 Run Loop会自动过滤和其他 mode 相关的事件源，而只监视和当前设置 mode 相关的源(通知相关的观察者)。大多数时候，Run Loop都是运行在系统定义的默认模式上。
  
- 注. Run Loop Mode 区分基于事件的源，而不是事件的种类。比如你不能通过 Run Loop mode 去只选择鼠标点击事件或者键盘输入事件。你可以使用Run Loop Mode去监听端口，暂停计时器或者改变其他源。
+ 注. Run Loop Mode 区分基于事件的源，而不是事件的种类。比如你不能通过 Run Loop mode 去只选择鼠标点击事件或者键盘输入事件。你可以使用 Run Loop Mode 去监听端口，暂停计时器或者改变其他源。
  
- 注. 我们可以给Mode指定任意名称，但是它对应的集合内容不能是任意的。我们需要添加Input source, Timer source 或者 Observer到自己自定义的Mode。
+ 注. 我们可以给 Mode 指定任意名称，但是它对应的集合内容不能是任意的。我们需要添加 Input source, Timer source 或者 Observer 到自己自定义的 Mode。
  
- 下面列出 iOS 下一些已经定义的Run Loop Modes:
+ 下面列出 iOS 下一些已经定义的 Run Loop Modes:
  1) NSDefaultRunLoopMode: 大多数工作中默认的运行方式。
  2) NSConnectionReplyMode: 使用这个 mode 去监听 NSConnection 对象的状态，我们"很少"需要自己使用这个 Mode。
  3) NSModalPanelRunLoopMode: 使用这个 mode 在 Model Panel 情况下去区分事件(OS x 开发中会遇到)。
@@ -54,11 +54,11 @@
  我们可以使用 Core Foundation 里面的 CFRunLoopSourceRef 类型相关的函数来创建 Custom input source。
  
  2. Port-Based Sources:
- 通过内置的端口相关的对象和函数，配置基于端口的 Input source。 (比如在主线程创建子线程时传入一个 NSPort 对象,主线程和子线程就可以进行通讯。NSPort对象会负责自己创建和配置Input source。)
+ 通过内置的端口相关的对象和函数，配置基于端口的 Input source。 (比如在主线程创建子线程时传入一个 NSPort 对象,主线程和子线程就可以进行通讯。NSPort 对象会负责自己创建和配置Input source。)
  
  3. Cocoa Perform Selector Sources
  Cocoa 框架为我们定义了一些 Custom Input Sources，允许我们在线程中执行一系列 selector 方法。
- //在主线程的Run Loop下执行指定的 @selector 方法
+ //在主线程的 Run Loop 下执行指定的 @selector 方法
  performSelectorOnMainThread:withObject:waitUntilDone:
  performSelectorOnMainThread:withObject:waitUntilDone:modes:
  
@@ -75,13 +75,13 @@
  cancelPreviousPerformRequestsWithTarget:selector:object:
  
  注：
- 和Port-Based Sources一样的是：这些 selector 的请求会在目标线程中序列化，以减缓线程中多个方法执行带来的同步问题。
- 和Port-Based Sources不一样的是： 一个selector方法执行完之后会自动从当前Run Loop中移除。
+ 和 Port-Based Sources 一样的是：这些 selector 的请求会在目标线程中序列化，以减缓线程中多个方法执行带来的同步问题。
+ 和 Port-Based Sources 不一样的是：一个 selector 方法执行完之后会自动从当前 Run Loop 中移除。
  
  注. 走进Run Loop世界系列的第二章会专门讨论如何自定义事件源。
  
  4. Timer Sources
- Timer source 在预设的时间点同步的传递消息。Timer是线程通知自己做某件事的一种方式。
+ Timer source 在预设的时间点同步的传递消息。Timer 是线程通知自己做某件事的一种方式。
  Foundation 中 NSTimer Class 提供了相关方法来设置 Timer source. 需要注意的是除了 scheduledTimerWithTimeInterval 开头的方法创建的 timer 都需要手动添加到当前 Run Loop 中。（scheduledTimerWithTimeInterval 创建的 timer 会自动以 Default mode 加载到当前 Run Loop 中。）
  
  注. Timer在选择使用一次后，在执行完成时，会从 Run Loop 中移除。选择循环时，会一直保存在当前 Run Loop 中，直到调用 invalidate 方法。
@@ -97,7 +97,7 @@
 	Run Loop 停止的时候
  }
  
- 注. observer 需要使用 Core Foundataion 框架。和 timer 一样，Run Loop Observers 也可以使用一次或者选择 repeat。如果只使用一次，Observer会在它被执行后自己从Run Loop中移除。而循环的Observer会一直保存在Run Loop中。
+ 注. observer 需要使用 Core Foundataion 框架。和 timer 一样，Run Loop Observers 也可以使用一次或者选择 repeat。如果只使用一次，Observer 会在它被执行后自己从Run Loop中移除。而循环的Observer会一直保存在Run Loop中。
  
  # Run Loop 事件队列 #
  Run Loop 本质是一个处理事件源的循环。我们对 Run Loop 的运行时具有控制权，如果当前没有时间发生，Run Loop会让当前线程进入"睡眠模式"，来减轻 CPU 压力。如果有事件发生，Run Loop 就处理事件并通知相关的 Observer。具体的顺序如下:

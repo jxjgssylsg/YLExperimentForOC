@@ -29,7 +29,7 @@
     [normalThreadButton addTarget:self action:@selector(handleNormalThreadButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:normalThreadButton];
     
-    /* 点击之后 启动一个线程，使用Run Loop，等待线程完成后再继续执行任务。 在这个过程中 不会阻塞UI线程。点击下面的Normal按钮会正常输出。 */
+    /* 点击之后 启动一个线程，使用Run Loop，等待线程完成后再继续执行任务。 在这个过程中 不会阻塞UI线程。点击下面的 Normal 按钮会正常输出。 */
     UIButton *runLoopThreadButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 200, 50)];
     [runLoopThreadButton setTitle:@"Run Loop Thread" forState:UIControlStateNormal];
     [runLoopThreadButton addTarget:self action:@selector(handleRunLoopThreadButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
