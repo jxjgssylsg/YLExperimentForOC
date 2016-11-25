@@ -572,6 +572,7 @@
 		C3E45C401DB0FFB500AB0D35 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		C3E45C411DB0FFB500AB0D35 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		C3E45C421DB0FFB500AB0D35 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		C70F452B1DE4085D008F503C /* ProvisioningCodeSigning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvisioningCodeSigning.h; sourceTree = "<group>"; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -782,6 +783,7 @@
 				C3D7857D1D955A4300B945DF /* KVC  KVO */,
 				C3D7858F1D98B93C00B945DF /* RunLoop */,
 				C37B83711DA74D1D00BFF5E1 /* 通知 */,
+				C70F452A1DE407AD008F503C /* 证书  Provisioning  Code Signing */,
 			);
 			path = YLExperimentForOC;
 			sourceTree = "<group>";
@@ -1453,6 +1455,14 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
+		C70F452A1DE407AD008F503C /* 证书  Provisioning  Code Signing */ = {
+			isa = PBXGroup;
+			children = (
+				C70F452B1DE4085D008F503C /* ProvisioningCodeSigning.h */,
+			);
+			name = "证书  Provisioning  Code Signing";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1460,7 +1470,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C35B1F7E1CCF5A4800032582 /* Build configuration list for PBXNativeTarget "YLExperimentForOC" */;
 			buildPhases = (
-				E0F02641CC9B31216547ECD4 /* Check Pods Manifest.lock */,
+				E0F02641CC9B31216547ECD4 /* [CP] Check Pods Manifest.lock */,
 				B6FA12FD318ED820F9D5D1BE /* [CP] Check Pods Manifest.lock */,
 				C35B1F631CCF5A4800032582 /* Sources */,
 				C35B1F641CCF5A4800032582 /* Frameworks */,
@@ -1656,19 +1666,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLExperimentForOC/Pods-YLExperimentForOC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E0F02641CC9B31216547ECD4 /* Check Pods Manifest.lock */ = {
+		E0F02641CC9B31216547ECD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1928,6 +1938,7 @@
 			baseConfigurationReference = 06BF23971DD60662A4430E30 /* Pods-YLExperimentForOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 87VJUKA92U;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = YLExperimentForOC/Info.plist;
@@ -1947,6 +1958,7 @@
 			baseConfigurationReference = 778D26B954310062603BA11A /* Pods-YLExperimentForOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 87VJUKA92U;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = YLExperimentForOC/Info.plist;
