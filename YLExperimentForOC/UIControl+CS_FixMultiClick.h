@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (CS_FixMultiClick)
+@interface UIControl (CS_FixMultiClick)
 
 @property (nonatomic, assign) NSTimeInterval cs_acceptEventInterval; // 重复点击的间隔
 

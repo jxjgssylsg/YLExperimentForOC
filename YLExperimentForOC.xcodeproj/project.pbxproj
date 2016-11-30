@@ -208,6 +208,9 @@
 		C3E45C451DB0FFB500AB0D35 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C3D1DB0FFB500AB0D35 /* FMDatabasePool.m */; };
 		C3E45C461DB0FFB500AB0D35 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C3F1DB0FFB500AB0D35 /* FMDatabaseQueue.m */; };
 		C3E45C471DB0FFB500AB0D35 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E45C421DB0FFB500AB0D35 /* FMResultSet.m */; };
+		C70F45301DE7ECB0008F503C /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F452F1DE7ECB0008F503C /* UIWebViewController.m */; };
+		C70F45321DE7FE2D008F503C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70F45311DE7FE2D008F503C /* WebKit.framework */; };
+		C70F453B1DEEA256008F503C /* BKLemmaKWBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -573,6 +576,11 @@
 		C3E45C411DB0FFB500AB0D35 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		C3E45C421DB0FFB500AB0D35 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		C70F452B1DE4085D008F503C /* ProvisioningCodeSigning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProvisioningCodeSigning.h; sourceTree = "<group>"; };
+		C70F452E1DE7ECB0008F503C /* UIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
+		C70F452F1DE7ECB0008F503C /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
+		C70F45311DE7FE2D008F503C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C70F45391DEEA256008F503C /* BKLemmaKWBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLemmaKWBrowserViewController.h; sourceTree = "<group>"; };
+		C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLemmaKWBrowserViewController.m; sourceTree = "<group>"; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -581,6 +589,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70F45321DE7FE2D008F503C /* WebKit.framework in Frameworks */,
 				C3E45C201DAEB81200AB0D35 /* libsqlite3.0.dylib in Frameworks */,
 				33F7863DA89F529A2CB47A34 /* libPods-YLExperimentForOC.a in Frameworks */,
 			);
@@ -603,6 +612,7 @@
 		75786762FE357881E2E499C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C70F45311DE7FE2D008F503C /* WebKit.framework */,
 				C3E45C1F1DAEB81200AB0D35 /* libsqlite3.0.dylib */,
 				9E27233A3F10810DEB969BBA /* libPods.a */,
 				D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */,
@@ -640,6 +650,7 @@
 		C319E35D1D3F28F500286755 /* FCOM */ = {
 			isa = PBXGroup;
 			children = (
+				C70F45381DEEA127008F503C /* KWWebViewController-FCOM */,
 				C36355301D65BE8600435998 /* UIScollViewOneFCOM */,
 				C301DF581D4EEDDF00408501 /* AnswerInfoInterface - FCOM */,
 				C301DF281D49EF2200408501 /* AnswerTabUI - FCOM */,
@@ -772,6 +783,8 @@
 				C3DE87541D026AE20051E255 /* UITableView */,
 				C3664DDC1D30DB7200D29182 /* UIScrollView */,
 				C37813151D7AA0E200ABF5A0 /* UICollectionView */,
+				C70F452C1DE7E61A008F503C /* UIWebView */,
+				C70F452D1DE7E69A008F503C /* WKWebView */,
 				C34FEB431D115FE1006E6A51 /* Images ( 尽量复用 ) */,
 				C39ED14D1D66E87100C57AA4 /* Masonry */,
 				C3A52AF41D6D87B800325182 /* MMPlaceHolder */,
@@ -1463,6 +1476,31 @@
 			name = "证书  Provisioning  Code Signing";
 			sourceTree = "<group>";
 		};
+		C70F452C1DE7E61A008F503C /* UIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				C70F452E1DE7ECB0008F503C /* UIWebViewController.h */,
+				C70F452F1DE7ECB0008F503C /* UIWebViewController.m */,
+			);
+			name = UIWebView;
+			sourceTree = "<group>";
+		};
+		C70F452D1DE7E69A008F503C /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WKWebView;
+			sourceTree = "<group>";
+		};
+		C70F45381DEEA127008F503C /* KWWebViewController-FCOM */ = {
+			isa = PBXGroup;
+			children = (
+				C70F45391DEEA256008F503C /* BKLemmaKWBrowserViewController.h */,
+				C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */,
+			);
+			name = "KWWebViewController-FCOM";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1702,6 +1740,7 @@
 				C3664DE51D33959A00D29182 /* ScrollViewControllerThree.m in Sources */,
 				C3A2120D1D7D5DA70025B75F /* AnotherCollectionViewControllerFour.m in Sources */,
 				C34C89271D88031F008ABA4E /* UITabBar+badge.m in Sources */,
+				C70F453B1DEEA256008F503C /* BKLemmaKWBrowserViewController.m in Sources */,
 				C3D7856C1D92702500B945DF /* NSObject+AssociatedObject.m in Sources */,
 				C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
@@ -1727,6 +1766,7 @@
 				C3A212491D80E7340025B75F /* TravelNav0Controller.m in Sources */,
 				C3E45C181DAEB6FB00AB0D35 /* SqlitePeople.m in Sources */,
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
+				C70F45301DE7ECB0008F503C /* UIWebViewController.m in Sources */,
 				C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */,
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
 				C390BD3F1DB531FC006A922B /* CoreDataViewController.m in Sources */,

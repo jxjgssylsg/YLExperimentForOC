@@ -169,6 +169,9 @@
 // CoreData 知识点
 - (void)testCoreData;
 
+// UIVWebView 知识点
+- (void)creatUIVWebView;
+
 // ------------------------------ FCOM ------------------------------- //
 
 - (void)modifyDay;
@@ -192,6 +195,8 @@
 // scrollView use as uiview to addPullRefreshAction
 - (void)creatUIScrollViewOneFCOM;
 
+// creat the KWWebView
+- (void)creatKWWebViewFCOM;
 @end
 
 

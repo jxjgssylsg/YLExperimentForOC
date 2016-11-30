@@ -9,7 +9,7 @@
 #import "UIControl+CS_FixMultiClick.h"
 #import <objc/runtime.h>
 
-@implementation UIButton (CS_FixMultiClick)
+@implementation UIControl (CS_FixMultiClick)
 
 // 因category不能添加属性，只能通过关联对象的方式。
 static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterval";

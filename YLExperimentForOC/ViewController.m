@@ -65,6 +65,8 @@
 #import "NSCodingViewController.h"
 #import "SqliteViewController.h"
 #import "FMDBViewController.h"
+#import "UIWebViewController.h"
+#import "BKLemmaKWBrowserViewController.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -102,7 +104,7 @@
     // [self creatUITableViewThree];
     // [self creatUITableViewFour];
     // [self creatUITableViewSix];
-     [self creatUITableViewSeven];
+    // [self creatUITableViewSeven];
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
@@ -137,6 +139,7 @@
     // [self testSQLite];
     // [self testFMDB];
     // [self testCoreData];
+    // [self creatUIVWebView];
 // ------------------------------ FCOM ------------------------------- //
     
     // [self creatAddSubInterface];
@@ -144,6 +147,21 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
+       [self creatKWWebViewFCOM];
+    
+}
+
+- (void)creatKWWebViewFCOM {
+    BKLemmaKWBrowserViewController *BKKWWebViewVCOne = [[BKLemmaKWBrowserViewController alloc] initWithURL:@"http://baike.baidu.com/"];
+    [self.navigationController pushViewController:BKKWWebViewVCOne animated:NO];
+}
+
+- (void)creatUIVWebView {
+    UIWebViewController *UIWebViewVCOne = [[UIWebViewController alloc] init];
+    [UIWebViewVCOne.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
+    
+    [self addChildViewController:UIWebViewVCOne];
+    [self.view addSubview:UIWebViewVCOne.view];
     
 }
 
@@ -191,7 +209,6 @@
     NSLog(@"key2 - %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"key2"]);
     [[NSUserDefaults standardUserDefaults] setObject:@100 forKey:@"key2"];
     NSLog(@"key2 - %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"key2"]);
-    
     
     NSUserDefaults *customUserDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"CustomUserDefaults"];
     NSLog(@"key3 - %@", [customUserDefaults valueForKey:@"key3"]);
@@ -285,6 +302,7 @@
 
 - (void)testRuntimeTwo {
     RuntimeViewControllerTwo *RuntimeVCTwo = [[RuntimeViewControllerTwo alloc] init];
+    
     [RuntimeVCTwo.view setFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height)];
     
     [self addChildViewController:RuntimeVCTwo];

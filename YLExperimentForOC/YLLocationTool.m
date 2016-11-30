@@ -45,9 +45,9 @@
             if(version >= 8.0f){
                 [_locationManager requestAlwaysAuthorization];// 添加这句
             }
-    } else if (status!= kCLAuthorizationStatusAuthorizedAlways && status!= kCLAuthorizationStatusAuthorizedWhenInUse) {
+    } else if (status != kCLAuthorizationStatusAuthorizedAlways && status!= kCLAuthorizationStatusAuthorizedWhenInUse) {
         // 创建弹出窗口
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"boxfish" message:@"我们需要定位噢 " delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"定位设置", nil];
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"boxfish" message:@"我们需要定位噢 " delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"定位设置", nil];
         [alert show]; // 显示窗口
     } else {
         // 开始定位
