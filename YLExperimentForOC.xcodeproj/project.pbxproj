@@ -211,6 +211,7 @@
 		C70F45301DE7ECB0008F503C /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F452F1DE7ECB0008F503C /* UIWebViewController.m */; };
 		C70F45321DE7FE2D008F503C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70F45311DE7FE2D008F503C /* WebKit.framework */; };
 		C70F453B1DEEA256008F503C /* BKLemmaKWBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */; };
+		C70F453E1DEEF73D008F503C /* BKLemmaExternalBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -581,6 +582,8 @@
 		C70F45311DE7FE2D008F503C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C70F45391DEEA256008F503C /* BKLemmaKWBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLemmaKWBrowserViewController.h; sourceTree = "<group>"; };
 		C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLemmaKWBrowserViewController.m; sourceTree = "<group>"; };
+		C70F453C1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLemmaExternalBrowserViewController.h; sourceTree = "<group>"; };
+		C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLemmaExternalBrowserViewController.m; sourceTree = "<group>"; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1497,6 +1500,8 @@
 			children = (
 				C70F45391DEEA256008F503C /* BKLemmaKWBrowserViewController.h */,
 				C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */,
+				C70F453C1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.h */,
+				C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */,
 			);
 			name = "KWWebViewController-FCOM";
 			sourceTree = "<group>";
@@ -1746,6 +1751,7 @@
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
 				C34C89351D88036F008ABA4E /* SearchViewController.m in Sources */,
 				C3A212541D80E7600025B75F /* STUI.m in Sources */,
+				C70F453E1DEEF73D008F503C /* BKLemmaExternalBrowserViewController.m in Sources */,
 				C3A212271D7E6FF80025B75F /* NavRootViewControllerOne.m in Sources */,
 				C301DF311D49F50F00408501 /* AnswerVCCellDataModel.m in Sources */,
 				C3A211DB1D7BB4E00025B75F /* CalendarDataSource.m in Sources */,

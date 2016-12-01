@@ -15,6 +15,7 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 #import "BKLemmaKWBrowserViewController.h"
+#import "BKLemmaExternalBrowserViewController.h"
 #import <WebKit/WebKit.h>
 
 
@@ -35,19 +36,6 @@
     }
     return self;
 }
-
-/*
- 
- - (instancetype)initWithFrame:(CGRect)frame {
- if (self = [super initWithFrame:frame]) {
- [self setHeaderImage];
- [self setContentLabel];
- }
- return self;
- }
- 
-
- */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -80,11 +68,30 @@
      decisionHandler(WKNavigationActionPolicyAllow);
     } else {
      decisionHandler(WKNavigationActionPolicyCancel);
-     BKLemmaKWBrowserViewController *nextWebViewController = [[BKLemmaKWBrowserViewController alloc] initWithURL:urlString];
-     [self.navigationController pushViewController:nextWebViewController animated:NO];
-        
+    // 解码
+    // urlString = [urlString stringByRemovingPercentEncoding];
+    // NSLog(@"urlString=%@",urlString);
+    // 用:// 截取字符串
+    NSArray *urlComps = [urlString componentsSeparatedByString:@"://"];
+    if ([urlComps count]) {
+        // 获取协议头
+        NSString *protocolHead = [urlComps objectAtIndex:1];
+        NSLog(@"protocolHead=%@",protocolHead);
+        NSArray *urlCompsTemp = [protocolHead componentsSeparatedByString:@"."];
+        if ([urlCompsTemp count] && [[urlCompsTemp objectAtIndex:0] containsString:@"baike"]) {
+            BKLemmaKWBrowserViewController *nextWebViewController = [[BKLemmaKWBrowserViewController alloc] initWithURL:urlString];
+            [self.navigationController pushViewController:nextWebViewController animated:NO];
+        } else {
+            BKLemmaExternalBrowserViewController *nextWebViewController = [[BKLemmaExternalBrowserViewController alloc] initWithURL:urlString];
+          [self presentViewController:nextWebViewController animated:YES completion:nil];
+          [self.navigationController popViewControllerAnimated:NO];
+        }
+    }
+ 
+    //  [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
     }
   
+    /*
     // 解码
     urlString = [urlString stringByRemovingPercentEncoding];
     // NSLog(@"urlString=%@",urlString);
@@ -92,9 +99,10 @@
     NSArray *urlComps = [urlString componentsSeparatedByString:@"://"];
     if ([urlComps count]) {
         // 获取协议头
-        NSString *protocolHead = [urlComps objectAtIndex:0];
+        NSString *protocolHead = [urlComps objectAtIndex:1];
         NSLog(@"protocolHead=%@",protocolHead);
     }
+     */
 
 }
 
@@ -103,6 +111,14 @@
     _onceLoad = false;
    // [self getImageUrlByJS:self.wkWebView];
    // [self refreshBottomButtonState];
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"didFailNavigation something is wrong");
+}
+
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
+    NSLog(@"didFailProvisionalNavigation  something is wrong");
 }
 
 #pragma mark - WKUIDelegate Method
@@ -148,7 +164,7 @@
 #pragma mark - 懒加载
 - (WKWebView *)wkWebView {
     if (_wkWebView == nil) {
-        WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 20 )];
+        WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
         webView.navigationDelegate = self;
         webView.UIDelegate = self;
         // webView.scrollView.scrollEnabled = NO;
