@@ -37,6 +37,8 @@
 #define RightAnswerItemColor COLOR(102, 177, 50)
 #define WrongAnswerItemColor COLOR(255, 39, 18)
 
+// 16 进制颜色
+#define HEX_COLOR(x_RGB) [UIColor colorWithRed:((float)((x_RGB & 0xFF0000) >> 16))/255.0 green:((float)((x_RGB & 0xFF00) >> 8))/255.0 blue:((float)(x_RGB & 0xFF))/255.0 alpha:1.0f]
 
 // 定义构造单例的宏
 #define SharedInstanceInterfaceBuilder(ClassName) \

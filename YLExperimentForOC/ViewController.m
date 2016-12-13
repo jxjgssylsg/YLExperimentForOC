@@ -122,7 +122,7 @@
     // [self creatUICollectionViewFive];
     // [self testPthread];
     // [self testNSThread];
-    // [self testGCD];
+     [self testGCD];
     // [self testNSOperation];
     // [self testRuntime];
     // [self testRuntimeTwo];
@@ -147,7 +147,7 @@
     // [self creatTeacherAnswerInterface];
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
-       [self creatKWWebViewFCOM];
+    // [self creatKWWebViewFCOM];
     
 }
 

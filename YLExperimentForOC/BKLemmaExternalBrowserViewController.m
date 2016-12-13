@@ -19,17 +19,15 @@
 
 
 @interface BKLemmaExternalBrowserViewController () <UISearchBarDelegate, WKNavigationDelegate, WKUIDelegate>
-/// 搜索栏
-@property (nonatomic, strong) UISearchBar *searchBar;
-/// 网页控制导航栏
-@property (weak, nonatomic) UIView *bottomView;
 
+@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, weak) UIView *bottomView;
 @property (nonatomic, strong) WKWebView *wkWebView;
 
-@property (weak, nonatomic) UIButton *backBtn;
-@property (weak, nonatomic) UIButton *forwardBtn;
-@property (weak, nonatomic) UIButton *reloadBtn;
-@property (weak, nonatomic) UIButton *browserBtn;
+@property (nonatomic, weak) UIButton *backBtn;
+@property (nonatomic, weak) UIButton *forwardBtn;
+@property (nonatomic, weak) UIButton *reloadBtn;
+@property (nonatomic, weak) UIButton *browserBtn;
 
 @property (nonatomic, copy) NSString *URLString;
 
@@ -48,44 +46,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self simpleExampleTest];
     
     [self addSubViews];
     [self refreshBottomButtonState];
     
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_URLString]]];
-   // [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnblogs.com/mddblog/"]]];
     
-}
-- (void)simpleExampleTest {
-    // 1.创建webview，并设置大小，"20"为状态栏高度
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
-    // 2.创建请求
-    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://baike.baidu.com/item/baike"]];
-    // 3.加载网页
-    [webView loadRequest:request];
-    
-    // 最后将webView添加到界面
-    [self.view addSubview:webView];
 }
 
-/// 模拟器加载mac本地文件
-- (void)loadLocalFile {
-    // 1.创建webview，并设置大小，"20"为状态栏高度
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
-    // 2.创建url  userName：电脑用户名
-    NSURL *url = [NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"];
-    // 3.加载文件
-    [webView loadFileURL:url allowingReadAccessToURL:url];
-    // 最后将webView添加到界面
-    [self.view addSubview:webView];
-}
 
 - (void)addSubViews {
     [self addBottomViewButtons];
-    
     [self.view addSubview:self.searchBar];
-    
     [self.view addSubview:self.wkWebView];
 }
 
@@ -146,8 +118,7 @@
     CGFloat btnH = 30;
     
     CGFloat btnY = (self.bottomView.bounds.size.height - btnH) / 2;
-    // 按钮间间隙
-    CGFloat margin = (self.bottomView.bounds.size.width - btnW * count) / count;
+    CGFloat margin = (self.bottomView.bounds.size.width - btnW * count) / count;  // 按钮间间隙
     
     CGFloat btnX = margin * 0.5;
     self.backBtn.frame = CGRectMake(btnX, btnY, btnW, btnH);
@@ -161,7 +132,8 @@
     btnX = self.reloadBtn.frame.origin.x + btnW + margin;
     self.browserBtn.frame = CGRectMake(btnX, btnY, btnW, btnH);
 }
-/// 刷新按钮是否允许点击
+
+// 刷新按钮是否允许点击
 - (void)refreshBottomButtonState {
     if ([self.wkWebView canGoBack]) {
         self.backBtn.enabled = YES;
@@ -175,7 +147,8 @@
         self.forwardBtn.enabled = NO;
     }
 }
-/// 按钮点击事件
+
+// 按钮点击事件
 - (void)onBottomButtonsClicled:(UIButton *)sender {
     switch (sender.tag) {
         case 1:
@@ -205,7 +178,7 @@
 }
 
 #pragma mark - WKWebView WKNavigationDelegate 相关
-/// 是否允许加载网页 在发送请求之前，决定是否跳转
+// 是否允许加载网页 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 //    if (!navigationAction.targetFrame.isMainFrame) {
 //        [webView evaluateJavaScript:@"var a = document.getElementsByTagName('a');for(var i=0;i<a.length;i++){a[i].setAttribute('target','');}" completionHandler:nil];
@@ -213,7 +186,7 @@
     NSString *urlString = [[navigationAction.request URL] absoluteString];
     
     urlString = [urlString stringByRemovingPercentEncoding];
-    //    NSLog(@"urlString=%@",urlString);
+    // NSLog(@"urlString=%@",urlString);
     // 用://截取字符串
     NSArray *urlComps = [urlString componentsSeparatedByString:@"://"];
     if ([urlComps count]) {
@@ -278,7 +251,7 @@
 //    objc_setAssociatedObject(self, &imgUrlArrayKey, imgUrlArray, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 //}
 
-/// 网页加载完成之后调用
+// 网页加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [self getImageUrlByJS:self.wkWebView];
     [self refreshBottomButtonState];
@@ -302,23 +275,21 @@
     NSString *urlStr = searchBar.text;
     
     // 如果file://则为打开bundle本地文件，http则为网站，否则只是一般搜索关键字
-    if([urlStr hasPrefix:@"file://"]){
+    if ([urlStr hasPrefix:@"file://"]) {
         NSRange range = [urlStr rangeOfString:@"file://"];
         NSString *fileName = [urlStr substringFromIndex:range.length];
         url = [[NSBundle mainBundle] URLForResource:fileName withExtension:nil];
-        // 如果是模拟器加载电脑上的文件，则用下面的代码
-//        url = [NSURL fileURLWithPath:fileName];
-    }else if(urlStr.length>0){
+    } else if (urlStr.length > 0) {
         if ([urlStr hasPrefix:@"http://"]) {
-            url=[NSURL URLWithString:urlStr];
+            url = [NSURL URLWithString:urlStr];
         } else {
-            urlStr=[NSString stringWithFormat:@"http://baike.baidu.com/item/%@",urlStr];
+            urlStr = [NSString stringWithFormat:@"http://baike.baidu.com/item/%@",urlStr];
         }
         urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-        url=[NSURL URLWithString:urlStr];
+        url = [NSURL URLWithString:urlStr];
         
     }
-    NSURLRequest *request=[NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     // 加载请求页面
     [self.wkWebView loadRequest:request];
@@ -334,6 +305,7 @@
     }
     return _bottomView;
 }
+
 - (UISearchBar *)searchBar {
     if (_searchBar == nil) {
         UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, kSearchBarH)];
@@ -350,10 +322,6 @@
         WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20 + kSearchBarH, kScreenWidth, kScreenHeight - 20 - kSearchBarH - kBottomViewH)];
         webView.navigationDelegate = self;
         webView.UIDelegate = self; // syl
-//                webView.scrollView.scrollEnabled = NO;
-        
-        //        webView.backgroundColor = [UIColor colorWithPatternImage:self.image];
-        // 允许左右划手势导航，默认允许
         webView.allowsBackForwardNavigationGestures = YES;
         _wkWebView = webView;
     }
