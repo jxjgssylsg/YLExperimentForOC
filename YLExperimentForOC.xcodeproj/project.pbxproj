@@ -212,6 +212,7 @@
 		C70F45321DE7FE2D008F503C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70F45311DE7FE2D008F503C /* WebKit.framework */; };
 		C70F453B1DEEA256008F503C /* BKLemmaKWBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */; };
 		C70F453E1DEEF73D008F503C /* BKLemmaExternalBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */; };
+		C77C63311E02707C00F57416 /* BKCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C63301E02707C00F57416 /* BKCacheTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -584,6 +585,8 @@
 		C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLemmaKWBrowserViewController.m; sourceTree = "<group>"; };
 		C70F453C1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLemmaExternalBrowserViewController.h; sourceTree = "<group>"; };
 		C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLemmaExternalBrowserViewController.m; sourceTree = "<group>"; };
+		C77C632F1E02707C00F57416 /* BKCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCacheTool.h; sourceTree = "<group>"; };
+		C77C63301E02707C00F57416 /* BKCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCacheTool.m; sourceTree = "<group>"; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -653,6 +656,7 @@
 		C319E35D1D3F28F500286755 /* FCOM */ = {
 			isa = PBXGroup;
 			children = (
+				C77C632E1E02704D00F57416 /* CacheClear */,
 				C70F45381DEEA127008F503C /* KWWebViewController-FCOM */,
 				C36355301D65BE8600435998 /* UIScollViewOneFCOM */,
 				C301DF581D4EEDDF00408501 /* AnswerInfoInterface - FCOM */,
@@ -1506,6 +1510,15 @@
 			name = "KWWebViewController-FCOM";
 			sourceTree = "<group>";
 		};
+		C77C632E1E02704D00F57416 /* CacheClear */ = {
+			isa = PBXGroup;
+			children = (
+				C77C632F1E02707C00F57416 /* BKCacheTool.h */,
+				C77C63301E02707C00F57416 /* BKCacheTool.m */,
+			);
+			name = CacheClear;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1861,6 +1874,7 @@
 				C39ED1631D680BF500C57AA4 /* MasonryFourViewController.m in Sources */,
 				C3A211E61D7BB4FF0025B75F /* HeaderViewTwo.m in Sources */,
 				C3A211EA1D7BB5090025B75F /* SampleCalendarEvent.m in Sources */,
+				C77C63311E02707C00F57416 /* BKCacheTool.m in Sources */,
 				C3D785731D92D28C00B945DF /* PersonModel.m in Sources */,
 				C3A212021D7D5A070025B75F /* Footer.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,

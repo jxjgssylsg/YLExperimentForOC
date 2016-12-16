@@ -67,6 +67,7 @@
 #import "FMDBViewController.h"
 #import "UIWebViewController.h"
 #import "BKLemmaKWBrowserViewController.h"
+#import "BKCacheTool.h"
 
 @interface ViewController () <AdjustClassNumControllerDelegate> {
     int _number;
@@ -122,7 +123,7 @@
     // [self creatUICollectionViewFive];
     // [self testPthread];
     // [self testNSThread];
-     [self testGCD];
+    // [self testGCD];
     // [self testNSOperation];
     // [self testRuntime];
     // [self testRuntimeTwo];
@@ -148,7 +149,12 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     // [self creatKWWebViewFCOM];
+    [self clearCacheFCOM];
     
+}
+
+- (void)clearCacheFCOM {
+    [[BKCacheTool sharedManager] deleteCach];
 }
 
 - (void)creatKWWebViewFCOM {

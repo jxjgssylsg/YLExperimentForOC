@@ -197,6 +197,9 @@
 
 // creat the KWWebView
 - (void)creatKWWebViewFCOM;
+
+// clear cache tool
+- (void)clearCacheFCOM;
 @end
 
 

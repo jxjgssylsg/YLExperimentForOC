@@ -19,6 +19,7 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
+
 @implementation YLLocationTool
 - (instancetype)init
 {
@@ -37,12 +38,10 @@
 }
 
 - (void)locationJudge {
-    
-   
-    int status =[CLLocationManager authorizationStatus];
+    int status = [CLLocationManager authorizationStatus];
     if (status == kCLAuthorizationStatusNotDetermined) {
             double version = [[UIDevice currentDevice].systemVersion doubleValue];// 判定系统版本。
-            if(version >= 8.0f){
+            if(version >= 8.0f) {
                 [_locationManager requestAlwaysAuthorization];// 添加这句
             }
     } else if (status != kCLAuthorizationStatusAuthorizedAlways && status!= kCLAuthorizationStatusAuthorizedWhenInUse) {
@@ -100,6 +99,7 @@
     }
 }
 
+#pragma mark - UIAlertViewDelegate method
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     // 当点击了第二个按钮（OK）
     if (buttonIndex == 1) {
