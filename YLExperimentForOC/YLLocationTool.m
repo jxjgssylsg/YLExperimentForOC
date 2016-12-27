@@ -103,7 +103,7 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     // 当点击了第二个按钮（OK）
     if (buttonIndex == 1) {
-        if(![CLLocationManager locationServicesEnabled]) {
+        if (![CLLocationManager locationServicesEnabled]) {
             NSLog(@"aaaaaaaaaa");
             NSURL * url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
             if([[UIApplication sharedApplication] canOpenURL:url]) {
@@ -112,9 +112,9 @@
         } else {
             // 这里似乎有些问题,当是 ios7.0 的时候不存在单独设置的界面,故会崩溃
             NSLog(@"bbbbbbbbbb");
-            NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-            if([[UIApplication sharedApplication] canOpenURL:url]) {
-                NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
                 [[UIApplication sharedApplication] openURL:url];
             }
         }

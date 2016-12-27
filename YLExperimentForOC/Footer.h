@@ -11,5 +11,5 @@
 @interface Footer : UICollectionReusableView
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
-
+ 
 @end
