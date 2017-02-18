@@ -212,6 +212,7 @@
 		C70F45321DE7FE2D008F503C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70F45311DE7FE2D008F503C /* WebKit.framework */; };
 		C70F453B1DEEA256008F503C /* BKLemmaKWBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */; };
 		C70F453E1DEEF73D008F503C /* BKLemmaExternalBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */; };
+		C70FA95A1E27485700D2DE2C /* ExpandClickAreaButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C70FA9591E27485700D2DE2C /* ExpandClickAreaButton.m */; };
 		C77C63311E02707C00F57416 /* BKCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C63301E02707C00F57416 /* BKCacheTool.m */; };
 /* End PBXBuildFile section */
 
@@ -585,6 +586,8 @@
 		C70F453A1DEEA256008F503C /* BKLemmaKWBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLemmaKWBrowserViewController.m; sourceTree = "<group>"; };
 		C70F453C1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLemmaExternalBrowserViewController.h; sourceTree = "<group>"; };
 		C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLemmaExternalBrowserViewController.m; sourceTree = "<group>"; };
+		C70FA9581E27485700D2DE2C /* ExpandClickAreaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandClickAreaButton.h; sourceTree = "<group>"; };
+		C70FA9591E27485700D2DE2C /* ExpandClickAreaButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandClickAreaButton.m; sourceTree = "<group>"; };
 		C77C632F1E02707C00F57416 /* BKCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCacheTool.h; sourceTree = "<group>"; };
 		C77C63301E02707C00F57416 /* BKCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCacheTool.m; sourceTree = "<group>"; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -664,6 +667,7 @@
 				C32CFE891D3F19DF0079334D /* MessagePage - FCOM  */,
 				C3664DE81D349FDE00D29182 /* 加减课程 - FCOM */,
 				C3E27FDF1D387378004C4D15 /* Tag 标签 - FCOM */,
+				C70FA9571E27481100D2DE2C /* ExpandClickAreaBtn */,
 			);
 			name = FCOM;
 			sourceTree = "<group>";
@@ -1510,6 +1514,15 @@
 			name = "KWWebViewController-FCOM";
 			sourceTree = "<group>";
 		};
+		C70FA9571E27481100D2DE2C /* ExpandClickAreaBtn */ = {
+			isa = PBXGroup;
+			children = (
+				C70FA9581E27485700D2DE2C /* ExpandClickAreaButton.h */,
+				C70FA9591E27485700D2DE2C /* ExpandClickAreaButton.m */,
+			);
+			name = ExpandClickAreaBtn;
+			sourceTree = "<group>";
+		};
 		C77C632E1E02704D00F57416 /* CacheClear */ = {
 			isa = PBXGroup;
 			children = (
@@ -1791,6 +1804,7 @@
 				C390BD3F1DB531FC006A922B /* CoreDataViewController.m in Sources */,
 				C37B83811DA7BD1700BFF5E1 /* NotificationMultiThreadViewController.m in Sources */,
 				C3D7858D1D9611F300B945DF /* PersonObserver.m in Sources */,
+				C70FA95A1E27485700D2DE2C /* ExpandClickAreaButton.m in Sources */,
 				C301DF341D49F8FA00408501 /* AnswerVCCellDataModelFrame.m in Sources */,
 				C3D785631D92701900B945DF /* RuntimeViewController.m in Sources */,
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,

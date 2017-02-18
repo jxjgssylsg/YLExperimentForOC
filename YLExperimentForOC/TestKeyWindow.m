@@ -78,3 +78,11 @@
 }
 
 @end
+
+/**
+ *  移除指定 Tag 的 View
+ *  [[self.view viewWithTag:Control_tag] removeFromSuperview];
+ *  [[self.view viewWithTag:RemoveBtn_tag] removeFromSuperview];
+ *  [[self.view viewWithTag:CollectionView_Tag] removeFromSuperview];
+ *
+ */

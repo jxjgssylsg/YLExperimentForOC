@@ -49,7 +49,7 @@
   [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
     make.left.right.bottom.mas_equalTo(0);
     make.height.mas_equalTo(topView);
-    // 注意用 bottom 不行，不会适配，需要用 mas_bottom syl 16.12.27 
+    // 注意用 bottom 不行，不会适配，需要用 mas_bottom syl 16.12.27
      make.top.mas_equalTo(topView.mas_bottom);
   }];
   

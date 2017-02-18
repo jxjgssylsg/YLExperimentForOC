@@ -104,13 +104,14 @@
     // [self creatUITableViewTwo];
     // [self creatUITableViewThree];
     // [self creatUITableViewFour];
+    // [self creatUITableViewFive];
     // [self creatUITableViewSix];
     // [self creatUITableViewSeven];
     // [self creatUIScrollViewOne];
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     // [self testNSTimer];
-    // [self testMasonryOne];
+     [self testMasonryOne];
     // [self testMasonryTwo];
     // [self testMasonryThree];
     // [self testMasonryFour];
@@ -149,7 +150,7 @@
     // [self creatAnswerInfoInterface];
     // [self creatUIScrollViewOneFCOM];
     // [self creatKWWebViewFCOM];
-    [self clearCacheFCOM];
+    // [self clearCacheFCOM];
     
 }
 
