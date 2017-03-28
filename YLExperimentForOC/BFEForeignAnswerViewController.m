@@ -66,7 +66,7 @@ static NSString *AnswerVCCellIdentifier = @"CustomCellIdentifier";
     segMent.selectedSegmentIndex =0;   //指定索引
     // segmentedControl.tintColor = [UIColor blackColor];
     // segmentedControl.tintColor = [UIColor colorWithRed:224/255 green:225/255 blue:226/255 alpha:1];
-    segMent.tintColor =[UIColor blackColor];
+    segMent.tintColor = [UIColor blackColor];
     // segmentedControl
     [segMent addTarget:self action:@selector(segMentClick:) forControlEvents:UIControlEventValueChanged];
     // self.navigationItem.titleView = segMent;

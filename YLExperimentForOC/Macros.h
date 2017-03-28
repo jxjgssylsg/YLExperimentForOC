@@ -158,7 +158,7 @@ view.layer.borderWidth = width;\
 // 数字相关
 #define PageTransitionTime 0.5f
 #define PageControlHeight 30
-#define TitleFontSize (32 * 4 / 3) //32是point 乘以4/3是转化为pixel单位
+#define TitleFontSize (32 * 4 / 3) // 32 是 point 乘以 4/3 是转化为 pixel 单位
 
 // for student
 #define StatisticReductionConstant 10

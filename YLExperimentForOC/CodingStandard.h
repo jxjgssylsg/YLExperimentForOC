@@ -86,7 +86,12 @@ switch (property->_type & YYEncodingTypeMask) {
      default: propertyDesc = @"<unknown>"; break;
  }
 }
-
+ 
+// ------------------------  泛型 ------------------------//
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+ 
+ }
+ 
 #endif /* CodingStandard_h */
 
 
