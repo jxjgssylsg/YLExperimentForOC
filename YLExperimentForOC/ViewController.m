@@ -111,7 +111,7 @@
     // [self creatUIScrollViewTwo];
     // [self creatUIScrollViewThree];
     // [self testNSTimer];
-     [self testMasonryOne];
+    // [self testMasonryOne];
     // [self testMasonryTwo];
     // [self testMasonryThree];
     // [self testMasonryFour];
@@ -131,7 +131,7 @@
     // [self testKVC];
     // [self testKVO];
     // [self testKVOTwo];
-    // [self testRunLoop];
+       [self testRunLoop];
     // [self testNotificationCenter];
     // [self testNotificationCenterMultiThread];
     // [self testLocalNotification];
