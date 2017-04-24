@@ -214,6 +214,14 @@
 		C70F453E1DEEF73D008F503C /* BKLemmaExternalBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70F453D1DEEF73C008F503C /* BKLemmaExternalBrowserViewController.m */; };
 		C70FA95A1E27485700D2DE2C /* ExpandClickAreaButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C70FA9591E27485700D2DE2C /* ExpandClickAreaButton.m */; };
 		C77C63311E02707C00F57416 /* BKCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C63301E02707C00F57416 /* BKCacheTool.m */; };
+		C784A25D1EADC2420075DB66 /* PersonalVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C784A2541EADC2420075DB66 /* PersonalVideoListViewController.m */; };
+		C784A25E1EADC2420075DB66 /* PersonalVideoListVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C784A2561EADC2420075DB66 /* PersonalVideoListVCCell.m */; };
+		C784A25F1EADC2420075DB66 /* PersonalVideoListVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C784A2571EADC2420075DB66 /* PersonalVideoListVCCell.xib */; };
+		C784A2601EADC2420075DB66 /* PersonalHomePageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C784A2591EADC2420075DB66 /* PersonalHomePageCollectionView.m */; };
+		C784A2611EADC2420075DB66 /* PersonalVideoListVCHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C784A25B1EADC2420075DB66 /* PersonalVideoListVCHeadView.m */; };
+		C784A2621EADC2420075DB66 /* PersonalVideoListVCHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C784A25C1EADC2420075DB66 /* PersonalVideoListVCHeadView.xib */; };
+		C784A2651EADC2750075DB66 /* PersonalVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C784A2641EADC2750075DB66 /* PersonalVideoModel.m */; };
+		C784A2681EADC27E0075DB66 /* PersonalHomePageService.m in Sources */ = {isa = PBXBuildFile; fileRef = C784A2671EADC27E0075DB66 /* PersonalHomePageService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -590,6 +598,20 @@
 		C70FA9591E27485700D2DE2C /* ExpandClickAreaButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandClickAreaButton.m; sourceTree = "<group>"; };
 		C77C632F1E02707C00F57416 /* BKCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCacheTool.h; sourceTree = "<group>"; };
 		C77C63301E02707C00F57416 /* BKCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCacheTool.m; sourceTree = "<group>"; };
+		C784A2531EADC2420075DB66 /* PersonalVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalVideoListViewController.h; sourceTree = "<group>"; };
+		C784A2541EADC2420075DB66 /* PersonalVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalVideoListViewController.m; sourceTree = "<group>"; };
+		C784A2551EADC2420075DB66 /* PersonalVideoListVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalVideoListVCCell.h; sourceTree = "<group>"; };
+		C784A2561EADC2420075DB66 /* PersonalVideoListVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalVideoListVCCell.m; sourceTree = "<group>"; };
+		C784A2571EADC2420075DB66 /* PersonalVideoListVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalVideoListVCCell.xib; sourceTree = "<group>"; };
+		C784A2581EADC2420075DB66 /* PersonalHomePageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalHomePageCollectionView.h; sourceTree = "<group>"; };
+		C784A2591EADC2420075DB66 /* PersonalHomePageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalHomePageCollectionView.m; sourceTree = "<group>"; };
+		C784A25A1EADC2420075DB66 /* PersonalVideoListVCHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalVideoListVCHeadView.h; sourceTree = "<group>"; };
+		C784A25B1EADC2420075DB66 /* PersonalVideoListVCHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalVideoListVCHeadView.m; sourceTree = "<group>"; };
+		C784A25C1EADC2420075DB66 /* PersonalVideoListVCHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalVideoListVCHeadView.xib; sourceTree = "<group>"; };
+		C784A2631EADC2750075DB66 /* PersonalVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalVideoModel.h; sourceTree = "<group>"; };
+		C784A2641EADC2750075DB66 /* PersonalVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalVideoModel.m; sourceTree = "<group>"; };
+		C784A2661EADC27E0075DB66 /* PersonalHomePageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalHomePageService.h; sourceTree = "<group>"; };
+		C784A2671EADC27E0075DB66 /* PersonalHomePageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalHomePageService.m; sourceTree = "<group>"; };
 		D1B3B731ED24FEA9F5BF0EA9 /* libPods-YLExperimentForOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLExperimentForOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -659,6 +681,7 @@
 		C319E35D1D3F28F500286755 /* FCOM */ = {
 			isa = PBXGroup;
 			children = (
+				C784A2521EADC2240075DB66 /* PersonalHomePage */,
 				C77C632E1E02704D00F57416 /* CacheClear */,
 				C70F45381DEEA127008F503C /* KWWebViewController-FCOM */,
 				C36355301D65BE8600435998 /* UIScollViewOneFCOM */,
@@ -1532,6 +1555,27 @@
 			name = CacheClear;
 			sourceTree = "<group>";
 		};
+		C784A2521EADC2240075DB66 /* PersonalHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				C784A2661EADC27E0075DB66 /* PersonalHomePageService.h */,
+				C784A2671EADC27E0075DB66 /* PersonalHomePageService.m */,
+				C784A2631EADC2750075DB66 /* PersonalVideoModel.h */,
+				C784A2641EADC2750075DB66 /* PersonalVideoModel.m */,
+				C784A2531EADC2420075DB66 /* PersonalVideoListViewController.h */,
+				C784A2541EADC2420075DB66 /* PersonalVideoListViewController.m */,
+				C784A2551EADC2420075DB66 /* PersonalVideoListVCCell.h */,
+				C784A2561EADC2420075DB66 /* PersonalVideoListVCCell.m */,
+				C784A2571EADC2420075DB66 /* PersonalVideoListVCCell.xib */,
+				C784A2581EADC2420075DB66 /* PersonalHomePageCollectionView.h */,
+				C784A2591EADC2420075DB66 /* PersonalHomePageCollectionView.m */,
+				C784A25A1EADC2420075DB66 /* PersonalVideoListVCHeadView.h */,
+				C784A25B1EADC2420075DB66 /* PersonalVideoListVCHeadView.m */,
+				C784A25C1EADC2420075DB66 /* PersonalVideoListVCHeadView.xib */,
+			);
+			name = PersonalHomePage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1623,6 +1667,8 @@
 				C34FEB4F1D115FE1006E6A51 /* 10.png in Resources */,
 				C34C89481D881E10008ABA4E /* search@2x.png in Resources */,
 				C3D785531D8A222A00B945DF /* NSThreadViewController.xib in Resources */,
+				C784A2621EADC2420075DB66 /* PersonalVideoListVCHeadView.xib in Resources */,
+				C784A25F1EADC2420075DB66 /* PersonalVideoListVCCell.xib in Resources */,
 				C34FEB501D115FE1006E6A51 /* 2 in Resources */,
 				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
 				C3A212031D7D5A070025B75F /* Footer.xib in Resources */,
@@ -1776,6 +1822,7 @@
 				C3A52AF71D6D884200325182 /* MMPlaceHolder.m in Sources */,
 				C37310851D5983EE00AF4C2C /* NSTimer+Blocks.m in Sources */,
 				C34C89351D88036F008ABA4E /* SearchViewController.m in Sources */,
+				C784A2651EADC2750075DB66 /* PersonalVideoModel.m in Sources */,
 				C3A212541D80E7600025B75F /* STUI.m in Sources */,
 				C70F453E1DEEF73D008F503C /* BKLemmaExternalBrowserViewController.m in Sources */,
 				C3A212271D7E6FF80025B75F /* NavRootViewControllerOne.m in Sources */,
@@ -1798,6 +1845,7 @@
 				C3A212491D80E7340025B75F /* TravelNav0Controller.m in Sources */,
 				C3E45C181DAEB6FB00AB0D35 /* SqlitePeople.m in Sources */,
 				C3A52ACC1D6D2FBB00325182 /* HYBBaseController.m in Sources */,
+				C784A25E1EADC2420075DB66 /* PersonalVideoListVCCell.m in Sources */,
 				C70F45301DE7ECB0008F503C /* UIWebViewController.m in Sources */,
 				C3A52AD81D6D339500325182 /* RemakeContraintsController.m in Sources */,
 				C39ED14C1D65C16600C57AA4 /* ScrollViewControllerOneFCOM.m in Sources */,
@@ -1810,6 +1858,7 @@
 				C367364D1CE31B1E00F7E54F /* NSTimer+BFEExtension.m in Sources */,
 				C3A211E11D7BB4F10025B75F /* CalendarEventCell.m in Sources */,
 				C35CC6D71CF42D5F008B9EC2 /* KCContactGroup.m in Sources */,
+				C784A2681EADC27E0075DB66 /* PersonalHomePageService.m in Sources */,
 				C3E45C251DB0FB5800AB0D35 /* FMDBViewController.m in Sources */,
 				C3DE87661D044ED30051E255 /* TableViewControllerFour.m in Sources */,
 				C3A52AE11D6D339500325182 /* AspectFitController.m in Sources */,
@@ -1857,6 +1906,7 @@
 				C378131C1D7AA25700ABF5A0 /* CollectionViewCellOne.m in Sources */,
 				C3A52AD51D6D339500325182 /* UpdateConstraintsController.m in Sources */,
 				C3E45C451DB0FFB500AB0D35 /* FMDatabasePool.m in Sources */,
+				C784A2611EADC2420075DB66 /* PersonalVideoListVCHeadView.m in Sources */,
 				C37B83751DA7503400BFF5E1 /* NotificationCenterViewController.m in Sources */,
 				C34C89331D88036F008ABA4E /* FavoriteViewController.m in Sources */,
 				C3E27FEB1D387504004C4D15 /* TagSelectViewController.m in Sources */,
@@ -1891,6 +1941,7 @@
 				C77C63311E02707C00F57416 /* BKCacheTool.m in Sources */,
 				C3D785731D92D28C00B945DF /* PersonModel.m in Sources */,
 				C3A212021D7D5A070025B75F /* Footer.m in Sources */,
+				C784A25D1EADC2420075DB66 /* PersonalVideoListViewController.m in Sources */,
 				C3DE87601D0290E20051E255 /* TableViewControllerTwo.m in Sources */,
 				C3D7857C1D92D2EE00B945DF /* RuntimeViewControllerTwo.m in Sources */,
 				C3D785581D8E377300B945DF /* GCDViewController.m in Sources */,
@@ -1903,6 +1954,7 @@
 				C3A52AF31D6D3CFF00325182 /* HYMasonryViewController.m in Sources */,
 				C301DF5E1D4EEEDD00408501 /* BFEAnswerInfoInterface.m in Sources */,
 				C3D7856D1D92702500B945DF /* UIViewController+Logging.m in Sources */,
+				C784A2601EADC2420075DB66 /* PersonalHomePageCollectionView.m in Sources */,
 				C34C891B1D82E3F8008ABA4E /* PopAnimation.m in Sources */,
 				C3A52AE71D6D339500325182 /* ScrollViewController.m in Sources */,
 				C3664DEC1D34A06700D29182 /* AdjustClassNumController.m in Sources */,
