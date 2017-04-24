@@ -8,6 +8,9 @@
 
 #import "CCTestRunLoopViewController.h"
 #import "AppDelegate.h"
+#import "RuntimeViewController.h"
+#import <objc/runtime.h>
+
 
 @interface CCTestRunLoopViewController ()
 
@@ -20,7 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSObject *a = [[NSObject alloc] init];
+    // id ab = a;
+    // objc_getClass("ssss");
+    // objc_getClass("ssss");
+    Class c1 = objc_getClass("Person");
+    // object_getClass(a);
     [[UIButton appearance] setBackgroundColor:[UIColor blueColor]];
     
     /* 点击之后 产生一个普通的 Thread 执行任务,线程完成之后再继续运行。 在这个过程中会阻塞 UI 线程。点击下面的Normal按钮没有输出。 */

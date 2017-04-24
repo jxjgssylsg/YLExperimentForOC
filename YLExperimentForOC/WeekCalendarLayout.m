@@ -125,7 +125,7 @@ static const CGFloat HourHeaderWidth = 100;
     NSInteger maxDayIndex = [self dayIndexFromXCoordinate:CGRectGetMaxX(rect)];
     
     NSMutableArray *indexPaths = [NSMutableArray array];
-    for (NSInteger idx = minDayIndex; idx <= maxDayIndex; idx++) { // 可见范围内的 Day 所有的indexPaths
+    for (NSInteger idx = minDayIndex; idx <= maxDayIndex; idx++) { // 可见范围内的 Day 所有的 indexPaths
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:0];
         [indexPaths addObject:indexPath];
     }

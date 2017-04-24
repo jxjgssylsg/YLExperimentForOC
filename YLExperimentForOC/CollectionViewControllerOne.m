@@ -40,7 +40,7 @@ static NSString * const SupplementaryViewFooterIdentify = @"SupplementaryViewFoo
     [self.view addSubview:collectionView];
     
     // 注册
-//  [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CellReuseIdentify];
+    //  [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CellReuseIdentify];
     [collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCellOne" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CellReuseIdentify]; // CollectionViewCell 用了 autolayout.
     // UICollectionElementKindSectionHeader 注册是固定的
     [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:SupplementaryViewHeaderIdentify];
@@ -124,6 +124,7 @@ static NSString * const SupplementaryViewFooterIdentify = @"SupplementaryViewFoo
 
 
 #pragma mark - UICollectionViewDelegateFlowLayout method
+// 设置头部高度 $$$$
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     if(section == 1) {
         return CGSizeMake(100, 50);

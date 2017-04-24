@@ -34,7 +34,7 @@ _contentsDic[[NSString stringWithFormat:@"%ld",a]]
 
 - (instancetype)initWithMaxClassNum:(NSInteger)maxNum currentClassNum:(NSInteger)currentNum {
     if (self = [super init]) {
-       // _numClass.text = [NSString  stringWithFormat:@"%ld",currentNum];
+        // _numClass.text = [NSString  stringWithFormat:@"%ld",currentNum];
         _initialNum = _numClassNumber = currentNum;
         _maxClassNum = maxNum;
     }
