@@ -53,11 +53,11 @@
 		C34FEB221D10FDFE006E6A51 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C34FEB201D10FDFE006E6A51 /* CustomCell.m */; };
 		C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB211D10FDFE006E6A51 /* CustomCell.xib */; };
 		C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB241D1129C6006E6A51 /* friendsInfo.plist */; };
-		C34FEB4E1D115FE1006E6A51 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB441D115FE1006E6A51 /* 1.png */; };
+		C34FEB4E1D115FE1006E6A51 /* 1 in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB441D115FE1006E6A51 /* 1 */; };
 		C34FEB4F1D115FE1006E6A51 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB451D115FE1006E6A51 /* 10.png */; };
-		C34FEB501D115FE1006E6A51 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB461D115FE1006E6A51 /* 2.png */; };
-		C34FEB511D115FE1006E6A51 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB471D115FE1006E6A51 /* 3.png */; };
-		C34FEB521D115FE1006E6A51 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB481D115FE1006E6A51 /* 4.png */; };
+		C34FEB501D115FE1006E6A51 /* 2 in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB461D115FE1006E6A51 /* 2 */; };
+		C34FEB511D115FE1006E6A51 /* 3 in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB471D115FE1006E6A51 /* 3 */; };
+		C34FEB521D115FE1006E6A51 /* 4 in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB481D115FE1006E6A51 /* 4 */; };
 		C34FEB531D115FE1006E6A51 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB491D115FE1006E6A51 /* 5.png */; };
 		C34FEB541D115FE1006E6A51 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB4A1D115FE1006E6A51 /* 6.png */; };
 		C34FEB551D115FE1006E6A51 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = C34FEB4B1D115FE1006E6A51 /* 7.png */; };
@@ -294,11 +294,11 @@
 		C34FEB201D10FDFE006E6A51 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		C34FEB211D10FDFE006E6A51 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		C34FEB241D1129C6006E6A51 /* friendsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friendsInfo.plist; sourceTree = "<group>"; };
-		C34FEB441D115FE1006E6A51 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		C34FEB441D115FE1006E6A51 /* 1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1; sourceTree = "<group>"; };
 		C34FEB451D115FE1006E6A51 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
-		C34FEB461D115FE1006E6A51 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		C34FEB471D115FE1006E6A51 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		C34FEB481D115FE1006E6A51 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		C34FEB461D115FE1006E6A51 /* 2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2; sourceTree = "<group>"; };
+		C34FEB471D115FE1006E6A51 /* 3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3; sourceTree = "<group>"; };
+		C34FEB481D115FE1006E6A51 /* 4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4; sourceTree = "<group>"; };
 		C34FEB491D115FE1006E6A51 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		C34FEB4A1D115FE1006E6A51 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 		C34FEB4B1D115FE1006E6A51 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
@@ -715,10 +715,10 @@
 		C34FEB431D115FE1006E6A51 /* Images ( 尽量复用 ) */ = {
 			isa = PBXGroup;
 			children = (
-				C34FEB441D115FE1006E6A51 /* 1.png */,
-				C34FEB461D115FE1006E6A51 /* 2.png */,
-				C34FEB471D115FE1006E6A51 /* 3.png */,
-				C34FEB481D115FE1006E6A51 /* 4.png */,
+				C34FEB441D115FE1006E6A51 /* 1 */,
+				C34FEB461D115FE1006E6A51 /* 2 */,
+				C34FEB471D115FE1006E6A51 /* 3 */,
+				C34FEB481D115FE1006E6A51 /* 4 */,
 				C34FEB491D115FE1006E6A51 /* 5.png */,
 				C34FEB4A1D115FE1006E6A51 /* 6.png */,
 				C34FEB4B1D115FE1006E6A51 /* 7.png */,
@@ -1623,10 +1623,10 @@
 				C34FEB4F1D115FE1006E6A51 /* 10.png in Resources */,
 				C34C89481D881E10008ABA4E /* search@2x.png in Resources */,
 				C3D785531D8A222A00B945DF /* NSThreadViewController.xib in Resources */,
-				C34FEB501D115FE1006E6A51 /* 2.png in Resources */,
+				C34FEB501D115FE1006E6A51 /* 2 in Resources */,
 				C301DF671D4F27C600408501 /* bigPicture.jpeg in Resources */,
 				C3A212031D7D5A070025B75F /* Footer.xib in Resources */,
-				C34FEB511D115FE1006E6A51 /* 3.png in Resources */,
+				C34FEB511D115FE1006E6A51 /* 3 in Resources */,
 				C3A2122A1D7E6FF80025B75F /* NavSecondViewControllerOne.xib in Resources */,
 				C3D785721D92D28C00B945DF /* Persons.json in Resources */,
 				C3A211EE1D7BCE160025B75F /* CalendarCollectionViewControllerTwoSB.storyboard in Resources */,
@@ -1642,7 +1642,7 @@
 				C34FEB251D1129C6006E6A51 /* friendsInfo.plist in Resources */,
 				C301DF621D4F273A00408501 /* bgEarn.png in Resources */,
 				C34C89461D881E10008ABA4E /* home@2x.png in Resources */,
-				C34FEB4E1D115FE1006E6A51 /* 1.png in Resources */,
+				C34FEB4E1D115FE1006E6A51 /* 1 in Resources */,
 				C34C89431D881E10008ABA4E /* fav.png in Resources */,
 				C3A212071D7D5A3F0025B75F /* MyCollectionViewControllerThree.storyboard in Resources */,
 				C34C89491D881E10008ABA4E /* setting.png in Resources */,
@@ -1650,7 +1650,7 @@
 				C34C89421D881E10008ABA4E /* about@2x.png in Resources */,
 				C34C89411D881E10008ABA4E /* about.png in Resources */,
 				C34FEB231D10FDFE006E6A51 /* CustomCell.xib in Resources */,
-				C34FEB521D115FE1006E6A51 /* 4.png in Resources */,
+				C34FEB521D115FE1006E6A51 /* 4 in Resources */,
 				C301DF641D4F273A00408501 /* bgEarn@3x.png in Resources */,
 				C301DF391D4B46DD00408501 /* AnswerMessages.plist in Resources */,
 				C34C894A1D881E10008ABA4E /* setting@2x.png in Resources */,

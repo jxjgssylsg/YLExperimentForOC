@@ -119,7 +119,7 @@
     // [self testMasonrySix];
     // [self creatUICollectionViewOne];
     // [self creatUICollectionViewTwo];
-    // [self creatUICollectionViewThree];
+     [self creatUICollectionViewThree];
     // [self creatUICollectionViewFour];
     // [self creatUICollectionViewFive];
     // [self testPthread];
@@ -131,7 +131,7 @@
     // [self testKVC];
     // [self testKVO];
     // [self testKVOTwo];
-       [self testRunLoop];
+    // [self testRunLoop];
     // [self testNotificationCenter];
     // [self testNotificationCenterMultiThread];
     // [self testLocalNotification];
