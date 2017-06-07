@@ -33,7 +33,7 @@
 
     [self.navigationController.navigationBar addSubview:self.navigationView];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.buttonBack];
-
+    
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:self.imageView.bounds];
     [tableHeaderView addSubview:self.imageView];
     self.tableView.tableHeaderView = tableHeaderView;
@@ -52,7 +52,7 @@
     }
 
     if (progressChange >= 1) {
-         self.navigationView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:(progressChange - 1)];
+         self.navigationView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:(progressChange - 1)];
         [self.buttonBack setBackgroundImage:[UIImage imageNamed:@"backArrow"] forState:UIControlStateNormal];
         self.buttonBack.alpha = (progressChange - 1);
     }else {

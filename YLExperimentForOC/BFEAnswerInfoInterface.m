@@ -102,6 +102,8 @@
      _contentLabel = contentLabel;
     [self addSubview:_contentLabel];
     
+    // _contentLabel.hidden = YES;
+    
     /*
     UILabel *lbTemp =[[UILabel alloc] initWithFrame:CGRectMake(20, 20, 100, 700)];
     lbTemp.backgroundColor = [UIColor brownColor];
@@ -120,6 +122,19 @@
     CGRect rect = [attrStr boundingRectWithSize:CGSizeMake(200, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
     lbTemp.frame = CGRectMake(50, 50, rect.size.width, rect.size.height);
     lbTemp.attributedText = attrStr;
+     */
+    
+    /* note: 网页 label 功能
+    NSString * htmlString = @"<font color=\"#696969\" face = \"PingFangSC-Regular\">2014年1月8日,<font color=\"#dd3d3d\">杨幂</font>与刘恺威的<font color=\"#dd3d3d\">婚礼</font>在印度尼西亚巴厘岛举行。<font color=\"#dd3d3d\">婚礼</font>仪式于UTC8:25开始,整场<font color=\"#dd3d3d\">婚礼</font>仪式用半小时完成。...</font>";
+    attrStr = [[NSMutableAttributedString alloc]
+                        initWithData:[htmlString
+                   dataUsingEncoding:NSUnicodeStringEncoding]
+                             options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
+                    documentAttributes:nil
+                                 error:nil];
+    UILabel * myLabel = [[UILabel alloc] initWithFrame:self.bounds];
+    myLabel.attributedText = attrStr;
+    [self addSubview:myLabel];
      */
 }
 

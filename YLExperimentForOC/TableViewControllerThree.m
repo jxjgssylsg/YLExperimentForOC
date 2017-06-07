@@ -9,7 +9,7 @@
 #import "TableViewControllerThree.h"
 #define kSearchbarHeight 44
 
-@interface TableViewControllerThree()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>{
+@interface TableViewControllerThree()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate> {
     UITableView *_tableView;
     UISearchBar *_searchBar;
     //UISearchDisplayController *_searchDisplayController;

@@ -98,7 +98,7 @@
     // [self creatNavVCOne];
     // [self creatNavVCTwo];
     // [self creatNavVCThree];
-    // [self creatTabbarVCOne];
+     [self creatTabbarVCOne];
     // [self creatTabbarVCTwo];
     // [self creatUITableViewOne];
     // [self creatUITableViewTwo];
@@ -119,7 +119,7 @@
     // [self testMasonrySix];
     // [self creatUICollectionViewOne];
     // [self creatUICollectionViewTwo];
-     [self creatUICollectionViewThree];
+    // [self creatUICollectionViewThree];
     // [self creatUICollectionViewFour];
     // [self creatUICollectionViewFive];
     // [self testPthread];

@@ -28,7 +28,7 @@
 
     [self.view addSubview:self.tableView];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.buttonBack];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.buttonBack];
     self.navigationItem.titleView = self.titleView;
 
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:self.imageView.bounds];
@@ -50,12 +50,13 @@
 
 
 #pragma mark - --- delegate 视图委托 ---
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentInset.top + scrollView.contentOffset.y;
     CGFloat progress = offsetY / (self.headerHeight - 20);
     CGFloat progressChange = offsetY / (self.headerHeight - 64 - 44);
     NSLog(@"%s, %f, %f, %f", __FUNCTION__ ,progressChange, progress, offsetY);
     if (progress <= 0) {
+        // 下拉的时候图片变大 
         self.imageView.y = offsetY;
         self.imageView.height = self.headerHeight - offsetY;
         self.imageView.contentMode = UIViewContentModeScaleAspectFill;
